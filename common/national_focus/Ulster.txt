@@ -487,6 +487,117 @@ focus_tree = {
 
 	}
 	focus = {
+		id = ULS_repurpose_dali
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_dissolve_irish_police
+		}
+		x = -2
+		y = 2
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_fields_of_wire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_catholic_legislation
+		}
+		x = 0
+		y = 2
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_orange_syndicates
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_orange_tinted_glasses
+		}
+		x = 2
+		y = 2
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_six_counties_twenty_six_abberations
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_repurpose_dali
+		}
+		prerequisite = {
+			focus = ULS_fields_of_wire
+		}
+		x = -1
+		y = 3
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_protestant_education
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_orange_syndicates
+		}
+		prerequisite = {
+			focus = ULS_fields_of_wire
+		}
+		x = 1
+		y = 3
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_orange_rain
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_protestant_education
+		}
+		prerequisite = {
+			focus = ULS_six_counties_twenty_six_abberations
+		}
+		x = 2
+		y = 4
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_union_of_prots
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_six_counties_twenty_six_abberations
+		}
+		prerequisite = {
+			focus = ULS_protestant_education
+		}
+		x = -2
+		y = 4
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
+		id = ULS_contact_father
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = ULS_union_of_prots
+		}
+		prerequisite = {
+			focus = ULS_orange_rain
+		}
+		x = 0
+		y = 5
+		relative_position_id = ULS_red_hand_rule
+
+	}
+	focus = {
 		id = ULS_harrying_of_dumcree
 		icon = GFX_goal_unknown
 		cost = 10
@@ -897,117 +1008,6 @@ focus_tree = {
 		x = 4
 		y = 10
 		relative_position_id = ULS_harrying_of_dumcree
-
-	}
-	focus = {
-		id = ULS_repurpose_dali
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_dissolve_irish_police
-		}
-		x = -2
-		y = 2
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_fields_of_wire
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_catholic_legislation
-		}
-		x = 0
-		y = 2
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_orange_syndicates
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_orange_tinted_glasses
-		}
-		x = 2
-		y = 2
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_six_counties_twenty_six_abberations
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_repurpose_dali
-		}
-		prerequisite = {
-			focus = ULS_fields_of_wire
-		}
-		x = -1
-		y = 3
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_protestant_education
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_orange_syndicates
-		}
-		prerequisite = {
-			focus = ULS_fields_of_wire
-		}
-		x = 1
-		y = 3
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_orange_rain
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_protestant_education
-		}
-		prerequisite = {
-			focus = ULS_six_counties_twenty_six_abberations
-		}
-		x = 2
-		y = 4
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_union_of_prots
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_six_counties_twenty_six_abberations
-		}
-		prerequisite = {
-			focus = ULS_protestant_education
-		}
-		x = -2
-		y = 4
-		relative_position_id = ULS_red_hand_rule
-
-	}
-	focus = {
-		id = ULS_contact_father
-		icon = GFX_goal_unknown
-		cost = 10
-		prerequisite = {
-			focus = ULS_union_of_prots
-		}
-		prerequisite = {
-			focus = ULS_orange_rain
-		}
-		x = 0
-		y = 5
-		relative_position_id = ULS_red_hand_rule
 
 	}
 	focus = {
