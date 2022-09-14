@@ -39,195 +39,201 @@ ULS_CATHOLICS_desc:0 "The Catholics of Ulster, compromising a large minority of 
 
 ### Focuses ###
 ULS_the_bonfires_call: "Call of the Bonfires"
+ULS_the_bonfires_call_desc: "..."
 ULS_dig_up_arms: "Retrieve the Old Caches"
+ULS_dig_up_arms_desc: "..."
 ULS_call_for_aid: "Ulster Calls for Aid"
+ULS_call_for_aid_desc: "..."
 ULS_squirrel_guns: "Hunting Irish Squirrels"
+ULS_squirrel_guns_desc: "..."
 ULS_home_workshops: "Home-made Guns"
+ULS_home_workshops_desc: "..."
 ULS_a_new_army: "A New Model Army"
-ULS_roundhead_legacy:
-ULS_roundhead_legacy_desc:
-ULS_over_the_trenches:
-ULS_over_the_trenches_desc:
-ULS_armoured_pikes:
-ULS_armoured_pikes_desc:
-ULS_grinding_warfare:
-ULS_grinding_warfare_desc:
-ULS_legacy_of_tory_island:
-ULS_legacy_of_tory_island_desc:
-ULS_belfast_dockyards:
-ULS_belfast_dockyards_desc:
-ULS_destroyers:
-ULS_destroyers_desc:
-ULS_cruisers:
-ULS_cruisers_desc:
-ULS_old_relics:
-ULS_old_relics_desc:
-ULS_industrial_revivial:
-ULS_industrial_revivial_desc:
-ULS_belfast_foundries:
-ULS_belfast_foundries_desc:
-ULS_dublin_delivers:
-ULS_dublin_delivers_desc:
-ULS_further_interirish_links:
-ULS_further_interirish_links_desc:
-ULS_shamrock_delivers:
-ULS_shamrock_delivers_desc:
-ULS_aerial_stars:
-ULS_aerial_stars_desc:
-ULS_expand_airfields:
-ULS_expand_airfields:
-ULS_emerald_sea_interdiction:
-ULS_emerald_sea_interdiction_desc:
-ULS_hit_and_run:
-ULS_hit_and_run_desc:
-ULS_clifton_street_summit:
-ULS_clifton_street_summit_desc:
-ULS_civillian_rule:
-ULS_civillian_rule_desc:
-ULS_privy_council_question:
-ULS_privy_council_question_desc:
-ULS_loyalist_oaths:
-ULS_loyalist_oaths_desc:
-ULS_stormont_system:
-ULS_stormont_system_desc:
-ULS_dual_systems:
-ULS_dual_systems_desc:
-ULS_irish_commisioners:
-ULS_irish_commisioners_desc:
-ULS_dublin_tax_system:
-ULS_dublin_tax_system_desc:
-ULS_one_country_two_systems:
-ULS_one_country_two_systems_desc:
-ULS_atlantic_ties:
-ULS_atlantic_ties_desc:
-ULS_wait_and_see:
-ULS_wait_and_see_desc:
-ULS_red_hand_rule:
-ULS_red_hand_rule_desc:
-ULS_dissolve_irish_police:
-ULS_dissolve_irish_police_desc:
-ULS_catholic_legislation:
-ULS_catholic_legislation_desc:
-ULS_orange_tinted_glasses:
-ULS_orange_tinted_glasses_desc:
-ULS_repurpose_dali:
-ULS_repurpose_dali_desc:
-ULS_fields_of_wire:
-ULS_fields_of_wire_desc:
-ULS_orange_syndicates:
-ULS_orange_syndicates_desc:
-ULS_six_counties_twenty_six_abberations:
-ULS_six_counties_twenty_six_abberations_desc:
-ULS_protestant_education:
-ULS_protestant_education_desc:
-ULS_orange_rain:
-ULS_orange_rain_desc:
-ULS_union_of_prots:
-ULS_union_of_prots_desc:
-ULS_contact_father:
-ULS_contact_father_desc:
-ULS_harrying_of_dumcree:
-ULS_harrying_of_dumcree_desc:
-ULS_UVA:
-ULS_UVA_desc:
-ULS_scots_english_mutt:
-ULS_scots_english_mutt_desc:
-ULS_ban_the_harp:
-ULS_ban_the_harp_desc:
-ULS_antrim_tribunal:
-ULS_antrim_tribunal_desc:
-ULS_gaelic_bonfires:
-ULS_gaelic_bonfires_desc:
-ULS_parade_the_counties:
-ULS_parade_the_counties_desc:
-ULS_ban_roman_monkey:
-ULS_ban_roman_monkey_desc:
-ULS_by_the_standard:
-ULS_by_the_standard_desc:
-ULS_heritage_over_history:
-ULS_heritage_over_history_desc:
-ULS_southern_pillage:
-ULS_southern_pillage_desc:
-ULS_council_of_red_hand:
-ULS_council_of_red_hand_desc:
-ULS_united_ulster:
-ULS_united_ulster_desc:
-ULS_canadian_traitors:
-ULS_canadian_traitors_desc:
-ULS_doth_the_cap:
-ULS_doth_the_cap_desc:
-ULS_continental_connections:
-ULS_continental_connections_desc:
-ULS_reichspakt_supplies:
-ULS_reichspakt_supplies_desc:
-ULS_freedom_fleet:
-ULS_freedom_fleet_desc:
-ULS_prepare_the_crossing:
-ULS_prepare_the_crossing_desc:
-ULS_retake_our_isles:
-ULS_retake_our_isles_desc:
-ULS_rule_ourtannia:
-ULS_rule_ourtannia_desc:
-ULS_rebuild_isles:
-ULS_rebuild_isles_desc:
-ULS_absorb_industry:
-ULS_absorb_industry_desc:
-ULS_salvage_jutland:
-ULS_salvage_jutland_desc:
-ULS_crown_orange:
-ULS_crown_orange_desc:
-ULS_canadian_investment:
-ULS_canadian_investment_desc:
-ULS_french_expertise:
-ULS_french_expertise_desc:
-ULS_join_idec:
-ULS_join_idec_desc:
-ULS_everything_for_britannia:
-ULS_everything_for_britannia_desc:
-ULS_nature_upheaval:
-ULS_nature_upheaval_desc:
-ULS_sword_of_entente:
-ULS_sword_of_entente_desc:
-ULS_red_white_and_plow:
-ULS_red_white_and_plow_desc:
-ULS_the_mosleyite:
-ULS_the_mosleyite_desc:
-ULS_lock_and_hammer:
-ULS_lock_and_hammer_desc:
-ULS_unify_currency:
-ULS_unify_currency_desc:
-ULS_maximist_education:
-ULS_maximist_education_desc:
-ULS_local_chairmen:
-ULS_local_chairmen_desc:
-ULS_workers_state:
-ULS_workers_state_desc:
-ULS_backdoor_veto:
-ULS_backdoor_veto_desc:
-ULS_pledge_more:
-ULS_pledge_more_desc:
-ULS_annex_me_daddy:
-ULS_annex_me_daddy_desc:
-ULS_partners:
-ULS_partners_desc:
-ULS_the_dog_kneels:
-ULS_the_dog_kneels_desc:
-ULS_farmers_union:
-ULS_farmers_union_desc:
-ULS_thirty_two_syndicates:
-ULS_thirty_two_syndicates_desc:
-ULS_church_dismantlement:
-ULS_church_dismantlement_desc:
-ULS_syndicate_store:
-ULS_syndicate_store_desc:
-ULS_workers_police:
-ULS_workers_police_desc:
-ULS_evolution_of_work:
-ULS_evolution_of_work_desc:
-ULS_red_shamrock:
-ULS_red_shamrock_desc:
-ULS_gender_equality:
-ULS_gender_equality_desc:
-ULS_red_palm_bends:
-ULS_red_palm_bends_desc:
+ULS_a_new_army_desc: "..."
+ULS_roundhead_legacy: "Legacy of the Roundheads"
+ULS_roundhead_legacy_desc: "..."
+ULS_over_the_trenches: "Up and Over!"
+ULS_over_the_trenches_desc: "..."
+ULS_armoured_pikes: "Pikes of Old and New"
+ULS_armoured_pikes_desc: "..."
+ULS_grinding_warfare: "Grinding Warfare"
+ULS_grinding_warfare_desc: "..."
+ULS_legacy_of_tory_island: "Legacy of Tory Island"
+ULS_legacy_of_tory_island_desc: "..."
+ULS_belfast_dockyards: "Belfast Dockyards"
+ULS_belfast_dockyards_desc: "..."
+ULS_destroyers: "Corvettes of Old"
+ULS_destroyers_desc: "..."
+ULS_cruisers: "New Ships of the Line"
+ULS_cruisers_desc: "..."
+ULS_old_relics: "Rusted Hulks"
+ULS_old_relics_desc: "..."
+ULS_industrial_revivial: "The Belfast Boon"
+ULS_industrial_revivial_desc: "..."
+ULS_belfast_foundries: "Foundries of Steel and Pride"
+ULS_belfast_foundries_desc: "..."
+ULS_dublin_delivers: "Respark Dublin"
+ULS_dublin_delivers_desc: "..."
+ULS_further_interirish_links: "Inter-Ireland Roads"
+ULS_further_interirish_links_desc: "..."
+ULS_shamrock_delivers: "The Shamrock Seal"
+ULS_shamrock_delivers_desc: "..."
+ULS_aerial_stars: "Stars of the Sky"
+ULS_aerial_stars_desc: "..."
+ULS_expand_airfields: "Expand Airfields"
+ULS_expand_airfields_desc: "..."
+ULS_emerald_sea_interdiction: "Emerald Sea Shooting Gallery"
+ULS_emerald_sea_interdiction_desc: "..."
+ULS_hit_and_run: "Hit and Run Tactics"
+ULS_hit_and_run_desc: "..."
+ULS_clifton_street_summit: "Clifton Street Summit"
+ULS_clifton_street_summit_desc: "..."
+ULS_civillian_rule: "Civilian Rule"
+ULS_civillian_rule_desc: "..."
+ULS_privy_council_question: "Reinstate the Privy Council?"
+ULS_privy_council_question_desc: "..."
+ULS_loyalist_oaths: "Loyalist Oaths"
+ULS_loyalist_oaths_desc: "..."
+ULS_stormont_system: "Rule from Stormont"
+ULS_stormont_system_desc: "..."
+ULS_dual_systems: "The Dual Idea"
+ULS_dual_systems_desc: "..."
+ULS_irish_commisioners: "Irish Commissioners" 
+ULS_irish_commisioners_desc: "..."
+ULS_dublin_tax_system: "Dublin Tax System"
+ULS_dublin_tax_system_desc: "..."
+ULS_one_country_two_systems: "One Ireland Two Systems"
+ULS_one_country_two_systems_desc: "..."
+ULS_atlantic_ties: "Our American Friends"
+ULS_atlantic_ties_desc: "..."
+ULS_wait_and_see: "Tea and Waiting"
+ULS_wait_and_see_desc: "..."
+ULS_red_hand_rule: "Red Handed Rule"
+ULS_red_hand_rule_desc: "..."
+ULS_dissolve_irish_police: "Dissolve the Independent Irish Police"
+ULS_dissolve_irish_police_desc: "..."
+ULS_catholic_legislation: "Catholic Legislation"
+ULS_catholic_legislation_desc: "..."
+ULS_orange_tinted_glasses: "Orange Tinted Glasses"
+ULS_orange_tinted_glasses_desc: "..."
+ULS_repurpose_dali: "Repurpose the Dali"
+ULS_repurpose_dali_desc: "..."
+ULS_fields_of_wire: "Fields of Wire and Wine"
+ULS_fields_of_wire_desc: "..."
+ULS_orange_syndicates: "Orange Syndicates"
+ULS_orange_syndicates_desc: "..."
+ULS_six_counties_twenty_six_abberations: "Six Counties, Twenty Six Aberrations"
+ULS_six_counties_twenty_six_abberations_desc: "..."
+ULS_protestant_education: "Protestant Education"
+ULS_protestant_education_desc: "..."
+ULS_orange_rain: "Orange Rains"
+ULS_orange_rain_desc: "..."
+ULS_union_of_prots: "Union of Protestants and God"
+ULS_union_of_prots_desc: "..."
+ULS_contact_father: "Contact Father"
+ULS_contact_father_desc: "..."
+ULS_harrying_of_dumcree: "Harrying of Drumcree"
+ULS_harrying_of_dumcree_desc: "..."
+ULS_UVA: "Our Holy UVA"
+ULS_UVA_desc: "..."
+ULS_scots_english_mutt: "Scottish, English, Mutt"
+ULS_scots_english_mutt_desc: "..."
+ULS_ban_the_harp: "Ban the Harp"
+ULS_ban_the_harp_desc: "..."
+ULS_antrim_tribunal: "The Antrim Tribunal"
+ULS_antrim_tribunal_desc: "..."
+ULS_gaelic_bonfires: "Gaelic Bonfire"
+ULS_gaelic_bonfires_desc: "..."
+ULS_parade_the_counties: "32 Glorious Parades"
+ULS_parade_the_counties_desc: "..."
+ULS_ban_roman_monkey: "Ban the Roman Monkey"
+ULS_ban_roman_monkey_desc: "..."
+ULS_by_the_standard: "By the Standard"
+ULS_by_the_standard_desc: "..."
+ULS_heritage_over_history: "Heritage over History"
+ULS_heritage_over_history_desc: "..."
+ULS_southern_pillage: "Southern Restitution" 
+ULS_southern_pillage_desc: "..."
+ULS_council_of_red_hand: "Council of the Loyal Red Hand"
+ULS_council_of_red_hand_desc: "..."
+ULS_united_ulster: "United Ulster"
+ULS_united_ulster_desc: "..."
+ULS_canadian_traitors: "Spit at the Beaver"
+ULS_canadian_traitors_desc: "..."
+ULS_doth_the_cap: "Doth the Cap"
+ULS_doth_the_cap_desc: "..."
+ULS_continental_connections: "Continental Connections"
+ULS_continental_connections_desc: "..."
+ULS_reichspakt_supplies: "Reichspakt Supplies"
+ULS_reichspakt_supplies_desc: "..."
+ULS_freedom_fleet: "Fleet for Freedom"
+ULS_freedom_fleet_desc: "..."
+ULS_prepare_the_crossing: "Prepare the Crossing"
+ULS_prepare_the_crossing_desc: "..."
+ULS_retake_our_isles: "Retake the Loyalist Isle"
+ULS_retake_our_isles_desc: "..."
+ULS_rule_ourtannia: "Rule Ourtannia"
+ULS_rule_ourtannia_desc: "..."
+ULS_rebuild_isles: "Rebuild the Isle"
+ULS_rebuild_isles_desc: "..."
+ULS_absorb_industry: "Industrial Absorption"
+ULS_absorb_industry_desc: "..."
+ULS_salvage_jutland: "Salvage Jutland's Legacy"
+ULS_salvage_jutland_desc: "..."
+ULS_crown_orange: "Crown of Orange and Blood"
+ULS_crown_orange_desc: "..."
+ULS_canadian_investment: "Canadian Investment"
+ULS_canadian_investment_desc: "..."
+ULS_french_expertise: "Baguette and Frog Lectures"
+ULS_french_expertise_desc: "..."
+ULS_join_idec: "Join the IDEC"
+ULS_join_idec_desc: "..."
+ULS_everything_for_britannia: "Everything for Britannia"
+ULS_everything_for_britannia_desc: "..."
+ULS_nature_upheaval: "Upheaval of Nature and Land"
+ULS_nature_upheaval_desc: "..."
+ULS_sword_of_entente: "Flaming Sword of the Entente"
+ULS_sword_of_entente_desc: "..."
+ULS_red_white_and_plow: "Red, White and Plow"
+ULS_red_white_and_plow_desc: "..."
+ULS_the_mosleyite: "Our Friend Mosley"
+ULS_the_mosleyite_desc: "..."
+ULS_lock_and_hammer: "Lock and Hammer"
+ULS_lock_and_hammer_desc: "..."
+ULS_unify_currency: "Unify Currency"
+ULS_unify_currency_desc: "..."
+ULS_maximist_education: "Maximist Education"
+ULS_maximist_education_desc: "..."
+ULS_local_chairmen: "Local Chairmen for Local Syndicates"
+ULS_local_chairmen_desc: "..."
+ULS_workers_state: "Workers State"
+ULS_workers_state_desc: "..."
+ULS_backdoor_veto: "Implement the Backdoor Veto"
+ULS_backdoor_veto_desc: "..."
+ULS_pledge_more: "Everything Together"
+ULS_pledge_more_desc: "..."
+ULS_annex_me_daddy: "Rejoin the Union"
+ULS_annex_me_daddy_desc: "..."
+ULS_partners: "Partners with Respect"
+ULS_partners_desc: "..."
+ULS_the_dog_kneels: "The Dog Kneels"
+ULS_the_dog_kneels_desc: "..."
+ULS_farmers_union: "Champion the Farmers Union"
+ULS_farmers_union_desc: "..."
+ULS_thirty_two_syndicates: "Thirty Two Syndicates"
+ULS_thirty_two_syndicates_desc: "..."
+ULS_church_dismantlement: "Fully Dismantle the Church"
+ULS_church_dismantlement_desc: "..."
+ULS_syndicate_store: "A Government Run Store?"
+ULS_syndicate_store_desc: "..."
+ULS_workers_police: "Worker's Policeforce"
+ULS_workers_police_desc: "..."
+ULS_evolution_of_work: "Evolutionary Toil and Strife"
+ULS_evolution_of_work_desc: "..."
+ULS_red_shamrock: "A Red Shamrock"
+ULS_red_shamrock_desc: "..."
+ULS_gender_equality: "Equality To All Before The Syndicate"
+ULS_gender_equality_desc: "..."
+ULS_red_palm_bends: "The Red Palm Bends"
+ULS_red_palm_bends_desc: "..."
 ### Events ###
