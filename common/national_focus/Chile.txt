@@ -851,7 +851,7 @@ focus_tree = {
 focus = {
 		id = CHL_1936_WFC
 		icon = GFX_CHL_coa
-		x = 28
+		x = 29
 		y = 1
 		cost = 0
 		available = {
@@ -938,6 +938,7 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHL_strenghten_republic"
 			add_stability = 0.1
+			add_idea = CHL_workers_ofthe_homefront
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -967,6 +968,50 @@ focus = {
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
 focus = {
+		id = CHL_The_Valderrama_Affair
+		icon = GFX_CHL_coa
+		prerequisite = { focus = CHL_brit_chilean_pact focus = CHL_Diss_Ibanez }
+		x = -2
+		y = 2
+		relative_position_id = CHL_1936_WFC
+		cost = 8
+		available = {
+			OR = {
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHL_The_Valderrama_Affair"
+    		add_political_power = 100
+    		CHL = { country_event = chl.coup.1 }
+							}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+focus = {
+		id = CHL_Mantain_Old_Officers
+		icon = GFX_CHL_coa
+		prerequisite = { focus = CHL_The_Valderrama_Affair }
+		x = -1
+		y = 2
+		relative_position_id = CHL_1936_WFC
+		cost = 8
+		available = {
+			OR = {
+			has_government = syndicalist
+			has_government = radical_socialist
+			has_government = totalist
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHL_Mantain_Old_Officers"
+							}
+			search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		}
+		
+focus = {
 		id = CHL_New_Santigo
 		icon = GFX_CHL_coa
 		prerequisite = { focus = CHL_red_hearts_and_souls }
@@ -995,4 +1040,3 @@ focus = {
 	}
 
 
-}

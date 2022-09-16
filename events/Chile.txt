@@ -2333,5 +2333,25 @@ country_event = { #Secretary General
 		}
 	}
 }
+country_event = { #Valderrama Affair
+	id = chl.coup.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event chl.coup.1" }
+	title = chl.coup.1.t
+	desc = chl.coup.1.d
+
+	is_triggered_only = yes
+
+	option = { #execute valderrama
+		name = chl.coup.1.a
+		add_manpower = -1
+		add_political_power = -50
+		add_stability = -5
+		set_country_flag = valderrama_ded
+	}
+	option = {
+		name = chl.coup.1.b
+		add_stability = -10
+		set_country_flag = valderrama_alive
+	}
 
 }
