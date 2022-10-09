@@ -32,6 +32,10 @@ scripted_gui = {
 					DEN_has_leader_gui = yes
 					SWE_has_leader_GUI = yes
 					HOL_has_leader_GUI = yes
+					LIT_has_leader_GUI = yes
+					NOR_has_leader_GUI = yes
+					AUS_has_leader_GUI = yes
+					FIN_has_leader_GUI = yes
 					has_country_flag = LEADER_GUI_VISIBLE
 					AND = { #We have one portrait so far, too lazy to make the rest
 						tag = ROM
@@ -904,6 +908,13 @@ scripted_gui = {
 				}
 			}
 			
+			Jean_Mermoz_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = NFA_Jean_Mermoz_hog_ade
+				}
+			}
+			
 			### American Vps ###
 			
 			James_W_Ford_visible = {
@@ -1681,6 +1692,13 @@ scripted_gui = {
 				}
 			}
 			
+			Victor_Puerschel_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = DEN_Victor_Puerschel_hog_ade
+				}
+			}
+			
 			
 			### Belgian PMs ###
 			
@@ -1863,6 +1881,113 @@ scripted_gui = {
 				}
 			}
 			
+			### Lithuanian PMs ###
+			
+			Steponas_Kairys_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = LIT_Steponas_Kairys_hog_sde
+				}
+			}
+			
+			Leonas_Bistras_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = LIT_Leonas_Bistras_hog_sco
+				}
+			}
+			
+			Stasys_Salkauskis_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = LIT_Stasys_Salkauskis_hog_sco
+				}
+			}
+			
+			Antanas_Smetona_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = LIT_Antanas_Smetona_hog_ade
+				}
+			}
+			
+			Povilas_Plechavicius_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = LIT_Povilas_Plechavicius_hog_ade
+				}
+			}
+			
+			### Norwegian PMs ###
+			
+			Albin_Eines_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					tag = NOR
+					has_government = totalist
+				}
+			}
+			
+			Elias_Volan_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					tag = NOR
+					has_government = syndicalist
+				}
+			}
+			
+			Martin_Tranmel_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					tag = NOR
+					has_government = radical_socialist
+				}
+			}
+			
+			Johan_Nygaardsvold_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = NOR_Johan_Nygaardsvold_hog_sde
+				}
+			}
+			
+			Magnus_Nilssen_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = NOR_Magnus_Nilssen_hog_sde
+				}
+			}
+			
+			Carl_Joachim_Hambro_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = NOR_Carl_Joachim_Hambro_hog_mli
+				}
+			}
+			
+			Johan_Henrik_Andresen_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = NOR_Johan_Henrik_Andresen_hog_mli
+				}
+			}
+			
+			Vidkun_Quisling_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = NOR_Vidkun_Quisling_hog_pau
+				}
+			}
+			
+			### Finnish PM (just the one) ###
+			
+			Juho_Kusti_Paasikivi_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = FIN_Juho_Kusti_Paasikivi_hog_pau
+				}
+			}
+			
 			### The Others ###
 			
 			Albert_I_visible = {
@@ -1946,13 +2071,6 @@ scripted_gui = {
 					has_country_flag = MARSHALL_IN_POWER
 				}
 			}
-			
-			Vidkun_Quisling_visible = {
-				AND = {
-					has_country_flag = HOG_veiw
-					has_idea = NOR_Vidkun_Quisling_hog_pau
-				}
-			}
 
             Leon_Blum_visible = {
 				AND = {
@@ -1988,6 +2106,10 @@ scripted_gui = {
 				DEN_has_leader_gui = yes
 				SWE_has_leader_GUI = yes
 				HOL_has_leader_GUI = yes
+				LIT_has_leader_GUI = yes
+				NOR_has_leader_GUI = yes
+				AUS_has_leader_GUI = yes
+				FIN_has_leader_GUI = yes
 				has_country_flag = LEADER_GUI_VISIBLE
 				AND = { #We have one portrait so far, too lazy to make the rest
 					tag = ROM
