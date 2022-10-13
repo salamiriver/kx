@@ -11,7 +11,7 @@ focus_tree = {
 
 	default = no
 	
-	continuous_focus_position = { x = 2500 y = 3250 }
+	continuous_focus_position = { x = 3250 y = 1140 }
 	
 	### Starting Tree ###
 	focus = {
@@ -5396,6 +5396,465 @@ focus_tree = {
 					days = 40
 				}
 			}
+		}
+	}
+        ### Black Nationalist Tree ###
+
+        focus = {
+		id = NYC_unchained_black_man
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		x = 12
+		y = 23
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_end_unfair_employment
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_unchained_black_man
+		}
+		x = 4
+		y = 1
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_invite_garvey_question
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_end_unfair_employment
+		}
+		x = 4
+		y = 3
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_purge_tammany_tiger
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_unchained_black_man
+		}
+		x = -4
+		y = 1
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_clean_up_nypd_discrimination
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_purge_tammany_tiger
+		}
+		x = -4
+		y = 3
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_lawson_garveyites
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+                mutually_exclusive = {
+                        focus = NYC_kemp_radical_unionists
+                        focus = NYC_hamid_nationalists
+                }
+		prerequisite = {
+			focus = NYC_unchained_black_man
+		}
+		x = -2
+		y = 1
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_diminish_influence_org_crime
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_lawson_garveyites
+		}
+		x = -3
+		y = 2
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_arm_yourself_in_self_defense
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_diminish_influence_org_crime
+		}
+		prerequisite = {
+			focus = NYC_utilize_picket_lines
+		}
+		prerequisite = {
+			focus = NYC_give_jobs_to_blacks
+		}
+		x = -2
+		y = 3
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_utilize_picket_lines
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_kemp_radical_unionists
+			focus = NYC_hamid_nationalists
+			focus = NYC_lawson_garveyites
+		}
+		x = -1
+		y = 2
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_hamid_nationalists
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+                mutually_exclusive = {
+                        focus = NYC_kemp_radical_unionists
+                        focus = NYC_lawson_garveyites
+                }
+		prerequisite = {
+			focus = NYC_unchained_black_man
+		}
+		x = 0
+		y = 1
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_negro_metropolis
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_utilize_picket_lines
+		}
+		prerequisite = {
+			focus = NYC_give_jobs_to_blacks
+		}
+		x = 0
+		y = 3
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_kemp_radical_unionists
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+                mutually_exclusive = {
+                        focus = NYC_hamid_nationalists
+                        focus = NYC_lawson_garveyites
+                }
+		prerequisite = {
+			focus = NYC_unchained_black_man
+		}
+		x = 2
+		y = 1
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_fine_line_of_nationalism
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_kemp_radical_unionists
+		}
+		x = 3
+		y = 2
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_cordiality_with_whites
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_utilize_picket_lines
+		}
+		prerequisite = {
+			focus = NYC_give_jobs_to_blacks
+		}
+		prerequisite = {
+			focus = NYC_fine_line_of_nationalism
+		}
+		x = 2
+		y = 3
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_give_jobs_to_blacks
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_kemp_radical_unionists
+			focus = NYC_hamid_nationalists
+			focus = NYC_lawson_garveyites
+		}
+		x = 1
+		y = 2
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_united_front_of_NYC_negroes
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_cordiality_with_whites
+			focus = NYC_negro_metropolis
+			focus = NYC_arm_yourself_in_self_defense
+		}
+		prerequisite = {
+			focus = NYC_clean_up_nypd_discrimination
+		}
+		prerequisite = {
+			focus = NYC_invite_garvey_question
+		}
+		x = 0
+		y = 4
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_question_moderate_black_unions
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_united_front_of_NYC_negroes
+		}
+		x = -1
+		y = 5
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_bolster_black_businesses
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_united_front_of_NYC_negroes
+		}
+		x = 1
+		y = 5
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
+		}
+	}
+        focus = {
+		id = NYC_future_linked_with_african_brothers
+		icon = GFX_goal_CSA_black_autonomy
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = NYC_bolster_black_businesses
+		}
+		prerequisite = {
+			focus = NYC_question_moderate_black_unions
+		}
+		x = 0
+		y = 6
+		cost = 5
+                relative_position_id = NYC_unchained_black_man
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
+
 		}
 	}
 
