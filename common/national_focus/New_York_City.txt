@@ -5404,7 +5404,7 @@ focus_tree = {
 		id = NYC_unchained_black_man
 		icon = GFX_goal_CSA_black_autonomy
 		available = {
-			always = no
+			has_country_flag = NYC_black_nationalists_flag
 		}
 		x = 12
 		y = 23
@@ -5416,7 +5416,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NYC_black_nationalist_takeover"
-
+                        custom_effect_tooltip = NYC_black_nationalist_coup_tt
 		}
 	}
         focus = {
