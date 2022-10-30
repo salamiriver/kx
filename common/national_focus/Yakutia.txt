@@ -1961,7 +1961,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAK_Merchant_Fleet
-		icon = GFX_goal_EGY_sultan_fleet
+		icon = GFX_goal_CAL_trade_fleet
 		relative_position_id = YAK_Navy
 		x = 0
 		y = 2
@@ -2010,10 +2010,10 @@ focus_tree = {
 				is_female = yes
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0 amount = 25 producer = TRM
+				type = small_plane_airframe amount = 25 producer = TRM
 			}
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_0
+				type = medium_plane_airframe
 				amount = 25
 				producer = TRM
 			}

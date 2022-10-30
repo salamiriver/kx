@@ -256,7 +256,7 @@ focus_tree = {
 
 	focus = {
 		id = KOR_ban_all_parties
-		icon = BAY_BAN_ELECTIONS
+		icon = GFX_BAY_BAN_ELECTIONS
 
 		prerequisite = { focus = KOR_the_red_scare }
 		relative_position_id = KOR_a_free_korea
@@ -352,7 +352,7 @@ focus_tree = {
 	
 	focus = {
 		id = KOR_form_a_royal_guard
-		icon = BAY_SECURING_OUR_KINGDOM
+		icon = GFX_BAY_SECURING_OUR_KINGDOM
 
 		prerequisite = { focus = KOR_distribute_noble_titles }
 		relative_position_id = KOR_a_free_korea
@@ -2436,8 +2436,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_under_the_sea"
 			
-			add_tech_bonus = { 
-				bonus = 1
+			add_doctrine_cost_reduction = { 
+				cost_reduction = 1
 				uses = 4
 				category = trade_interdiction_tree
 			}
@@ -2491,8 +2491,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_wolfpack_doctrine"
 			
-			add_tech_bonus = {
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
 				uses = 4
 				category = trade_interdiction_tree
 			}
@@ -2518,7 +2518,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_buy_fighters"
 			
 			add_equipment_to_stockpile = {
-			    type = fighter_equipment_1
+			    type = small_plane_airframe
 			    amount = 100
 			    producer = GER
 		    }
@@ -2608,7 +2608,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus KOR_coastal_patrols"
 			
 			add_equipment_to_stockpile = {
-			    type = nav_bomber_equipment_1
+			    type = small_plane_naval_bomber_airframe
 			    amount = 50
 			    producer = GER
 		    }

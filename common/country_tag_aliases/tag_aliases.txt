@@ -121,7 +121,11 @@ UTR = {
 GEX = {
 	global_event_target = current_german_exile_government
 }
-
+### European Union
+EUU = {
+	original_tag = AUS
+	has_country_flag = EU_FOUNDER
+}
 
 ### Texan Kaiserreich
 KTX = {
@@ -163,7 +167,11 @@ BAJ = {
 OXA = {
 	global_event_target = Oaxaca_Owner
 	has_cosmetic_tag = OXA
+}
 
+### Oaxaca
+AOG = {
+	original_tag = LEP
 }
 
 ### Soviet Russia

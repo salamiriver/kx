@@ -283,7 +283,7 @@ focus_tree = {
 		relative_position_id = YUC_the_military
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus YUC_star_war"
-			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 50 producer = MEX }
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 50 producer = MEX }
 			air_experience = 25
 			add_doctrine_cost_reduction = {
 	name = air_doc_bonus
@@ -547,6 +547,9 @@ focus_tree = {
 		id = YUC_airplane_aquistions
 		icon = GFX_goal_ELS_Plane_Lease
 		cost = 7
+		available = {
+			has_design_based_on = small_plane_airframe
+		}
 		prerequisite = {
 			focus = YUC_air_force
 		}
@@ -555,6 +558,7 @@ focus_tree = {
 		relative_position_id = YUC_the_military
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus YUC_airplane_aquistions"
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 100 }
 		}
 	}
 	focus = {# Aerial Drills
@@ -1684,7 +1688,7 @@ focus_tree = {
 	}
 	focus = {# 
 		id = YUC_Seperate_From_Radicalism
-		icon = VNC_no_liberty_to_the_enemies_of_liberty
+		icon = GFX_VNC_no_liberty_to_the_enemies_of_liberty
 		cost = 7
 		prerequisite = {
 			focus = YUC_social_welfare
@@ -2028,7 +2032,7 @@ focus_tree = {
 	}
 	focus = {# Maya Tax Breaks
 		id = YUC_maya_tax_breaks
-		icon = GRU_CONS_TAX_CUT
+		icon = GFX_GRU_CONS_TAX_CUT
 		cost = 7
 		prerequisite = {
 			focus = YUC_constitutional_review
@@ -2057,7 +2061,7 @@ focus_tree = {
 	
 	focus = {# 
 		id = YUC_New_Republicanism
-		icon = VNC_model_of_modern_republicanism
+		icon = GFX_VNC_model_of_modern_republicanism
 		cost = 7
 		prerequisite = {
 			focus = YUC_maya_tax_breaks
@@ -2385,7 +2389,7 @@ focus_tree = {
 	}
 	focus = {# 
 		id = YUC_Defense_Against_Radicals
-		icon = GRU_CONS_SIDELINE_RADICALS
+		icon = GFX_GRU_CONS_SIDELINE_RADICALS
 		cost = 7
 		prerequisite = {
 			focus = YUC_social_conservatives
@@ -2988,7 +2992,7 @@ focus_tree = {
 	}
 	focus = {#
 		id = YUC_Exert_Control
-		icon = GRU_CONTROL_ELECTION
+		icon = GFX_GRU_CONTROL_ELECTION
 		cost = 7
 		prerequisite = {
 			focus = YUC_Prohibition
@@ -3923,25 +3927,61 @@ focus_tree = {
 				type = annex_everything
 				target = CEN
 			}
+			every_state = {
+				limit = {
+					is_core_of = CEN
+				}
+				add_claim_by = YUC
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = ELS
+			}
+			every_state = {
+				limit = {
+					is_core_of = ELS
+				}
+				add_claim_by = YUC
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = GUA
 			}
+			every_state = {
+				limit = {
+					is_core_of = GUA
+				}
+				add_claim_by = YUC
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = HON
+			}
+			every_state = {
+				limit = {
+					is_core_of = HON
+				}
+				add_claim_by = YUC
 			}
 			create_wargoal = {
 				type = annex_everything
 				target = NIC
 			}
+			every_state = {
+				limit = {
+					is_core_of = NIC
+				}
+				add_claim_by = YUC
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = COS
+			}
+			every_state = {
+				limit = {
+					is_core_of = COS
+				}
+				add_claim_by = YUC
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }

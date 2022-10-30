@@ -119,7 +119,7 @@ create_country_leader = {
 	desc = "POLITICS_SERENGDONGRUB_DESC"
 	picture = "gfx/leaders/MON/Portrait_MON_Serengdongrub.png"
 	expire = "1965.1.1"
-	ideology = national_liberalism_subtype
+	ideology = soclib_humanistic_capitalism_subtype
 	traits = {}
 }
 
@@ -204,6 +204,22 @@ create_field_marshal = { #
 	planning_skill = 3
 	logistics_skill = 2
 	id = 1154
+}
+
+create_field_marshal = { #
+	name = "Tögs-Ochiryn Namnansüren"
+	desc = ""
+	portrait_path = "gfx/leaders/MON/Portrait_MON_Togs_Ochiryn_Namnansüren.png"
+	traits = {
+		old_guard
+		politically_connected
+		cavalry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
 }
 
 create_corps_commander = { #

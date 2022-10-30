@@ -48,14 +48,36 @@ set_technology = {
 	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
+}
 
-	### Air ###
-	early_fighter = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-	strategic_bomber1 = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "ENG_air_bba"
+
+		set_technology = {
+			aa_lmg = 1
+			early_bombs = 1
+			engines_1 = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+			basic_medium_airframe = 1
+		}
+		ENG_BBA_air_variants = yes
+	else = {
+		set_air_oob = "ENG_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			strategic_bomber1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+		}
+	}
 }
 
 ### Navy - MtG ###
@@ -213,21 +235,21 @@ create_country_leader = {# Herbert Samuel
 	name = "Herbert Samuel"
 	picture = "gfx/leaders/ENG/Portrait_England_Herbert_Samuel.png"
 	expire = "1965.1.1"
-	ideology = social_liberal_subtype
+	ideology = classical_liberalism_subtype
 	traits = {}
 }
 create_country_leader = {# Abraham England
 	name = "Abraham England"
 	picture = "gfx/leaders/ENG/Portrait_England_Abraham_England.png"
 	expire = "1965.1.1"
-	ideology = market_liberal_subtype
+	ideology = marlib_classical_liberalism_subtype
 	traits = {}
 }
 create_country_leader = {# Harold MacMillan
 	name = "Harold MacMillan"
 	picture = "gfx/leaders/ENG/Portrait_Britain_Harold_MacMillan.png"
 	expire = "1965.1.1"
-	ideology = social_conservative_subtype
+	ideology = toryism_subtype
 	traits = {}
 }
 create_country_leader = {# Percy Hobart

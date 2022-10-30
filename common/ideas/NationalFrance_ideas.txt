@@ -65,31 +65,31 @@ ideas = {
 				air_night_penalty = -0.05
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				cv_nav_bomber_equipment = {
+				cv_small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
 			}
@@ -104,31 +104,31 @@ ideas = {
 				air_mission_xp_gain_factor = 0.05
 			}
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				cv_fighter_equipment = {
+				cv_small_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				CAS_equipment = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				cv_nav_bomber_equipment = {
+				cv_small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				nav_bomber_equipment = {
+				small_plane_naval_bomber_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				heavy_fighter_equipment = {
+				medium_plane_fighter_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
-				strat_bomber_equipment = {
+				large_plane_airframe = {
 					build_cost_ic = -0.10 instant = yes
 				}
 			}
@@ -229,7 +229,7 @@ ideas = {
 			}
 
 			name = NFA_transsaharian
-			picture = generic_build_infrastructure
+			picture = NFA_sahara_rail
 		}
 
 		NFA_transsaharian_4 = {
@@ -1932,7 +1932,7 @@ ideas = {
 			}
 
 			name = NFA_french_friendship
-			picture = MAF_French_Influence
+			picture = advisors_natfrance2
 		}
 
 		NFA_franco_german_trade = {
@@ -2739,6 +2739,7 @@ ideas = {
 				command_power_gain_mult = 0.10
 				war_support_factor = 0.10
 				weekly_manpower = 200
+				paternal_autocrat_drift = 0.05
 			}
 			
 			picture = NFA_presidential
@@ -2752,6 +2753,7 @@ ideas = {
 				surrender_limit = 0.10
 				monthly_population = 0.40
 				stability_weekly = 0.015
+				authoritarian_democrat_drift = 0.05
 			}
 			
 			picture = NFA_popdem
@@ -3789,7 +3791,7 @@ ideas = {
 			modifier = {
 			stability_factor = 0.15
 			war_stability_factor = 0.15
-			occupation_cost = -0.15
+			required_garrison_factor = -0.15
 			resistance_growth_on_our_occupied_states = 0.2
 			army_org_regain = 0.1
 			army_org_factor = 0.1
@@ -3871,7 +3873,7 @@ ideas = {
 			picture = NFA_final_nap
 			modifier = {
 				war_support_factor = 0.08
-				paternal_autocrat_drift = 0.05
+				paternal_autocrat_drift = 0.10
 				war_support_weekly = 0.002
 				planning_speed = 0.15
 				justify_war_goal_time = -0.25
@@ -3994,9 +3996,8 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_peasant_economy"}
 			picture = NFA_union_africa
 			modifier = {
-				occupation_cost = -0.2
+				required_garrison_factor = -0.2
 				resistance_activity = -0.15
-				required_garrison_factor = -0.1
 			}
 		}
 		NFA_versaille_treaty_for_GRU = {
@@ -4017,6 +4018,47 @@ ideas = {
 				cic_to_overlord_factor = 0.10
 				extra_trade_to_overlord_factor = 0.30
 				overlord_trade_cost_factor = -0.15
+			}
+		}
+		NFA_pope_lefebvre = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NFA_versaille_treaty_for_GRU"}
+			picture = NFA_pope_lefebvre
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15   
+			}
+		}
+		NFA_fixed_federalism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NFA_versaille_treaty_for_GRU"}
+			picture = NFA_fixed_federalism
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		NFA_cleanse_rome_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_peasant_economy"}
+			picture = NFA_cleanse_rome
+			modifier = {
+				weekly_manpower = -200
+				stability_factor = -0.05
+				political_power_cost = -0.05
+			}
+		}
+		NFA_council_of_trent = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SKM_peasant_economy"}
+			picture = NFA_council_of_trent
+			modifier = {
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				defence = 0.2
+				dig_in_speed_factor	= 0.2
 			}
 		}
 	}
@@ -4213,8 +4255,8 @@ ideas = {
 	naval_manufacturer = {
 		designer = yes
 
-		ateliers_de_la_loire_nfa = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ateliers_de_la_loire_nfa"}
+		ateliers_de_la_loire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ateliers_de_la_loire"}
 			allowed = {
 				tag = NFA
 			}

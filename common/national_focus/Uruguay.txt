@@ -2523,7 +2523,7 @@ focus_tree = {
 				name = URG_buy_fighters
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 		}
 	}
@@ -2593,7 +2593,7 @@ focus_tree = {
 				name = URG_independent_air_force
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 		}
 	}
@@ -3347,7 +3347,7 @@ focus_tree = {
 	}
 	focus = {
 		id = URG_promote_socialism
-		icon = GRU_PIECK_propaganda
+		icon = GFX_GRU_PIECK_propaganda
 		x = 2
 		y = 3
 		relative_position_id = URG_uruguayan_revolution

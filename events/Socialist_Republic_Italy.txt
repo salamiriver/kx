@@ -4445,24 +4445,6 @@ country_event = {
 	}
 }
 
-country_event = { # Remove French reliance spirit during the Weltkrieg
-	id = socitaly.201
-	immediate = { log = "[GetDateText]: [Root.GetName]: event socitaly.201" }
-	title = socitaly.201.t
-	desc = socitaly.201.d
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		GER = { has_war_with = FRA }
-		has_idea = SRI_french_advisors_idea
-	}
-	
-	option = {
-		name = socitaly.201.a
-		remove_ideas = SRI_french_advisors_idea
-	}
-}
 
 # Messe takes over
 country_event = {
@@ -8955,6 +8937,9 @@ country_event = { #Pio papal name
 	picture = GFX_report_event_SRI_pio_pope
 
 	is_triggered_only = yes
+	immediate = {
+		set_global_flag = SRI_PIO_IS_POPE
+	}
 
 	option = { #leo
 		name = cathitaly.23.a
@@ -9110,6 +9095,7 @@ country_event = { #opening of the Second Vatican Council
 	option = { #vatican two gang
 		name = cathitaly.26.a
 		add_ideas = SRI_vatican_two_open
+		set_global_flag = VATICANII_HAPPENEDS
 		hidden_effect = {
 			random_other_country = {
 				news_event = {

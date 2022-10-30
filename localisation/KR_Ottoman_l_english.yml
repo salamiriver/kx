@@ -130,40 +130,19 @@ OTT_fed_national_populist:0 "Ottoman Empire"
 OTT_fed_national_populist_ADJ:0 "Ottoman"
 OTT_fed_national_populist_DEF:0 "the Ottoman Empire"
 
-ARO_totalist:0 "Vilayet of Armenia"
-ARO_totalist_ADJ:0 "Armenian"
-ARO_totalist_DEF:0 "the Vilayet of Armenia"
-ARO_syndicalist:0 "Vilayet of Armenia"
-ARO_syndicalist_ADJ:0 "Armenian"
-ARO_syndicalist_DEF:0 "the Vilayet of Armenia"
-ARO_radical_socialist:0 "Vilayet of Armenia"
-ARO_radical_socialist_ADJ:0 "Armenian"
-ARO_radical_socialist_DEF:0 "the Vilayet of Armenia"
-ARO_social_democrat:0 "Vilayet of Armenia"
-ARO_social_democrat_ADJ:0 "Armenian"
-ARO_social_democrat_DEF:0 "Vilayet of Armenia"
-ARO_social_liberal:0 "Vilayet of Armenia"
-ARO_social_liberal_ADJ:0 "Armenian"
-ARO_social_liberal_DEF:0 "Vilayet of Armenia"
-ARO_market_liberal:0 "Vilayet of Armenia"
-ARO_market_liberal_ADJ:0 "Armenian"
-ARO_market_liberal_DEF:0 "Vilayet of Armenia"
-ARO_social_conservative:0 "Vilayet of Armenia"
-ARO_social_conservative_ADJ:0 "Armenian"
-ARO_social_conservative_DEF:0 "Vilayet of Armenia"
-ARO_authoritarian_democrat:0 "Vilayet of Armenia"
-ARO_authoritarian_democrat_ADJ:0 "Armenian"
-ARO_authoritarian_democrat_DEF:0 "Vilayet of Armenia"
-ARO_paternal_autocrat:0 "Vilayet of Armenia"
-ARO_paternal_autocrat_ADJ:0 "Armenian"
-ARO_paternal_autocrat_DEF:0 "Vilayet of Armenia"
-ARO_national_populist:0 "Vilayet of Armenia"
-ARO_national_populist_ADJ:0 "Armenian"
-ARO_national_populist_DEF:0 "Vilayet of Armenia"
-
 OTT_german_fun:0 "Das Kakerlakenreich"
 OTT_german_fun_ADJ:0 "Kakerlank"
-OTT_german_fun_def:0 "the Kakerlakenreich"
+OTT_german_fun_DEF:0 "the Kakerlakenreich"
+
+OTT_Join_Russia:0 "Join the Russian Sphere"
+
+OTT_kadro_national_populist:0 "Anatolian-Levantine National Republic"
+OTT_kadro_national_populist_ADJ:0 "Anatolian-Levantine"
+OTT_kadro_national_populist_DEF:0 "the Anatolian-Levantine National Republic"
+
+OTT_kadro_totalist:0 "Anatolian-Levantine Social Republic"
+OTT_kadro_totalist_ADJ:0 "Anatolian-Levantine"
+OTT_kadro_totalist_DEF:0 "the Anatolian-Levantine Social Republic"
 
 ############
 # Tooltips #
@@ -264,6 +243,7 @@ EGY_CONQ:0 "Annexed Egypt"
 AXIS_VICTORY:0 "The Cairo Axis is victorious"
 expanded_millets:0 "The Millets have been expanded"
 ziraat_bypass:0 "Ziraat Bankasi has been established"
+RUSSIAN_OTTOMAN_DEAL: "Russo-Ottoman Convention signed"
 
 ### Global Flags
 OTT_Surrender:0 "The Ottomans have been defeated."
@@ -2436,10 +2416,11 @@ ottsep.34.d:0 "Established in 1913 after almost a hundred years of negotiations,
 ottsep.34.a:0 "War it is then!"
 
 # Armenia
-ottsep.35.t:0 "Rebellion Against the Ottoman Empire!"
-ottsep.35.d:0 "With war breaking out across the Middle East, and the Ottoman Empire that has ruled over us for decades beginning to collapse, now might be the only chance we have to rebel against our overlords. Nzhdeh's fedayi are ready to take over Erivan, and raise the flag of an independent Armenia once again."
-ottsep.35.a:0 "For Armenia!"
-ottsep.35.b:0 "We stand loyal to Constantinople."
+ottsep.35.t:0 "Rebellion in Armenia!"
+ottsep.35.d:0 "Conflict is brewing across the Middle East, and our Empire that has ruled over the region for decades is beginning to collapse. The Armenians in the east see this situation as an opportunity, and Nzhdeh's fedayi are ready to take over Erivan, raising the flag of an independent Armenia once again."
+ottsep.35.a:0 "We stand loyal to [TUR.Capital.GetCapitalVictoryPointName]."
+ottsep.35.b:0 "For Armenia! (Play as Armenia)"
+
 
 ###################
 ## FLAVOUR STUFF ##
@@ -2524,6 +2505,18 @@ ottfla.19.a:0 "A true calamity!"
 ottfla.20.t:0 "Enver Bey Cigarettes Take-over"
 ottfla.20.d:0 "Founded in 1909 by Mendel Gottreich, the German based cigarette company Enver Bey was handed over to the state monopoly on Tobacco today. The company which derives its name from the infamous Enver Pasha has declared that it will continue operations but change its name, further announcing new brands and varieties to the trusted Ottoman product.\n\nAlthough the company is only a small player on the Ottoman-German market, the main producer being the Yenidze factory in Dresden, the sale marks another point in the constantly developing friendship between Ottoman and German business interests."
 ottfla.20.a:0 "Huzzah!"
+
+ottfla.21.t: "The Death of Abdülmecid II"
+ottfla.21.d: "Sad news befalls us this day, as our beloved Sultan Abdülmecid II has suffered a heart attack and passed on from this world.\n\nFunerals arrangements are already being organised, and naturally shall befit his stature as our Padishah, and as Caliph of all Islam.\n\nAs the news spreads, the streets are filled with the sound of anguish, for the Kayser-i Rûm was seen as a cherished figure for the people, and a fitting figurehead to lead our Empire.\n\nAbdülmecid bin Abdülaziz was born in 1868 as the heir apparent of the Empire, but only inherited in 1926 following the death of his cousin, as his own father had previously been murdered and ousted from the throne. This late inheritance did not rest easy with him, for as a renowned patron and appreciator of culture, our Sultan sooner devoted his time to painting, music and worship, than to the mundanity of governance.\n\nNevertheless, despite his disinterest in the position, he grew into the role and presided over an era of great change in the Empire.\n\nConservatives will remember him for his piety, while liberals will recognise his willingness to leave the ruling of the Empire to the elected government.\n\nHe is now succeeded by his cousin Sultan Ahmed IV, who will lead the mourning for his predecessor through the capital, before guiding the Empire into a bright new age of his own making, inshallah."
+ottfla.21.a: "Inna Lillahi wa inna ilayhi raji'un!"
+
+### Epic Kadro
+ottfla.22.t:0 "The Future of the Sublime Porte"
+ottfla.22.d:0 "At long last, and with laborious effort, our enemies have been put to the sword and the state has begun to slowly stabilize. The Sultan has successfully been dethroned as the Caliph as we separated Church and State, reducing His Highness to a puppeted state largely acting as a figure head as we continue on with the great and hard task of eliminating the manipulative opiate that is Islam and Theism from our beautiful and bountiful paradise. The apparatus of state and the Kadroist Party have been fully united in cause and purpose, and now we stand at a crossroads. The two heads of our movement, Yakup Kadri Karaosmanoğlu and Şevket Süreyya Aydemir, have long worked as close allies since founding the Kadro paper and formulating our ideology. However, they have begun to drift on their idea for the state. Though both devout in their cause, and both determined to one day usher in true Ottoman Republicanism, Şevket Süreyya Aydemir has begun to identify with more openly Leftist positions and politics. We must now decide if we are to at all attempt to topple the Ottoman Sultanate and its monarchist institutions, and if so, if we should continue on our path of Social Nationalism, or pursue true National Socialism as both attempt to give rise to the Sublime Ottoman Social National Republic."
+ottfla.22.a:0 "The Sultan is the heart of the Empire. Begrudgingly keep the monarchy in place, for now."
+ottfla.22.b:0 "Remove the Sultan and pursue Kadroist Republicanism under Karaosmanoğlu."
+ottfla.22.c:0 "Remove the Sultan and pursue the true Kadroist Revolution under Aydemir."
+
 
 ###########
 # REVOLTS #
@@ -3008,6 +3001,13 @@ ottfor.93.d:0 "Gross mismanagement and a repressive regime have ensured the tota
 ottfor.93.a:0 "To war!"
 ottfor.93.b:0 "We have no quarrel with the Ottoman Turks"
 
+### Epic Kadro
+ottfor.94.t:0 "The Future of the Sublime Porte"
+ottfor.94.d:0 "At long last, and with laborious effort, our enemies have been put to the sword and the state has begun to slowly stabilize. The Sultan has successfully been dethroned as the Caliph as we separated Church and State, reducing His Highness to a puppeted state largely acting as a figure head as we continue on with the great and hard task of eliminating the manipulative opiate that is Islam and Theism from our beautiful and bountiful paradise. The apparatus of state and the Kadroist Party have been fully united in cause and purpose, and now we stand at a crossroads. The two heads of our movement, Yakup Kadri Karaosmanoğlu and Şevket Süreyya Aydemir, have long worked as close allies since founding the Kadro paper and formulating our ideology. However, they have begun to drift on their idea for the state. Though both devout in their cause, and both determined to one day usher in true Ottoman Republicanism, Şevket Süreyya Aydemir has begun to identify with more openly Leftist positions and politics. We must now decide if we are to at all attempt to topple the Ottoman Sultanate and its monarchist institutions, and if so, if we should continue on our path of Social Nationalism, or pursue true National Socialism as both attempt to give rise to the Sublime Ottoman Social National Republic."
+ottfor.94.a:0 "The Sultan is the heart of the Empire. Begrudgingly keep the monarchy in place, for now."
+ottfor.94.b:0 "Remove the Sultan and pursue Kadroist Republicanism under Karaosmanoğlu."
+ottfor.94.c:0 "Remove the Sultan and pursue the true Kadroist Revolution under Aydemir."
+
 ### Ottoman Peace Deal 
 cp.1.t:0 "End of an Era"
 cp.1.d:0 "As the Arab forces push through the Taurus mountains into Anatolia, we must concede that the golden days of the Sublime Porte are now definitively over. Refusing to give up their homes, various Turkish and Kurdish irregular organisations are waging a war of resistance in the South of Anatolia, but their attempts will likely be in vain. Therefore the Sultan has called the cabinet to his side to discuss terms of an armistice and afterwards of surrender.\n\nTalking in the grand halls of Dolmabahce Palace, the gathered men can only ponder about the future of their once immense empire as air raid alarms blare near the Galata Tower and families, with tears in their eyes, wave their goodbyes to sons and fathers headed for the Anatolian front."
@@ -3134,6 +3134,10 @@ cp.24.b:0 "A coordinated withdrawal would be in our best interests"
 cp.25.t:0 "Ottomans Withdraw from Batum"
 cp.25.d:0 "Without firing a shot, our army has succeeded in retaking the historically Georgian port of Batum as the Ottoman garrison in the city was ordered by Kostantiniyye to withdraw towards Rize. Although this a grand victory for Georgia, not all are convinced by the choice to kick the Turks whilst they are down. Pointing out dark shadows up North, they fear that should the Turks survive their ordeal the sovereignty of all Georgia might have just been compromised."
 cp.25.a:0 "A glorious day!"
+
+cp.26.t:0 "The Ottomans Hold in Batum"
+cp.26.d:0 "Surprisingly, and in spite of the dire circumstances they are currently in, the Porte has chosen to hold fast in Batum, and has issued an ultimatum for our troops to leave or face war. If we are to regain the port of Batum, our only choice left now is to officially declare war on [FROM.GetNameDef]."
+cp.26.a:0 "War it is, then."
 ####################
 ### GUI Elements ###
 ####################

@@ -79,9 +79,7 @@ leader_traits = {
 	}
 	admiral_dictator = {
 		random = no
-		research_speed_factor = 0.1
-		production_speed_naval_base_factor = 0.1
-		production_speed_dockyard_factor = 0.1
+		naval_doctrine_cost_factor = -0.1
 		ai_will_do = {
 			factor = 1
 		}
@@ -99,10 +97,7 @@ leader_traits = {
 	}
 	rear_admiral_dictator = {
 		random = no
-		political_power_gain = 0.1		
-		research_speed_factor = 0.05
-		production_speed_naval_base_factor = 0.05
-		production_speed_dockyard_factor = 0.05
+		naval_doctrine_cost_factor = -0.05 
 		ai_will_do = {
 			factor = 1
 		}
@@ -224,6 +219,12 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.1
 		stability_factor = 0.1
+	}
+	KAR_Johtaja = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		conscription_factor = 0.05
 	}
 	WHR_nacalnik_dzyarzhavy = {
 		random = no

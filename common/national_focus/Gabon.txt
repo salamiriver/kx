@@ -1421,13 +1421,8 @@ focus_tree = {
 				name = GAB_experiment_with_french_designs
 				bonus = 1
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = light_fighter
+				category = cat_heavy_fighter
 			}
 		}
 	}
@@ -2827,6 +2822,15 @@ focus_tree = {
 				type = annex_everything
 				target = KOG
 			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = TKE
+						is_core_of = KOG
+					}
+				}
+				add_claim_by = GAB
+			}
 		}
 	}
 	
@@ -2928,6 +2932,15 @@ focus_tree = {
 				type = annex_everything
 				target = CMR
 			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ADA
+						is_core_of = CMR
+					}
+				}
+				add_claim_by = GAB
+			}
 		}
 	}
 	
@@ -2955,6 +2968,12 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = CEA
+			}
+			every_state = {
+				limit = {
+					is_core_of = CEA
+				}
+				add_claim_by = GAB
 			}
 		}
 	}
@@ -3291,6 +3310,15 @@ focus_tree = {
 				type = annex_everything
 				target = CMR
 			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = ADA
+						is_core_of = CMR
+					}
+				}
+				add_claim_by = GAB
+			}
 		}
 	}
 	
@@ -3324,6 +3352,15 @@ focus_tree = {
 				type = annex_everything
 				target = KOG
 			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = TKE
+						is_core_of = KOG
+					}
+				}
+				add_claim_by = GAB
+			}
 		}
 	}
 	
@@ -3355,6 +3392,12 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = CEA
+			}
+			every_state = {
+				limit = {
+					is_core_of = CEA
+				}
+				add_claim_by = GAB
 			}
 		}
 	}
@@ -3426,6 +3469,12 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = WAD
+			}
+			every_state = {
+				limit = {
+					is_core_of = WAD
+				}
+				add_claim_by = GAB
 			}
 		}
 	}

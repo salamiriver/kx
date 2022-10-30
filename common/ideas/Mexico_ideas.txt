@@ -576,6 +576,20 @@ ideas = {
 			}
 		}
 		
+		MEX_DL_the_prince_archbishopric_of_mexico = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_DL_the__rince_archbishopric_of_mexico"}
+			picture = MEX_prince_archbishopric_of_mexico_idea
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				authoritarian_democrat_drift = 0.01
+				social_conservative_drift = 0.01
+				market_liberal_drift = 0.01
+				social_liberal_drift = 0.01
+				social_democrat_drift = 0.01
+			}
+		}
+		
 		MEX_DL_presidential_republic = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_DL_presidential_republic"}
 			picture = MEX_a_presidential_republic_idea
@@ -686,7 +700,7 @@ ideas = {
 				has_government = authoritarian_democrat
 			}
 			removal_cost = -1
-			picture = MEX_PRUN_propaganda
+			picture = MEX_reactionary
 		}	
 		
 		MEX_propaganda_campaign = { #Propaganda
@@ -786,7 +800,7 @@ ideas = {
 		
 		MEX_Christian_Democracy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_Christian_Democracy"}
-			picture = TEX_christian_commonwealth
+			picture = generic_christian_democracy
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
@@ -803,7 +817,7 @@ ideas = {
 		MEX_Christian_Democracy2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_Christian_Democracy"}
 			name = MEX_Christian_Democracy
-			picture = TEX_christian_commonwealth
+			picture = generic_christian_democracy
 			modifier = {
 				stability_factor = 0.05
 				war_support_factor = 0.05
@@ -1483,7 +1497,7 @@ ideas = {
 		
 		MEX_MEK_state_catholicism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_MEK_state_catholicism"}
-			picture = MEX_catholic_monarch
+			picture = MEX_catholic_monarch_idea
 			modifier = {
 				stability_factor = 0.02
 				war_support_factor = 0.02
@@ -2819,7 +2833,7 @@ ideas = {
 		}
 		MEX_revolution_military_professional1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_revolution_military_professional1"}
-			picture = generic_war_preparation
+			picture = advisors_mexico
 			modifier = {
 				experience_gain_army_factor	= 0.03
 				planning_speed = 0.02
@@ -2831,7 +2845,7 @@ ideas = {
 		}
 		MEX_revolution_military_professional2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_revolution_military_professional2"}
-			picture = generic_war_preparation
+			picture = advisors_mexico
 			modifier = {
 				experience_gain_army_factor	= 0.05
 				planning_speed = 0.04
@@ -2845,7 +2859,7 @@ ideas = {
 		}
 		MEX_revolution_military_professional3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea MEX_revolution_military_professional3"}
-			picture = generic_war_preparation
+			picture = advisors_mexico
 			modifier = {
 				experience_gain_army_factor	= 0.1
 				planning_speed = 0.06

@@ -701,7 +701,7 @@ ideas = {
 			available = {
 				has_government = market_liberal
 			}
-			picture = BBR_fairer_taxes
+			picture = generic_tax_cuts
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.05
@@ -941,7 +941,7 @@ ideas = {
 		
 		NYC_corrupt_politics = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NYC_corrupt_politics"}
-			picture = PER_Corruption
+			picture = ETH_corrupt_bureaucracy
 			modifier = {
 				political_power_cost = -0.25
 				consumer_goods_factor = 0.03

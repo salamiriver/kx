@@ -23,6 +23,7 @@ focus_tree = {
 
 		available = {
 			has_country_flag = hungary_democracy
+			is_subject = no
 		}
 		
 
@@ -728,6 +729,7 @@ focus_tree = {
 				has_government = radical_socialist
 				has_government = syndicalist
 			}
+			is_subject = no
 		}
 
 		ai_will_do = {
@@ -1664,6 +1666,7 @@ focus_tree = {
 		
 		available = {
 			has_government = national_populist
+			is_subject = no
 		}
 
 		ai_will_do = {
@@ -4139,8 +4142,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_close_air_support"
-			add_tech_bonus = {
-				bonus = 0.55
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.55
 				uses = 3
 				category = cat_battlefield_support
 			}
@@ -4167,8 +4170,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_strategic_destruction"
-			add_tech_bonus = {
-				bonus = 0.55
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.55
 				uses = 3
 				category = cat_strategic_destruction
 			}

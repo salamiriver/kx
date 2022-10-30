@@ -2061,7 +2061,6 @@ country_event = { #Abkhazia
 		transfer_state = 1080
 		1080 = { remove_claim_by = ROOT }
 		add_political_power = 25
-		give_guarantee = FROM
 		give_military_access = FROM
 		FROM = { give_military_access = ROOT }
 		diplomatic_relation = {
@@ -2566,10 +2565,8 @@ country_event = { #Azerbaijan
 					FROM = { is_in_faction = yes }
 				}
 			}
-			give_guarantee = FROM
 			give_military_access = FROM
 			FROM = { 
-				give_guarantee = ROOT
 				give_military_access = ROOT
 			}
 		}
@@ -2604,8 +2601,14 @@ country_event = { #Civil war
 	id = mtrcw.1
 	immediate = { 
 		hidden_effect = {
-			event_target:MTR_Dzhalav_Tonayev = { set_nationality = DAG }
-			event_target:MTR_Nukh_Bek_Tarkovsky = { set_nationality = DAG }
+			random_unit_leader = {
+				limit = { has_id = 49998 }
+				set_nationality = DAG
+			}
+			random_unit_leader = {
+				limit = { has_id = 49999 }
+				set_nationality = DAG
+			}
 			set_variable = { MTR_dagestan_support = 0 }
 			set_variable = { MTR_nogai_support = 0 }
 			every_owned_state = {

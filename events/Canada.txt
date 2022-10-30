@@ -3623,7 +3623,7 @@ country_event = {
 				name = "John Bracken"
 				picture = "gfx/leaders/CAN/Portrait_Canada_John_Bracken.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 		}
 	}
@@ -7457,7 +7457,7 @@ country_event = {
 	option = { # appoint Lord Mountbatten
 		name = canada.302.b
 		ai_chance = {
-			factor = 40
+			factor = 30
 		}
 		add_political_power = 50
 		if = {
@@ -7506,6 +7506,28 @@ country_event = {
 			country_event = canada.303
 		}
 	}
+	option = { # Appoint a Canadian
+		name = canada.302.e_2
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -50
+		CAN = {
+			set_country_flag = CAN_gov_gen_banting
+			add_opinion_modifier = { target = ROOT modifier = KR_approves_of_govt }
+			country_event = canada.303
+		}
+	}
+	option = { # Unite the Thrones
+		name = canada.302.f
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -50
+		CAN = {
+			country_event = canada.3031
+		}
+	}
 }
 
 # Canada gets its new Governor General
@@ -7531,6 +7553,10 @@ country_event = {
 		text = canada.303.d.mcnaughton
 		trigger = { has_country_flag = CAN_gov_gen_mcnaughton }
 	}
+	desc = {
+		text = canada.303.d.banting
+		trigger = { has_country_flag = CAN_gov_gen_banting }
+	}
 
 	is_triggered_only = yes
 
@@ -7550,28 +7576,28 @@ country_event = {
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
 				desc = "POLITICS_ALBERT_WINDSOR_DESC"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Prince_Albert.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "Prince Albert"
@@ -7595,25 +7621,25 @@ country_event = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Louis_Mountbatten.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "Lord Louis Mountbatten"
@@ -7628,37 +7654,37 @@ country_event = {
 			subtract_from_variable = { CAN_was_king_popularity = 1 }
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "John Vereker"
-				picture = "gfx/leaders/ENG/Portrait_England_John_Vereker.png"
+				picture = "gfx/leaders/CAN/Portrait_England_John_Vereker_GG.png"
 				expire = "1965.1.1"
 				ideology = paternal_autocrat_subtype
 			}
@@ -7683,25 +7709,25 @@ country_event = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = national_liberalism_subtype
+				ideology = classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = marlib_national_liberalism_subtype
+				ideology = marlib_classical_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = social_conservative_subtype
+				ideology = toryism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
 				picture = "gfx/leaders/CAN/Portrait_Canada_Andrew_McNaughton_GG.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_toryism_subtype
 			}
 			create_country_leader = {
 				name = "Andrew McNaughton"
@@ -7710,6 +7736,63 @@ country_event = {
 				ideology = paternal_autocrat_subtype
 			}
 		}
+		if = {
+			limit = { has_country_flag = CAN_gov_gen_banting }
+			add_political_power = 50
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = socdem_democratic_socialism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = classical_liberalism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = marlib_classical_liberalism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = toryism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = authdem_toryism_subtype
+			}
+			create_country_leader = {
+				name = "Frederick Banting"
+				picture = "gfx/leaders/CAN/Portrait_Canada_Frederick_Banting.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+			}
+		}
+	}
+}
+
+# King of Canada
+country_event = {
+	id = canada.3031
+	immediate = { log = "[GetDateText]: [Root.GetName]: event canada.3031" }
+	title = canada.3031.t
+	picture = GFX_report_event_royal_parade
+	desc = canada.3031.d
+	
+	is_triggered_only = yes
+
+	option = {
+		name = canada.3031.a
+		drop_cosmetic_tag = yes
+		add_stability = 0.06
 	}
 }
 
@@ -8598,6 +8681,20 @@ country_event = {
 			planning_skill = 3
 			logistics_skill = 3
 		}
+		create_corps_commander = { # Thomas George Prince
+			name = "Thomas George Prince"
+			portrait_path = "gfx/leaders/CAN/Portrait_CAN_thomas_prince.png"
+			traits = {
+				career_officer
+				commando
+				trait_engineer
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 5
+		}
 		create_navy_leader = {
 			name = "Horatio Nelson Lay"
 			portrait_path = "gfx/leaders/CAN/Portrait_Canada_Horatio_Lay.png"
@@ -9356,7 +9453,7 @@ country_event = {
 				desc = ""
 				picture = "gfx/leaders/NEE/Portrait_NEE_Kennedy_governor_general.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = authdem_junta_subtype
 				traits = {}
 			}
 			create_country_leader = {

@@ -19,8 +19,8 @@ bookmarks = {
 
 			focuses = {
 				FRA_communism_reborn
-				FRA_glory_to_the_chairman
-				FRA_france_awake
+				FRA_defender
+				FRA_who_shall_lead
 			}
 		}
 		
@@ -59,13 +59,14 @@ bookmarks = {
 			history = "AUS_KR_GATHERING_STORM_DESC"
 			ideology = social_conservative
 			ideas = {
+				AUS_financial_ties_broken
 				AUS_fatherland_front
-                                AUS_karl_habsburg
+                AUS_karl_habsburg
 			}
 			focuses = {
-				AUS_patriotize_army
-				AUS_god_wills_it
+				AUS_austro-marxism
 				AUS_one_party_empire
+				AUS_united_states
 			}
 		}
 		
@@ -94,9 +95,9 @@ bookmarks = {
 				USA_syndicalist_strike_idea
 			}
 			focuses = {
-				USA_return_to_true_americanism
-				USA_last_bastion
-				USA_by_the_people_for_the_people
+				USA_preserve_founders_vision
+				USA_everypot_a_chicken
+				USA_salute_the_chief
 			}
 		}
 
@@ -142,23 +143,23 @@ bookmarks = {
 			focuses = {
 				NFA_napoleon_restoration
 				NFA_troops_on_the_streets
-				NFA_order_of_the_french_legion
+				NFA_sede_es_petri
 			}
 		}
 
-		"LIB" = {
+		"COG" = {
 			minor = yes
-			history = "LIB_KR_GATHERING_STORM_DESC"
-			ideology = social_conservative
+			history = "COG_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
 			ideas = {
-               	LIB_Liberian_Frontier_Force
-				LIB_massive_debt
-				LIB_slavery_scandal
+				COG_Resistance_Colonial_Rule
+				COG_German_Influence 
+				COG_Desertion_Crisis
 			}
 			focuses = {
-				LIB_america_lives_once_more
-				LIB_secret_societies
-				LIB_massaquoi_liberia
+				COG_king_exile 
+				COG_new_governor_general 
+				COG_kaisers_congo
 			}
 		}
 
@@ -194,23 +195,7 @@ bookmarks = {
 			}
 		}
 
-		
-		"TRM" = {
-			minor = yes
-			history = "TRM_KR_GATHERING_STORM_DESC"
-			ideology = paternal_autocrat
-			ideas = {
-               	TRM_anti_kolchak
-				TRM_dream
-				TRM_Siberian_Army
-			}
-			focuses = {
-				TRM_tsar_soviets
-				TRM_Kolchak_Doc
-				TRM_Nationalists_Take_Over
-			}
-		}
-	
+
 		"SKM" = {
 			minor = yes
 			history = "SKM_KR_GATHERING_STORM_DESC"
@@ -227,35 +212,53 @@ bookmarks = {
 			}
 		}
 
-		"ICE" = {
+		
+		"IRE" = {
 			minor = yes
-			history = "ICE_KR_GATHERING_STORM_DESC"
-			ideology = social_democrat
+			history = "IRE_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
 			ideas = {
-				ICE_ailing_economy
-				ICE_Personal_Union 
-				ICE_CWCS
+               	IRE_Ulster_Issue
+				IRE_Unraveling_Political_Scene
+				IRE_Threat_Across_Isle
 			}
 			focuses = {
-				ICE_maintaining_the_jernishyggja 
-				ICE_rise_of_flokkur_jernissinna 
-				ICE_the_beginnings_of_a_new_saga
+				IRE_Ruby_Isle
+				IRE_Democratic_Mandate
+				IRE_Monarchy
+			}
+		}
+	
+
+		"SOM" = {
+			minor = yes
+			history = "SOM_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				SOM_iron_fist_of_warsangali
+				SOM_foodplease
+				SOM_Islamic_Socialist
+			}
+			focuses = {
+				SOM_SRSP_Victory
+				SOM_SYL_Victory
+				SOM_GSL_Victory
 			}
 		}
 
-		"COG" = {
+		"LEP" = {
 			minor = yes
-			history = "COG_KR_GATHERING_STORM_DESC"
-			ideology = authoritarian_democrat
+			history = "LEP_KR_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
 			ideas = {
-				COG_Resistance_Colonial_Rule
-				COG_German_Influence 
-				COG_Desertion_Crisis
+               	LEP_Conspicuous_Kleptocracy
+				LEP_Nanking_Kommission
+				LEP_Tsingtau_Collaboration2
 			}
 			focuses = {
-				COG_king_exile 
-				COG_new_governor_general 
-				COG_kaisers_congo
+				LEP_centralize_power
+				LEP_five_provinces_one_marshal
+				LEP_prepare_for_shitshow
 			}
 		}
 

@@ -659,6 +659,7 @@ country_event = { #Lapua Movement marchs on Parliament
 		}
 
 		set_politics = { ruling_party = national_populist elections_allowed = no }
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Bruno_Salmiala_hog_npo
 		add_ideas = FIN_Arne_Somersalo_for_npo
@@ -956,6 +957,12 @@ country_event = { #Socialists clash with Lapua Movement
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		drop_cosmetic_tag = yes
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		
 		remove_all_ministers = yes
 		add_ideas = FIN_Adolf_Taimi_hog_syn
 		add_ideas = FIN_Ville_Pessi_for_syn
@@ -1025,6 +1032,188 @@ country_event = { #Socialists clash with Lapua Movement
 			country_event = {
 				id = finland.17
 				days = 6
+			}
+			if = {
+				limit = { country_exists = KAR }
+				KAR = {
+					country_event = {
+						id = kar.26
+						days = 1
+					}
+					country_event = {
+						id = kar.72
+						days = 60
+						random_days = 40
+					}
+				}
+			}
+			random_other_country = { news_event = worldnews.415 }
+
+			create_country_leader = {
+				name = "Juho Kusti Paasikivi"
+				desc = "POLITICS_JUHO_KUSTI_PAASIKIVI_DESC"
+				picture = "gfx/leaders/FIN/Portrait_FIN_Juho_Kusti_Paasikivi.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
+		}
+	}
+	
+	option = { #The socialists take power!
+		name = finland.15.a_2
+
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = FIN_future
+					option = FIN_FUTURE_LAPUA
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = FIN_future
+					option = FIN_FUTURE_KINGDOM
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_SOCDEM
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_RED_EARTH
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_AGRARIANS
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_NATIONAL_COALITION
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_MANNERHEIM
+					}
+				}
+			}
+		}
+
+		set_country_flag = FIN_socialist_victory_flag
+
+		set_country_flag = FIN_finland_is_stable
+
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.35
+		}
+
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.1
+		}
+
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		drop_cosmetic_tag = yes
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes
+		
+		remove_all_ministers = yes
+		add_ideas = FIN_Jaakko_Kivi_hog_rso
+		add_ideas = FIN_Hannes_Pulkkinen_for_rso
+		add_ideas = FIN_Elin_Airamo_eco_rso
+		add_ideas = FLN_Ferdinand_Minnaert_sec_rso
+
+		if = {
+			limit = {
+				has_idea = FIN_mounting_dissent_idea
+			}
+			remove_ideas = FIN_mounting_dissent_idea
+		}
+
+		if = {
+			limit = {
+				gives_military_access_to = GER
+			}
+			GER = {
+				diplomatic_relation = {
+					country = FIN
+					relation = military_access
+					active = no
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				GER = {
+					gives_military_access_to = FIN
+				}
+			}
+			FIN = {
+				diplomatic_relation = {
+					country = GER
+					relation = military_access
+					active = no
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				country_exists = GER
+			}
+			diplomatic_relation = {
+				country = GER
+				relation = non_aggression_pact
+				active = no
+			}
+		}
+
+		remove_opinion_modifier = {
+			target = GER
+			modifier = KR_approves_of_govt
+		}
+
+		GER = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = KR_approves_of_govt
+			}
+		}
+
+		hidden_effect = {
+			GER_leave_mitteleuropa = yes
+			country_event = {
+				id = finland.17
+				days = 6
+			}
+			if = {
+				limit = { country_exists = KAR }
+				KAR = {
+					country_event = {
+						id = kar.26
+						days = 1
+					}
+					country_event = {
+						id = kar.72
+						days = 60
+						random_days = 40
+					}
+				}
 			}
 			random_other_country = { news_event = worldnews.415 }
 
@@ -1102,6 +1291,7 @@ country_event = { #Socialists clash with Lapua Movement
 		}
 
 		set_politics = { ruling_party = national_populist elections_allowed = no }
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Bruno_Salmiala_hog_npo
 		add_ideas = FIN_Arne_Somersalo_for_npo
@@ -1236,21 +1426,6 @@ country_event = { #Socialists clash with Lapua Movement
 			logistics_skill = 3
 		}
 
-		create_corps_commander = {
-			name = "Aarne Sihvo"
-			portrait_path = "gfx/leaders/FIN/Portrait_FIN_Aarne_Sihvo.png"
-			traits = {
-				career_officer
-				skilled_staffer
-				infantry_leader
-			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 2
-		}
-
 		add_popularity = {
 			ideology = national_populist
 			popularity = -0.2
@@ -1345,6 +1520,7 @@ country_event = { #Socialists clash with Lapua Movement
 		}
 
 		set_politics = { ruling_party = national_populist elections_allowed = no }
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Bruno_Salmiala_hog_npo
 		add_ideas = FIN_Arne_Somersalo_for_npo
@@ -1366,14 +1542,14 @@ country_event = { #Socialists clash with Lapua Movement
 			}
 			random_other_country = { news_event = worldnews.415 }
 
-			#create_country_leader = {
-			#	name = "Juho Kusti Paasikivi"
-			#	desc = "POLITICS_JUHO_KUSTI_PAASIKIVI_DESC"
-			#	picture = "gfx/leaders/FIN/Portrait_FIN_Juho_Kusti_Paasikivi.png"
-			#	expire = "1965.1.1"
-			#	ideology = paternal_autocrat_subtype
-			#	traits = { }
-			#}
+			create_country_leader = {
+				name = "Juho Kusti Paasikivi"
+				desc = "POLITICS_JUHO_KUSTI_PAASIKIVI_DESC"
+				picture = "gfx/leaders/FIN/Portrait_FIN_Juho_Kusti_Paasikivi.png"
+				expire = "1965.1.1"
+				ideology = paternal_autocrat_subtype
+				traits = { }
+			}
 		}
 	}
 }
@@ -1521,6 +1697,11 @@ country_event = { #Lapua Movement taken out and White Guard clash with socialist
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		drop_cosmetic_tag = yes
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Adolf_Taimi_hog_syn
 		add_ideas = FIN_Ville_Pessi_for_syn
@@ -1534,44 +1715,7 @@ country_event = { #Lapua Movement taken out and White Guard clash with socialist
 			remove_ideas = FIN_mounting_dissent_idea
 		}
 
-		if = {
-			limit = {
-				gives_military_access_to = GER
-			}
-			GER = {
-				diplomatic_relation = {
-					country = FIN
-					relation = military_access
-					active = no
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				GER = {
-					gives_military_access_to = FIN
-				}
-			}
-			FIN = {
-				diplomatic_relation = {
-					country = GER
-					relation = military_access
-					active = no
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				country_exists = GER
-			}
-			diplomatic_relation = {
-				country = GER
-				relation = non_aggression_pact
-				active = no
-			}
-		}
+		clear_all_relations = yes
 
 		remove_opinion_modifier = {
 			target = GER
@@ -1590,6 +1734,126 @@ country_event = { #Lapua Movement taken out and White Guard clash with socialist
 			country_event = {
 				id = finland.19
 				days = 6
+			}
+			if = {
+				limit = { country_exists = KAR }
+				KAR = {
+					country_event = {
+						id = kar.26
+						days = 1
+					}
+					country_event = {
+						id = kar.72
+						days = 60
+						random_days = 40
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #The socialists win!
+		name = finland.18.a_2
+
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_SOCDEM
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_RED_EARTH
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_AGRARIANS
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_DEMOCRACY_NATIONAL_COALITION
+					}
+					has_game_rule = {
+						rule = FIN_future
+						option = FIN_FUTURE_MANNERHEIM
+					}
+				}
+			}
+		}
+
+		set_country_flag = FIN_socialist_victory_flag
+
+		set_country_flag = FIN_finland_is_stable
+
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.35
+		}
+
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.1
+		}
+
+		set_politics = {
+			ruling_party = radical_socialist
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		drop_cosmetic_tag = yes
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes
+		remove_all_ministers = yes
+		add_ideas = FIN_Jaakko_Kivi_hog_rso
+		add_ideas = FIN_Hannes_Pulkkinen_for_rso
+		add_ideas = FIN_Elin_Airamo_eco_rso
+		add_ideas = FLN_Ferdinand_Minnaert_sec_rso
+
+		if = {
+			limit = {
+				has_idea = FIN_mounting_dissent_idea
+			}
+			remove_ideas = FIN_mounting_dissent_idea
+		}
+
+		clear_all_relations = yes
+
+		remove_opinion_modifier = {
+			target = GER
+			modifier = KR_approves_of_govt
+		}
+
+		GER = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = KR_approves_of_govt
+			}
+		}
+
+		hidden_effect = {
+			GER_leave_mitteleuropa = yes
+			country_event = {
+				id = finland.19
+				days = 6
+			}
+			if = {
+				limit = { country_exists = KAR }
+				KAR = {
+					country_event = {
+						id = kar.26
+						days = 1
+					}
+					country_event = {
+						id = kar.72
+						days = 60
+						random_days = 40
+					}
+				}
 			}
 		}
 	}
@@ -1631,6 +1895,7 @@ country_event = { #Lapua Movement taken out and White Guard clash with socialist
 		}
 
 		set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Karl_Fredrik_Wilkama_hog_ade
 		add_ideas = FIN_Aarne_Sihvo_for_ade
@@ -1931,6 +2196,8 @@ country_event = { #Finnish snap elections
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Karl_August_Fagerholm_hog_sde
 		add_ideas = FIN_Urho_Kekkonen_for_sli
@@ -2182,6 +2449,7 @@ country_event = { #Favouring the workers/farmers (Red-Earth)
 		add_political_power = -50
 
 		set_country_flag = FIN_coalition_broken_up
+		end_coalition = yes
 
 		if = {
 			limit = {
@@ -2207,7 +2475,6 @@ country_event = { #Favouring the workers/farmers (Red-Earth)
 			}
 
 			set_politics = { ruling_party = social_liberal elections_allowed = no }
-
 			if = {
 				limit = {
 					has_idea = FIN_mounting_dissent_idea
@@ -2472,7 +2739,10 @@ country_event = { #The socialist constitution
 	desc = {
 		text = finland.36.d.syndicalist
 		trigger = {
-			has_government = syndicalist
+			OR = {
+				has_government = syndicalist
+				has_government = radical_socialist
+			}
 		}
 	}
 	desc = {
@@ -2492,7 +2762,10 @@ country_event = { #The socialist constitution
 
 		if = {
 			limit = {
-				has_government = syndicalist
+				OR = {
+					has_government = syndicalist
+					has_government = radical_socialist
+				}
 			}
 			add_ideas = FIN_syndicalist_constitution_idea
 		}
@@ -2636,8 +2909,9 @@ country_event = { #The Red Guard's response
 			ideology = totalist
 			popularity = 0.35
 		}
-
+		
 		set_politics = { ruling_party = totalist elections_allowed = no }
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Tuomas_Hyrskymurto_hog_tot
 		add_ideas = FIN_Arvo_Tuominen_for_tot
@@ -2718,6 +2992,7 @@ country_event = { #Disbanding the Red Guard
 		}
 
 		set_politics = { ruling_party = totalist elections_allowed = no }
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = FIN_Tuomas_Hyrskymurto_hog_tot
 		add_ideas = FIN_Arvo_Tuominen_for_tot
@@ -2897,9 +3172,34 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 747910
 			}
-			random_unit_leader = {
-				limit = { has_id = 747910 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 747910 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 747910 }			
+					set_nationality = KAR
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_unit_leader = 747911
+			}
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 747911 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 747911 }			
+					set_nationality = KAR
+				}
 			}
 		}
 
@@ -2907,9 +3207,17 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 326
 			}
-			random_unit_leader = {
-				limit = { has_id = 326 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 326 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 326 }			
+					set_nationality = KAR
+				}
 			}
 		}
 		set_country_flag = Karl_Lennart_Oesch_dead
@@ -2918,9 +3226,17 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 327
 			}
-			random_unit_leader = {
-				limit = { has_id = 327 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 327 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 327 }			
+					set_nationality = KAR
+				}
 			}
 		}
 
@@ -2928,9 +3244,17 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 328
 			}
-			random_unit_leader = {
-				limit = { has_id = 328 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 328 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 328 }			
+					set_nationality = KAR
+				}
 			}
 		}
 
@@ -2938,9 +3262,17 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 329
 			}
-			random_unit_leader = {
-				limit = { has_id = 329 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 329 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 329 }			
+					set_nationality = KAR
+				}
 			}
 		}
 		set_country_flag = Erik_Heinrichs_dead
@@ -2949,9 +3281,17 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 330
 			}
-			random_unit_leader = {
-				limit = { has_id = 330 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 330 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 330 }			
+					set_nationality = KAR
+				}
 			}
 		}
 
@@ -2959,9 +3299,17 @@ country_event = { #The question of our military high command
 			limit = {
 				has_unit_leader = 331
 			}
-			random_unit_leader = {
-				limit = { has_id = 331 }			
-				remove_unit_leader = yes
+			effect_tooltip = {
+				random_unit_leader = {
+					limit = { has_id = 331 }			
+					remove_unit_leader = yes
+				}
+			}
+			hidden_effect = { 
+				random_unit_leader = {
+					limit = { has_id = 331 }			
+					set_nationality = KAR
+				}
 			}
 		}
 		set_country_flag = Lauri_Malmberg_dead
@@ -4534,7 +4882,10 @@ country_event = { #Russia's terms
 		ai_chance = {
 			factor = 15
 		}
-
+		remove_opinion_modifier = {
+			target = RUS
+			modifier = KR_hostile
+		}
 		ROOT = {
 			diplomatic_relation = {
 				country = FROM
@@ -4592,7 +4943,11 @@ country_event = { #Russia's terms
 
 	option = { #Accept
 		name = finland.97.a
-
+		remove_opinion_modifier = {
+			target = RUS
+			modifier = KR_hostile
+		}
+		
 		ROOT = {
 			diplomatic_relation = {
 				country = FROM
@@ -5283,10 +5638,7 @@ country_event = { #White peace with Russia
 
 	trigger = {
 		tag = FIN
-		OR = {
 			has_war_with = RUS
-			has_war_with = SOV
-		}
 		NOT = {
 			FIN = {
 				is_in_faction = yes
@@ -5294,10 +5646,17 @@ country_event = { #White peace with Russia
 		}
 		controls_state = 722
 		controls_state = 213
-		controls_state = 215
 		OR = {
-			has_country_flag = fin_rcw_karelian_invasion
+			KAR = { controls_state = 216 }
 			controls_state = 216
+		}
+		OR = {
+			KAR = { controls_state = 215 }
+		controls_state = 215
+		}
+		OR = {
+			KAR = { controls_state = 1274 }
+			controls_state = 1274
 		}
 	}
 
@@ -5369,12 +5728,29 @@ country_event = { #Finland wants to peace out?
 		ai_chance = {
 			factor = 10
 		}
-
+		every_state = {
+			limit = {
+				NOT = { is_owned_by = KAR }
+				OR = {
+					state = 722
+					state = 213
+					state = 215
+				}
+			}
+			transfer_state_to = FIN
+		}
+		if = {
+			limit = { country_exists = KAR }
+			KAR = {
+				transfer_state = 216
+				transfer_state = 1274
+			}
+		}
+		else = {
 		FIN = {
-			transfer_state = 722
-			transfer_state = 213
-			transfer_state = 215
 			transfer_state = 216
+				transfer_state = 1274
+			}
 		}
 
 		ROOT = {
@@ -5798,6 +6174,16 @@ country_event = { #Russia retreats
 country_event = { #Death of Fredrik Kaarle
 	id = finland.128
 	immediate = { log = "[GetDateText]: [Root.GetName]: event finland.128" }
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = KAR
+				}
+				KAR = {	country_event = kar.80 } #just in case
+			}
+		}
+	}
 	title = finland.128.t
 	desc = finland.128.d
 	picture = GFX_report_event_generic_sign_treaty3
@@ -5810,10 +6196,11 @@ country_event = { #Death of Fredrik Kaarle
 
 	option = {
 		name = finland.128.a
-
+		set_country_flag = Frederik_Kaarle_dead		
 		create_country_leader = {
 			name = "Väinö I"
 			picture = "gfx/leaders/FIN/Portrait_FIN_Vaino_I.png"
+			desc = "POLITICS_VAINO_DESC"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
 		}
@@ -5834,10 +6221,11 @@ country_event = { #Death of Fredrik Kaarle (after they've been chased out of the
 	}
 
 	option = {
-
+		set_country_flag = Frederik_Kaarle_dead				
 		create_country_leader = {
 			name = "Väinö I"
 			picture = "gfx/leaders/FIN/Portrait_FIN_Vaino_I.png"
+			desc = "POLITICS_VAINO_DESC"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
 		}

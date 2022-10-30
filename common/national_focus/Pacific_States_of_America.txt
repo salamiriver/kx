@@ -274,9 +274,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_deWitt_in_Charge"
 			add_ideas = CAL_deWitt_plan_idea_1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = Dewitt_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_mass_assault
 			}
@@ -462,9 +462,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_kruger_doctrine"
 			add_ideas = CAL_kruger_doctrine_idea
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_mobility_doctrine
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -486,9 +486,9 @@ focus_tree = {
 				remove_idea = CAL_kruger_doctrine_idea
 				add_idea = CAL_kruger_doctrine_idea_2
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_mobility_doctrine
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -624,9 +624,9 @@ focus_tree = {
 				remove_idea = CAL_kruger_doctrine_idea_3_both
 				add_idea = CAL_kruger_doctrine_idea_4
 				}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_mobility_doctrine
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -692,9 +692,9 @@ focus_tree = {
 				add_idea = CAL_kruger_doctrine_idea_4_both
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_mobility_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -719,9 +719,9 @@ focus_tree = {
 				remove_idea = CAL_kruger_doctrine_idea_4_both
 				add_idea = CAL_kruger_doctrine_idea_5
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_mobility_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 3
 				category = cat_mobile_warfare
 			}
@@ -745,9 +745,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_mcnair_report"
 			add_ideas = CAL_mcnair_idea
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_mcnair_doctrine
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -959,7 +959,7 @@ focus_tree = {
 		relative_position_id = CAL_mcnair_report
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_bombing_support"
-			add_equipment_to_stockpile = { type = nav_bomber_equipment amount = 40 }
+			add_equipment_to_stockpile = { type = small_plane_naval_bomber_airframe amount = 40 }
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
@@ -1000,9 +1000,9 @@ focus_tree = {
 		relative_position_id = CAL_activate_the_Western_Defense_Command
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_Marshall_in_command"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_Extensive_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1059,9 +1059,9 @@ focus_tree = {
 					add_idea = CAL_Marshall_plan_idea_3_both
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_Extensive_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -1123,9 +1123,9 @@ focus_tree = {
 					add_idea = CAL_Marshall_plan_idea_3_both
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAL_Extensive_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -1571,7 +1571,7 @@ focus_tree = {
 
 	focus = {# Great White Fleet
 		id = CAL_great_white_fleet
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_generic_naval_fleet_in_being
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_navy
@@ -1605,8 +1605,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_great_white_fleet"
-			add_tech_bonus = {
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
 				uses = 2
 				category = cat_fleet_in_being
 			}
@@ -1615,7 +1615,7 @@ focus_tree = {
 
 	focus = {# Protect American Trade
 		id = CAL_protect_american_trade
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_generic_trade_interdiction
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_navy
@@ -1660,7 +1660,7 @@ focus_tree = {
 
 	focus = {# Carrier Projects
 		id = CAL_carrier_projects
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_goal_generic_carrier_aircraft
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_navy
@@ -1808,7 +1808,7 @@ focus_tree = {
 
 	focus = {# Light Cruisers
 		id = CAL_light_cruisers
-		icon = GFX_goal_EGY_sultan_fleet
+		icon = GFX_goal_generic_naval_cruiser2
 		cost = 5.00
 		prerequisite = {
 			focus = CAL_carrier_projects
@@ -2470,8 +2470,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_army_air_support"
-			add_tech_bonus = {
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
 				uses = 1
 				category = cat_battlefield_support
 			}
@@ -2534,8 +2534,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_air_supremcy"
-			add_tech_bonus = {
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
 				uses = 2
 				category = cat_strategic_destruction
 			}
@@ -2564,7 +2564,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 		}
 	}
@@ -3589,14 +3589,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_naval_project"
 			add_equipment_to_stockpile = {
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = 350
 			producer = CAL
 			}
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 			random_owned_controlled_state = {
 				if = {
@@ -9732,8 +9732,8 @@ focus_tree = {
 			}
 			set_country_flag = CAL_court_long
 			country_event = {
-			id = pacificstates.400
-			days = 2
+				id = pacificstates.400
+				days = 2
 			}
 		}
 	}
@@ -17508,6 +17508,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = CAL_Norton_Legacy
+			hidden_effect = {
+				country_event = {
+					id = KX_california.28
+					days = 33
+				}
+			}
 		}
 	}
 	focus = {
@@ -18115,9 +18121,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 200 producer = USA }
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 200 producer = USA }
 				add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_0
+				type = medium_plane_airframe
 				amount = 200
 				producer = USA
 			}
@@ -18158,9 +18164,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 200 producer = USA }
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 200 producer = USA }
 				add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_0
+				type = medium_plane_airframe
 				amount = 200
 				producer = USA
 			}

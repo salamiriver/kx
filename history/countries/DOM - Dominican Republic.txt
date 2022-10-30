@@ -19,6 +19,8 @@ if = {
 		early_ship_hull_light = 1
 		basic_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		panzerschiffe = 1
 		
 		basic_naval_mines = 1
 		mtg_transport = 1
@@ -46,6 +48,20 @@ if = {
 		transport = 1
 	}
 }
+
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		#DOM_BBA_air_variants = yes
+		#set_air_oob = "DOM_air_bba"
+
+		
+	else = {
+		#set_air_oob = "DOM_air_legacy"
+		
+	}
+}
+
 
 add_opinion_modifier = { target = HAI modifier = HAI_border_dispute }
 add_opinion_modifier = { target = HAI modifier = DOM_anti_haitian_1 }

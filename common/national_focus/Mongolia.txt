@@ -92,7 +92,7 @@ focus_tree = {
 					name = air_bonus
 					bonus = 0.5
 					uses = 3
-					category = fighter_techs
+					category = light_fighter
 					category = light_air
 					category = medium_air
 					category = heavy_air
@@ -1152,6 +1152,7 @@ focus_tree = {
 			add_state_claim = 619
 			hidden_effect = {
 				load_oob = "MON_help_borthers"
+				set_global_flag = northwest_conflict_begun
 			}
 			XSM = {
 				country_event = {
@@ -1224,6 +1225,8 @@ focus_tree = {
 			hidden_effect={
 				custom_effect_tooltip = MON_dissident_decisions
 				unlock_decision_category_tooltip = MON_dissident_decisions
+				clr_global_flag = northwest_conflict_begun
+				set_global_flag = northwest_conflict_ended
 			}
 		}
 	}
@@ -2547,10 +2550,7 @@ focus_tree = {
 				}
 				729 = {
 					owner = {
-						OR = {
-							is_chinese_tag = yes
-							tag = AOG
-						}
+						is_chinese_tag = yes
 					}
 				}
 			}
@@ -2633,8 +2633,8 @@ focus_tree = {
 										}
 								}
 							AND = {
-									has_war_with = AOG
-									AOG = {
+									has_war_with = LEP
+									LEP = {
 											owns_state = 743
 										}
 								}
@@ -2680,10 +2680,10 @@ focus_tree = {
 										}
 								}
 							AND = {
-									AOG = {
+									LEP = {
 											is_subject_of = MON
 										}
-									AOG = {
+									LEP = {
 											owns_state = 743
 										}
 								}
@@ -3491,7 +3491,6 @@ focus_tree = {
 							is_core_of = LEP
 							is_core_of = QIE
 							is_core_of = CHI
-							is_core_of = LEP
 							is_core_of = ANQ
 							is_core_of = HNN
 							is_core_of = GXC
@@ -3526,7 +3525,6 @@ focus_tree = {
 							is_core_of = LEP
 							is_core_of = QIE
 							is_core_of = CHI
-							is_core_of = LEP
 							is_core_of = ANQ
 							is_core_of = HNN
 							is_core_of = GXC
@@ -3654,7 +3652,6 @@ focus_tree = {
 							is_core_of = LEP
 							is_core_of = QIE
 							is_core_of = CHI
-							is_core_of = LEP
 							is_core_of = ANQ
 							is_core_of = HNN
 							is_core_of = GXC
@@ -4012,9 +4009,9 @@ focus_tree = {
 				}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus MON_air_doctrines_I"
-					add_tech_bonus = {
+					add_doctrine_cost_reduction = {
 							name = air_doctrine_bonus
-							bonus = 0.5
+							cost_reduction = 0.5
 							uses = 2
 							category = air_doctrine
 						}
@@ -4036,9 +4033,9 @@ focus_tree = {
 				}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus MON_air_doctrines_II"
-					add_tech_bonus = {
+					add_doctrine_cost_reduction = {
 							name = air_doctrine_bonus
-							bonus = 0.5
+							cost_reduction = 0.5
 							uses = 2
 							category = air_doctrine
 						}
@@ -4064,7 +4061,7 @@ focus_tree = {
 							name = fighter_techs_bonus
 							bonus = 0.5
 							uses = 3
-							category = fighter_techs
+							category = light_fighter
 						}
 				}
 
@@ -4737,7 +4734,7 @@ focus_tree = {
 	
 	focus = {
 		id = MON_expand_trans_siberian
-		icon = BAY_RAILWAYS
+		icon = GFX_BAY_RAILWAYS
 		
 		cost = 8
 		x = 3

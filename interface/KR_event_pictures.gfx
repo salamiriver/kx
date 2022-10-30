@@ -348,6 +348,76 @@ spriteTypes = {
 		name = "GFX_report_event_ARG_quiroga"
 		texturefile = "gfx/event_pictures/South_America/Argentina/quiroga.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_generic_south_america_map"
+		texturefile = "gfx/event_pictures/South_America/Argentina/report_event_generic_south_america_map.png"
+	}
+
+	## ARM - Armenia
+	spriteType = {
+		name = "GFX_report_event_ARM_Keresteciyan"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_Keresteciyan.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_Karabekir"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_Karabekir.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_Karabekir2"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_Karabekir2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_Karabekir3"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_Karabekir3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_army"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_army.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_army_training"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_army_training.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_country_map"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_country_map.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_demonstration"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_demonstration.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_demonstration_city"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_demonstration_city.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_demonstration_socialist"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_demonstration_socialist.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_landscape_mountain"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_landscape_mountain.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_landscape_mountain2"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_landscape_mountain2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_propaganda_socialist"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_propaganda_socialist.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_refugees"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_refugees.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_construction_Tsitsernakaberd"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_construction_Tsitsernakaberd.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ARM_etchmiadzin"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_etchmiadzin.png"
+	}
 
 	## AST - Australasia
 	spriteType = {
@@ -2496,10 +2566,30 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/East_Asia/China/doihara.png"
 	}
 
-	## FIN - Finland
+	## FIN - Finland & KAR - Karelia
 	spriteType  = {
 		name = "GFX_report_event_FIN_white_guard_intro"
 		texturefile = "gfx/event_pictures/Europe/Finland/FIN_white_guard.png"
+	}
+	spriteType  = {
+		name = "GFX_report_event_FIN_Kaarlo_Linkola"
+		texturefile = "gfx/event_pictures/Europe/Finland/FIN_Kaarlo_Linkola.png"
+	}
+	spriteType  = {
+		name = "GFX_report_event_KAR_paavo_ahava"
+		texturefile = "gfx/event_pictures/Europe/Finland/KAR_paavo_ahava.png"
+	}
+	spriteType  = {
+		name = "GFX_report_event_KAR_tver_karelians"
+		texturefile = "gfx/event_pictures/Europe/Finland/KAR_tver_karelians.png"
+	}
+	spriteType  = {
+		name = "GFX_report_event_KAR_ukki"
+		texturefile = "gfx/event_pictures/Europe/Finland/KAR_ukki.png"
+	}
+	spriteType  = {
+		name = "GFX_report_event_KAR_nature"
+		texturefile = "gfx/event_pictures/Europe/Finland/KAR_nature.png"
 	}
 	spriteType  = {
 		name = "GFX_report_event_FIN_black_monday"
@@ -4180,6 +4270,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Africa/National_France/Petain1.png"
 	}
 	spriteType = {
+		name = "GFX_report_event_NFA_event_Petain2"
+		texturefile = "gfx/event_pictures/Africa/National_France/Petain2.png"
+	}
+	spriteType = {
 		name = "GFX_report_event_NFA_event_Parade"
 		texturefile = "gfx/event_pictures/Africa/National_France/Parade.png"
 	}
@@ -4370,6 +4464,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_NFA_ac_vault"
 		texturefile = "gfx/event_pictures/Africa/National_France/ac_vault.png"
+	
+	}
+	spriteType = {
+		name = "GFX_event_NFA_flandin"
+		texturefile = "gfx/event_pictures/Africa/National_France/GFX_event_NFA_flandin.png"
+	}
+	spriteType = {
+		name = "GFX_event_NFA_Petain_Sitting"
+		texturefile = "gfx/event_pictures/Africa/National_France/GFX_event_NFA_Petain_Sitting.png"
 	}
 
 	## NOR - Norway
@@ -4864,6 +4967,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Europe/Ottomans/OTT_Enver_Cigarettes.png"
 	}
 	spriteType = {
+		name = "GFX_OTT_Kadroists"
+		texturefile = "gfx/event_pictures/Europe/Ottomans/OTT_Kadroists.png"
+	}
+	spriteType = {
 		name = "GFX_report_event_OTT_Beirut_Assault"
 		texturefile = "gfx/event_pictures/Europe/Ottomans/report_event_OTT_Beirut_Assault.png"
 	}
@@ -4923,6 +5030,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_OTT_war_desert"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_OTT_war_desert.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TUR_fevzi_plan"
+		texturefile = "gfx/event_pictures/Europe/Ottomans/report_event_TUR_fevzi_plan.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_cigiltepe"
+		texturefile = "gfx/event_pictures/Europe/Ottomans/TUR_cigiltepe.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_Omer"
+		texturefile = "gfx/event_pictures/Europe/Ottomans/TUR_Omer.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_OSP"
+		texturefile = "gfx/event_pictures/Europe/Ottomans/TUR_OSP.png"
+	}
+	spriteType = {
+		name = "GFX_TUR_KMT"
+		texturefile = "gfx/event_pictures/Europe/Ottomans/TUR_KMT.png"
 	}
 
 	## PAP - Papal States
@@ -5873,6 +6000,10 @@ spriteTypes = {
 		name = "GFX_report_event_SCA_schleswig_holstein"
 		texturefile = "gfx/event_pictures/Europe/Scandinavia/SCA_schleswig_holstein.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_SCA_three_brothers"
+		texturefile = "gfx/event_pictures/Europe/Scandinavia/SCA_three_brothers.png"
+	}
 
 	## SIA - Siam
 	# Posters
@@ -6274,6 +6405,50 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_SOM_Barre"
 		texturefile = "gfx/event_pictures/Africa/Somalia/Somalia_011.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Siad_Fun"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Siad_Fun.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Haaji"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Haaji.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Charge"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Charge.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Barre_Profile"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Barre_Profile.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Cismaan"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Cismaan.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Djibouti"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Djibouti.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Yemen"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Yemen.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Sultan"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Sultan.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_Latinization"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_Latinization.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_SYL_Group"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_SYL_Group.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_SOM_SYL_Meeting"
+		texturefile = "gfx/event_pictures/Africa/Somalia/SOM_SYL_Meeting.png"
 	}
 
 	## SPR - Spain

@@ -1670,6 +1670,12 @@ country_event = { #Tammany Takeover
 			NYC_Jeremiah_T_Mahoney_eco_sco
 			NYC_Carmine_DeSapio_sec_sco
 		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -4392,11 +4398,15 @@ country_event = { # Harlem Coup
 		set_politics = {
 			ruling_party = totalist
 		}
+		every_unit_leader = {
+			limit = { has_trait = NYC_mobster }
+			retire = yes
+		}
 		create_field_marshal = {
 			name = "Bumpy Johnson"
 			portrait_path = "gfx/leaders/NYC/Portrait_NYC_Bumpy_Johnson.png"
 			traits = {
-				old_guard inflexible_strategist offensive_doctrine
+				old_guard inflexible_strategist offensive_doctrine NYC_mobster
 			}
 			skill = 3
 			attack_skill = 3
@@ -4408,6 +4418,7 @@ country_event = { # Harlem Coup
 			name = "Finlay Hoskins"
 			portrait_path = "gfx/leaders/NYC/Portrait_NYC_Finlay_Hoskins.png"
 			traits = {
+				NYC_mobster
 			}
 			skill = 1
 			attack_skill = 1
@@ -4419,6 +4430,7 @@ country_event = { # Harlem Coup
 			name = "Mayme Hatcher Johnson"
 			portrait_path = "gfx/leaders/NYC/Portrait_NYC_Mayme_Hatcher_Johnson.png"
 			traits = {
+				NYC_mobster
 			}
 			skill = 1
 			attack_skill = 1
@@ -4430,6 +4442,7 @@ country_event = { # Harlem Coup
 			name = "Dillard Morrison"
 			portrait_path = "gfx/leaders/NYC/Portrait_NYC_Dillard_Morrison.png"
 			traits = {
+				NYC_mobster
 			}
 			skill = 1
 			attack_skill = 1
@@ -4454,7 +4467,7 @@ country_event = { # Harlem Coup
 			picture = "gfx/leaders/NYC/Portrait_NYC_Casper_Holstein.png"
 			expire = "1965.1.1"
 			ideology = caponism_subtype
-			traits = { }
+			traits = { hero_harlem }
 		}
         create_country_leader = {
             name = "Stephanie St. Clair"
@@ -4462,11 +4475,7 @@ country_event = { # Harlem Coup
 			picture = "gfx/leaders/NYC/Portrait_NYC_Stephanie_St._Clair.png"
 			expire = "1965.1.1"
 			ideology = marlib_crime_syndicate_subtype
-			traits = { }
-		}
-		every_unit_leader = {
-			limit = { has_trait = NYC_mobster }
-			retire = yes
+			traits = { racket_queen }
 		}
 		BBR = {
 			country_event = {
@@ -4536,7 +4545,7 @@ country_event = { # Black Hitler Guy (St Clair Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2226.a
-		
+		add_political_power = -10
 	}
 }
 country_event = { # Firebrand (Holstein Specific)
@@ -4552,7 +4561,7 @@ country_event = { # Firebrand (Holstein Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2227.a
-		
+		add_political_power = 25
 	}
 }
 country_event = { # Spending Spree (Holstein Specific)
@@ -4568,7 +4577,7 @@ country_event = { # Spending Spree (Holstein Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2228.a
-		
+                add_political_power = 75
 	}
 }
 country_event = { # Kidnapping (Holstein Specific)
@@ -4584,7 +4593,7 @@ country_event = { # Kidnapping (Holstein Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2229.a
-		
+                add_stability = -0.05
 	}
 }
 country_event = { # Garvey Visit (Holstein Specific)
@@ -4600,7 +4609,8 @@ country_event = { # Garvey Visit (Holstein Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2230.a
-		
+                add_political_power = 25
+		add_stability = 0.05	
 	}
 }
 country_event = { # Anti Corruption (St Clair Specific)
@@ -4616,7 +4626,8 @@ country_event = { # Anti Corruption (St Clair Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2231.a
-		
+                add_political_power = -25
+		add_stability = 0.05
 	}
 }
 country_event = { # Mobster Feminisim (St Clair Specific)
@@ -4631,8 +4642,8 @@ country_event = { # Mobster Feminisim (St Clair Specific)
 	fire_only_once = yes
 
 	option = { # Yes
-		name = NYC_flavor.2232.a
-		
+		name = NYC_flavor.2232.a                
+                add_stability = 0.05
 	}
 }
 country_event = { # Gambler's Paradise (Shared)
@@ -4648,7 +4659,7 @@ country_event = { # Gambler's Paradise (Shared)
 
 	option = { # Yes
 		name = NYC_flavor.2233.a
-		
+		add_political_power = 50
 	}
 }
 country_event = { # Danish Friends (Holstein Specific)
@@ -4686,7 +4697,7 @@ country_event = { # Harlem Renaissance (Shared )
 
 	option = { # Yes
 		name = NYC_flavor.2235.a
-		
+		add_political_power = 50
 	}
 }
 country_event = { # Race Equality (Shared )
@@ -4702,7 +4713,7 @@ country_event = { # Race Equality (Shared )
 
 	option = { # Yes
 		name = NYC_flavor.2236.a
-		
+		add_political_power = 50
 	}
 }
 country_event = { # Darling Image (St Clair Specific)
@@ -4718,7 +4729,7 @@ country_event = { # Darling Image (St Clair Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2237.a
-		
+		add_political_power = 15
 	}
 }
 country_event = { # Revenge (St Clair Specific)
@@ -4734,7 +4745,7 @@ country_event = { # Revenge (St Clair Specific)
 
 	option = { # Yes
 		name = NYC_flavor.2238.a
-		
+		add_political_power = 35
 	}
 }
 country_event = { # Fate of America
@@ -4958,7 +4969,7 @@ country_event = { #Hubert Harrison(For Hubert/Crosswaith)
 			picture = "gfx/leaders/NYC/Portrait_NYC_Hubert_Harrison.png"
 			expire = "1965.1.1"
 			ideology = syn_georgism_subtype
-			traits = { }
+			traits = { black_socrates }
 		}
 		hidden_effect = {
                         drop_cosmetic_tag = yes
@@ -5004,7 +5015,7 @@ country_event = { # Crosswaith or Harrison (For Hubert/Crosswaith)
 			picture = "gfx/leaders/NYC/Portrait_NYC_Frank_Rudolph_Crosswaith.png"
 			expire = "1965.1.1"
 			ideology = de_leonism_subtype
-			traits = { }
+			traits = { negro_debs }
 		}
 	}
 }
@@ -7116,6 +7127,7 @@ country_event = { # Frank Sinatra #2
 			portrait_path = "gfx/leaders/NYC/Portrait_NYC_Frank_Sinatra.png"
 			traits = {
 				politically_connected
+				bandmaster
 			}
 			skill = 1
 			attack_skill = 2
