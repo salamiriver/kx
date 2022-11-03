@@ -17709,7 +17709,7 @@ focus_tree = {
 	focus = {
 		id = CAL_million_sons_saved
 		icon = GFX_goal_CAL_Saving_Million_Sons
-		cost = 5.00
+		cost = 1
 		available = {	
 			has_country_flag = CAL_million_sons
                 }
@@ -17729,655 +17729,375 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = CAL_industry_for_million_sons
-		icon = GFX_goal_CAL_Sons_Economy
-		cost = 1
-		prerequisite = {
-			focus = CAL_million_sons_saved
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -4
-		y = 1
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		  }
-	     }
-	}
-	focus = {
-		id = CAL_build_up_capital
-		icon = GFX_goal_CAL_Sacramento
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_industry_for_million_sons
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -3
-		y = 2
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_political_power = 100
-		}
-	}
-	focus = {
-		id = CAL_build_up_lesser_fortunate_areas
-		icon = GFX_goal_CAL_Rations_Poor
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_industry_for_million_sons
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -5
-		y = 2
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-                add_stability = 0.10
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-	      }
-	}
-	focus = {
-		id = CAL_towns_into_cities
-		icon = GFX_goal_CAL_Los_Angeles_Hall_Tower
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_build_up_lesser_fortunate_areas
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -5
-		y = 3
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-                add_stability = 0.05
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-	      }
-	}
-	focus = {
-		id = CAL_cities_into_utopia
-		icon = GFX_goal_CAL_Road_Utopia
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_build_up_capital
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -3
-		y = 3
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-		}
-	}
-	focus = {
-		id = CAL_prospering_economy_for_prospering_citizens
-		icon = GFX_goal_CAL_Marshall_Plan
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_cities_into_utopia
-		}
-		prerequisite = {
-			focus = CAL_towns_into_cities
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -4
-		y = 4
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-                        add_ideas = CAL_economy_no_greed 
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-		}
-	}
-	focus = {
-		id = CAL_army_without_million_sons
-		icon = GFX_goal_CAL_Air_Boy
-		cost = 1
-		prerequisite = {
-			focus = CAL_million_sons_saved
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 4
-		y = 1
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_political_power = 100
-			army_experience = -35
-		}
-	}
-	focus = {
-		id = CAL_necessary_demobilization
-		icon = GFX_goal_CAL_Mobilization_Recruitment
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_army_without_million_sons
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 5
-		y = 2
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_manpower = -15000
-		}
-	}
-	focus = {
-		id = CAL_found_RAND
-		icon = GFX_goal_CAL_Found_Rand
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_necessary_demobilization
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 5
-		y = 3
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_research_slot = 1
-                        country_event = {
-                              id = pacificstates.250
-                              days = 1
-                        }
-			add_tech_bonus = {
-				name = infantry_bonus
-				bonus = 1
-				uses = 2
-				category = infantry_weapons
-			}
-		}
-	}
-	focus = {
-		id = CAL_lessen_need_for_mils
-		icon = GFX_goal_CAL_Cope
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_army_without_million_sons
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 3
-		y = 2
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_political_power = 35
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-	     }
-	}
-	focus = {
-		id = CAL_necessarily_enlarged_airforce
-		icon = GFX_goal_CAL_Air_Force_Lady
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_lessen_need_for_mils
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 3
-		y = 3
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			random_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_equipment_to_stockpile = { type = small_plane_airframe amount = 200 producer = USA }
-				add_equipment_to_stockpile = {
-				type = medium_plane_airframe
-				amount = 200
-				producer = USA
-			}
-		}
-	}
-	focus = {
-		id = CAL_an_army_withour_our_sons
-		icon = GFX_goal_CAL_Peace_Army
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_necessarily_enlarged_airforce
-		}
-		prerequisite = {
-			focus = CAL_found_RAND
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 4
-		y = 4
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-                        decrease_conscription = yes
-                        add_ideas = CAL_army_without_sons
-			random_owned_state = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_equipment_to_stockpile = { type = small_plane_airframe amount = 200 producer = USA }
-				add_equipment_to_stockpile = {
-				type = medium_plane_airframe
-				amount = 200
-				producer = USA
-			}
-		}
-	}
-	focus = {
-		id = CAL_prosperity_for_million_sons
-		icon = GFX_goal_CAL_California_Prosperity
-		cost = 1
-		prerequisite = {
-			focus = CAL_million_sons_saved
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 0
-		y = 1
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_political_power = 100
-		}
-	}
-	focus = {
-		id = CAL_no_need_for_political_greed
-		icon = GFX_goal_CAL_Target_Politicians
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_prosperity_for_million_sons
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 1
-		y = 2
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_political_power = 25
-                        add_ideas = CAL_Political_greed_vanquished
-		}
-	}
-	focus = {
-		id = CAL_get_rid_of_ogliarchs
-		icon = GFX_goal_CAL_Dethrone_Oligarchs
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_no_need_for_political_greed
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 1
-		y = 3
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-		random_owned_state = {
-			limit = {
-				is_core_of = CAL
-				is_controlled_by = CAL
-				industrial_complex > 0
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		   }
-			add_ideas = CAL_ogliarchs_flee
-		}
-	}
-	focus = {
-		id = CAL_no_need_for_radicals
-		icon = GFX_goal_CAL_Pierce_Heart
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_prosperity_for_million_sons
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -1
-		y = 2
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_political_power = 100
-			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = -0.15
-			}
-			add_popularity = {
-				ideology = radical_socialist
-				popularity = -0.15
-			}
-			add_popularity = {
-				ideology = national_populist
-				popularity = -0.15
-			}
-		}
-	}
-	focus = {
-		id = CAL_cut_corruption_off
-		icon = GFX_goal_CAL_Corrupt_Capital
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_no_need_for_radicals
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-			has_completed_focus = CAL_get_rid_of_ogliarchs
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = -1
-		y = 3
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_stability = 0.05
-			swap_ideas = {
-				remove_idea = CAL_ogliarchs_flee
-				add_idea = CAL_corruption_eradicated
-			}
-		}
-	}
-	focus = {
-		id = CAL_power_in_right_hands
-		icon = GFX_goal_CAL_Good_Army
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_cut_corruption_off
-		}
-		prerequisite = {
-			focus = CAL_get_rid_of_ogliarchs
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 0
-		y = 4
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_ideas = CAL_power_in_hands
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		id = CAL_arnold_my_beloved
+		id = CAL_general_of_the_airforce
 		icon = GFX_goal_CAL_Savior_Arnold
-		cost = 5.00
+		cost = 5
 		prerequisite = {
-			focus = CAL_power_in_right_hands
-		}
-		prerequisite = {
-			focus = CAL_an_army_withour_our_sons
+			focus = CAL_million_sons_saved
 		}
 		available = {	
-		   OR = {
 			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_million_sons_saved
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_one_unified_airforce
+		icon = GFX_goal_CAL_Air_Boy
+		cost = 5
+		prerequisite = {
+			focus = CAL_general_of_the_airforce
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_general_of_the_airforce
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_encourage_use_civilian_expertise
+		icon = GFX_goal_CAL_Sons_Economy
+		cost = 5
+		prerequisite = {
+			focus = CAL_one_unified_airforce
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_general_of_the_airforce
+		x = -1
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_legacy_of_aeronautical_division
+		icon = GFX_goal_CAL_Air_Force_Lady
+		cost = 5
+		prerequisite = {
+			focus = CAL_one_unified_airforce
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_general_of_the_airforce
+		x = 1
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_end_corruption_in_all_branches
+		icon = GFX_goal_CAL_Pierce_Heart
+		cost = 5
+		prerequisite = {
+			focus = CAL_legacy_of_aeronautical_division
+		}
+		prerequisite = {
+			focus = CAL_encourage_use_civilian_expertise
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_general_of_the_airforce
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_found_the_RAND_corporation
+		icon = GFX_goal_CAL_Found_Rand
+		cost = 5
+		prerequisite = {
+			focus = CAL_general_of_the_airforce
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_general_of_the_airforce
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_reinforce_airforce_research
+		icon = GFX_goal_CZE_air_industry
+		cost = 5
+		prerequisite = {
+			focus = CAL_found_the_RAND_corporation
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
+		}
+		relative_position_id = CAL_general_of_the_airforce
+		x = -2
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_lift_up_our_poor
+		icon = GFX_goal_CAL_Rations_Poor
+		cost = 5
+		prerequisite = {
+			focus = CAL_americas_finest_soldier
+			focus = CAL_general_of_the_airforce
+		}
+		relative_position_id = CAL_million_sons_saved
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_onto_the_road_to_prosperity
+		icon = GFX_goal_CAL_California_Prosperity
+		cost = 5
+		prerequisite = {
+			focus = CAL_lift_up_our_poor
+		}
+		relative_position_id = CAL_million_sons_saved
+		x = 0
+		y = 4
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_americas_finest_soldier
+		icon = GFX_goal_CAL_Savior_Marshall
+		cost = 5
+		prerequisite = {
+			focus = CAL_million_sons_saved
+		}
+		available = {
 			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
+		}
+		relative_position_id = CAL_million_sons_saved
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_modernize_and_expand_army
+		icon = GFX_goal_CAL_Good_Army
+		cost = 5
+		prerequisite = {
+			focus = CAL_americas_finest_soldier
+		}
+		available = {
+			has_country_leader = { ruling_only = yes name = "George Marshall"}
+		}
+		relative_position_id = CAL_americas_finest_soldier
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_study_infantry_in_battle
+		icon = GFX_goal_CAL_Cope
+		cost = 5
+		prerequisite = {
+			focus = CAL_modernize_and_expand_army
+		}
+		available = {
+			has_country_leader = { ruling_only = yes name = "George Marshall"}
+		}
+		relative_position_id = CAL_americas_finest_soldier
+		x = 1
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_inspire_the_troops
+		icon = GFX_goal_CAL_Mobilization_Recruitment
+		cost = 5
+		prerequisite = {
+			focus = CAL_modernize_and_expand_army
+		}
+		available = {
+			has_country_leader = { ruling_only = yes name = "George Marshall"}
+		}
+		relative_position_id = CAL_americas_finest_soldier
+		x = -1
+		y = 2
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_bolster_american_red_cross
+		icon = GFX_goal_CAL_Los_Angeles_Hall_Tower
+		cost = 5
+		prerequisite = {
+			focus = CAL_inspire_the_troops
+		}
+		prerequisite = {
+			focus = CAL_study_infantry_in_battle
+		}
+		available = {
+			has_country_leader = { ruling_only = yes name = "George Marshall"}
+		}
+		relative_position_id = CAL_americas_finest_soldier
+		x = 0
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_introduce_marshall_plan
+		icon = GFX_goal_CAL_Marshall_Plan
+		cost = 5
+		prerequisite = {
+			focus = CAL_americas_finest_soldier
+		}
+		available = {	
+			has_country_leader = { ruling_only = yes name = "George Marshall"}
+		}
+		relative_position_id = CAL_americas_finest_soldier
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_pacifician_new_deal
+		icon = GFX_goal_TEX_Little_New_Deal
+		cost = 5
+		prerequisite = {
+			focus = CAL_introduce_marshall_plan
+		}
+		available = {
+			has_country_leader = { ruling_only = yes name = "George Marshall"}
+		}
+		relative_position_id = CAL_americas_finest_soldier
+		x = 2
+		y = 3
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
+	        }
+	}
+	focus = {
+		id = CAL_organizers_of_peace
+		icon = GFX_goal_CAL_Sacramento
+		cost = 5
+                mutually_exclusive = {
+                        focus = CAL_end_tyranny_in_the_east
+                }
+		prerequisite = {
+			focus = CAL_end_corruption_in_all_branches
+			focus = CAL_bolster_american_red_cross
+		}
+		prerequisite = {
+			focus = CAL_pacifician_new_deal
+			focus = CAL_reinforce_airforce_research
+		}
+		prerequisite = {
+			focus = CAL_onto_the_road_to_prosperity
 		}
 		relative_position_id = CAL_million_sons_saved
 		x = 1
@@ -18389,29 +18109,25 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_stability = 0.09
-			hidden_effect = {
-				remove_ideas = CAL_economy_no_greed  
-				remove_ideas = CAL_power_in_hands 
-			}
-			add_ideas = CAL_arnold_beloved
-		}
+	        }
 	}
 	focus = {
-		id = CAL_marshall_bros
-		icon = GFX_goal_CAL_Savior_Marshall
-		cost = 5.00
+		id = CAL_end_tyranny_in_the_east
+		icon = GFX_goal_CAL_Target_Politicians
+		cost = 5
+                mutually_exclusive = {
+                        focus = CAL_organizers_of_peace
+                }
 		prerequisite = {
-			focus = CAL_power_in_right_hands
+			focus = CAL_end_corruption_in_all_branches
+			focus = CAL_bolster_american_red_cross
 		}
 		prerequisite = {
-			focus = CAL_prospering_economy_for_prospering_citizens
+			focus = CAL_pacifician_new_deal
+			focus = CAL_reinforce_airforce_research
 		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
+		prerequisite = {
+			focus = CAL_onto_the_road_to_prosperity
 		}
 		relative_position_id = CAL_million_sons_saved
 		x = -1
@@ -18423,41 +18139,6 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_stability = 0.09
-			hidden_effect = { 
-				remove_ideas = CAL_army_without_sons 
-			}
-			add_ideas = CAL_marshalls_economy
-		}
-	}
-	focus = {
-		id = CAL_pacific_preserved
-		icon = GFX_goal_CAL_Pacific_Dreaming
-		cost = 5.00
-		prerequisite = {
-			focus = CAL_arnold_my_beloved
-		}
-		prerequisite = {
-			focus = CAL_marshall_bros
-		}
-		available = {	
-		   OR = {
-			has_country_leader = { ruling_only = yes name = "Henry H. Arnold"}
-			has_country_leader = { ruling_only = yes name = "George Marshall"}
-                   }
-		}
-		relative_position_id = CAL_million_sons_saved
-		x = 0
-		y = 6
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CAL_million_sons_saved"
-			add_stability = 0.09
-			add_ideas = CAL_pacific_dreamin
-		}
+	        }
 	}
 }

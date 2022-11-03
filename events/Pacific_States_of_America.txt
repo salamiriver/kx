@@ -8163,7 +8163,7 @@ country_event = {# Military Coups Hearst
                 set_party_name = {
                         ideology = authoritarian_democrat
                         name = "Military Junta"
-                        long_name = "Junta for the Preservation of America's Sons"
+                        long_name = "Junta for the Preservation of Peace"
                 }
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -14500,7 +14500,7 @@ country_event = { #growing distrust
 			set_party_name = {
 				ideology = authoritarian_democrat
 				long_name = "Military Government"
-				name = "Junta for the Preservation of America's Sons"
+				name = "Junta for the Preservation of Peace"
 			}
 			complete_national_focus = CAL_arnold_coup
 			set_global_flag = CAl_peaceoutgang
