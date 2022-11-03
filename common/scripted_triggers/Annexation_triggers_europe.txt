@@ -573,12 +573,12 @@ can_release_constantinople = {
 		340 = { is_valid_annexation_state = no } #Bursa
 		OR = {
 			tag = TUR
-			tag = OTT
+			tag = TUR
 			tag = BUL
 			tag = GRE
 			var:340.owner = { #Bursa
 				OR = {
-					tag = OTT
+					tag = TUR
 					tag = TUR
 				}
 				ROOT_can_grant_land = yes
@@ -1231,6 +1231,7 @@ can_release_finland = {
 	ROOT = {
 		NOT = {
 			tag = SCA
+			tag = KAR
 			has_country_flag = FIN_CONQ
 			country_exists = FIN
 		}
@@ -3435,7 +3436,7 @@ can_release_western_thrace = {
 		OR = {
 			tag = GRE
 			tag = BUL
-			tag = OTT
+			tag = TUR
 			tag = TUR
 			GRE = {
 				ROOT_can_grant_land = yes

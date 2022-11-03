@@ -1993,6 +1993,9 @@ highlight_state_targets = {
 		}
 		visible = {
 			has_completed_focus = CENmil_arms_deals
+			country_exists = ENT
+			ENT = { has_design_based_on = small_plane_airframe }
+			NOT = { has_war_with = ENT }
 		}
 		cost = 100
 		days_re_enable = 150
@@ -2000,17 +2003,15 @@ highlight_state_targets = {
 			factor = 0
 			modifier = {
 				add = 100
-				has_equipment = {
-					fighter_equipment < 0
-				}
+				stockpile_ratio = { archetype = small_plane_airframe ratio < 1 }
 			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CENmil_buy_planes"
 			add_equipment_to_stockpile = {
-				type = fighter_equipment
+				type = small_plane_airframe
 				amount = 40
-				producer = CAN
+				producer = ENT
 			}
 		}
 	}

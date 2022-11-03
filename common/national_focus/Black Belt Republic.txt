@@ -9206,7 +9206,7 @@ focus_tree = {
 	}
 	focus = {# Basic Firearms Build-up
 		id = BBR_firearms_contract
-		icon = MON_army_money
+		icon = GFX_MON_army_money
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_hit_and_run
@@ -9258,7 +9258,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_coastal_support"
 			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment
+				type = small_plane_naval_bomber_airframe
 				amount = 20
 				producer = BBR
 			}
@@ -9469,7 +9469,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_tuskeegee_airmen"
 			add_equipment_to_stockpile = { 
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = 200 
 			producer = BBR
 			}
@@ -9477,7 +9477,7 @@ focus_tree = {
 				name = SRI_fighter_efforts
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 			add_manpower = 250
 		}
@@ -9514,7 +9514,7 @@ focus_tree = {
 	}
 	focus = {# Military Research
 		id = BBR_military_research
-		icon = MON_military_res_inst
+		icon = GFX_MON_military_res_inst
 		cost = 6.00
 		prerequisite = {
 			focus = BBR_purchase_convoys
@@ -9607,7 +9607,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BBR_aireal_offense"
 			add_equipment_to_stockpile = {
-				type = CAS_equipment
+				type = small_plane_cas_airframe
 				amount = 10
 				producer = BBR
 			}

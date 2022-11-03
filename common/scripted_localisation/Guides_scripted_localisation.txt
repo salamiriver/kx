@@ -24,7 +24,7 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			tag = OTT
+			tag = TUR
 		}
 		localization_key = "OTT_guidesnum"
 	}
@@ -626,6 +626,12 @@ defined_text = {
 			tag = ARM
 		}
 		localization_key = "ARM_guidesnum"
+	}
+        text = {
+		trigger = {
+			tag = SOM
+		}
+		localization_key = "SOM_guidesnum"
 	}
 }
 

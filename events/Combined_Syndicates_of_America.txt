@@ -10882,12 +10882,20 @@ country_event = { # Send Lovestone to Alaska?
 			complete_national_focus = ALA_distribute_land
 			complete_national_focus = ALA_factory_distribution
 			complete_national_focus = ALA_for_the_worker
+			create_country_leader = {
+				name = "Jay Lovestone"
+				desc = "POLITICS_LOVESTONE_DESC"
+				picture = "gfx/leaders/ALA/Portrait_Alaska_Jay_Lovestone.png"
+				expire = "1965.1.1"
+				ideology = lovestoneism_subtype
+				traits = {}
+			}
 			remove_all_ministers = yes
 			add_ideas = {
-				ALA_Jay_Lovestone_hog_tot
-				ALA_Grigory_Zinoviev_for_tot
-				ALA_Lev_Kamenev_eco_tot
-				ALA_Anatoly_Lunacharsky_sec_tot
+				ALA_Joseph_Jurich_hog_tot
+				ALA_Vince_Zuanich_for_syn
+				ALA_George_Lane_eco_syn
+				ALA_Jeff_Kibre_sec_syn
 			}
 		}
 	}
@@ -14478,7 +14486,7 @@ country_event = { #James Burnham dead
 			desc = "POLITICS_JAY_LOVESTONE_DESC"
 			picture = "gfx/leaders/CSA/Portrait_CSA_Jay_Lovestone.png"
 			expire = "1965.1.1"
-			ideology = authcom_subtype
+			ideology = lovestoneism_subtype
 			traits = { trade_union_boss }
 			}
 		set_politics = {
@@ -15234,17 +15242,15 @@ country_event = { # African Puppet
 	desc = csa.51914.d
 	picture = event_CSA_Technocracy2
 
-        hidden =  yes
+    hidden =  yes
 	fire_only_once = yes
-        trigger = {
-               has_country_flag = CSA_technate_puppets
-               all_other_country = {
-                    limit = {
-                         is_on_continent = africa
-                    }
-                    exists = no
-               }
-        }
+	trigger = {
+		has_country_flag = CSA_technate_puppets
+		all_other_country = {
+			is_in_africa = yes
+			exists = no
+		}
+	}
 
 	option = { # Flavor
 		name = csa.51914.a
@@ -15262,15 +15268,15 @@ country_event = { # African Puppet
 			           traits = {}
 		        }
 		        create_country_leader = {
-			           name = "Kwame Nkrumah"
-			           picture = "gfx/leaders/GHA/Portrait_Ashanti_Kwame.png"
+			           name = "Edward Makuka Nkoloso"
+			           picture = "gfx/leaders/ZAM/Portrait_Zambia_Edward_Makuka_Nkoloso.png"
 			           expire = "1965.1.1"
 			           ideology = utopian_technocracy_subtype
 			           traits = {}
 		        }
                         create_country_leader = {
-			           name = "Kwame Nkrumah"
-			           picture = "gfx/leaders/GHA/Portrait_Ashanti_Kwame.png"
+			           name = "Edward Makuka Nkoloso"
+			           picture = "gfx/leaders/ZAM/Portrait_Zambia_Edward_Makuka_Nkoloso.png"
 			           expire = "1965.1.1"
 			           ideology = socdem_utopian_technocracy_subtype
 			           traits = {}
@@ -15290,27 +15296,27 @@ country_event = { # Asian Puppet
 	desc = csa.51915.d
 	picture = event_CSA_Technocracy2
 
-        hidden =  yes
+    hidden =  yes
 	fire_only_once = yes
-        trigger = {
-               has_country_flag = CSA_technate_puppets
-               all_other_country = {
-                    limit = {
-                         is_on_continent = asia
-			 is_on_continent = india
-                    }
-                    exists = no
-               }
-        }
+    trigger = {
+		has_country_flag = CSA_technate_puppets
+		all_other_country = {
+			OR = {
+				is_in_asia = yes
+				is_in_india = yes
+			}
+			exists = no
+		}
+    }
 
 	option = { # Flavor
 		name = csa.51915.a
 		every_state = {
 			limit = { 
-                             OR = {
-				is_on_continent = asia
-				is_on_continent = india
-                             }
+                OR = {
+					is_on_continent = asia
+					is_on_continent = india
+                }
 			}
 			MON = {
                         load_focus_tree = generic_focus
@@ -15351,17 +15357,15 @@ country_event = { # South American Puppet
 	desc = csa.51916.d
 	picture = event_CSA_Technocracy2
 
-        hidden =  yes
+    hidden =  yes
 	fire_only_once = yes
-        trigger = {
-               has_country_flag = CSA_technate_puppets
-               all_other_country = {
-                    limit = {
-			is_on_continent = south_america
-                    }
-                    exists = no
-               }
+    trigger = {
+        has_country_flag = CSA_technate_puppets
+        all_other_country = {
+            is_in_south_america = yes
+            exists = no
         }
+	}
 
 	option = { # Flavor
 		name = csa.51916.a
@@ -15434,18 +15438,18 @@ country_event = { # Eurasian Puppet
 	desc = csa.51917.d
 	picture = event_CSA_Technocracy2
 
-        hidden =  yes
+    hidden =  yes
 	fire_only_once = yes
-        trigger = {
-               has_country_flag = CSA_technate_puppets
-               all_other_country = {
-                    limit = {
-			is_on_continent = middle_east
-                        is_on_continent = europe
-                    }
-                    exists = no
-               }
+    trigger = {
+        has_country_flag = CSA_technate_puppets
+        all_other_country = {
+            OR = {
+				is_in_middle_east = yes
+				is_in_europe = yes
+            }
+            exists = no
         }
+    }
 
 	option = { # Flavor
 		name = csa.51917.a
@@ -15522,17 +15526,15 @@ country_event = { # Oceania Puppet
 	desc = csa.51918.d
 	picture = event_CSA_Technocracy2
 
-        hidden =  yes
+    hidden =  yes
 	fire_only_once = yes
-        trigger = {
-               has_country_flag = CSA_technate_puppets
-               all_other_country = {
-                    limit = {
-			 is_on_continent = australia
-                    }
-                    exists = no
-               }
+    trigger = {
+		has_country_flag = CSA_technate_puppets
+		all_other_country = {
+            is_in_australia = yes
+			exists = no
         }
+    }
 
 	option = { # Flavor
 		name = csa.51918.a
@@ -15652,7 +15654,7 @@ country_event = { #Who Came Before
 	immediate = { log = "[GetDateText]: [Root.GetName]: event csa.518" }
 	title = csa.5180.t
 	desc = csa.5180.d
-        pictyre = GFX_event_CSA_american_utopianism
+    picture = GFX_event_CSA_american_utopianism
 
 	is_triggered_only = yes
 	
@@ -15694,7 +15696,7 @@ country_event = { #What It Will Be like
 
 	option = { #Cool
 		name = csa.5182.a
-	random_owned_state = {
+		random_owned_state = {
 			limit = {
 				is_core_of = CSA
 				is_controlled_by = CSA
@@ -15702,9 +15704,9 @@ country_event = { #What It Will Be like
 			}
 			add_extra_state_shared_building_slots = 1
 		}
+		add_political_power = 50
+		add_popularity = { ideology = radical_socialist popularity = 0.07 }
 	}
-	add_political_power = 50
-	add_popularity = { ideology = radical_socialist popularity = 0.07 }
 }
 country_event = { #True Utopia
 	id = csa.5183
@@ -15932,7 +15934,10 @@ country_event = { #Schizo Log Events - EPIC Sinclair
                tag = CSA
                has_country_leader = { ruling_only = yes name = "Harold Loeb"}
                CAL = {
-                  has_country_leader = { ruling_only = yes name = "Upton Sinclair"}
+                  OR = {
+                     has_country_leader = { ruling_only = yes name = "Upton Sinclair"}
+                     has_country_leader = { ruling_only = yes name = "Culbert Olson"}
+                     }
                }
     }
 
@@ -15959,7 +15964,7 @@ country_event = { #Schizo Log Events - EPIC Sinclair
 			picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.png"
 			expire = "1965.1.1"
 			ideology = utopian_technocracy_subtype
-			traits = {  }
+			traits = { PSA_an_end_to_poverty }
 		}
 		create_country_leader = {
 			name = "Upton Sinclair"
@@ -15967,7 +15972,7 @@ country_event = { #Schizo Log Events - EPIC Sinclair
 			picture = "gfx/leaders/CAL/Portrait_CAL_Upton_Sinclair.png"
 			expire = "1965.1.1"
 			ideology = socdem_utopian_technocracy_subtype
-			traits = {  }
+			traits = { PSA_an_end_to_poverty }
 		}
     }
 }
@@ -16016,7 +16021,7 @@ country_event = { #Schizo Log Events - SUN RA
 			picture = "gfx/leaders/BBR/Herman_Poole_Blount.png"
 			expire = "1965.1.1"
 			ideology = utopian_technocracy_subtype
-			traits = {  }
+			traits = { the_hearld }
 		}
 		create_country_leader = {
 			name = "Herman Poole Blount"
@@ -16024,7 +16029,7 @@ country_event = { #Schizo Log Events - SUN RA
 			picture = "gfx/leaders/BBR/Herman_Poole_Blount.png"
 			expire = "1965.1.1"
 			ideology = socdem_utopian_technocracy_subtype
-			traits = {  }
+			traits = { the_hearld }
 		}
 	}
 }
@@ -16060,7 +16065,7 @@ country_event = { #Schizo Log Events - Hemingway and Loeb battle royale (hemingw
 			picture = "gfx/leaders/CSA/Portrait_CSA_Ernest_Hemingway.png"
 			expire = "1965.1.1"
 			ideology = utopian_technocracy_subtype
-			traits = { }
+			traits = { author }
 		}
 		add_stability = -0.05
 	}
@@ -16463,31 +16468,42 @@ country_event = { # Death of Burnham
 			desc = "POLITICS_JAY_LOVESTONE_DESC"
 			picture = "gfx/leaders/CSA/Portrait_CSA_Jay_Lovestone.png"
 			expire = "1965.1.1"
-			ideology = authcom_subtype
+			ideology = lovestoneism_subtype
 			traits = { trade_union_boss }
 		}
 		set_cosmetic_tag = CSA_lovestone_1
 	}
-
-	option = { #Reagan
-		name = csa_sucsessor.2.b
+	
+	option = { #Cannon
+		name = csa_sucsessor.2.b	
 		create_country_leader = {
-			name = "Ronald Reagan"
-			picture = "gfx/leaders/USA/Portrait_USA_Ronald_Reagan.png"
+			name = "James P. Cannon"
+			picture = "gfx/leaders/CSA/Portrait_CSA_James_P_Cannon.png"
 			expire = "1965.1.1"
 			ideology = technocratic_socialism_subtype
-			traits = { eco_patriotic_socialist }
+			traits = { }
 		}
 	}
 
-	option = { #LaRouche
-		name = csa_sucsessor.2.c	
+	option = { #Reagan
+		name = csa_sucsessor.2.c
 		create_country_leader = {
 			name = "Lyndon LaRouche"
 			picture = "gfx/leaders/CSA/Portrait_CSA_Lyndon_LaRouche.png"
 			expire = "1965.1.1"
 			ideology = technocratic_socialism_subtype
 			traits = { hog_militant_reactionary }
+		}
+	}
+
+	option = { #LaRouche
+		name = csa_sucsessor.2.e	
+		create_country_leader = {
+			name = "Ronald Reagan"
+			picture = "gfx/leaders/USA/Portrait_USA_Ronald_Reagan.png"
+			expire = "1965.1.1"
+			ideology = technocratic_socialism_subtype
+			traits = { eco_patriotic_socialist }
 		}
 	}
 }

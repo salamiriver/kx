@@ -4643,7 +4643,7 @@ reset_russian_leaders = {
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 			expire = "1965.1.1"
 			ideology = market_socialist_subtype 
-			traits = {}
+			traits = { RUS_ex_bolshevik  }
 		}
 
 		create_country_leader = {
@@ -7990,6 +7990,7 @@ setup_soviet_psr = {
 			limit = { has_id = 449 }	
 			set_leader_portrait = GFX_Portrait_RUS_Gregory_Zhukov_General
 		}
+		clr_country_flag = psr_banned
 	}
 }
 RUS_transfer_russian_ideas = {
@@ -8533,135 +8534,18 @@ RUS_zemstvo_add_infrastructure = {
 }
 
 RUS_increase_denikin = {
-	set_temp_variable = { RUS_denikin_influence_temp = RUS.denikin_influence }
-	set_temp_variable = { RUS_wrangel_influence_temp = RUS.wrangel_influence }
-	add_to_temp_variable = { var = RUS_denikin_influence_temp value = 1 }
-	if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp = RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_balance
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_balance
-			}
+	add_power_balance_value = {
+		id = RUS_denikin_wrangel_conflict
+		value = -0.20
 		}
 	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp > RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_denikin
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_denikin
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp < RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-	}
-	add_to_variable = { var = RUS.wrangel_influence value = -1 }
-	add_to_variable = { var = RUS.denikin_influence value = 1 }
-}
 
 RUS_increase_wrangel = {
-	set_temp_variable = { RUS_denikin_influence_temp = RUS.denikin_influence }
-	set_temp_variable = { RUS_wrangel_influence_temp = RUS.wrangel_influence }
-	add_to_temp_variable = { var = RUS_wrangel_influence_temp value = 1 }
-	add_to_temp_variable = { var = RUS_denikin_influence_temp value = -1 }
-	if = {
-		limit = {
-			check_variable = { RUS_denikin_influence_temp = RUS_wrangel_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_balance
+	add_power_balance_value = {
+		id = RUS_denikin_wrangel_conflict
+		value = 0.20
 			}
 		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_balance
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_wrangel_influence_temp > RUS_denikin_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_denikin }
-			swap_ideas = {
-				remove_idea = RUS_rovs_denikin
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_wrangel
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = { RUS_wrangel_influence_temp < RUS_denikin_influence_temp }
-		}
-		if = {
-			limit = { has_idea = RUS_rovs_balance }
-			swap_ideas = {
-				remove_idea = RUS_rovs_balance
-				add_idea = RUS_rovs_denikin
-			}
-		}
-		else_if = {
-			limit = { has_idea = RUS_rovs_wrangel }
-			swap_ideas = {
-				remove_idea = RUS_rovs_wrangel
-				add_idea = RUS_rovs_denikin
-			}
-		}
-	}
-	add_to_variable = { var = RUS.wrangel_influence value = 1 }
-	add_to_variable = { var = RUS.denikin_influence value = -1 }
-}
 RUS_calculate_expected_monarchy_referendum = {
 	set_temp_variable = { temp1 = RUS_monarchy_popular_support }
 	set_temp_variable = { temp2 = RUS_monarchy_candidate_legitimacy }
@@ -8812,7 +8696,7 @@ setup_soviet_russia = {
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 			expire = "1965.1.1"
 			ideology = market_socialist_subtype 
-			traits = {}
+			traits = { RUS_ex_bolshevik  }
 		}
 
 		create_country_leader = {
@@ -9427,10 +9311,10 @@ setup_bjorko_pact = {
 		hidden_effect = {
 			if = {
 				limit = {
-					country_exists = OTT
-					OTT = { is_subject = no }
+					country_exists = TUR
+					TUR = { is_subject = no }
 				}
-				OTT = { 
+				TUR = { 
 					country_event = {
 						id = ottfor.51 
 						days = 1
@@ -9512,10 +9396,10 @@ setup_bjorko_pact = {
 		hidden_effect = {
 			if = {
 				limit = {
-					country_exists = OTT
-					OTT = { is_subject = no }
+					country_exists = TUR
+					TUR = { is_subject = no }
 				}
-				OTT = { 
+				TUR = { 
 					country_event = {
 						id = ottfor.51 
 						days = 1
@@ -9702,9 +9586,9 @@ setup_vilnius_accords = {
 		release = PREV
 		if = {
 			limit = {
-				OTT = { has_war_with = ROOT }
+				TUR = { has_war_with = ROOT }
 			}
-			OTT = {
+			TUR = {
 				annex_country = {
 					target = PREV
 				}
@@ -9779,7 +9663,7 @@ setup_vilnius_accords = {
 			OR = {
 				tag = GER
 				tag = AUS
-				tag = OTT
+				tag = TUR
 			}
 		}
 		event_target:peace_country = { white_peace = PREV }
@@ -9789,7 +9673,7 @@ setup_vilnius_accords = {
 			OR = {
 				is_in_faction_with = GER
 				is_in_faction_with = AUS
-				is_in_faction_with = OTT
+				is_in_faction_with = TUR
 			}
 		}
 		event_target:peace_country = { white_peace = PREV }
@@ -9799,7 +9683,7 @@ setup_vilnius_accords = {
 			OR = {
 				is_subject_of = GER
 				is_subject_of = AUS
-				is_subject_of = OTT
+				is_subject_of = TUR
 			}
 		}
 		event_target:peace_country = { white_peace = PREV }
@@ -9959,8 +9843,8 @@ setup_yerevan_treaty = {
 				tag = CRM
 			}
 			OR = {
-				is_in_faction_with = OTT
-				is_subject_of = OTT
+				is_in_faction_with = TUR
+				is_subject_of = TUR
 			}
 			OR = {
 				exists = no
@@ -9984,8 +9868,8 @@ setup_yerevan_treaty = {
 			limit = {
 				tag = ARM
 				OR = {
-					is_in_faction_with = OTT
-					is_subject_of = OTT
+					is_in_faction_with = TUR
+					is_subject_of = TUR
 				}
 				OR = {
 					exists = no
@@ -10006,7 +9890,7 @@ setup_yerevan_treaty = {
 			}
 			BUL = { transfer_state = 341 }
 		}
-		OTT = {
+		TUR = {
 			diplomatic_relation = {
 				country = ROOT
 				relation = non_aggression_pact
@@ -10055,8 +9939,8 @@ setup_yerevan_treaty = {
 			limit = {
 				PER = {
 					OR = {
-						is_in_faction_with = OTT
-						is_subject_of = OTT
+						is_in_faction_with = TUR
+						is_subject_of = TUR
 					}
 				}
 			}
@@ -10077,20 +9961,20 @@ setup_yerevan_treaty = {
 	#recheck if OTT is in RSP and kick it
 	if = {
 		limit = {
-			OTT = { is_in_faction_with = GER }
+			TUR = { is_in_faction_with = GER }
 		}
 		leave_faction = yes
 	}
 	save_event_target_as = peace_country
 	every_enemy_country = {
 		limit = {
-			tag = OTT
+			tag = TUR
 		}
 		event_target:peace_country = { white_peace = PREV }
 	}
 	every_enemy_country = {
 		limit = {
-			is_subject_of = OTT
+			is_subject_of = TUR
 		}
 		event_target:peace_country = { white_peace = PREV }
 	}	
@@ -10250,7 +10134,12 @@ load_base_russian_tree = {
 	load_focus_tree = russia_focus
 	clr_country_flag = make_absolute_monarchy_tree_visible
 	clr_country_flag = make_kerensky_tree_visible	
-	clr_country_flag = make_russia_democratic_tree_visible
+	clr_country_flag = make_russia_plsr_nsp_democratic_tree_visible
+	clr_country_flag = make_russia_rsdrp_democratic_tree_visible
+	clr_country_flag = make_russia_psr_democratic_tree_visible
+	clr_country_flag = make_russia_liberal_conservative_democratic_tree_visible
+	clr_country_flag = make_russia_nrpr_democratic_tree_visible
+	clr_country_flag = make_russia_nsnp_democratic_tree_visible
 	clr_country_flag = make_russian_junta_tree_visible	
 	clr_country_flag = make_savinkov_tree_visible	
 	clr_country_flag = make_savinkov_successors_tree_visible	

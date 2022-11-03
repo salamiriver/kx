@@ -533,6 +533,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = HOL
+		}
+		localization_key = QU_OR_PM
+	}
+	
+	text = {
+		trigger = {
 			tag = BEL
 		}
 		localization_key = PM_OR_LEADER
@@ -2690,6 +2697,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = CAL_Charlie_Chaplin_hog_rso
+		}
+		localization_key = CAL_Charlie_Chaplin_hog_rso
+	}
+	
+	text = {
+		trigger = {
+			has_idea = CAL_Robert_Heinlein_hog_rso
+		}
+		localization_key = CAL_Robert_Heinlein_hog_rso
+	}
+	
+	text = {
+		trigger = {
 			has_idea = CAL_Glen_H_Taylor_hog_sde
 		}
 		localization_key = CAL_Glen_H_Taylor_hog_sde
@@ -3637,6 +3658,48 @@ defined_text = {
 			}
 		}
 		localization_key = "Prime Minister"
+	}
+}
+
+defined_text = {
+	name = HOLGetLeaderTitle
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					name = "Wilhelmina"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Juliana"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Maria-Adelheid"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "Queen"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					name = "Wilhelmina"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Juliana"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Maria-Adelheid"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "King"
 	}
 }
 

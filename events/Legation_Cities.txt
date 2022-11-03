@@ -3045,7 +3045,7 @@ country_event = { #Shanghai in Chaos - LEC
 			desc = "MANDATE_CHAOS_DESC"
 			picture = "gfx/leaders/LEC/Portrait_LEC_Chaos.png"
 			expire = "1965.1.1"
-			ideology = libertarian_subtype
+			ideology = free_market_capitalist_subtype
 		}
 		create_country_leader = {
 			name = "Leaderless Mandate"
@@ -3204,15 +3204,8 @@ country_event = { # CPS lets us in
 	option = {	# great
 		name = lec.78.a
 		add_political_power = 5
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_id = 1351
-					has_id = 1354
-				}
-			}
-			retire = yes
-		}
+		LEC_exile_georg_wetzell = yes
+		LEC_exile_william_fairbairn = yes
 		JAP = {
 			add_to_faction = LEC
 			puppet = LEC
@@ -9757,7 +9750,7 @@ country_event = { # politics stuff
 			name = "Patrick J. Hurley"
 			picture = "gfx/leaders/LEC/Portrait_Patrick_Hurley.png"
 			expire = "1965.1.1"
-			ideology = libertarian_subtype
+			ideology = free_market_capitalist_subtype
 			traits = {
 				hedonist
 			}
@@ -9870,15 +9863,8 @@ country_event = { # politics stuff
 			}
 		}
 		set_country_flag = LEC_new_high_commissioner
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_id = 1353
-					has_id = 1350
-				}
-			}
-			retire = yes
-		}
+		LEC_exile_koreshige_inuzuka = yes
+		LEC_exile_francis_wogan_festing = yes
 		set_politics = {
 			ruling_party = paternal_autocrat
 			elections_allowed = no

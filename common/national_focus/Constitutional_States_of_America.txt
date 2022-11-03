@@ -18,18 +18,15 @@ focus_tree = {
 		icon = GFX_goal_COR_Boss_Crump
 		cost = 5
 		available = {
-                has_country_flag = COR_memphis_commission 
-		has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+        has_country_flag = COR_memphis_commission
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
-                bypass = {
-                has_country_flag = COR_memphis_commission 
-		has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+        bypass = {
+        has_country_flag = COR_memphis_commission 
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
                 }
 		ai_will_do = { factor = 5 }
 		x = 20
@@ -47,10 +44,10 @@ focus_tree = {
 			focus = COR_crumps_machine
 		}
 		available = {
-		has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -77,10 +74,10 @@ focus_tree = {
 			focus = COR_crumps_machine
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -102,10 +99,10 @@ focus_tree = {
 			focus = COR_corrupt_machine
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -134,10 +131,10 @@ focus_tree = {
 			focus = COR_black_voting
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -170,10 +167,10 @@ focus_tree = {
 			focus = COR_black_voting
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -194,10 +191,10 @@ focus_tree = {
 			focus = COR_corrupt_machine
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -236,10 +233,10 @@ focus_tree = {
 			focus = COR_controlled_politics
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -287,10 +284,10 @@ focus_tree = {
 			focus = COR_cotton_row
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -330,10 +327,10 @@ focus_tree = {
 			focus = COR_controlled_politics
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -357,10 +354,10 @@ focus_tree = {
 			focus = COR_influence_state_politics
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -383,10 +380,10 @@ focus_tree = {
 			focus = COR_influence_state_politics
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -439,10 +436,10 @@ focus_tree = {
 			focus = COR_merge_inefficent_departments
 		}
 		available = {
-			has_country_leader = {
-			ruling_only = yes
-			name = "E.H. Crump"
-				}
+		OR = {
+		has_country_leader = { ruling_only = yes name = "E.H. Crump" }
+		has_country_leader = { ruling_only = yes name = "Georgia Tann" }
+			}
 		}
 		ai_will_do = { factor = 5 }
                 relative_position_id = COR_crumps_machine
@@ -8406,9 +8403,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_Patton_Plan"
 			add_ideas = COR_Patton_plan1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Spearhead_Doctrine
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_mobile_warfare
 			}
@@ -8637,9 +8634,9 @@ focus_tree = {
 				remove_idea = COR_Patton_plan4
 				add_idea = COR_Patton_plan5
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Spearhead_Doctrine
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 3
 				category = cat_mobile_warfare
 			}
@@ -8676,9 +8673,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_Moseley_Plan"
 			add_ideas = COR_Moseley_plan1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Extensive_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -8719,9 +8716,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Extensive_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_grand_battle_plan
 			}
@@ -8778,9 +8775,9 @@ focus_tree = {
 				remove_idea = COR_Moseley_plan2
 				add_idea = COR_Moseley_plan3
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Extensive_Planning
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 2
 				category = cat_grand_battle_plan
 			}
@@ -8880,9 +8877,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_mcnarney_advisory"
 			add_ideas = COR_mcnarney_advisory_idea
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Overwhelming_Firepower
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -9091,9 +9088,9 @@ focus_tree = {
 			remove_idea = COR_mcnarney_advisory_idea4
 			add_idea = COR_mcnarney_advisory_idea5
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Overwhelming_Firepower
-				bonus = 2.5
+				cost_reduction = 2.5
 				uses = 1
 				category = cat_superior_firepower
 			}
@@ -9125,9 +9122,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_army_war_colleges"
 			army_experience = 40
 			add_manpower = 1000
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_Overwhelming_Firepower
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 2
 				category = cat_superior_firepower
 			}
@@ -9162,9 +9159,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_wickliffe_plan"
 			add_ideas = COR_wickliffe_plan1
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = COR_War_Of_Numbers
-				bonus = 1.5
+				cost_reduction = 1.5
 				uses = 1
 				category = cat_mass_assault
 			}
@@ -9546,7 +9543,7 @@ focus_tree = {
 	}
 	focus = {
 		id = COR_increase_military_spending
-		icon = MON_army_money
+		icon = GFX_MON_army_money
 		cost = 5.00
 		prerequisite = {
 			focus = COR_take_the_fight_abroad
@@ -9841,7 +9838,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 1
 				uses = 1
-				category = fighter_techs
+				category = light_fighter
 			}
 		}
 
@@ -9876,7 +9873,7 @@ focus_tree = {
 	}
 	focus = {
 		id = COR_air_field_expansion
-		icon = MON_improve_construction
+		icon = GFX_MON_improve_construction
 		cost = 5
 		prerequisite = {
 			focus = COR_bombers
@@ -10117,19 +10114,11 @@ focus_tree = {
 		relative_position_id = COR_Weyland_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_CAS_focus"
-			if = {
-				limit = { NOT = { has_tech = CAS2 } }
-				hidden_effect = {
-					set_technology = { CAS2 = 1 }
-				}
-				custom_effect_tooltip = COR_unlock_CAS
-				else = {
-					add_tech_bonus = {
-						bonus = 1
-						uses = 1
-						category = cas_bomber
-					}
-				}
+			add_tech_bonus = {
+				name = TEX_CAS_focus
+				bonus = 0.75
+				uses = 2
+				category = cas_bomber
 			}
 		}
 	}
@@ -10182,26 +10171,11 @@ focus_tree = {
 		relative_position_id = COR_Weyland_plan
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_flexible_bombers"
-			if = {
-				limit = { NOT = { has_tech = tactical_bomber1 } }
-				hidden_effect = {
-					set_technology = { tactical_bomber1 = 1 }
-				}
-				custom_effect_tooltip = COR_unlock_bomber_1
-				else_if = {
-					limit = { NOT = { has_tech = tactical_bomber2 } }
-					hidden_effect = {
-						set_technology = { tactical_bomber2 = 1 }
-					}
-					custom_effect_tooltip = COR_unlock_bomber_2
-				}
-				else = {
-					add_tech_bonus = {
-						bonus = 1
-						uses = 1
-						category = tactical_bomber
-					}
-				}
+			add_tech_bonus = {
+				name = TEX_flexible_bombers
+				bonus = 0.75
+				uses = 2
+				category = tactical_bomber
 			}
 		}
 	}
@@ -10258,19 +10232,11 @@ focus_tree = {
 		relative_position_id = COR_le_may_reform
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_strat_bomber_development"
-			if = {
-				limit = { NOT = { has_tech = strategic_bomber2 } }
-				hidden_effect = {
-					set_technology = { strategic_bomber2 = 1 }
-				}
-				custom_effect_tooltip = COR_unlock_strat_bomber
-				else = {
-					add_tech_bonus = {
-						bonus = 1
-						uses = 1
-						category = cat_strategic_bomber
-					}
-				}
+			add_tech_bonus = {
+				name = COR_strat_bomber_development
+				bonus = 0.75
+				uses = 2
+				category = cat_strategic_bomber
 			}
 		}
 	}
@@ -10324,26 +10290,11 @@ focus_tree = {
 		relative_position_id = COR_le_may_reform
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_long_range_interceptors"
-			if = {
-				limit = { NOT = { has_tech = heavy_fighter1 } }
-				hidden_effect = {
-					set_technology = { heavy_fighter1 = 1 }
-				}
-				custom_effect_tooltip = COR_unlock_heavy_fighter_1
-				else_if = {
-					limit = { NOT = { has_tech = heavy_fighter2 } }
-					hidden_effect = {
-						set_technology = { heavy_fighter2 = 1 }
-					}
-					custom_effect_tooltip = COR_unlock_heavy_fighter_2
-				}
-				else = {
-					add_tech_bonus = {
-						bonus = 1
-						uses = 1
-						category = cat_heavy_fighter
-					}
-				}
+			add_tech_bonus = {
+				name = COR_long_range_interceptors 
+				bonus = 0.75
+				uses = 2
+				category = cat_heavy_fighter
 			}
 		}
 	}
@@ -10386,7 +10337,7 @@ focus_tree = {
 
 	focus = {# Great White Fleet
 		id = COR_great_white_fleet
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_goal_generic_naval_fleet_in_being
 		cost = 5
 		mutually_exclusive = {
 			focus = COR_protect_american_trade
@@ -10431,7 +10382,7 @@ focus_tree = {
 
 	focus = {# Protect American Trade
 		id = COR_protect_american_trade
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_goal_generic_trade_interdiction
 		cost = 5
 		mutually_exclusive = {
 			focus = COR_great_white_fleet
@@ -10476,7 +10427,7 @@ focus_tree = {
 
 	focus = {# Carrier Projects
 		id = COR_carriers
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_goal_generic_carrier_aircraft
 		cost = 5
 		mutually_exclusive = {
 			focus = COR_great_white_fleet
@@ -10626,7 +10577,7 @@ focus_tree = {
 
 	focus = {# Light Cruisers
 		id = COR_light_cruisers
-		icon = GFX_goal_EGY_sultan_fleet
+		icon = GFX_goal_generic_naval_cruiser2
 		cost = 5
 		prerequisite = {
 			focus = COR_protect_american_trade
@@ -11173,7 +11124,7 @@ focus_tree = {
 			has_government = national_populist
 			has_country_leader = {
 					ruling_only = yes
-					name = "James Francis Byrnes"
+					name = "James F. Byrnes"
 				}
 			}
 		}
@@ -11587,7 +11538,7 @@ focus_tree = {
 			OR = {
 			has_country_leader = {
 			ruling_only = yes
-			name = "James Francis Byrnes"
+			name = "James F. Byrnes"
 				}
 			has_country_leader = {
 			ruling_only = yes
@@ -12410,7 +12361,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus COR_send_support"
 			GER = {
 			add_equipment_to_stockpile = { 
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = 800 
 			producer = COR
 				}
@@ -12419,7 +12370,7 @@ focus_tree = {
 			add_opinion_modifier = { target = COR modifier = medium_increase }
 			}
 			add_equipment_to_stockpile = { 
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = -800
 			producer = COR
 			}
@@ -13529,16 +13480,16 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_government = social_democrat
-		}
-                NOT = {
-                 has_country_leader = {
-		        ruling_only = yes
-		        name = "Rush Limbaugh Sr."
+			NOT = {
+                has_country_leader = {
+					ruling_only = yes
+					name = "Rush Limbaugh Sr."
+				}
 			}
-                }
+		}
 		bypass = {
 			has_government = social_democrat
-                }
+        }
 		prerequisite = {
 			focus = COR_Dems_Win
 		}

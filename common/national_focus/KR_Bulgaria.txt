@@ -2358,7 +2358,7 @@ focus_tree = {
 
 	focus = {
 		id = BUL_doctrinal_reevaluation
-		icon = MON_doctrines_I
+		icon = GFX_MON_doctrines_I
 		prerequisite = { focus = BUL_expand_the_reserves }
 		prerequisite = { focus = BUL_well_trained_officers }
 		relative_position_id = BUL_the_bulgarian_army
@@ -4842,7 +4842,7 @@ focus_tree = {
 
 	focus = {
 		id = BUL_destroy_enemy_supply_lines
-		icon = MON_bomber_focus
+		icon = GFX_MON_bomber_focus
 		prerequisite = { focus = BUL_the_bulgarian_air_force }
 		relative_position_id = BUL_the_bulgarian_navy
 		x = 3
@@ -4857,9 +4857,6 @@ focus_tree = {
 				name = BUL_destroy_enemy_supply_lines
 				bonus = 1
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
 				category = tactical_bomber
 			}
 		}
@@ -4891,7 +4888,7 @@ focus_tree = {
 
 	focus = {
 		id = BUL_invest_in_fighters
-		icon = MON_light_fighter
+		icon = GFX_MON_light_fighter
 		prerequisite = { focus = BUL_the_bulgarian_air_force }
 		relative_position_id = BUL_the_bulgarian_navy
 		x = 2
@@ -4906,13 +4903,8 @@ focus_tree = {
 				name = BUL_invest_in_fighters
 				bonus = 1
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = light_fighter
+				category = cat_heavy_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4920,7 +4912,7 @@ focus_tree = {
 
 	focus = {
 		id = BUL_spread_our_resources
-		icon = MON_heavy_fighter
+		icon = GFX_MON_heavy_fighter
 		prerequisite = { focus = BUL_focus_on_destroyer_construction }
 		prerequisite = { focus = BUL_invest_in_fighters }
 		mutually_exclusive = { focus = BUL_build_new_airbases focus = BUL_develop_the_varna_naval_base }
@@ -6820,17 +6812,7 @@ focus_tree = {
     	completion_reward = {
     		log = "[GetDateText]: [Root.GetName]: Focus BUL_revolutionize_incendiary_warfare"
     		add_ideas = BUL_incendiary_warfare
-			if = {
-				limit = {
-					NOT = {
-						has_tech = CAS2
-					}
-				}
-				custom_effect_tooltip = CAS2_300
-			}
-			
 			hidden_effect = {
-				set_technology = { CAS2 = 1 }
 				country_event = {
 					id = kxbul.21
 					days = 3
@@ -6838,7 +6820,7 @@ focus_tree = {
 			}
 			
 			add_equipment_to_stockpile = {
-				type = CAS_equipment_2
+				type = small_plane_cas_airframe
 				amount = 300
 				producer = BUL
 			}
@@ -8214,13 +8196,13 @@ focus_tree = {
 	#				is_in_faction_with = AUS
 	#			}
 	#			add_equipment_to_stockpile = {
-	#				type = fighter_equipment
+	#				type = small_plane_airframe
 	#				amount = 100
 	#				producer = AUS
 	#			}
 	#			
 	#			add_equipment_to_stockpile = {
-	#				type = CAS_equipment
+	#				type = small_plane_cas_airframe
 	#				amount = 100
 	#				producer = AUS
 	#			}
@@ -8237,13 +8219,13 @@ focus_tree = {
 	#				is_in_faction_with = GER
 	#			}
 	#			add_equipment_to_stockpile = {
-	#				type = fighter_equipment
+	#				type = small_plane_airframe
 	#				amount = 100
 	#				producer = GER
 	#			}
 	#			
 	#			add_equipment_to_stockpile = {
-	#				type = CAS_equipment
+	#				type = small_plane_cas_airframe
 	#				amount = 100
 	#				producer = GER
 	#			}
@@ -8260,13 +8242,13 @@ focus_tree = {
 	#				is_in_faction = no
 	#			}
 	#			add_equipment_to_stockpile = {
-	#				type = fighter_equipment
+	#				type = small_plane_airframe
 	#				amount = 100
 	#				producer = BUL
 	#			}
 	#			
 	#			add_equipment_to_stockpile = {
-	#				type = CAS_equipment
+	#				type = small_plane_cas_airframe
 	#				amount = 100
 	#				producer = BUL
 	#			}

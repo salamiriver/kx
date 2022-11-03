@@ -1142,6 +1142,12 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = NFA_chantiers_de_la_jeunesse
+			hidden_effect = {
+				country_event = {
+					id = flavorfra.82
+					days = 78
+				}
+			}
 		}
 	}
 	
@@ -4172,17 +4178,17 @@ focus_tree = {
 				}
 			}
 			add_equipment_to_stockpile = {
-                type = fighter_equipment
+                type = small_plane_airframe
                 amount = 60
                 producer = NFA
             }
 			add_equipment_to_stockpile = {
-                type = CAS_equipment
+                type = small_plane_cas_airframe
                 amount = 20
                 producer = NFA
             }
 			add_equipment_to_stockpile = {
-                type = tac_bomber_equipment
+                type = medium_plane_airframe
                 amount = 20
                 producer = NFA
             }
@@ -4971,7 +4977,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = NFA_air_battlefield_support
 			add_equipment_to_stockpile = {
-                type = cas_equipment
+                type = small_plane_cas_airframe
                 amount = 40
                 producer = NFA
             }
@@ -5241,7 +5247,7 @@ focus_tree = {
 				add_idea = NFA_force_cooperation_3
 			}
 			add_equipment_to_stockpile = {
-                type = fighter_equipment
+                type = small_plane_airframe
                 amount = 80
                 producer = NFA
             }
@@ -5646,7 +5652,7 @@ focus_tree = {
 	
 	focus = {
 		id = NFA_Transmitting_Knowledge
-		icon = MON_air_doctrines_II
+		icon = GFX_MON_air_doctrines_II
 		cost = 4.00
 		x = 1
 		y = 1
@@ -6990,11 +6996,18 @@ focus_tree = {
 			add_state_claim = 827
 			add_state_claim = 670
 			add_state_claim = 857
+			add_state_claim = 728
 			add_state_claim = 671
 			add_state_claim = 750
 			add_state_claim = 825
 			add_state_claim = 1177
+			add_state_claim = 1178
 			add_state_claim = 1179
+			add_state_claim = 708
+			add_state_claim = 706
+			add_state_claim = 1095
+			add_state_claim = 635
+			add_state_claim = 641
 		}		
 	}
 
@@ -11894,6 +11907,12 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = NFA_la_france_aux_francais_idea
 				add_idea = NFA_la_france_aux_francais_idea2
+			}
+			hidden_effect = {
+				country_event = {
+					id = flavorfra.83
+					days = 56
+				}
 			}
 		}		
 	}
