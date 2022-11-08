@@ -148,8 +148,8 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "William Weir Gilmour"
-	picture = "gfx/leaders/SCT/Portrait_SCT_William_Weir_Gilmour.png"
+	name = "No Central Leadership"
+	picture = "gfx/leaders/SCT/Portrait_No_Central_Authority"
 	expire = "1965.1.1"
 	ideology = natsynd_subtype
 	traits = {}
@@ -163,43 +163,19 @@ create_country_leader = {
 	traits = {}
 }
 create_country_leader = {
-	name = "Jennie Lee"
+	name = "James Maxton"
 	desc = "SCT_LEE_DESC"
-	picture = "gfx/leaders/SCT/Portrait_Jennie_Lee.png"
+	picture = "gfx/leaders/SCT/Portrait_James_Maxton.png"
 	expire = "1965.1.1"
 	ideology = radical_socialist_subtype
 	traits = {}
 }
 create_country_leader = {
-	name = "James Maxton"
+	name = "Rolanf Muirhead"
 	desc = "SCT_MAXTON_DESC"
-	picture = "gfx/leaders/SCT/Portrait_James_Maxton.png"
+	picture = "gfx/leaders/SCT/Portrait_Scotland_Roland_Muirhead.png"
 	expire = "1965.1.1"
 	ideology = social_democrat_subtype
-	traits = {}
-}
-create_country_leader = {
-	name = "Jean Mann"
-	desc = "SCT_MANN_DESC"
-	picture = "gfx/leaders/SCT/Portrait_Jean_Mann.png"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {}
-}
-create_country_leader = {
-	name = "Philip Kerr"
-	desc = "SCT_KERR_DESC"
-	picture = "gfx/leaders/SCT/Portrait_Phillip_Kerr.png"
-	expire = "1965.1.1"
-	ideology = market_liberal_subtype
-	traits = {}
-}
-create_country_leader = {
-	name = "Tam Galbraith"
-	desc = "SCT_GALBRAITH_DESC"
-	picture = "gfx/leaders/SCT/Portrait_Tam_Galbraith.png"
-	expire = "1965.1.1"
-	ideology = toryism_subtype
 	traits = {}
 }
 create_country_leader = {
@@ -207,19 +183,43 @@ create_country_leader = {
 	desc = "SCT_MACCORKMICK_DESC"
 	picture = "gfx/leaders/SCT/Portrait_John_MacCormick.png"
 	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "James Graham"
+	desc = "SCT_KERR_DESC"
+	picture = "gfx/leaders/SCT/Portrait_SCT_James_Graham.png"
+	expire = "1965.1.1"
+	ideology = market_liberal_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "David John Colville"
+	desc = "SCT_GALBRAITH_DESC"
+	picture = "gfx/leaders/SCT/Portrait_SCT_David_John_Colville.png"
+	expire = "1965.1.1"
+	ideology = toryism_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Provisional Government"
+	desc = ""
+	picture = "gfx/leaders/SCT/Portrait_Provisional_Government.png"
+	expire = "1965.1.1"
 	ideology = authoritarian_democrat_subtype
 	traits = {}
 }
 create_country_leader = {
-	name = "Robert IV"
+	name = "Ruaraidh Erskine"
 	desc = "SCT_RUPPRECHT_DESC"
-	picture = "gfx/leaders/SCT/Portrait_Wales_Rupprecht_I.png"
+	picture = "gfx/leaders/SCT/Portrait_SCT_Ruaraidh Erskine.png"
 	expire = "1965.1.1"
 	ideology = absolute_monarchy_subtype
 	traits = {}
 }
 create_country_leader = {
-	name = "Rev. John White"
+	name = "John White"
 	desc = "SCT_WHITE_DESC"
 	picture = "gfx/leaders/SCT/Portrait_John_White.png"
 	expire = "1965.1.1"
