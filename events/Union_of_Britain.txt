@@ -8083,7 +8083,7 @@ country_event = { # Scotland Breaks Off!
 
 	option = {
 		name = uob.505.a
-		
+		activate_mission = ENG_act_quickly
 		add_stability = -0.10
 		SCT = {
 			transfer_state = 120
@@ -8152,7 +8152,7 @@ country_event = { # Scotland Breaks Off!
 	
 	option = {
 		name = uob.505.b
-		
+		activate_mission = ENG_act_quickly
 		add_stability = -0.10
 		SCT = {
 			transfer_state = 120
@@ -8213,7 +8213,6 @@ country_event = { # Wales Breaks Off Too!
 
 	option = {
 		name = uob.506.a
-		
 		country_event = uob.507
 		
 		add_stability = -0.10
@@ -8248,7 +8247,6 @@ country_event = { # Wales Breaks Off Too!
 	
 	option = {
 		name = uob.506.b
-		
 		add_stability = -0.10
 		WAL = {
 			transfer_state = 122
@@ -8309,67 +8307,104 @@ country_event = { # The Refugee Crisis
 		}
 	}
 }
-
-country_event = { # Peace With Scotland
-	id = uob.508
-	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.508"}
-	title = uob.508.t
-	desc = uob.508.d
-	picture = GFX_report_event_journalists_speech
-	
-	fire_only_once = yes
-	trigger = {
-		tag = ENG
-		ENG = { has_war_with = SCT }
-		SCT = {
-			controls_state = 120
-			controls_state = 121
-			controls_state = 133
-			controls_state = 136
-		}
-		OR = {
-			date > 1937.12.12
-			SCT = {
-				controls_state = 131
-				controls_state = 130
+country_event = {
+	id = uob.511
+	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.511"}
+	title = uob.511.t
+	desc = uob.511.d
+	picture = GFX_report_event_election_vote
+    is_triggered_only = yes 
+	immediate = {
+		hidden_effect = {
+			set_party_name = {
+				ideology = syndicalist
+				long_name = "Military Junta"
+				name = "Military Junta"
 			}
-			surrender_progress > 0.74
-			has_country_flag = wales_lost
+			set_party_name = {
+				ideology = totalist
+				long_name = "Military Vanguard"
+				name = "Military Vanguard"
+			}
 		}
 	}
-	
+	fire_only_once = yes
+
 	option = {
-		name = uob.508.a
-		
-		SCT = {
-			transfer_state = 120
-			transfer_state = 121
-			transfer_state = 133
-			transfer_state = 136
-			transfer_state = 938
-		}
-		add_stability = -0.30
+		name = uob.511.a
+		hidden_effect = {
+			set_politics = { ruling_party = syndicalist }
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "T.E. Lawrence"
+				desc = "POLITICS_TE_LAWRENCE_DESC"
+				picture = "gfx/leaders/ENG/Portrait_England_T_E_Lawrence.png"
+				expire = "1965.1.1"
+				ideology = syndicalist_subtype
+				traits = { dictator }
+			}
+			clr_country_flag = mosley_chairman
+			set_cosmetic_tag = ENG_england
+			set_country_flag = ENG_dictator_lawrence
+			add_ideas = ENG_divided_militia_idea
+			remove_ideas = ENG_england_army_mutiny
+			add_ideas = ENG_maximist_resistance
+			remove_all_ministers = yes
+			add_ideas = ENG_Tom_Mann_hog_syn
+			add_ideas = ENG_Ernest_Bevin_for_syn
+			add_ideas = ENG_Nye_Bevan_eco_syn
+			add_ideas = ENG_Lewis_Valentine_sec_syn
+			127 = { set_demilitarized_zone = yes}
+			338 = { set_demilitarized_zone = yes}
+			128 = { set_demilitarized_zone = yes}
+			129 = { set_demilitarized_zone = yes}
+			130 = { set_demilitarized_zone = yes}
+			132 = { set_demilitarized_zone = yes}
+			131 = { set_demilitarized_zone = yes}
+			123 = { set_demilitarized_zone = yes}
+			set_country_flag = ENG_civil_war
+			add_stability = -0.40
 		
 		white_peace = {
 			tag = SCT
-			message = "Scotland has won its Independence"
+			message = "With the Collapse of the British Government, Scotland has earned it's Freedom."
 		}
-		
-		
-		hidden_effect = {
-			set_country_flag = scotland_lost
-		}
-		
+		set_country_flag = scotland_lost
 		SCT = { 
 			hidden_effect = {
 				set_country_flag = free_caledonia
 				set_country_flag = uprising_over
 				clr_country_flag = rebellion_start
 				remove_ideas = SCT_revolt
+				transfer_state = 120
+			    transfer_state = 121
+			    transfer_state = 133
+			    transfer_state = 136
+			    transfer_state = 938
 			}
 		}
-	}
+		WAL = {
+			transfer_state = 122
+		}
+		set_country_flag = wales_lost
+		white_peace = {
+			tag = WAL
+			message = "With the end of Mosley's Government, Wales has achieved independence."
+		}
+		
+		WAL = { 
+			hidden_effect = {
+				set_country_flag = WAL_rebellion_over
+				clr_country_flag = rebellion_start
+				remove_ideas = WAL_revolt
+				remove_ideas = WAL_disunited_command
+			}
+		}
+	   }
+	 }
 }
+
+
 
 country_event = { # Peace With Wales
 	id = uob.509
@@ -8563,71 +8598,6 @@ country_event = {
 			CAN = {
 				complete_national_focus = CAN_return_of_the_king
 			}
-		}
-	}
-}
-
-country_event = {
-	id = uob.511
-	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.511"}
-	title = uob.511.t
-	desc = uob.511.d
-	picture = GFX_report_event_election_vote
-
-	trigger = {
-		tag = ENG
-		has_country_flag = wales_lost
-		has_country_flag = scotland_lost
-	}
-	immediate = {
-		hidden_effect = {
-			set_party_name = {
-				ideology = syndicalist
-				long_name = "Military Junta"
-				name = "Military Junta"
-			}
-			set_party_name = {
-				ideology = totalist
-				long_name = "Military Vanguard"
-				name = "Military Vanguard"
-			}
-		}
-	}
-	fire_only_once = yes
-
-	option = {
-		name = uob.511.a
-		hidden_effect = {
-			set_politics = { ruling_party = syndicalist }
-			retire_country_leader = yes
-			create_country_leader = {
-				name = "T.E. Lawrence"
-				desc = "POLITICS_TE_LAWRENCE_DESC"
-				picture = "gfx/leaders/ENG/Portrait_England_T_E_Lawrence.png"
-				expire = "1965.1.1"
-				ideology = syndicalist_subtype
-				traits = { dictator }
-			}
-			clr_country_flag = mosley_chairman
-			set_cosmetic_tag = ENG_england
-			set_country_flag = ENG_dictator_lawrence
-			add_ideas = ENG_divided_militia_idea
-			remove_ideas = ENG_england_army_mutiny
-			add_ideas = ENG_maximist_resistance
-			remove_all_ministers = yes
-			add_ideas = ENG_Tom_Mann_hog_syn
-			add_ideas = ENG_Ernest_Bevin_for_syn
-			add_ideas = ENG_Nye_Bevan_eco_syn
-			add_ideas = ENG_Lewis_Valentine_sec_syn
-			127 = { set_demilitarized_zone = yes}
-			338 = { set_demilitarized_zone = yes}
-			128 = { set_demilitarized_zone = yes}
-			129 = { set_demilitarized_zone = yes}
-			130 = { set_demilitarized_zone = yes}
-			132 = { set_demilitarized_zone = yes}
-			131 = { set_demilitarized_zone = yes}
-			123 = { set_demilitarized_zone = yes}
-			set_country_flag = ENG_civil_war
 		}
 	}
 }

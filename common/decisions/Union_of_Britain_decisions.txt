@@ -56,3 +56,33 @@ ENG_weltkrieg_decisions = {
 		}
 	}
 }
+ENG_collapse_mission = {
+ENG_act_quickly = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #manually activated
+
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		days_mission_timeout = 120
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			WAL = {
+			exists = no
+			}
+			SCT = {
+			exists = no
+			}
+		}
+
+		timeout_effect = {
+			country_event = uob.511
+		}
+	}
+}

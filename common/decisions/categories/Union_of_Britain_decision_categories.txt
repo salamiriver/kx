@@ -8,3 +8,12 @@ ENG_weltkrieg_decisions = {
 		#has_global_flag = second_weltkrieg_has_started
 	}
 }
+ENG_collapse_mission = {
+	icon = GFX_decision_cat_caf_rebelion
+	picture = GFX_decision_cat_british_collapse
+	priority = 100
+	allowed = {	original_tag = ENG }
+	visible = {
+		original_tag = ENG
+	}
+}
