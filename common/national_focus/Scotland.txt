@@ -3,6 +3,9 @@
 ###################
 #By ZimbabweSaltCo#
 ###################
+#Unfucked by Vozhd#
+###################
+
 
 focus_tree = {
 	id = SCT_focus

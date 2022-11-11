@@ -1,8 +1,9 @@
-####################
-#Scotland Events   #
-####################
-#By ZimbabweSaltCo.#
-####################
+###################
+# Scotland Events #
+###################
+###################
+#Unfucked by Vozhd#
+###################
 
 add_namespace = scotland
 add_namespace = sctrevolt
