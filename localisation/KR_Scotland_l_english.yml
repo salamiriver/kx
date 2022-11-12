@@ -1001,7 +1001,7 @@ scotland.137.d:0 "The government in London has refused to send us necessary aid.
 scotland.137.a:0 "Damn!"
 
 sctflavor.1.t:0 "Debates within the Seanadh"
-sctflavor.1.d:0 "Seanadh is arguing about a bunch of thing regarding the future of Scotland including if we should be a monarchy or not, a heckle came from somebody saying 'no, it will be a kingdom and John MacCormick will be our king.' Because of this MacCormick has gained the Nickname King John"
+sctflavor.1.d:0 "Seanadh is arguing about a bunch of thing regarding the future of Scotland including if we should be a monarchy or not, a heckle came from somebody saying no, it will be a kingdom and John MacCormick will be our king. Because of this MacCormick has gained the Nickname King John"
 sctflavor.1.a:0 "God Save King John..?"
 
 sctflavor.2.t:0 "The Second Neo-Jacobite Revival"
@@ -1010,7 +1010,7 @@ sctflavor.2.a:0 "Jacobites eh? What an archaic lot, let's hope they don't cause 
 
 sctrevolt.1.t:0 "The Provisional Seanadh is Formed"
 sctrevolt.1.d:0 "Prov government has been formed and war with the brits has begun"
-sctrevolt.1.a:0 "Alba gu bràth!"
+sctrevolt.1.a:0 "Alba gu brath!"
 
 sctrevolt.2.t:0 "John MacCormick elected Provisional President"
 sctrevolt.2.d:0 "With the Seanadh being dominated by the NSP they elect John MacCormick as the provisional president"
