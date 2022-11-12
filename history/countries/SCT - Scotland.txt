@@ -136,8 +136,8 @@ set_politics = {
 
 set_popularities = {
     totalist = 5
-    syndicalist = 13
-	radical_socialist = 14
+    syndicalist = 14
+	radical_socialist = 13
     social_democrat = 18
     social_liberal = 19
     market_liberal = 6

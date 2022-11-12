@@ -7,6 +7,7 @@
 
 add_namespace = scotland
 add_namespace = sctrevolt
+add_namespace = sctflavor
 
 #############
 #The Economy#
@@ -4899,7 +4900,54 @@ country_event = { # No aid
 		add_political_power = -50
     }
 }
+### Flavor events ###
+country_event = { # Monarchy vs Republic debates
+	id = sctflavor.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctflavor.1"}
+	title = sctflavor.1.t
+	desc = sctflavor.1.d
+	picture = GFX_els_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
 
+	option = {
+		name = sctflavor.1.a
+		
+		add_political_power = -50
+		add_popularity = {
+			ideology = paternal_autocrat popularity = 0.01
+		}
+		add_popularity = {
+			ideology = social_conservative popularity = 0.01
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctflavor.2
+				days = 14
+			}
+		}
+		}
+		
+    }
+}
+country_event = { # Neo-Jacobite revival
+	id = sctflavor.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctflavor.2"}
+	title = sctflavor.2.t
+	desc = sctflavor.2.d
+	picture = GFX_els_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctflavor.2.a
+		
+		add_popularity = {
+			ideology = paternal_autocrat popularity = 0.05
+		}
+		
+    }
+}
 ###############
 #Revolt Events#
 ###############
@@ -4917,7 +4965,7 @@ country_event = { # Rebellion
 
 	option = {
 		name = sctrevolt.1.a
-		
+		custom_effect_tooltip = SCT_you_will_have_to_last_120_days_tt
 		set_politics = {
 			ruling_party = authoritarian_democrat
 			elections_allowed = no
@@ -4971,11 +5019,86 @@ country_event = { # Rebellion
 			136 = {
 				add_extra_state_shared_building_slots = 2
 			}
+			country_event = {
+				id = sctrevolt.2
+				days = 3
+			}
+			IRE = {
+			country_event = {
+				id = sctrevolt.14
+				days = 8
+			}
+			}
 		}
     }
 }
 
-country_event = { # The New State
+country_event = { # (For Ireland) Send help to Scotland?
+	id = sctrevolt.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.16"}
+	title = sctrevolt.14.t
+	desc = sctrevolt.14.d
+	picture = GFX_report_event_IRE_german_volunteers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.14.a
+		
+		ai_chance = {
+			factor = 90
+		}
+		add_political_power = 100
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -5000
+		}
+		add_manpower = -2000
+
+		SCT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+			}
+			
+			add_manpower = 2000
+			country_event = sctrevolt.15
+		}
+	}
+	option = {
+		name = sctrevolt.14.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -100
+			
+	}
+}
+
+country_event = { # Ireland sent aid!
+	id = sctrevolt.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.8"}
+	title = sctrevolt.15.t
+	desc = sctrevolt.15.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.15.a
+		add_opinion_modifier = {
+         target = IRE
+         modifier = KR_friendly
+         }
+		add_political_power = 50
+		add_war_support = 0.05
+    }
+}
+
+
+country_event = { # MacCormick becomes leader
 	id = sctrevolt.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.2"}
 	title = sctrevolt.2.t
@@ -4986,12 +5109,32 @@ country_event = { # The New State
 
 	option = {
 		name = sctrevolt.2.a
-		
 		add_political_power = 50
+		add_popularity = {
+			ideology = authoritarian_democrat popularity = 0.05
+		}
+		create_country_leader = {
+				name = "John MacCormick"
+				desc = "SCT_MACCORKMICK_DESC"
+				picture = "gfx/leaders/SCT/Portrait_John_MacCormick.png"
+				expire = "1965.1.1"
+				ideology = authoritarian_liberalism_subtype
+				traits = {}
+			}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.3
+				days = 3
+			}
+		country_event = {
+				id = sctflavor.1
+				days = 23
+			}	
+		}	
     }
 }
 
-country_event = { # Don't kill each other
+country_event = { # Gallacher is pissed
 	id = sctrevolt.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.3"}
 	title = sctrevolt.3.t
@@ -5004,13 +5147,27 @@ country_event = { # Don't kill each other
 		name = sctrevolt.3.a
 		
 		add_political_power = -50
-		add_stability = 0.10
+		add_stability = -0.05
+		add_popularity = {
+			ideology = syndicalist popularity = 0.07
+		}
+		add_popularity = {
+			ideology = radical_socialist popularity = 0.05
+		}
+		add_popularity = {
+			ideology = totalist popularity = 0.03
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.4
+				days = 5
+			}
+		}
 		
-		remove_ideas = SCT_internal_troubles
     }
 }
 
-country_event = { # Overthrow MacCormick
+country_event = { # Exiles from Canada return
 	id = sctrevolt.4
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.4"}
 	title = sctrevolt.4.t
@@ -5023,11 +5180,463 @@ country_event = { # Overthrow MacCormick
 	option = {
 		name = sctrevolt.4.a
 		
-		add_political_power = -40
-		add_stability = -0.15
-		add_war_support = -0.06
-		#war_support_factor = -0.06
+		add_war_support = 0.10
+		add_manpower = 30000
+		#will create division when I'm less lazy
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.5
+				days = 10
+			}
+		}
+    }
+}
+
+country_event = { # Exiles from Canada flock to the Scottish Party and Unionists
+	id = sctrevolt.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.5"}
+	title = sctrevolt.5.t
+	desc = sctrevolt.5.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.5.a
+		add_political_power = -50
+		add_stability = -0.03
+		add_popularity = {
+			ideology = social_conservative popularity = 0.10
+		}
+		add_popularity = {
+			ideology = market_liberal popularity = 0.07
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.6
+				days = 20
+			}
+		}
+    }
+}
+
+country_event = { # Request aid from Canada?
+	id = sctrevolt.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.6"}
+	title = sctrevolt.6.t
+	desc = sctrevolt.6.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Fuck no
+		name = sctrevolt.6.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 50
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = social_conservative popularity = -0.03
+		}
+		add_popularity = {
+			ideology = market_liberal popularity = -0.01
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.10
+				days = 10
+			}
+		}
+    }
+	option = { # Yes
+		name = sctrevolt.6.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -50
+		add_popularity = {
+			ideology = social_conservative popularity = 0.03
+		}
+		add_popularity = {
+			ideology = market_liberal popularity = 0.01
+		}
+		CAN = {
+			country_event = {
+				id = sctrevolt.7
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Scotland requests aid!
+	id = sctrevolt.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.7"}
+	title = sctrevolt.7.t
+	desc = sctrevolt.7.d
+	picture = GFX_report_event_IRE_canadian_volunteers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.7.a
 		
+		ai_chance = {
+			factor = 90
+		}
+        #will remove the Black Watch as a division
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -5000
+		}
+		add_manpower = -2000
+
+		SCT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+			}
+
+			add_manpower = 2000
+			country_event = sctrevolt.8
+		}
+	}
+	option = {
+		name = sctrevolt.7.b
+		trigger = {
+			SCT = {
+				is_ai = Yes
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+		
+		add_political_power = -50
+			
+		
+		SCT = {
+			country_event = sctrevolt.20
+		}
+	}
+}
+
+country_event = { # Canada sent aid!
+	id = sctrevolt.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.8"}
+	title = sctrevolt.8.t
+	desc = sctrevolt.8.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.8.a
+		add_opinion_modifier = {
+         target = CAN
+         modifier = KR_approves_of_govt
+         }
+		#will create the Black Watch as an elite division
+		add_political_power = 50
+		add_stability = 0.05
+		add_popularity = {
+			ideology = social_conservative popularity = 0.03
+		}
+		add_popularity = {
+			ideology = market_liberal popularity = 0.03
+		}
+		set_country_flag = SCT_canadian_aid_flag
+    }
+}
+
+country_event = { # Canada refused Aid!
+	id = sctrevolt.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.9"}
+	title = sctrevolt.9.t
+	desc = sctrevolt.9.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = sctrevolt.9.a
+		add_opinion_modifier = {
+         target = CAN
+         modifier = KR_outraged
+         }
+		add_political_power = -50
+		add_war_support = -0.05
+		add_popularity = {
+			ideology = social_conservative popularity = -0.03
+		}
+		add_popularity = {
+			ideology = market_liberal popularity = -0.03
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.10
+				days = 5
+		}
+		}
+    }
+}
+
+country_event = { # Request aid from Germany?
+	id = sctrevolt.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.10"}
+	title = sctrevolt.10.t
+	desc = sctrevolt.10.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Fuck no
+		name = sctrevolt.10.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 50
+		add_war_support = 0.05
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.15
+				days = 15
+			}
+		}
+    }
+	option = { # Yes
+		name = sctrevolt.10.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -50
+		GER = {
+			country_event = {
+				id = sctrevolt.11
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Scotland wants help!
+	id = sctrevolt.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.16"}
+	title = sctrevolt.11.t
+	desc = sctrevolt.11.d
+	picture = GFX_report_event_IRE_german_volunteers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.11.a
+		
+		ai_chance = {
+			factor = 90
+		}
+		
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -5000
+		}
+		add_manpower = -2000
+
+		SCT = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+			}
+			
+			add_manpower = 2000
+			country_event = sctrevolt.12
+		}
+	}
+	option = {
+		name = sctrevolt.10.b
+		trigger = {
+			SCT = {
+				is_ai = Yes
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+		
+		add_political_power = -50
+			
+		
+		SCT = {
+			country_event = sctrevolt.13
+		}
+	}
+}
+country_event = { # Germany sent aid!
+	id = sctrevolt.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.12"}
+	title = sctrevolt.12.t
+	desc = sctrevolt.12.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.12.a
+		add_opinion_modifier = {
+         target = GER
+         modifier = KR_approves_of_govt
+         }
+		#will a German volunteer division
+		add_political_power = 50
+		add_stability = 0.05
+		set_country_flag = SCT_german_aid_flag
+    }
+}
+country_event = { # Germany refused Aid!
+	id = sctrevolt.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.13"}
+	title = sctrevolt.13.t
+	desc = sctrevolt.13.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = sctrevolt.13.a
+		add_opinion_modifier = {
+         target = GER
+         modifier = KR_outraged
+         }
+		add_political_power = -50
+		add_war_support = -0.05
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.16
+				days = 10
+		}
+	  }
+    }
+}
+
+country_event = { #Reach out to the Syndicalists?
+	id = sctrevolt.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.10"}
+	title = sctrevolt.16.t
+	desc = sctrevolt.16.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Fuck no
+		name = sctrevolt.16.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 100
+		add_war_support = -0.05
+	    set_country_flag = SCT_elections_allowed_flag
+    }
+	option = { # Yes
+		name = sctrevolt.16.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -50
+		add_popularity = {
+			ideology = syndicalist popularity = 0.05
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.17
+				days = 5
+		}
+	  }
+	}
+}
+
+country_event = { #Syndies want power!
+	id = sctrevolt.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.10"}
+	title = sctrevolt.17.t
+	desc = sctrevolt.17.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #FUCK no
+		name = sctrevolt.17.a
+		ai_chance = {
+			factor = 75
+		}
+		add_political_power = 100
+		add_war_support = -0.05
+		add_stability = -0.05
+	    hidden_effect = {
+		country_event = {
+				id = sctrevolt.18
+				days = 10
+		}
+	  }
+    }
+	option = { #offer a middle ground
+		name = sctrevolt.17.b
+		ai_chance = {
+			factor = 75
+		}
+		add_political_power = -50
+		add_stability = 0.05
+	    hidden_effect = {
+		country_event = {
+				id = sctrevolt.22
+				days = 10
+		}
+	  }
+    }
+	option = { # Fine
+		name = sctrevolt.17.c
+		ai_chance = {
+			factor = 35
+		}
+		add_political_power = -50
+		add_stability = 0.05
+		add_popularity = {
+			ideology = syndicalist popularity = 0.05
+		}
+		hidden_effect = {
+		country_event = {
+				id = sctrevolt.19
+				days = 5
+		}
+	  }
+	}
+}
+
+country_event = { #Syndies attempt coup!
+	id = sctrevolt.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.18"}
+	title = sctrevolt.18.t
+	desc = sctrevolt.18.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #They win
+		name = sctrevolt.18.a
+		ai_chance = {
+			factor = 45
+		}
 		set_politics = {
 			ruling_party = syndicalist
 			elections_allowed = no
@@ -5039,827 +5648,129 @@ country_event = { # Overthrow MacCormick
 			SCT_Agnes_Dollan_eco_syn
 			SCT_Tom_Johnston_sec_syn
 		}
-		
 		add_popularity = {
 			ideology = authoritarian_democrat popularity = -0.20
 		}
-		
+		add_political_power = -100
+		add_war_support = -0.05
+		add_stability = -0.10
+	    set_country_flag = SCT_socialist_revolution
+    }
+	option = { # They lose
+		name = sctrevolt.18.b
+		ai_chance = {
+			factor = 65
+		}
+		add_political_power = 50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = syndicalist popularity = -0.10
+		}
+		add_popularity = {
+			ideology = radical_socialist popularity = -0.05
+		}
+		set_country_flag = SCT_syndicalists_failed_coup
 		hidden_effect = {
-			delete_unit_template_and_units = { 
-				division_template = "Homeland Watch Unit"
-			}
+		country_event = {
+				id = sctrevolt.20
+				days = 5
 		}
-    }
-}
-
-country_event = { # Reach Out To France
-	id = sctrevolt.5
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.5"}
-	title = sctrevolt.5.t
-	desc = sctrevolt.5.d
-	picture = SWE_military_meeting
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.5.a
-		
-		ai_chance = {
-			factor = 40
-		}
-		
-		add_political_power = 20
-		set_country_flag = neutral_syndie
-    }
-	
-	option = {
-		name = sctrevolt.5.b
-		
-		ai_chance = {
-			factor = 60
-		}
-		
-		FRA = {
-			country_event = {
-				id = sctrevolt.6
-				days = 1
-			}
-		}
-    }
-}
-
-country_event = { # Scotland Petitions France
-	id = sctrevolt.6
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.6"}
-	title = sctrevolt.6.t
-	desc = sctrevolt.6.d
-	picture = SWE_military_meeting
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { #Yes
-		name = sctrevolt.6.a
-		ai_chance = {
-			factor = 40
-		}
-		
-		remove_from_faction = ENG
-		
-		FRA = {
-			add_to_faction = SCT
-		}
-		ENG = {
-			country_event = {
-				id = sctrevolt.8
-				days = 0
-			}
-		} 
-	}
-
-	option = { #No
-		name = sctrevolt.6.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		ai_chance = {
-			factor = 60
-		}
-		
-		SCT = {
-			country_event = {
-				id = sctrevolt.7
-				days = 1
-			}
-		} 
+	  }
 	}
 }
 
-country_event = { # They Refuse!
-	id = sctrevolt.7
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.7"}
-	title = sctrevolt.7.t
-	desc = sctrevolt.7.d
-	picture = SWE_military_meeting
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { 
-		name = sctrevolt.7.a
-		
-		add_political_power = -20
-		set_country_flag = neutral_syndie
-		set_country_flag = syndie_scotland
-	}
-}
-
-country_event = { # France Protects Scotland
-	id = sctrevolt.8
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.8"}
-	title = sctrevolt.8.t
-	desc = sctrevolt.8.d
-	picture = SWE_military_meeting
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.8.a
-		
-		SCT = {
-			transfer_state = 120
-			transfer_state = 121
-			transfer_state = 133
-			transfer_state = 136
-			transfer_state = 938
-		}
-		SCT = {
-			white_peace_with_ROOT = yes
-		}
-		ENG = {
-			set_country_flag = scotland_lost
-		}
-		add_stability = -0.30
-		
-		SCT = { 
-			hidden_effect = {
-				set_country_flag = free_caledonia
-				set_country_flag = syndie_scotland
-				set_country_flag = auld_alliance
-				set_country_flag = uprising_over
-				clr_country_flag = rebellion_start
-			}
-		}
-	}
-}
-
-country_event = { # Help from Canada
-	id = sctrevolt.9
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.9"}
-	title = sctrevolt.9.t
-	desc = sctrevolt.9.d
-	picture = GFX_report_event_IRE_canadian_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { # Just Aid
-		name = sctrevolt.9.a
-		
-		ai_chance = {
-			factor = 33
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_CANADA_ALLIGNED_MONARCHY
-				}
-			}
-		}
-		
-		CAN = {
-			country_event = {
-				id = sctrevolt.10
-				days = 1
-			}
-		}
-	}
-	
-	option = { # Volunteers Too
-		name = sctrevolt.9.b
-		
-		ai_chance = {
-			factor = 33
-		}
-		
-		CAN = {
-			country_event = {
-				id = sctrevolt.11
-				days = 1
-			}
-		}
-	}
-	
-	option = { # Expeditionary Force
-		name = sctrevolt.9.c
-		
-		ai_chance = {
-			factor = 34
-		}
-		
-		CAN = {
-			country_event = {
-				id = sctrevolt.12
-				days = 1
-			}
-		}
-	}
-}
-
-country_event = { # Just Aid
-	id = sctrevolt.10
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.10"}
-	title = sctrevolt.10.t
-	desc = sctrevolt.10.d
-	picture = GFX_report_event_IRE_canadian_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.10.a
-		
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_CANADA_ALLIGNED_MONARCHY
-				}
-			}
-		}
-		
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_1
-			amount = -5000
-		}
-			
-		
-		SCT = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 5000
-			}
-			
-			set_country_flag = dem_support
-		}
-	}
-	
-	option = {
-		name = sctrevolt.10.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		
-		ai_chance = {
-			factor = 10
-		}
-		
-		add_political_power = -50
-		
-		SCT = {
-			country_event = sctrevolt.20
-		}
-	}
-}
-
-country_event = { # Volunteers Too
-	id = sctrevolt.11
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.11"}
-	title = sctrevolt.11.t
-	desc = sctrevolt.11.d
-	picture = GFX_report_event_IRE_canadian_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.11.a
-		
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_CANADA_ALLIGNED_MONARCHY
-				}
-			}
-		}
-
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_1
-			amount = -5000
-		}
-		add_manpower = -2000
-
-		SCT = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 5000
-			}
-
-			add_manpower = 2000
-
-			set_country_flag = dem_support
-		}
-	}
-	option = {
-		name = sctrevolt.10.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		
-		ai_chance = {
-			factor = 10
-		}
-		
-		add_political_power = -50
-			
-		
-		SCT = {
-			country_event = sctrevolt.20
-		}
-	}
-}
-
-country_event = { # Expeditionary Force
-	id = sctrevolt.12
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.12"}
-	title = sctrevolt.12.t
-	desc = sctrevolt.12.d
-	picture = GFX_report_event_IRE_canadian_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.12.a
-		
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_CANADA_ALLIGNED_MONARCHY
-				}
-			}
-		}
-		
-		set_country_flag = can_expeditionary
-		
-		CAN = {
-			add_to_faction = SCT
-		}
-		
-		ENG = {
-			country_event = {
-				id = sctrevolt.13
-				days = 0
-			}
-		}
-	}
-	option = {
-		name = sctrevolt.10.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		
-		ai_chance = {
-			factor = 20
-		}
-		
-		add_political_power = -50
-		
-		SCT = {
-			country_event = sctrevolt.20
-		}
-	}
-}
-
-country_event = { # Canada Protects Scotland
-	id = sctrevolt.13
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.13"}
-	title = sctrevolt.13.t
-	desc = sctrevolt.13.d
-	picture = GFX_report_event_IRE_canadian_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.13.a
-		
-		SCT = {
-			transfer_state = 120
-			transfer_state = 121
-			transfer_state = 133
-			transfer_state = 136
-			transfer_state = 938
-		}
-		SCT = {
-			white_peace_with_ROOT = yes
-		}
-		add_stability = -0.30
-		ENG = {
-			set_country_flag = scotland_lost
-		}
-		SCT = { 
-			hidden_effect = {
-				set_country_flag = free_caledonia
-				country_event = {
-					id = scotland.7
-					days = 5
-				}
-			}
-			set_country_flag = uprising_over
-			remove_ideas = SCT_revolt
-			clr_country_flag = rebellion_start
-		}
-	}
-}
-
-country_event = { # Help from Germany
-	id = sctrevolt.14
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.14"}
-	title = sctrevolt.14.t
-	desc = sctrevolt.14.d
-	picture = GFX_report_event_IRE_german_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = { # Just Aid
-		name = sctrevolt.14.a
-		
-		ai_chance = {
-			factor = 33
-		}
-		
-		GER = {
-			country_event = {
-				id = sctrevolt.15
-				days = 1
-			}
-		}
-	}
-	
-	option = { # Volunteers Too
-		name = sctrevolt.14.b
-		
-		ai_chance = {
-			factor = 33
-		}
-		
-		GER = {
-			country_event = {
-				id = sctrevolt.16
-				days = 1
-			}
-		}
-	}
-	
-	option = { # Expeditionary Force
-		name = sctrevolt.14.c
-		
-		ai_chance = {
-			factor = 34
-		}
-		
-		GER = {
-			country_event = {
-				id = sctrevolt.17
-				days = 1
-			}
-		}
-	}
-}
-
-country_event = { # Just Aid
-	id = sctrevolt.15
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.15"}
-	title = sctrevolt.15.t
-	desc = sctrevolt.15.d
-	picture = GFX_report_event_IRE_german_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.15.a
-		
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_GERMAN_ALLIGNED_MONARCHY
-				}
-			}
-		}
-		
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_1
-			amount = -5000
-		}
-			
-		
-		SCT = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 5000
-			}
-			
-			set_country_flag = dem_support
-		}
-	}
-	option = {
-		name = sctrevolt.10.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		
-		ai_chance = {
-			factor = 10
-		}
-		
-		add_political_power = -50
-			
-		
-		SCT = {
-			country_event = sctrevolt.20
-		}
-	}
-}
-
-country_event = { # Volunteers Too
-	id = sctrevolt.16
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.16"}
-	title = sctrevolt.16.t
-	desc = sctrevolt.16.d
-	picture = GFX_report_event_IRE_german_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.16.a
-		
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_GERMAN_ALLIGNED_MONARCHY
-				}
-			}
-		}
-		
-		add_equipment_to_stockpile = {
-			type = infantry_equipment_1
-			amount = -5000
-		}
-		add_manpower = -2000
-
-		SCT = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 5000
-			}
-			
-			add_manpower = 2000
-			
-			set_country_flag = dem_support
-		}
-	}
-	option = {
-		name = sctrevolt.10.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		
-		ai_chance = {
-			factor = 10
-		}
-		
-		add_political_power = -50
-			
-		
-		SCT = {
-			country_event = sctrevolt.20
-		}
-	}
-}
-
-country_event = { # Expeditionary Force
-	id = sctrevolt.17
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.17"}
-	title = sctrevolt.17.t
-	desc = sctrevolt.17.d
-	picture = GFX_report_event_IRE_german_volunteers
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = sctrevolt.17.a
-		
-		ai_chance = {
-			factor = 80
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_GERMAN_ALLIGNED_MONARCHY
-				}
-			}
-		}
-		
-		set_country_flag = ger_expeditionary
-		
-		GER = {
-			add_to_faction = SCT
-		}
-		
-		ENG = {
-			country_event = {
-				id = sctrevolt.18
-				days = 0
-			}
-		}
-	}
-	option = {
-		name = sctrevolt.10.b
-		trigger = {
-			SCT = {
-				is_ai = Yes
-			}
-		}
-		
-		ai_chance = {
-			factor = 20
-		}
-		
-		add_political_power = -50
-			
-		
-		SCT = {
-			country_event = sctrevolt.20
-		}
-	}
-}
-
-country_event = { # Germany Protects Scotland
-	id = sctrevolt.18
+country_event = { #MacCormick's next move
+	id = sctrevolt.20
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.18"}
-	title = sctrevolt.18.t
-	desc = sctrevolt.18.d
-	picture = GFX_report_event_IRE_german_volunteers
+	title = sctrevolt.20.t
+	desc = sctrevolt.20.d
+	picture = SCT_syndies_march
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = {
-		name = sctrevolt.18.a
+	option = { #Declare a state of emergency!
+		name = sctrevolt.20.a
+		ai_chance = {
+			factor = 50
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat popularity = 0.10
+		}
+		add_political_power = 100
+		add_war_support = 0.10
+		add_stability = -0.10
+	    set_country_flag = SCT_MacCormick_dictator
+		set_party_name = {
+         ideology = authoritarian_democrat
+         long_name = SCT_authoritarian_democrat_NSP_party_long
+         name = SCT_authoritarian_democrat_NSP_party
+        }
 		
-		SCT = {
-			transfer_state = 120
-			transfer_state = 121
-			transfer_state = 133
-			transfer_state = 136
-			transfer_state = 938
+    }
+	option = { # Keep the prov government
+		name = sctrevolt.20.b
+		ai_chance = {
+			factor = 65
 		}
-		SCT = {
-			white_peace_with_ROOT = yes
-		}
-		add_stability = -0.30
-		ENG = {
-			set_country_flag = scotland_lost
-		}
-		SCT = { 
-			hidden_effect = {
-				set_country_flag = free_caledonia
-				country_event = {
-					id = scotland.5
-					days = 5
-				}
-			}
-			set_country_flag = uprising_over
-			clr_country_flag = rebellion_start
-			remove_ideas = SCT_revolt
-		}
+		add_stability = 0.10
+		add_political_power = -50
+		set_country_flag = SCT_elections_allowed_flag
 	}
 }
 
-country_event = { # Consolidating Internal Power
+country_event = { #Syndie prov government
 	id = sctrevolt.19
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.19"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.18"}
 	title = sctrevolt.19.t
 	desc = sctrevolt.19.d
-	picture = NOR_street_fighting
+	picture = SCT_syndies_march
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = sctrevolt.19.a
-		
-		ai_chance = {
-			factor = 60
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_DEMOCRACY
-				}
-			}
-		}
-		
-		add_stability = 0.10
-		add_political_power = -50
-		add_manpower = 2500
-		
-		add_popularity = {
-			ideology = social_democrat 
-			popularity = 0.05
+		set_politics = {
+			ruling_party = syndicalist
+			elections_allowed = no
+	    }
+		remove_all_ministers = yes
+		add_ideas = {
+			SCT_William_Gallacher_hog_syn
+			SCT_Hugh_MacDiarmid_for_syn
+			SCT_Agnes_Dollan_eco_syn
+			SCT_Tom_Johnston_sec_syn
 		}
 		add_popularity = {
-			ideology = social_liberal 
-			popularity = 0.05
+			ideology = authoritarian_democrat popularity = -0.20
 		}
-		add_popularity = {
-			ideology = market_liberal 
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology =social_conservative 
-			popularity = 0.05
-		}
-		
-		hidden_effect = {
-			set_country_flag = dem_support
-		}
-	}
-	option = {
-		name = sctrevolt.19.b
-		
-		ai_chance = {
-			factor = 40
-			modifier = {
-				factor = 100
-				has_game_rule = {
-					rule = SCT_political_path
-					option = SCT_NATPOP
-				}
-			}
-		}
-		
-		add_stability = -0.15
-		add_political_power = 80
-		add_manpower = 1000
-		
-		add_ideas = SCT_natpop_support
-		
-		add_popularity = {
-			ideology = authoritarian_democrat 
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = national_populist 
-			popularity = 0.10
-		}
-		
-		hidden_effect = {
-			set_country_flag = nat_support
-		}
-	}
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.05
+	    set_country_flag = SCT_syndicalists_prov_government
+    }
 }
 
-country_event = { # Aid Refused
-	id = sctrevolt.20
-	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.20"}
-	title = sctrevolt.20.t
-	desc = sctrevolt.20.d
-	picture = japan_meeting
+country_event = { #Scottish unity gov
+	id = sctrevolt.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.22"}
+	title = sctrevolt.22.t
+	desc = sctrevolt.22.d
+	picture = SCT_syndies_march
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = sctrevolt.20.a
-		
-		add_political_power = -20
-		
-		hidden_effect = {
-			set_country_flag = dem_support
+		name = sctrevolt.19.a
+		add_popularity = {
+			ideology = authoritarian_democrat popularity = 0.10
 		}
-	}
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.05
+	    set_country_flag = SCT_scottish_unity_gov_flag
+		set_country_flag = SCT_elections_allowed_flag
+    }
 }
