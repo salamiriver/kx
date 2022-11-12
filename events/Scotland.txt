@@ -5020,7 +5020,6 @@ country_event = { # Rebellion
 		}
     }
 }
-
 country_event = { # (For Ireland) Send help to Scotland?
 	id = sctrevolt.14
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.16"}
@@ -5325,7 +5324,6 @@ country_event = { # Canada sent aid!
          target = CAN
          modifier = KR_approves_of_govt
          }
-		#will create the Black Watch as an elite division
 		add_political_power = 50
 		add_stability = 0.05
 		add_popularity = {
@@ -5335,6 +5333,9 @@ country_event = { # Canada sent aid!
 			ideology = market_liberal popularity = 0.03
 		}
 		set_country_flag = SCT_canadian_aid_flag
+		hidden_effect = {
+		load_oob = SCT_black_watch
+		}
     }
 }
 
