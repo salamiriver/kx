@@ -4965,18 +4965,8 @@ country_event = { # Rebellion
 	option = {
 		name = sctrevolt.1.a
 		custom_effect_tooltip = SCT_you_will_have_to_last_120_days_tt
-		set_politics = {
-			ruling_party = authoritarian_democrat
-			elections_allowed = no
-		}
 		remove_all_ministers = yes
 		
-		add_manpower = 20000
-		
-		declare_war_on = {
-			target = ENG
-			type = annex_everything
-		}
 		
 		hidden_effect = {
 			load_oob = SCT_uprising
@@ -4997,6 +4987,11 @@ country_event = { # Rebellion
 			amount = 500 }  
 		    hidden_effect = {
 			set_country_flag = rebellion_start
+		    }
+			add_manpower = 20000
+		    declare_war_on = {
+			target = ENG
+			type = annex_everything
 		    }
 		}
 		hidden_effect = {
