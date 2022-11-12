@@ -4925,11 +4925,10 @@ country_event = { # Monarchy vs Republic debates
 				id = sctflavor.2
 				days = 14
 			}
-		}
+		 }
 		}
 		
     }
-}
 country_event = { # Neo-Jacobite revival
 	id = sctflavor.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctflavor.2"}
@@ -4971,12 +4970,6 @@ country_event = { # Rebellion
 			elections_allowed = no
 		}
 		remove_all_ministers = yes
-		add_ideas = {
-			SCT_John_MacCormick_hog_ade
-			SCT_Ian_Campbell_Gray_eco_ade
-			SCT_Charles_Earl_Breadalbane_sec_ade
-			SCT_Douglas_Duke_of_Hamilton_for_ade
-		}
 		
 		add_manpower = 20000
 		
@@ -4987,25 +4980,25 @@ country_event = { # Rebellion
 		
 		hidden_effect = {
 			load_oob = SCT_uprising
-		}
-		
-		add_equipment_to_stockpile = {
+			add_ideas = {
+			SCT_John_MacCormick_hog_ade
+			SCT_Ian_Campbell_Gray_eco_ade
+			SCT_Charles_Earl_Breadalbane_sec_ade
+			SCT_Douglas_Duke_of_Hamilton_for_ade
+		    }
+			add_ideas = SCT_revolt
+		    add_ideas = SCT_internal_troubles
+			add_equipment_to_stockpile = {
 			type = infantry_equipment_1
-			amount = 7500
-		}
-		
-		add_equipment_to_stockpile = {
+			amount = 2000
+		    }
+		    add_equipment_to_stockpile = {
 			type = support_equipment_1
-			amount = 500
-		}
-		
-		add_ideas = SCT_revolt
-		add_ideas = SCT_internal_troubles
-		
-		hidden_effect = {
+			amount = 500 }  
+		    hidden_effect = {
 			set_country_flag = rebellion_start
+		    }
 		}
-		
 		hidden_effect = {
 			120 = {
 				add_extra_state_shared_building_slots = 2
@@ -5406,7 +5399,7 @@ country_event = { # Request aid from Germany?
 		add_war_support = 0.05
 		hidden_effect = {
 		country_event = {
-				id = sctrevolt.15
+				id = sctrevolt.16
 				days = 15
 			}
 		}
