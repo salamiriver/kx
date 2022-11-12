@@ -63,6 +63,33 @@ SCT_national_populist_ADJ:0 "Scottish"
 SCT_national_populist_DEF:0 "Scotland"
 
 ### Focuses ###
+SCT_scotland_unshackled:0 "For A Free Scotland"
+SCT_scotland_unshackled_desc:0 ""
+
+SCT_look_for_foreign_aid:0 "Petition for Foreign Aid"
+SCT_look_for_foreign_aid_desc:0 ""
+
+SCT_use_the_weapon_reserves:0 "Gather the Weapon Reserves"
+SCT_use_the_weapon_reserves_desc:0 ""
+
+SCT_sprit_of_the_bruce:0 "Call Back to the Struggle of Robert Bruce"
+SCT_sprit_of_the_bruce_desc:0 ""
+
+SCT_create_the_homeland_watch:0 "Form the Homeland Watch"
+SCT_create_the_homeland_watch_desc:0 ""
+
+SCT_arm_the_returned_exiles:0 "Arm the Returned Exiles"
+SCT_arm_the_returned_exiles_desc:0 ""
+
+SCT_as_long_as_theres_100:0 "As Long As There's One Hundred"
+SCT_as_long_as_theres_100_desc:0 ""
+
+SCT_use_our_mountains:0 "Use Our Mountain Peaks"
+SCT_use_our_mountains_desc:0 ""
+
+SCT_defend_scotland_at_all_costs:0 "The Final Defence of our Freedom"
+SCT_defend_scotland_at_all_costs_desc:0 ""
+
 
 SCT_first_elections:0 "The First Elections"
 SCT_first_elections_desc:0 "With the successful transition of the caretaker Provisional Government into a constitutional democracy, vigorous campaigning has been underway by each of Scotland’s democratic political parties. May the best candidate win!"
@@ -1105,6 +1132,9 @@ sctrevolt.22.a:0 "Together for Freedom!"
 
 ### Tooltips ###
 SCT_you_will_have_to_last_120_days_tt:0 "§YWe will have to last§! §R120 Days§! §Yagainst the English if we are to achieve independence!§!"
+SCT_freedom_tt:0 "§GFor the First time in over 500 years, Scotland has a chance at freedom. We will not waste it.§!"
+SCT_we_will_look_for_aid_tt:0 "§GWe will begin looking for aid from other countries.§!"
+SCT_homeland_watch_will_defend_us_tt:0 "§GThe Homeland Watch will defend us.§!"
 uprising_over:0 "The Uprising Is Over"
 army_reform:0 "Army Reform Has Began"
 focus_on_agriculture:0 "Agrarian Economics"

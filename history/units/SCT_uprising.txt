@@ -37,13 +37,13 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Homeland Watch Unit"
+	name = "Highlander Militia"
 	division_names_group = ENGL_INF_01
 	is_locked = no
 	regiments = {
 		militia = { x = 0 y = 0 }
 		militia = { x = 0 y = 1 }
-		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
 		militia = { x = 1 y = 1 }
 	}
 }
@@ -57,13 +57,19 @@ units = {
 ########
 
 	division = {
-		name = "1st Loyalist Division"
+		name = "1st Division"
 		location = 9392
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "2nd Loyalist Division"
+		name = "2nd Division"
+		location = 9392
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3nd Division"
 		location = 9392
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
@@ -72,6 +78,12 @@ units = {
 		name = "1st Cavalry Division"
 		location = 9392
 		division_template = "Cavalry Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Inverness Highlanders"
+		location = 9161
+		division_template = "Highlander Militia"
 		start_experience_factor = 0.1
 	}
 	division = {
@@ -85,18 +97,6 @@ units = {
 		location = 3273
 		division_template = "Syndicalist Militia"
 		start_experience_factor = 0.2
-	}
-	division = {
-		name = "1st Homeland Watch Division"
-		location = 11218
-		division_template = "Homeland Watch Unit"
-		start_experience_factor = 0.5
-	}
-	division = {
-		name = "2nd Homeland Watch Division"
-		location = 9314
-		division_template = "Homeland Watch Unit"
-		start_experience_factor = 0.5
 	}
 }
 

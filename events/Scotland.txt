@@ -5200,12 +5200,7 @@ country_event = { # Exiles from Canada flock to the Scottish Party and Unionists
 		add_popularity = {
 			ideology = market_liberal popularity = 0.07
 		}
-		hidden_effect = {
-		country_event = {
-				id = sctrevolt.6
-				days = 20
-			}
-		}
+
     }
 }
 

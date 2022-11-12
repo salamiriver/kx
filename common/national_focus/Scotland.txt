@@ -20,12 +20,307 @@ focus_tree = {
 	
 	default = no
 	reset_on_civilwar = no
+    ###Revolt stuff###
+	focus = {
+		id = SCT_scotland_unshackled
+		icon = GFX_focus_SCT_scotland_icon
 
+		x = 0
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = rebellion_start
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_scotland_unshackled"
+			
+			custom_effect_tooltip = SCT_freedom_tt
+		}
+	}
 	
+	focus = {
+		id = SCT_look_for_foreign_aid
+		icon = GFX_goal_SWI_international_aid
+
+		x = 1
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_scotland_unshackled }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_look_for_foreign_aid"
+			custom_effect_tooltip = SCT_we_will_look_for_aid_tt
+			hidden_effect = {
+			country_event = {
+				id = sctrevolt.6
+				days = 10
+			 }
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = SCT_use_the_weapon_reserves
+		icon = GFX_goal_generic_basic_weapons
+
+		x = -1
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_scotland_unshackled }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_use_the_weapon_reserves"
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 3000
+		    }
+			
+		}
+	}
+	
+	focus = {
+		id = SCT_sprit_of_the_bruce
+		icon = GFX_goal_generic_boost_morale
+
+		x = 0
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_use_the_weapon_reserves }
+		prerequisite = { focus = SCT_look_for_foreign_aid }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_sprit_of_the_bruce"
+		   add_war_support = 0.10
+		   add_timed_idea = {
+             idea = SCT_spirit_of_robert_the_bruce 
+             days = 90
+            }
+		}
+	}
+	focus = {
+		id = SCT_create_the_homeland_watch
+		icon = GFX_focus_SCT_soldiers_march
+
+		x = -2
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_use_the_weapon_reserves }
+		prerequisite = { focus = SCT_look_for_foreign_aid }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus  SCT_create_the_homeland_watch"
+			custom_effect_tooltip = SCT_homeland_watch_will_defend_us_tt
+			hidden_effect = {
+			load_oob = SCT_homeland_watch
+			}
+		}
+	}
+	focus = {
+		id = SCT_arm_the_returned_exiles
+		icon = GFX_focus_SCT_unionist_troops
+
+		x = 2
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_look_for_foreign_aid }
+		prerequisite = { focus = SCT_use_the_weapon_reserves }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_arm_the_returned_exiles"
+			add_manpower = 20000
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1000
+		    }
+			hidden_effect = {
+			load_oob = SCT_loyalist
+			}
+		}
+	}
+	focus = {
+		id = SCT_as_long_as_theres_100
+		icon = GFX_goal_ENG_devolution_scotland
+
+		x = -1
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_create_the_homeland_watch }
+		prerequisite = { focus = SCT_sprit_of_the_bruce }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_as_long_as_theres_100"
+			add_war_support = 0.15
+			add_stability = 0.05
+			add_manpower = 100
+		}
+	}
+	focus = {
+		id = SCT_use_our_mountains
+		icon = GFX_goal_SKM_Mastery_Mountains
+
+		x = 1
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_arm_the_returned_exiles }
+		prerequisite = { focus = SCT_sprit_of_the_bruce }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_scotland_unshackled"
+			add_timed_idea = {
+             idea = SCT_use_mountains
+             days = 60
+            }
+			
+		}
+	}
+	focus = {
+		id = SCT_defend_scotland_at_all_costs
+		icon = GFX_focus_SCT_fist
+
+		x = 0
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		relative_position_id = SCT_scotland_unshackled
+		prerequisite = { focus = SCT_as_long_as_theres_100 }
+		prerequisite = { focus = SCT_use_our_mountains }
+		
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = rebellion_start
+		}
+		bypass = {
+			has_country_flag = free_caledonia
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_scotland_unshackled"
+			add_manpower = 10000
+			add_war_support = 0.20
+			add_timed_idea = {
+             idea = SCT_the_final_defense
+             days = 30
+            }
+		}
+	}
 	##################
 	#Democratic Stuff#
 	##################
-
+    
 	focus = {
 
 		id = SCT_first_elections

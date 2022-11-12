@@ -1,0 +1,45 @@
+﻿########
+# Templates
+########
+division_template = {
+	name = "Homeland Watch"
+	division_names_group = ENGL_INF_01
+	is_locked = no
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 2 y = 0 }
+	}
+}
+
+
+
+########
+units = {
+########
+# Land
+########
+
+	division = {
+		name = "1st Homeland Watch Division"
+		location = 9392
+		division_template = "Homeland Watch"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "2st Homeland Watch Division"
+		location = 9392
+		division_template = "Homeland Watch"
+		start_experience_factor = 0.4
+	}
+	
+}
+
+########
+# Air
+########
+
+}
+
