@@ -157,7 +157,7 @@ focus_tree = {
 
 		x = -2
 		y = 2
-		cost = 1
+		cost = 2
 		available_if_capitulated = yes
 		relative_position_id = SCT_scotland_unshackled
 		prerequisite = { focus = SCT_use_the_weapon_reserves }
@@ -189,7 +189,7 @@ focus_tree = {
 
 		x = 2
 		y = 2
-		cost = 1
+		cost = 2
 		available_if_capitulated = yes
 		relative_position_id = SCT_scotland_unshackled
 		prerequisite = { focus = SCT_look_for_foreign_aid }
@@ -289,7 +289,7 @@ focus_tree = {
 
 		x = 0
 		y = 4
-		cost = 3
+		cost = 4
 		available_if_capitulated = yes
 		relative_position_id = SCT_scotland_unshackled
 		prerequisite = { focus = SCT_as_long_as_theres_100 }
