@@ -1753,6 +1753,10 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/goal_korean_occupation.png"
 	}
 	SpriteType = {
+		name = "GFX_SCT_Robert_Bruce"
+		texturefile = "gfx/interface/goals/SCT_Robert_Bruce.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_SCT_kingdom"
 		texturefile = "gfx/interface/goals/focus_SCT_kingdom.png"
 	}

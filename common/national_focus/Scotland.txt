@@ -120,7 +120,7 @@ focus_tree = {
 	
 	focus = {
 		id = SCT_sprit_of_the_bruce
-		icon = GFX_goal_generic_boost_morale
+		icon = GFX_SCT_Robert_Bruce
 
 		x = 0
 		y = 2
