@@ -171,7 +171,7 @@ create_country_leader = {
 	traits = {}
 }
 create_country_leader = {
-	name = "Rolanf Muirhead"
+	name = "Roland Muirhead"
 	desc = "SCT_MAXTON_DESC"
 	picture = "gfx/leaders/SCT/Portrait_Scotland_Roland_Muirhead.png"
 	expire = "1965.1.1"
