@@ -1413,7 +1413,7 @@ focus_tree = {
 			133 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				    type = arms_factory
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -1421,7 +1421,7 @@ focus_tree = {
 			121 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				    type = arms_factory
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -1478,7 +1478,7 @@ focus_tree = {
 			
 			133 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 4
 					province = 11218
 					instant_build = yes
@@ -1486,7 +1486,7 @@ focus_tree = {
 			}
 			121 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 4
 					province = 9314
 					instant_build = yes
@@ -1494,7 +1494,7 @@ focus_tree = {
 			}
 			121 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 4
 					province = 11378
 					instant_build = yes
@@ -1556,7 +1556,7 @@ focus_tree = {
 			133 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				    type = industrial_complex
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -1564,7 +1564,7 @@ focus_tree = {
 			121 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				    type = industrial_complex
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -1597,7 +1597,7 @@ focus_tree = {
 			136 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				    type = industrial_complex
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -1605,7 +1605,7 @@ focus_tree = {
 			120 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				    type = industrial_complex
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -2148,7 +2148,7 @@ focus_tree = {
 			
 			133 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 6
 					province = 11218
 					instant_build = yes
@@ -2156,7 +2156,7 @@ focus_tree = {
 			}
 			121 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 6
 					province = 9314
 					instant_build = yes
@@ -2164,7 +2164,7 @@ focus_tree = {
 			}
 			121 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 6
 					province = 11378
 					instant_build = yes
@@ -2939,10 +2939,10 @@ focus_tree = {
 			
 			120 = {
 				add_extra_state_shared_building_slots = 1
-		    }
+			}
 			121 = {
 				add_extra_state_shared_building_slots = 1
-	        }
+			}
 			133 = {
 				add_extra_state_shared_building_slots = 1
 			}
@@ -4334,20 +4334,20 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_invest_in_industry"
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			121 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -5656,7 +5656,7 @@ focus_tree = {
 	cost_reduction = 0.5
 	uses = 1
 	category = cat_grand_battle_plan
-		    }
+			}
 		}
 	}
 	
@@ -5693,7 +5693,7 @@ focus_tree = {
 	cost_reduction = 0.5
 	uses = 1
 	category = cat_grand_battle_plan
-		    }
+			}
 			
 			army_experience = 20
 		}
@@ -5771,7 +5771,7 @@ focus_tree = {
 	cost_reduction = 0.5
 	uses = 1
 	category = cat_grand_battle_plan
-		    }
+			}
 		}
 	}
 	
@@ -5808,7 +5808,7 @@ focus_tree = {
 	cost_reduction = 0.5
 	uses = 1
 	category = cat_grand_battle_plan
-		    }
+			}
 			
 			army_experience = 10
 		}
@@ -5847,7 +5847,7 @@ focus_tree = {
 	cost_reduction = 0.5
 	uses = 1
 	category = cat_grand_battle_plan
-		    }
+			}
 			
 			add_ideas = SCT_not_one_step
 		}
@@ -6000,7 +6000,7 @@ focus_tree = {
 			
 			133 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 2
 					province = 6385
 					instant_build = yes
@@ -6008,7 +6008,7 @@ focus_tree = {
 			}
 			121 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 2
 					province = 159
 					instant_build = yes
@@ -6016,7 +6016,7 @@ focus_tree = {
 			}
 			136 = {
 				add_building_construction = {
-				    type = bunker
+					type = bunker
 					level = 2
 					province = 3150
 					instant_build = yes
@@ -6606,20 +6606,20 @@ focus_tree = {
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			121 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -6666,29 +6666,29 @@ focus_tree = {
 			custom_effect_tooltip = SCT_naval_fort
 			
 			hidden_effect = {
-			    121 = {
-				    add_building_construction = {
-					    type = coastal_bunker
-					    level = 4
-					    province = 6300
-					    instant_build = yes
-				    }
+				121 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 6300
+						instant_build = yes
+					}
 				}
 				133 = {
-				    add_building_construction = {
-				        type = coastal_bunker
-					    level = 4
-					    province = 6395
-					    instant_build = yes
-				    }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 6395
+						instant_build = yes
+					}
 				}
 				938 = {
-				    add_building_construction = {
-				        type = coastal_bunker
-					    level = 4
-					    province = 13631
-					    instant_build = yes
-				    }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 13631
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -6921,20 +6921,20 @@ focus_tree = {
 			
 			136 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			938 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7017,26 +7017,26 @@ focus_tree = {
 			
 			hidden_effect = {
 				120 = {
-				    add_building_construction = {
-				        type = coastal_bunker
-					    level = 2
-					    province = 6062
-					    instant_build = yes
-				    }
 					add_building_construction = {
-					    type = naval_base
-					    level = 2
-					    province = 3373
-					    instant_build = yes
-				    }
+						type = coastal_bunker
+						level = 2
+						province = 6062
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 3373
+						instant_build = yes
+					}
 				}
 				938 = {
-				    add_building_construction = {
-				        type = naval_base
-					    level = 4
-					    province = 6196
-					    instant_build = yes
-				    }
+					add_building_construction = {
+						type = naval_base
+						level = 4
+						province = 6196
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -7079,20 +7079,20 @@ focus_tree = {
 			
 			hidden_effect = {
 				133 = {
-				    add_building_construction = {
-				        type = coastal_bunker
-					    level = 3
-					    province = 6395
-					    instant_build = yes
-				    }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6395
+						instant_build = yes
+					}
 				}
 				938 = {
-				    add_building_construction = {
-				        type = naval_base
-					    level = 2
-					    province = 13631
-					    instant_build = yes
-				    }
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 13631
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -7310,33 +7310,33 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_repair_nation"
 			
 			133 = {
-		        add_building_construction = {
-		            type = infrastructure
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			136 = {
-		        add_building_construction = {
-		            type = infrastructure
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			120 = {
-		        add_building_construction = {
-		            type = infrastructure
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			121 = {
-		        add_building_construction = {
-		            type = infrastructure
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7361,20 +7361,20 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_minor_investments"
 			
 			136 = {
-		        add_building_construction = {
-		            type = infrastructure
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7429,7 +7429,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_agriculture"
 			
-            add_ideas = SCT_feudalism
+			add_ideas = SCT_feudalism
 			
 			120 = {
 				add_extra_state_shared_building_slots = 1
@@ -7443,7 +7443,7 @@ focus_tree = {
 			136 = {
 				add_extra_state_shared_building_slots = 1
 			}
-            938 = {
+			938 = {
 				add_extra_state_shared_building_slots = 1
 			}
 		}
@@ -7470,26 +7470,26 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_fishing"
 			
 			swap_ideas = {
-                remove_idea = SCT_feudalism
-                add_idea = SCT_grimsby_feudalism
-            }
+				remove_idea = SCT_feudalism
+				add_idea = SCT_grimsby_feudalism
+			}
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			938 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7516,20 +7516,20 @@ focus_tree = {
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			121 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7556,12 +7556,12 @@ focus_tree = {
 			
 			121 = {
 				add_extra_state_shared_building_slots = 2
-		        add_building_construction = {
-		            type = dockyard
-			        level = 2
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7588,9 +7588,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_reforged_economy"
 			
 			swap_ideas = {
-                remove_idea = SCT_grimsby_feudalism
-                add_idea = SCT_reforged_economy
-            }
+				remove_idea = SCT_grimsby_feudalism
+				add_idea = SCT_reforged_economy
+			}
 			
 			add_political_power = 100
 		}
@@ -7618,12 +7618,12 @@ focus_tree = {
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -7663,18 +7663,18 @@ focus_tree = {
 			121 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			133 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -7702,20 +7702,20 @@ focus_tree = {
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = arms_factory
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			136 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = arms_factory
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7745,12 +7745,12 @@ focus_tree = {
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = dockyard
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7776,26 +7776,26 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_smoky_cities"
 			
 			swap_ideas = {
-                remove_idea = SCT_industry
-                add_idea = SCT_industry2
-            }
+				remove_idea = SCT_industry
+				add_idea = SCT_industry2
+			}
 			
 			133 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			121 = {
 				add_extra_state_shared_building_slots = 1
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 1
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			add_tech_bonus = {
 				name = concentrated_industry_bonus
 				bonus = 1
@@ -7830,18 +7830,18 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_highland_industry"
 			
 			swap_ideas = {
-                remove_idea = SCT_industry
-                add_idea = SCT_industry2
-            }
+				remove_idea = SCT_industry
+				add_idea = SCT_industry2
+			}
 			
 			120 = {
 				add_extra_state_shared_building_slots = 2
-		        add_building_construction = {
-		            type = industrial_complex
-			        level = 2
-			        instant_build = yes
-		        }
-		    }
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				name = dispersed_industry_bonus
@@ -7877,9 +7877,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_economic_boom"
 			
 			swap_ideas = {
-                remove_idea = SCT_industry2
-                add_idea = SCT_boom
-            }
+				remove_idea = SCT_industry2
+				add_idea = SCT_boom
+			}
 		}
 	}
 }	
