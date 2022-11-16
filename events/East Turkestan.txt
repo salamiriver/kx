@@ -21,7 +21,9 @@ country_event = { #Kashgar and Khotan
 	option = {#Done with events
 		name = ets.0.a
 		ETS = { save_event_target_as = volunteer_target }
-		OTT = { send_volunteers_to_TARGET = yes }
+		TUR = { send_volunteers_to_TARGET = yes }
+		TRK = { send_volunteers_to_TARGET = yes }
+		KYR = { send_volunteers_to_TARGET = yes }
 		add_political_power = 10
 	}
 }
@@ -47,10 +49,11 @@ country_event = { #Seek Foreign Support
 		hidden_effect = {
 			activate_targeted_decision = { target = RUS decision = ETS_foreign_support_send_delgations_RUS }
 			activate_targeted_decision = { target = DEH decision = ETS_foreign_support_send_delgations_DEH }
-			activate_targeted_decision = { target = OTT decision = ETS_foreign_support_send_delgations_OTT }
+			activate_targeted_decision = { target = TUR decision = ETS_foreign_support_send_delgations_OTT }
 			activate_targeted_decision = { target = AFG decision = ETS_foreign_support_send_delgations_AFG }
 			activate_targeted_decision = { target = ALO decision = ETS_foreign_support_send_delgations_central_asia }
 			activate_targeted_decision = { target = TRK decision = ETS_foreign_support_send_delgations_central_asia }
+			activate_targeted_decision = { target = KYR decision = ETS_foreign_support_send_delgations_central_asia }
 		}
 		hidden_effect = {
 		country_event = {
@@ -198,8 +201,8 @@ country_event = { #Delegation arrives in Ottoman Empire
 		ai_chance = {
 			factor = 90
 		}
-		add_to_array = { ETS.ETS_foreign_country_array_majors_yay = OTT }
-		add_to_array = { ETS.ETS_foreign_country_array_full_support = OTT }
+		add_to_array = { ETS.ETS_foreign_country_array_majors_yay = TUR }
+		add_to_array = { ETS.ETS_foreign_country_array_full_support = TUR }
 		add_opinion_modifier = {
 			target = ETS
 			modifier = KR_trade_agreement
@@ -219,8 +222,8 @@ country_event = { #Delegation arrives in Ottoman Empire
 		ai_chance = {
 			factor = 5
 		}
-		add_to_array = { ETS.ETS_foreign_country_array_majors_yay = OTT }
-		add_to_array = { ETS.ETS_foreign_country_array_partial_support = OTT }
+		add_to_array = { ETS.ETS_foreign_country_array_majors_yay = TUR }
+		add_to_array = { ETS.ETS_foreign_country_array_partial_support = TUR }
 		set_country_flag = ETS_partial_support
 		add_opinion_modifier = {
 			target = ETS
@@ -581,7 +584,7 @@ country_event = { #night to remember trigger 1
 			desc = "POLITICS_SABIT_DAMULLA_ABDULBAKI_DESC"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Sabit_Damulla_Abdulbaki.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = authdem_junta_subtype
 			traits = {
 				tenacious_negotiator
 			}
@@ -645,6 +648,16 @@ country_event = { #night to remember
 
 	option = { #timur
 		name = ets.20.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_BUGHRA_ISLAM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_BUGHRA_TURKIC }
+				}
+			}
+		}
 
 		complete_national_focus = ETS_timur_win
 		every_country = {
@@ -655,7 +668,7 @@ country_event = { #night to remember
 					tag = AFG
 					tag = TRK
 					tag = ALO
-					tag = OTT
+					tag = TUR
 					tag = TUR
 					tag = AZE
 					tag = JBS
@@ -689,6 +702,20 @@ country_event = { #night to remember
 
 	option = { #hotan
 		name = ets.20.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_TIMUR_ELECTION }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_TIMUR_SHAH }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCCON }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_AUTDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SABRI }
+				}
+			}
+		}
 
 		complete_national_focus = ETS_bughra_win
 		every_country = {
@@ -699,7 +726,7 @@ country_event = { #night to remember
 					tag = AFG
 					tag = TRK
 					tag = ALO
-					tag = OTT
+					tag = TUR
 					tag = TUR
 					tag = AZE
 					tag = JBS
@@ -789,7 +816,7 @@ country_event = { #timur
 			name = "Timur Beg"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Timur_Beg.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = oligarchy_subtype
 			traits = {
 				warrior_prince
 			}
@@ -798,7 +825,7 @@ country_event = { #timur
 			name = "Abdullah Bughra"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Abdullah_Bughra.png"
 			expire = "1965.1.1"
-			ideology = national_populist_subtype
+			ideology = fundementalism_subtype
 			traits = {
 				cornered_fox
 			}
@@ -847,7 +874,7 @@ country_event = { #Bughra
 			name = "Masud Sabri"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Masud_Sabri.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = authdem_junta_subtype
 			traits = {
 				great_survivor
 			}
@@ -875,6 +902,13 @@ country_event = { #masud attack parade?
 
 	option = { #attack
 		name = ets.21.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = ETS_night option = ETS_NIGHT_TIMUR_ELECTION }
+			}
+		}
 
 		hidden_effect = {
 			country_event = {
@@ -886,6 +920,19 @@ country_event = { #masud attack parade?
 
 	option = { #no attack
 		name = ets.21.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_TIMUR_SHAH }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCCON }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_AUTDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SABRI }
+				}
+			}
+		}
 
 		hidden_effect = {
 			country_event = {
@@ -906,11 +953,18 @@ country_event = { #masud attacks parade
 
 	option = { #attack succeeds
 		name = ets.22.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = ETS_night option = ETS_NIGHT_TIMUR_SHAH }
+			}
+		}
 		create_country_leader = {
 			name = "Masud Sabri"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Masud_Sabri.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = authdem_junta_subtype
 			traits = {
 				great_survivor
 			}
@@ -920,6 +974,18 @@ country_event = { #masud attacks parade
 
 	option = { #atack fails
 		name = ets.22.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCCON }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_AUTDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SABRI }
+				}
+			}
+		}
 
 		set_country_flag = ETS_timurshah_flag
 	}
@@ -973,12 +1039,26 @@ country_event = { #piece of the puzzle 2
 
 	option = {
 		name = ets.25.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = ETS_night option = ETS_NIGHT_BUGHRA_TURKIC }
+			}
+		}
 		add_stability = 0.05
 		set_country_flag = ETS_islamiccountry
 	}
 
 	option = {
 		name = ets.25.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = ETS_night option = ETS_NIGHT_BUGHRA_ISLAM }
+			}
+		}
 		add_political_power = -75
 		set_country_flag = ETS_turkiccountry
 	}
@@ -1018,6 +1098,13 @@ country_event = { #sun rises 2
 
 	option = {
 		name = ets.27.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SABRI }
+			}
+		}
 
 		set_country_flag = ETS_demoflag
 		set_politics = {
@@ -1041,6 +1128,17 @@ country_event = { #sun rises 2
 
 	option = {
 		name = ets.27.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCCON }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_AUTDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCDEM }
+				}
+			}
+		}
 		add_ideas = {
 			ETS_Masud_Sabri_hog_ade
 			ETS_Hafiz_Beg_for_ade
@@ -1097,7 +1195,7 @@ country_event = { #Timur Shah
 			name = "Timur Shah"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Timur_Beg.png"
 			expire = "1965.1.1"
-			ideology = authoritarian_democrat_subtype
+			ideology = oligarchy_subtype
 			traits = {
 				warrior_prince
 			}
@@ -1718,7 +1816,10 @@ country_event = { # acquiring planes
 			OR = {
 				country_exists = GER
 				country_exists = RUS
-				country_exists = OTT
+				AND = {
+					country_exists = TUR
+					NOT = { has_global_flag = AXIS_VICTORY }
+				}
 				country_exists = JAP
 			}
 		}
@@ -1781,11 +1882,14 @@ country_event = { #purchasing other nation's
 	option = { #OTT
 		name = ets.49.c
 		trigger = {
-			country_exists = OTT
+			AND = {
+				country_exists = TUR
+				NOT = { has_global_flag = AXIS_VICTORY }
+			}
 		}
 
 		add_political_power = -20
-		OTT = {
+		TUR = {
 			country_event = {
 				id = ets.50
 				days = 4
@@ -1876,7 +1980,7 @@ country_event = { #purchasing other Aircraft - other accepts
 				amount = 1000
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = small_plane_airframe_0
 				amount = 50
 				producer = GER
 			}
@@ -1888,7 +1992,7 @@ country_event = { #purchasing other Aircraft - other accepts
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = small_plane_airframe_0
 				amount = 50
 				producer = RUS
 			}
@@ -1896,13 +2000,13 @@ country_event = { #purchasing other Aircraft - other accepts
 		if = {
 			limit = {
 				FROM = {
-					tag = OTT
+					tag = TUR
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = small_plane_airframe_0
 				amount = 50
-				producer = OTT
+				producer = TUR
 			}
 		}
 		if = {
@@ -1912,7 +2016,7 @@ country_event = { #purchasing other Aircraft - other accepts
 				}
 			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = small_plane_airframe_0
 				amount = 50
 				producer = JAP
 			}
@@ -2058,7 +2162,7 @@ country_event = { # trained officers back
 	fire_only_once = yes
 
 	trigger = {
-		OTT = {
+		TUR = {
 			exists = yes
 		}
 	}
@@ -2146,6 +2250,13 @@ country_event = { #free elections
 		name = ets.101.a
 		ai_chance = {
 			factor = 3
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_AUTDEM }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCDEM }
+				}
+			}
 		}
 
 		set_politics = {
@@ -2170,6 +2281,13 @@ country_event = { #free elections
 		name = ets.101.b
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCCON }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCDEM }
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -2193,6 +2311,13 @@ country_event = { #free elections
 		name = ets.101.c
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_SOCCON }
+					has_game_rule = { rule = ETS_night option = ETS_NIGHT_DEMOCRACY_AUTDEM }
+				}
+			}
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -2210,5 +2335,176 @@ country_event = { #free elections
 			ETS_Yusuf_Jan_eco_sde
 			ETS_Rahimjan_Sabir_Hodjayev_sec_sde
 		}
+	}
+}
+country_event = { #we ate china what do
+	id = ets.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ets.100" }
+	title = ets.102.t
+	desc = ets.102.d
+	picture = GFX_report_event_ETS_declaration
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETS
+		owns_state = 608
+	}
+
+	option = {
+		name = ets.102.a
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = QIE
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_claimed_by = FNG
+					is_core_of = MON
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = TUR
+				}
+			}
+			add_core_of = ETS
+		}
+		set_cosmetic_tag = ETS_uyghur
+
+	}
+	option = {
+		name = ets.102.b
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = QIE
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_claimed_by = FNG
+					is_core_of = MON
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = TUR
+				}
+			}
+			add_core_of = ETS
+		}
+		set_cosmetic_tag = ETS_dung
+
+	}
+	option = {
+		name = ets.102.c
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = QIE
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_claimed_by = FNG
+					is_core_of = MON
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = TUR
+				}
+			}
+			add_core_of = ETS
+		}
+		set_cosmetic_tag = ETS_turkestan
+
+	}
+	option = {
+		name = ets.102.e
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = QIE
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_claimed_by = FNG
+					is_core_of = MON
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = TUR
+				}
+			}
+			add_core_of = ETS
+		}
+		set_cosmetic_tag = ETS_timur_rep
+
+	}
+	option = {
+		name = ets.102.f
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = QIE
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_claimed_by = FNG
+					is_core_of = MON
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = TUR
+				}
+			}
+			add_core_of = ETS
+		}
+		set_cosmetic_tag = ETS_gurkani
+
+	}
+	option = {
+		name = ets.102.g
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = QIE
+					is_claimed_by = QIE
+					is_core_of = FNG
+					is_claimed_by = FNG
+					is_core_of = MON
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = TUR
+				}
+			}
+			add_core_of = ETS
+		}
+		set_cosmetic_tag = ETS_gokturk
+
 	}
 }

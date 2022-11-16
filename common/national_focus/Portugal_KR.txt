@@ -219,7 +219,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_imperial_pride
-		icon = GFX_goal_EGY_sultan_fleet
+		icon = GFX_goal_TEX_naval_prominence
 		prerequisite = { focus = POR_realities }
 		relative_position_id = POR_matters_of_the_realm
 		x = 1
@@ -968,7 +968,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_the_fleet_of_the_empire
-		icon = GFX_goal_EGY_sultan_fleet
+		icon = GFX_MAF_naval_aerial_observation
 		prerequisite = { focus = POR_grande_armada }
 		relative_position_id = POR_navy
 		x = -1
@@ -991,9 +991,9 @@ focus_tree = {
 		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POR_backfoot_armada"
-			add_tech_bonus = {
-				name = POR_backfoot_armada
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -1075,9 +1075,9 @@ focus_tree = {
 		cost = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POR_raiding_squads"
-			add_tech_bonus = {
-				name = POR_raiding_squads
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -2606,10 +2606,7 @@ focus_tree = {
 				name = POR_air_superiority
 				bonus = 1
 				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				category = light_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2650,9 +2647,7 @@ focus_tree = {
 				name = POR_fighterefforto
 				bonus = 1
 				uses = 2
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = cat_heavy_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2733,9 +2728,7 @@ focus_tree = {
 				name = POR_strategic_bomber
 				bonus = 1
 				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
+				category = tactical_bomber
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

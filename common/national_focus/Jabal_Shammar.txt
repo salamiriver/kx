@@ -1,5 +1,5 @@
 #######################################################
-# Jabal Shammar Focus Tree                  		  #
+# Jabal Shammar Focus Tree						#
 #######################################################
 # By Jeankedezeehond with help from Zimbabwe Salt Co. #
 #######################################################
@@ -64,8 +64,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject_of = OTT
-				is_in_faction_with = OTT
+				is_subject_of = TUR
+				is_in_faction_with = TUR
 			}
 		}
 
@@ -96,8 +96,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject_of = OTT
-				is_in_faction_with = OTT
+				is_subject_of = TUR
+				is_in_faction_with = TUR
 				is_subject_of = SYR
 				is_in_faction_with = SYR
 			}
@@ -128,8 +128,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject_of = OTT
-				is_in_faction_with = OTT
+				is_subject_of = TUR
+				is_in_faction_with = TUR
 			}
 		}
 		
@@ -156,8 +156,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-				is_subject_of = OTT
-				is_in_faction_with = OTT
+				is_subject_of = TUR
+				is_in_faction_with = TUR
 			}
 		}
 
@@ -283,7 +283,7 @@ focus_tree = {
 
 	focus = {
 		id = JBS_found_directory_of_military_affairs
-		icon = GFX_goal_generic_army_cooperation
+		icon = GFX_goal_JBS_Army
 
 		prerequisite = { focus = JBS_merchant_princes }
 		relative_position_id = JBS_merchant_princes
@@ -790,7 +790,7 @@ focus_tree = {
 					modifier = large_increase
 				}
 			}
-			OTT = {
+			TUR = {
 				add_opinion_modifier = {
 					target = JBS
 					modifier = small_increase
@@ -998,8 +998,8 @@ focus_tree = {
 			if = {
 				limit = {
 					is_subject = no
-					country_exists = OTT
-					OTT = { is_subject = no }
+					NOT = { has_global_flag = AXIS_VICTORY }
+					TUR = { is_subject = no }
 				}
 				country_event = jbs.59
 			}
@@ -1097,7 +1097,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OTT = { owns_state = 656 }
+			TUR = { owns_state = 656 }
 		}
 
 		prerequisite = { focus = JBS_second_rashidi_state }
@@ -1277,7 +1277,7 @@ focus_tree = {
 				AND = {
 					has_country_flag = TPC_tt
 					NOT = {
-						has_war_with = OTT
+						has_war_with = TUR
 					}
 				}
 				AND = {
@@ -1307,7 +1307,7 @@ focus_tree = {
 					has_country_flag = TPC_tt
 				}
 				give_resource_rights = {
-					receiver = OTT
+					receiver = TUR
 					state = 656
 				}
 			}
@@ -1385,9 +1385,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JBS_al_hasa_coast_guard"
 			navy_experience = 30
-			add_tech_bonus = {
-				name = JBS_al_hasa_coast_guard
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
 				uses = 1
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -1421,7 +1421,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_war_with = OTT
+			has_war_with = TUR
 		}
 
 		x = 5
@@ -1435,7 +1435,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JBS_unite_arabs"
 			remove_ideas = JBS_ottoman_lapdogs
-			OTT = {
+			TUR = {
 				country_event = jbs.67
 				if = {
 					limit = { has_subject = ROOT }
@@ -1450,9 +1450,12 @@ focus_tree = {
 				leave_faction = yes
 			}
 			if = {
-				limit = { has_war_together_with = OTT }
+				limit = { has_war_together_with = TUR }
 				separate_peace_all_wars = yes
 			}
+			remove_targeted_decision = { target = TUR decision = JBS_Ottoman_Training }
+			remove_targeted_decision = { target = TUR decision = JBS_Ottoman_Weapons_Assistance }
+			remove_targeted_decision = { target = TUR decision = JBS_Support_the_Ottomans }
 			add_timed_idea = {
 				idea = JBS_unification_fevour
 				days = 200
@@ -1530,7 +1533,7 @@ focus_tree = {
 			NOT = {
 				controls_state = 679
 				JBS = {
-					is_subject_of = OTT
+					is_subject_of = TUR
 					is_in_faction_with = 679.owner
 				}
 			}
@@ -1547,13 +1550,13 @@ focus_tree = {
 			factor = 0
 			modifier = {
 				add = 500
-				OTT = {
+				TUR = {
 					has_war_with = EGY
 				}
 			}
 			modifier = {
 				add = 100
-				OTT = {
+				TUR = {
 					has_war = yes
 					surrender_progress > 0.5
 				}
@@ -1802,7 +1805,7 @@ focus_tree = {
 
 	focus = {
 		id = JBS_Port_Jeddah
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_goal_JBS_Navy
 
 		available = {
 			controls_state = 679

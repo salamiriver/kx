@@ -53,28 +53,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					tag = FIN
-					has_democratic_government = no
-					NOT = { has_government = paternal_autocrat }
-				}
-				if = {
-					limit = {
-						KAR = {	is_subject_of = FIN }
-						FIN = { has_socialist_government = yes }
-					}
-					end_puppet = KAR
-				}
-				else_if = {
-					limit = {
-						FIN = { has_government = national_populist }
-					}
-					annex_country = {
-						target = KAR
-					}
-				}
-			}
-			if = {
-				limit = {
 					tag = WHR
 				}
 				if = {
@@ -174,6 +152,18 @@ on_actions = {
 					days = 1
 				}
 			}
+			if = {
+				limit = {
+					tag = KAR
+					FROM = { tag = FIN }
+				}
+				KAR = { 
+					country_event = {
+						id = kar.88 
+						days = 2
+					}
+				}
+			}
 		}
 	}
 
@@ -184,7 +174,7 @@ on_actions = {
 			if = {
 				limit = {
 					tag = UKR
-					FROM = { is_russian_tag = yes }
+					FROM = { is_russian_tag_that_can_integrate = yes }
 					is_in_faction_with = INT
 				}
 				INT = {

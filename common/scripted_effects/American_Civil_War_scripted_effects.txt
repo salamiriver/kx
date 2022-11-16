@@ -267,6 +267,7 @@ USA_release_CSA = {
 			limit = { 
 				has_id = 102 #Herbert Holdridge 
 			} 
+			set_leader_portrait = GFX_Portrait_CSA_herbert_holdridge
 			set_nationality = CSA 
 		}
 
@@ -277,6 +278,12 @@ USA_release_CSA = {
 				CSA_militia_idea
 				extensive_conscription
 			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 35
+				producer = CSA
+			}
+
 			if = { ##BONUSES
 			limit = {
 			USA = {
@@ -288,101 +295,6 @@ USA_release_CSA = {
 			}
 			add_war_support = -0.03
 			add_stability = -0.3
-			}
-			if = { ##BONUSES
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value = 1
-				}
-			}
-			}
-			add_manpower = 5000
-			add_war_support = 0.05
-			add_stability = -0.25
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value = 2
-				}
-			}
-			}
-			add_manpower = 7500
-			add_command_power = 5
-			add_stability = -0.2
-			add_war_support = 0.08
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value = 3
-				}
-				}
-			}
-			add_manpower = 10000
-			add_war_support = 0.1
-			add_stability = -0.15
-			add_command_power = 10
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value = 4
-				}
-				}
-			}
-			add_manpower = 12500
-			add_war_support = 0.12
-			add_stability = -0.1
-			add_command_power = 15
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value = 5
-				}
-				}
-			}
-			add_manpower = 15000
-			add_stability = -0.05
-			add_war_support = 0.15
-			add_command_power = 20
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value = 6
-				}
-				}
-			}
-			add_manpower = 17500
-			add_war_support = 0.18
-			add_command_power = 20
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = SPA_strength
-				value > 6
-				}
-				}
-			}
-			add_manpower = 20000
-			add_war_support = 0.2
-			add_command_power = 25
 			}
 			if = {
 				limit = { has_template = "National Guard Division" }
@@ -443,6 +355,110 @@ USA_release_CSA = {
 			if = {
 				limit = { has_template = "Irish Volunteers" }
 				delete_unit_template_and_units = { division_template = "Irish Volunteers" disband = yes }
+			}
+		}
+		
+		##BONUSES
+		if = { 
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 1
+					compare = equals
+				}
+			}
+			CSA = {
+				add_manpower = 5000
+				add_war_support = 0.05
+				add_stability = -0.25
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 2
+					compare = equals
+				}
+			}
+			CSA = {
+				add_manpower = 7500
+				add_command_power = 5
+				add_stability = -0.2
+				add_war_support = 0.08
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 3
+					compare = equals
+				}
+			}
+			CSA = {
+				add_manpower = 10000
+				add_war_support = 0.1
+				add_stability = -0.15
+				add_command_power = 10
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 4
+					compare = equals
+				}
+			}
+			CSA = {
+				add_manpower = 12500
+				add_war_support = 0.12
+				add_stability = -0.1
+				add_command_power = 15
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 5
+					compare = equals
+				}
+			}
+			CSA = {
+				add_manpower = 15000
+				add_stability = -0.05
+				add_war_support = 0.15
+				add_command_power = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 6
+					compare = equals
+				}
+			}
+			CSA = {
+				add_manpower = 17500
+				add_war_support = 0.18
+				add_command_power = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = SPA_strength
+					value = 6
+					compare = greater_than
+				}
+			}
+			CSA = {
+				add_manpower = 20000
+				add_war_support = 0.2
+				add_command_power = 25
 			}
 		}
 
@@ -615,110 +631,22 @@ USA_release_TEX = {
 			producer = USA
 			}
 			add_equipment_to_stockpile = { 
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = 260
 			producer = TEX
 			}
 			add_equipment_to_stockpile = { 
-			type = tac_bomber_equipment
+			type = medium_plane_airframe
 			amount = 120
 			producer = TEX
 			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 25
+				producer = TEX
+			}
 			add_ideas = {
 				extensive_conscription
-			}
-			if = { ##BONUSES
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value = 1
-				}
-			}
-			}
-			add_manpower = 5000
-			add_war_support = 0.05
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value = 2
-				}
-			}
-			}
-			add_manpower = 7500
-			add_command_power = 5
-			add_war_support = 0.08
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value = 3
-				}
-				}
-			}
-			add_manpower = 10000
-			add_war_support = 0.1
-			add_command_power = 10
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value = 4
-				}
-				}
-			}
-			add_manpower = 12500
-			add_war_support = 0.12
-			add_command_power = 15
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value = 5
-				}
-				}
-			}
-			add_manpower = 15000
-			add_war_support = 0.15
-			add_stability = 0.05
-			add_command_power = 20
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value = 6
-				}
-				}
-			}
-			add_manpower = 17500
-			add_war_support = 0.18
-			add_stability = 0.1
-			add_command_power = 20
-			}
-			if = {
-			limit = {
-			USA = {
-			has_country_flag = {
-				flag = AFP_strength
-				value > 6
-				}
-				}
-			}
-			add_manpower = 20000
-			add_war_support = 0.2
-			add_command_power = 25
-			add_stability = 0.15
 			}
 			if = {
 				limit = { has_template = "National Guard Division" }
@@ -777,6 +705,108 @@ USA_release_TEX = {
 				delete_unit_template_and_units = { division_template = "USA Resistance" }
 			}
 		}
+		
+		##BONUSES
+		if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 1
+					compare = equals
+				}
+			}
+			TEX = {
+				add_manpower = 5000
+				add_war_support = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 2
+					compare = equals
+				}
+			}
+			TEX = {
+				add_manpower = 7500
+				add_command_power = 5
+				add_war_support = 0.08
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 3
+					compare = equals
+				}
+			}
+			TEX = {
+				add_manpower = 10000
+				add_war_support = 0.1
+				add_command_power = 10
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 4
+					compare = equals
+				}
+			}
+			TEX = {
+				add_manpower = 12500
+				add_war_support = 0.12
+				add_command_power = 15
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 5
+					compare = equals
+				}
+			}
+			TEX = {
+				add_manpower = 15000
+				add_war_support = 0.15
+				add_stability = 0.05
+				add_command_power = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 6
+					compare = equals
+				}
+			}
+			TEX = {
+				add_manpower = 17500
+				add_war_support = 0.18
+				add_stability = 0.1
+				add_command_power = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = AFP_strength
+					value = 6
+					compare = greater_than
+				}
+			}
+			TEX = {
+				add_manpower = 20000
+				add_war_support = 0.2
+				add_command_power = 25
+				add_stability = 0.15
+			}
+		}
 
 		# Atlantic Battle Fleet
 		
@@ -784,17 +814,17 @@ USA_release_TEX = {
 		
 		transfer_ship = { prefer_name = "USS Ranger" type = carrier target = XXA }
 		send_equipment = {
-			type = cv_fighter_equipment
+			type = cv_small_plane_airframe
 			amount = 24
 			target = XXA
 		}
 		send_equipment = {
-			type = cv_CAS_equipment
+			type = cv_small_plane_cas_airframe
 			amount = 18
 			target = XXA
 		}
 		send_equipment = {
-			type = cv_nav_bomber_equipment
+			type = cv_small_plane_naval_bomber_airframe
 			amount = 18
 			target = XXA
 		}
@@ -842,20 +872,6 @@ USA_release_COR = {
 			limit = { NOT = { has_global_flag = USA_COR_existed } }
 	}
 	hidden_effect = {
-		transfer_ship = { prefer_name = "USS Washington" type = battleship target = COR }
-		transfer_ship = { prefer_name = "USS Indiana" type = SH_battleship target = COR }
-		transfer_ship = { prefer_name = "USS Idaho" type = battleship target = COR }
-		transfer_ship = { prefer_name = "USS Chattanooga" type = heavy_cruiser target = COR }
-		transfer_ship = { prefer_name = "USS Cleveland" type = heavy_cruiser target = COR }
-		transfer_ship = { prefer_name = "USS Robinson" type = destroyer target = COR }
-		transfer_ship = { prefer_name = "USS Ringgold" type = destroyer target = COR }
-		transfer_ship = { prefer_name = "USS Selfridge" type = destroyer target = COR }
-		transfer_ship = { prefer_name = "USS McCormick" type = destroyer target = COR }
-		transfer_ship = { prefer_name = "USS Stringham" type = destroyer target = COR }
-		transfer_ship = { prefer_name = "USS Barracuda" type = submarine target = COR }
-		transfer_ship = { prefer_name = "USS Bass" type = submarine target = COR }
-		transfer_ship = { prefer_name = "USS O1" type = submarine target = COR }
-		transfer_ship = { prefer_name = "USS O2" type = submarine target = COR }
 		COR = {
 			add_state_core = 363
 			add_state_core = 364
@@ -1001,98 +1017,27 @@ USA_release_COR = {
 		COR = {
 			load_oob = "USA_civil_war_car_army"
 			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 20
+				producer = COR
+			}
+			add_equipment_to_stockpile = {
 			type = infantry_equipment_1
 			amount = 3500
 			producer = USA
 			}
 			add_equipment_to_stockpile = { 
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = 250
 			producer = COR
 			}
 			add_equipment_to_stockpile = { 
-			type = tac_bomber_equipment 
+			type = medium_plane_airframe 
 			amount = 100
 			producer = COR
 			}
 			add_ideas = {
 				extensive_conscription
-			}
-			if = { ##BONUSES
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value = 1
-				}
-			}
-			add_manpower = 5000
-			add_war_support = 0.05
-			}
-			if = {
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value = 2
-				}
-			}
-			add_manpower = 7500
-			add_command_power = 5
-			add_war_support = 0.08
-			}
-			if = {
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value = 3
-				}
-			}
-			add_manpower = 10000
-			add_war_support = 0.1
-			add_command_power = 10
-			}
-			if = {
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value = 4
-				}
-			}
-			add_manpower = 12500
-			add_war_support = 0.12
-			add_command_power = 15
-			}
-			if = {
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value = 5
-				}
-			}
-			add_manpower = 15000
-			add_war_support = 0.15
-			add_command_power = 20
-			}
-			if = {
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value = 6
-				}
-			}
-			add_manpower = 17500
-			add_war_support = 0.18
-			add_command_power = 20
-			}
-			if = {
-			limit = {
-			has_country_flag = {
-				flag = USA_odp_strength
-				value > 6
-				}
-			}
-			add_manpower = 20000
-			add_war_support = 0.2
-			add_command_power = 25
 			}
 			if = {
 				limit = { has_template = "National Guard Division" }
@@ -1150,6 +1095,125 @@ USA_release_COR = {
 				limit = { has_template = "USA Resistance" }
 				delete_unit_template_and_units = { division_template = "USA Resistance" }
 			}
+		}
+		
+		##BONUSES
+		if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 1
+					compare = equals
+				}
+			}
+			COR = {
+				add_manpower = 5000
+				add_war_support = 0.05
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 2
+					compare = equals
+				}
+			}
+			COR = {
+				add_manpower = 7500
+				add_command_power = 5
+				add_war_support = 0.08
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 3
+					compare = equals
+				}
+			}
+			COR = {
+				add_manpower = 10000
+				add_war_support = 0.1
+				add_command_power = 10
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 4
+					compare = equals
+				}
+			}
+			COR = {
+				add_manpower = 12500
+				add_war_support = 0.12
+				add_command_power = 15
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 5
+					compare = equals
+				}
+			}
+			COR = {
+				add_manpower = 15000
+				add_war_support = 0.15
+				add_command_power = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 6
+					compare = equals
+				}
+			}
+			COR = {
+				add_manpower = 17500
+				add_war_support = 0.18
+				add_command_power = 20
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					var = ODP_strength
+					value = 6
+					compare = greater_than
+				}
+			}
+			COR = {
+				add_manpower = 20000
+				add_war_support = 0.2
+				add_command_power = 25
+			}
+		}
+		
+		transfer_ship = { prefer_name = "USS Washington" type = battleship target = XXA }
+		transfer_ship = { prefer_name = "USS Indiana" type = SH_battleship target = XXA }
+		transfer_ship = { prefer_name = "USS Idaho" type = battleship target = XXA }
+		transfer_ship = { prefer_name = "USS Chattanooga" type = heavy_cruiser target = XXA }
+		transfer_ship = { prefer_name = "USS Cleveland" type = heavy_cruiser target = XXA }
+		transfer_ship = { prefer_name = "USS Robinson" type = destroyer target = XXA }
+		transfer_ship = { prefer_name = "USS Ringgold" type = destroyer target = XXA }
+		transfer_ship = { prefer_name = "USS Selfridge" type = destroyer target = XXA }
+		transfer_ship = { prefer_name = "USS McCormick" type = destroyer target = XXA }
+		transfer_ship = { prefer_name = "USS Stringham" type = destroyer target = XXA }
+		transfer_ship = { prefer_name = "USS Barracuda" type = submarine target = XXA }
+		transfer_ship = { prefer_name = "USS Bass" type = submarine target = XXA }
+		transfer_ship = { prefer_name = "USS O1" type = submarine target = XXA }
+		transfer_ship = { prefer_name = "USS O2" type = submarine target = XXA }
+
+		COR = {
+			annex_country = { target = XXA }
+			load_oob = ACW_COR_naval
 		}
 	}
 }
@@ -1381,12 +1445,12 @@ USA_release_WCC = {
 
 		WCC = {
 			add_equipment_to_stockpile = { 
-			type = fighter_equipment
+			type = small_plane_airframe
 			amount = 250
 			producer = TEX
 			}
 			add_equipment_to_stockpile = { 
-			type = tac_bomber_equipment 
+			type = medium_plane_airframe 
 			amount = 120
 			producer = TEX
 			}
@@ -1454,23 +1518,28 @@ USA_release_CAL = {
 				has_id = 84 #Walter Krueger 
 			}
 			set_nationality = CAL 
+			set_leader_portrait = GFX_Portrait_CAL_gen_Walter_Krueger
 		}
 		every_unit_leader = { 
 			limit = { 
 				has_id = 76 #Leslie McNair 
-			} set_nationality = CAL 
+			} 
+			set_nationality = CAL 
+			set_leader_portrait = GFX_Portrait_CAL_gen_Leslie_Mcnair
 		}
 		every_unit_leader = { 
 			limit = { 
 				has_id = 62 #Arnold 
 			} 
 			set_nationality = CAL 
+			set_leader_portrait = GFX_Portrait_CAL_Henry_Arnold
 		}
 		every_unit_leader = { 
 			limit = { 
 				has_id = 60 #George Marshall 
 			} 
 			set_nationality = CAL 
+			set_leader_portrait = GFX_Portrait_CAL_george_marshall
 		}
 
 		set_country_flag = Glen_H_Taylor_dead
@@ -1505,6 +1574,11 @@ USA_release_CAL = {
 
 		CAL = {
 			load_oob = "USA_civil_war_psa_army"
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 25
+				producer = CAL
+			}
 			add_ideas = {
 				extensive_conscription
 			}
@@ -1622,17 +1696,17 @@ USA_release_CAL = {
 		
 		transfer_ship = { prefer_name = "USS Langley" type = carrier target = XXA }
 		send_equipment = {
-			type = cv_fighter_equipment
+			type = cv_small_plane_airframe
 			amount = 20
 			target = XXA
 		}
 		send_equipment = {
-			type = cv_CAS_equipment
+			type = cv_small_plane_cas_airframe
 			amount = 10
 			target = XXA
 		}
 		send_equipment = {
-			type = cv_nav_bomber_equipment
+			type = cv_small_plane_naval_bomber_airframe
 			amount = 10
 			target = XXA
 		}
@@ -1712,12 +1786,17 @@ COR_release_BBR = {
 				NOT = { is_core_of = BBR }
 				NOT = { is_claimed_by = BBR }
 			}
-			add_claim_by = BBR
+			add_core_of = BBR
 		}
 
 		BBR = {
 			load_oob = "BBR"
 			set_equipment_fraction = 0.9
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 15
+				producer = BBR
+			}
 			hidden_effect = {
 			country_event = {
 				id = bbr.1

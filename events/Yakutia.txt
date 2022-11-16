@@ -1381,7 +1381,7 @@ country_event = {
 			name = "Yytachy"
 			picture = "gfx/leaders/YAK/Portrait_YAK_Platon_Oyunsky_Shaman.png"
 			expire = "1965.1.1"
-			ideology = national_populist_subtype
+			ideology = occultism_subtype
 			traits = { }
 		}
 	}
@@ -1854,6 +1854,14 @@ country_event = {
 				factor = 0.5
 				YAK = { is_ai = no }
 			}
+			modifier = {
+				factor = 0
+				AND = {
+					tag = RUS
+					NOT = { owns_state = 408 }
+					country_exists = TRM
+				}				
+			}
 		}
 		declare_war_on = {
 			target = FROM
@@ -1897,6 +1905,14 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				YAK = { is_ai = no }
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					tag = RUS
+					NOT = { owns_state = 408 }
+					country_exists = TRM
+				}				
 			}
 		}
 		declare_war_on = {

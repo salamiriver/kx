@@ -294,9 +294,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_Jansa"
-			add_tech_bonus = {
-				name = AUS_doctrine_Jansa
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 4
 				category = cat_grand_battle_plan
 			}
@@ -332,9 +332,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_Hickmann"
-			add_tech_bonus = {
-				name = AUS_doctrine_Hickmann
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 4
 				category = cat_superior_firepower
 			}
@@ -370,9 +370,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_doctrine_von_Hubicki"
-			add_tech_bonus = {
-				name = AUS_doctrine_von_Hubicki
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 4
 				category = cat_mobile_warfare
 			}
@@ -583,9 +583,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_uzelac-plan"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = AUS_uzelac-plan
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 4
 				category = cat_battlefield_support
 			}
@@ -619,9 +619,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_loehr-plan"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = AUS_loehr-plan
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 4
 				category = cat_strategic_destruction
 			}
@@ -886,9 +886,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_flexible_navy"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = AUS_flexible_navy
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
@@ -946,9 +946,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_large_navy"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = AUS_large_navy
-				bonus = 1
+				cost_reduction = 1
 				uses = 2
 				category = fleet_in_being_tree
 			}
@@ -1378,7 +1378,7 @@ focus_tree = {
 
 	focus = {
 		id = AUS_homeland_mil
-		icon = MON_army_money
+		icon = GFX_MON_army_money
 		x = 0
 		y = 2
 		cost = 8
@@ -3152,7 +3152,7 @@ focus_tree = {
 				has_war_with = RUS
 				has_war_with = ITA
 				has_war_with = SER
-				has_war_with = OTT
+				has_war_with = TUR
 			}
 			OR = {
 				CZE = {
@@ -3225,7 +3225,7 @@ focus_tree = {
 				has_war_with = RUS
 				has_war_with = ITA
 				has_war_with = SER
-				has_war_with = OTT
+				has_war_with = TUR
 			}
 			HUN = {
 				is_subject_of = AUS
@@ -5157,6 +5157,12 @@ focus_tree = {
 				ruling_only = yes
 			}
 		}
+
+				available = {
+			has_completed_focus = AUS_suppress_socialism
+						has_completed_focus = AUS_jumpstart_military_economy
+						has_completed_focus = AUS_patriotize_army
+		}
 		
 		prerequisite = { focus = AUS_dollfuss_austria }
 		
@@ -5288,6 +5294,10 @@ focus_tree = {
 				ruling_only = yes
 			}
 		}
+
+				available = {
+			has_completed_focus = AUS_disable_legislature
+		}
 		
 		prerequisite = { focus = AUS_god_wills_it }
 		
@@ -5384,7 +5394,7 @@ focus_tree = {
 				name = "Jörg Lanz von Liebenfels"
 				ruling_only = yes
 			}
-		}
+		} 
 		
 		prerequisite = { focus = AUS_negotiate_with_companies }
 		prerequisite = { focus = AUS_jumpstart_military_economy }
@@ -5454,6 +5464,10 @@ focus_tree = {
 				name = "Jörg Lanz von Liebenfels"
 				ruling_only = yes
 			}
+		}
+
+				available = {
+			has_completed_focus = AUS_disable_legislature
 		}
 		
 		prerequisite = { focus = AUS_dollfuss_austria }
@@ -5764,6 +5778,10 @@ focus_tree = {
 			}
 		}
 		
+				available = {
+			has_completed_focus = AUS_one_party_empire
+		}
+		
 		prerequisite = { focus = AUS_patriotize_army }
 		
 		available = {
@@ -5981,6 +5999,10 @@ focus_tree = {
 				name = "Jörg Lanz von Liebenfels"
 				ruling_only = yes
 			}
+		}
+
+				available = {
+			has_completed_focus = AUS_one_party_empire
 		}
 		
 		prerequisite = { focus = AUS_days_and_nights }

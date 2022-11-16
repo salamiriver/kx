@@ -1,7 +1,7 @@
 ################################
 # Dutch East Indies Focus Tree #
 ################################
-# By Thomahawk2k			   #
+# By Thomahawk2k			#
 ################################
 focus_tree = {
 	id = dei_focus
@@ -813,6 +813,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
+		available = {
+			has_design_based_on = small_plane_airframe
+		}
 		prerequisite = {
 			focus = DEI_military_aviation_of_the_KNIL
 		}
@@ -823,7 +826,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEI_purchase_old_fokker_fighters"
 			add_political_power = -20
-			add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 25 }
+			add_equipment_to_stockpile = { type = small_plane_airframe amount = 25 }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1092,9 +1095,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEI_fleet_in_being"
-			add_tech_bonus = {
-				name = DEI_fleet_in_being
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = AUS_flexible_navy
+				cost_reduction = 0.5
 				uses = 1
 				category = fleet_in_being_tree
 			}

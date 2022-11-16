@@ -127,10 +127,10 @@ country_event = {
 country_event = {
 	id = kx_geo.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event kx_geo.3"}
-    title = kx_geo.3.t
+	title = kx_geo.3.t
 	desc = kx_geo.3.d
 	picture = GFX_news_event_GEO_beria_military
-    fire_only_once = yes
+	fire_only_once = yes
 	
 	is_triggered_only = yes
 	
@@ -149,7 +149,7 @@ country_event = {
 			planning_skill = 2
 			logistics_skill = 3
 		}
-    }
+	}
 }
 
 country_event = {
@@ -189,7 +189,7 @@ country_event = {
 	option = {
 		name = kx_geo.6.a 
 		add_stability = 0.10
-        set_cosmetic_tag = GEO_Trans
+		set_cosmetic_tag = GEO_Trans
 		set_country_flag = GEO_chaos_in_caucasus
 	}	
 }
@@ -214,7 +214,7 @@ country_event = {
 	option = {
 		name = kx_geo.62.a 
 		add_stability = 0.10
-        set_cosmetic_tag = GEO_Trans
+		set_cosmetic_tag = GEO_Trans
 		set_country_flag = GEO_chaos_in_caucasus
 	}	
 }
@@ -265,7 +265,7 @@ country_event = {
 			factor = 50
 		}
 		add_stability = 0.15
-    }
+	}
 	option = { 
 		name = kx_geo.9.b
 		ai_chance = {
@@ -278,8 +278,8 @@ country_event = {
 				id = kx_geo.10
 				days = 15
 			}
-	    }
-    }
+		}
+	}
 }
 
 country_event = {
@@ -317,8 +317,8 @@ country_event = {
 				id = kx_geo.12
 				days = 15
 			}
-	    }
-    }
+		}
+	}
 	option = { 
 		name = kx_geo.11.b
 		ai_chance = {
@@ -333,8 +333,8 @@ country_event = {
 				id = kx_geo.13
 				days = 15
 			}
-	    }
-    }
+		}
+	}
 }
 
 country_event = {
@@ -372,14 +372,14 @@ country_event = {
 		}
 		add_stability = 0.15
 		add_political_power = -20
-    }
+	}
 	option = { 
 		name = kx_geo.13.b
 		ai_chance = {
 			factor = 30
 		}
 		add_political_power = 10
-    }
+	}
 	option = { 
 		name = kx_geo.13.c
 		ai_chance = {
@@ -395,7 +395,7 @@ country_event = {
 			ideology = totalist
 			popularity = 0.05
 		}
-    }
+	}
 }
 
 country_event = {
@@ -427,21 +427,21 @@ country_event = {
 		ai_chance = {
 			factor = 90
 		}
-        start_border_war = {
-            change_state_after_war = no
-            attacker = {
-                state = 231
-                num_provinces = 17
-                on_win = kx_geo.151
-                on_lose = kx_geo.152
-            }
-            defender = {
-                state = 1001
-                num_provinces = 7
-                on_win = kx_geo.152
-                on_lose = kx_geo.151
-            }
-        }
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 231
+				num_provinces = 17
+				on_win = kx_geo.151
+				on_lose = kx_geo.152
+			}
+			defender = {
+				state = 1001
+				num_provinces = 7
+				on_win = kx_geo.152
+				on_lose = kx_geo.151
+			}
+		}
 	}
 	option = { 
 		name = kx_geo.150.b
@@ -454,18 +454,18 @@ country_event = {
 
 				if = {
 					limit = {
-						1001 = { is_owned_and_controlled_by = OTT }
+						1001 = { is_owned_and_controlled_by = TUR }
 					}
 					transfer_state = 1001
 				}
 				if = {
 					limit = {
-						1213 = { is_owned_and_controlled_by = OTT }
+						1213 = { is_owned_and_controlled_by = TUR }
 					}
 					transfer_state = 1213
 				}
-		    }
-		OTT = {
+			}
+		TUR = {
 			declare_war_on = {
 				target = GEO
 				type = annex_everything
@@ -476,7 +476,7 @@ country_event = {
 				id = kx_geo.153
 				days = 15
 			}
-	    }
+		}
 	}
 }
 
@@ -492,7 +492,7 @@ country_event = {
 
 	option = {
 		name = kx_geo.151.a 
-	    add_political_power = 200
+		add_political_power = 200
 		army_experience = 300
 	}
 }
@@ -509,9 +509,9 @@ country_event = {
 
 	option = {
 		name = kx_geo.152.a 
-	    add_political_power = -150
-	    add_manpower = -200
-	    add_stability = -0.50
+		add_political_power = -150
+		add_manpower = -200
+		add_stability = -0.50
 	}
 }
 
@@ -546,7 +546,7 @@ country_event = {
 	}
 	option = {
 		name = kx_geo.154.b 
-		add_stability 0.10
+		add_stability = 0.10
 	}
 }
 
@@ -567,7 +567,7 @@ country_event = {
 				id = kx_geo.157
 				days = 30
 			}
-	    }
+		}
 	}
 }
 
@@ -609,7 +609,7 @@ country_event = {
 				id = kx_geo.158
 				days = 5
 			}
-	    }		
+		}		
 	}
 	option = {
 		name = kx_geo.157.b 
@@ -635,16 +635,16 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = georgian_socialism_subtype
 			traits = { degenerate_premier }
-        }
+		}
 		remove_ideas_with_trait = head_of_government
-        add_ideas = GEO_beria_hog_tot 
+		add_ideas = GEO_beria_hog_tot 
 		set_country_flag = Ioseb_B_Dzughashvili_dead
 		hidden_effect = {
 			country_event = {
 				id = kx_geo.159
 				days = 5
 			}
-	    }		
+		}		
 	}
 }
 
@@ -710,7 +710,7 @@ country_event = {
 				id = kx_geo.161
 				days = 15
 			}
-	    }	
+		}	
 	}
 }
 
@@ -726,9 +726,9 @@ country_event = {
 
 	option = {
 		name = kx_geo.162.a
-        add_manpower = 1200
-        add_stability = -0.05
-        add_political_power = 50		
+		add_manpower = 1200
+		add_stability = -0.05
+		add_political_power = 50		
 	}
 	option = {
 		name = kx_geo.162.b 
@@ -782,7 +782,7 @@ country_event = {
 				id = kx_geo.163
 				days = 3
 			}
-	    }	
+		}	
 	}
 }
 
@@ -803,7 +803,7 @@ country_event = {
 				id = kx_geo.166
 				days = 5
 			}
-	    }	
+		}	
 	}
 }
 
@@ -848,7 +848,7 @@ country_event = {
 		tag = GEO
 		owns_state = 232
 		owns_state = 787
-        owns_state = 233
+		owns_state = 233
 		owns_state = 234
 		owns_state = 235
 		owns_state = 237
@@ -868,10 +868,10 @@ country_event = {
 			add_state_core = 238
 			add_state_core = 245
 			add_state_core = 218
-	    add_timed_idea = {
-            idea = GEO_cossak_res_idea
-            days = 50
-        }
+		add_timed_idea = {
+			idea = GEO_cossak_res_idea
+			days = 50
+		}
 	}
 }
 
@@ -990,7 +990,7 @@ country_event = { # Treaty of Poti reevaluation
 				active = no
 			}
 		}
-		OTT = {
+		TUR = {
 			country_event = {
 				id = geo.56
 				days = 1
@@ -1022,7 +1022,7 @@ country_event = { # Treaty of Poti reevaluation
 		name = geo.2.c
 		add_political_power = 25
 		set_country_flag = GEO_end_treaty
-		OTT = {
+		TUR = {
 			country_event = {
 				id = geo.56
 				days = 1
@@ -1866,55 +1866,7 @@ country_event = { # referendum
 			limit = {
 				has_country_flag = GEO_end_treaty
 			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = absolute_monarchy_subtype
-			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = prussian_constitutionalism_subtype
-			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-			}
-			create_country_leader = {
-				name = "Giorgi IX"
-				desc = "POLITICS_GIORGI_BAGRATION_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_George_Bagriaton_Mukhraneli.png"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-			}
+			GEO_create_giorgi = yes
 			complete_national_focus = GEO_george_bagration_monarch
 			hidden_effect = {
 				country_event = { #
@@ -1927,55 +1879,7 @@ country_event = { # referendum
 			}
 		}
 		else = {
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = national_populist_subtype
-			}
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = absolute_monarchy_subtype
-			}
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = prussian_constitutionalism_subtype
-			}
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = social_conservative_subtype
-			}
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = market_liberal_subtype
-			}
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = social_liberal_subtype
-			}
-			create_country_leader = {
-				name = "Ioakhim I"
-				desc = "POLITICS_JOACHIM_VON_PREUSSEN_DESC"
-				picture = "gfx/leaders/GEO/Portrait_GEO_Prince_Joachim.png"
-				expire = "1965.1.1"
-				ideology = social_democrat_subtype
-			}
+			GEO_create_ioachim = yes
 			complete_national_focus = GEO_joachim_monarch
 			hidden_effect = {
 				country_event = { #
@@ -2629,7 +2533,7 @@ country_event = { # jugheli takes tiflis, takes power temporarily
 			desc = "POLITICS_VALIKO_JUGHELI_DESC"
 			picture = "gfx/leaders/GEO/Portrait_GEO_Valiko_Jugheli.png"
 			expire = "1965.1.1"
-			ideology = socdem_democratic_socialism_subtype
+			ideology = socdem_junta_subtype
 		}
 		create_field_marshal = {
 			name = "Valiko Jugheli"
@@ -2689,7 +2593,7 @@ country_event = { # jugheli takes tiflis, takes power temporarily
 				desc = "POLITICS_IOSIF_BARATOV_DESC"
 				picture = "gfx/leaders/GEO/Portrait_GEO_Iosif_Baratov.png"
 				expire = "1965.1.1"
-				ideology = social_liberal_subtype
+				ideology = national_liberalism_subtype
 			}
 			create_country_leader = {
 				name = "Mikheil Tsereteli"
@@ -2991,7 +2895,25 @@ country_event = { # they give zaqatala over
 
 	option = { # nice
 		name = geo.65.a
+		ai_chance = {
+			base = 20
+		}
 		transfer_state = 1081
+	}
+	option = { # nice
+		name = geo.65.b		
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0
+				FROM = { is_in_faction = yes }
+			}
+		}
+		transfer_state = 1081
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
 	}
 }
 
@@ -3548,6 +3470,122 @@ country_event = { # future elections
 			id = geo.123
 		}
 	}
+	
+	option = { # SR win
+		name = geo.122.c
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = { name = "Ioakhim I" }
+					has_country_leader = { name = "Giorgi IX" }
+				}
+			}
+			complete_national_focus = GEO_SSDP_victory
+			complete_national_focus = GEO_SSDP_SR_coalition
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					name = "Valiko Jugheli"
+					ruling_only = yes
+				}
+			}
+			create_country_leader = {
+				name = "Evgeni Gegechkori"
+				desc = "POLITICS_EVGENI_GEGECHKORI_DESC"
+				picture = "gfx/leaders/GEO/Portrait_GEO_Evgeni_Gegechkori.png"
+				expire = "1965.1.1"
+				ideology = socdem_democratic_socialism_subtype
+			}
+		}
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = radical_socialist
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			GEO_Leo_Shengelaia_hog_rso
+			GEO_Ivane_Lortkipanidze_for_rso
+			GEO_Leo_Shengelaia_eco_rso
+			GEO_Valiko_Jugheli_sec_sde
+		}
+	}
+	
+	option = { # SocLib win
+		name = geo.122.e
+		if = {
+			limit = {
+				NOT = {
+					has_country_leader = { name = "Ioakhim I" }
+					has_country_leader = { name = "Giorgi IX" }
+				}
+			}
+			complete_national_focus = GEO_SSDP_victory
+			complete_national_focus = GEO_SSDP_SSPRP_coalition
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.1
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					name = "Valiko Jugheli"
+					ruling_only = yes
+				}
+			}
+			create_country_leader = {
+				name = "Evgeni Gegechkori"
+				desc = "POLITICS_EVGENI_GEGECHKORI_DESC"
+				picture = "gfx/leaders/GEO/Portrait_GEO_Evgeni_Gegechkori.png"
+				expire = "1965.1.1"
+				ideology = socdem_democratic_socialism_subtype
+			}
+		}
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+				election_frequency = 48
+			}
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			GEO_Evgeni_Gegechkori_hog_sde
+			GEO_Akaki_Chkhenkeli_for_sde
+			GEO_Iosif_Baratov_eco_sli
+			GEO_Valiko_Jugheli_sec_sde
+		}
+	}
 
 	option = { # EDP-MMEP coalition
 		name = geo.122.b
@@ -3657,6 +3695,99 @@ country_event = { # menshevik coalition with who?
 			GEO_Valiko_Jugheli_sec_sde
 		}
 		
+	}
+}
+
+country_event = { # socdem vs radsoc
+	id = geo.124
+	immediate = { log = "[GetDateText]: [Root.GetName]: event geo.124" }
+	title = geo.124.t
+	desc = geo.124.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Socdem
+		name = geo.124.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_stability = 0.02
+	
+	}
+
+	option = { # Radsoc
+		name = geo.124.b
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		remove_ideas_with_trait = head_of_government
+		add_ideas = GEO_Leo_Shengelaia_hog_rso
+	}
+}
+
+country_event = { # socdem vs soclib
+	id = geo.125
+	immediate = { log = "[GetDateText]: [Root.GetName]: event geo.125" }
+	title = geo.125.t
+	desc = geo.125.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { # Socdem
+		name = geo.125.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_stability = 0.02
+	}
+
+	option = { # Soclib
+		name = geo.125.b
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.10
+		}
+	}
+}
+
+
+country_event = { #
+	id = geo.126
+	immediate = { log = "[GetDateText]: [Root.GetName]: event geo.126" }
+	title = geo.126.t
+	desc = geo.126.d
+	picture = GFX_news_event_GEO_supreme_stalin
+
+	trigger = {
+		has_country_leader = {
+			name =  "Ioseb B. Jughashvili"
+		}
+		has_government = totalist
+	}
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = geo.126.a
+		add_political_power = 25
+		increase_ruling_party_popularity_by_5 = yes
 	}
 }
 
