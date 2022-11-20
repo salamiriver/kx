@@ -1997,10 +1997,6 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/GEO_Mountain_gulags.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_GEO_Berias_ambition"
-		texturefile = "gfx/interface/goals/GEO_Berias_ambition.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_GEO_Colectivize_the_farms"
 		texturefile = "gfx/interface/goals/GEO_Colectivize_the_farms.png"
 	}
@@ -3127,40 +3123,8 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/SIC_the_west.png"
 	}
 	SpriteType = {
-		name = "GFX_goal_GEO_beria_control"
-		texturefile = "gfx/interface/goals/GEO_beria_control.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_desires"
-		texturefile = "gfx/interface/goals/GEO_beria_desires.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_economy"
-		texturefile = "gfx/interface/goals/GEO_beria_economy.png"
-	}
-	SpriteType = {
 		name = "GFX_goal_GEO_beria_gamer"
 		texturefile = "gfx/interface/goals/GEO_beria_gamer.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_gulag"
-		texturefile = "gfx/interface/goals/GEO_beria_gulag.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_labour"
-		texturefile = "gfx/interface/goals/GEO_beria_labour.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_liberty"
-		texturefile = "gfx/interface/goals/GEO_beria_liberty.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_cull"
-		texturefile = "gfx/interface/goals/GEO_beria_cull.png"
-	}
-	SpriteType = {
-		name = "GFX_goal_GEO_beria_cult"
-		texturefile = "gfx/interface/goals/GEO_beria_cult.png"
 	}
 	SpriteType = {
 		name = "GFX_goal_KMT_Autarky"
@@ -18226,10 +18190,135 @@ SpriteTypes = {
 		name = "GFX_goal_generic_fanatic_inquisition"
 		texturefile = "gfx/interface/goals/generic_fanatic_inquisition.png"
 	}
+	spriteType = {
+		name = "GFX_goal_generic_overthrow_capitalists"
+		texturefile = "gfx/interface/goals/generic_overthrow_capitalists.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_world_diplomacy"
+		texturefile = "gfx/interface/goals/generic_world_diplomacy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_top_hat_killer"
+		texturefile = "gfx/interface/goals/generic_top_hat_killer.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_gun_bulldog"
+		texturefile = "gfx/interface/goals/generic_gun_bulldog.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_rat_catching"
+		texturefile = "gfx/interface/goals/generic_rat_catching.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_smoking_bulldog"
+		texturefile = "gfx/interface/goals/generic_smoking_bulldog.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_happy_dollar_bag"
+		texturefile = "gfx/interface/goals/generic_happy_dollar_bag.png"
+	}
 	
 	spriteType = {
 		name = "GFX_goal_generic_the_man"
 		texturefile = "gfx/interface/goals/goal_generic_the_man.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_ALB_People_Army_alt"
+		texturefile = "gfx/interface/goals/ALB_People_Army_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AOG_Quell_Nobility_alt"
+		texturefile = "gfx/interface/goals/AOG_Quell_Nobility_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Approach_Ariosophs_alt"
+		texturefile = "gfx/interface/goals/AUS_Approach_Ariosophs_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Coalition_Splits_alt"
+		texturefile = "gfx/interface/goals/AUS_Coalition_Splits_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Glorify_Styrian_Courage_alt"
+		texturefile = "gfx/interface/goals/AUS_Glorify_Styrian_Courage_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Memories_Imperial_Utopia_alt"
+		texturefile = "gfx/interface/goals/AUS_Memories_Imperial_Utopia_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Nation_Of_Nature_alt"
+		texturefile = "gfx/interface/goals/AUS_Nation_Of_Nature_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_New_Age_Ariosophic_Artistry_alt"
+		texturefile = "gfx/interface/goals/AUS_New_Age_Ariosophic_Artistry_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Patriotism_Over_Background_alt"
+		texturefile = "gfx/interface/goals/AUS_Patriotism_Over_Background_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Restore_Sanity_Habsburg_Empire_alt"
+		texturefile = "gfx/interface/goals/AUS_Restore_Sanity_Habsburg_Empire_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_AUS_Secure_Administration_Colonels_alt"
+		texturefile = "gfx/interface/goals/AUS_Secure_Administration_Colonels_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_cow_pig_alt"
+		texturefile = "gfx/interface/goals/generic_cow_pig_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_GUA_People_Supervision_alt"
+		texturefile = "gfx/interface/goals/GUA_People_Supervision_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_HON_Banana_Relations_alt"
+		texturefile = "gfx/interface/goals/HON_Banana_Relations_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_HON_Gender_Equality_alt"
+		texturefile = "gfx/interface/goals/HON_Gender_Equality_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_HON_Help_Others_alt"
+		texturefile = "gfx/interface/goals/HON_Help_Others_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_HON_Monitor_Elections_alt"
+		texturefile = "gfx/interface/goals/HON_Monitor_Elections_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_NEE_Establish_Department_TFP_alt"
+		texturefile = "gfx/interface/goals/NEE_Establish_Department_TFP_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_NEE_Fly_Me_To_Moon_alt"
+		texturefile = "gfx/interface/goals/NEE_Fly_Me_To_Moon_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_NEE_Loyalty_Our_Anglo_Brethren_alt"
+		texturefile = "gfx/interface/goals/NEE_Loyalty_Our_Anglo_Brethren_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_NEE_Meritocracy_Focused_Growing_Urban_Heart_alt"
+		texturefile = "gfx/interface/goals/NEE_Meritocracy_Focused_Growing_Urban_Heart_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_NEE_Question_Racial_Laws_alt"
+		texturefile = "gfx/interface/goals/NEE_Question_Racial_Laws_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_NFA_Saint_Just_Blanc_alt"
+		texturefile = "gfx/interface/goals/NFA_Saint_Just_Blanc_alt.png"
+	}
+	spriteType = {
+		name = "GFX_goal_SKM_Talks_With_Internationale_alt"
+		texturefile = "gfx/interface/goals/SKM_Talks_With_Internationale_alt.png"
 	}
 	
 	spriteType = {

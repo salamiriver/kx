@@ -4397,6 +4397,10 @@ country_event = { #Standardizing Uniforms
 				limit = { has_id = 82814 }
 				set_leader_portrait = SVK_Rudolf_Viest_Blue
 			}
+			every_unit_leader = {
+				limit = { has_id = 82815 }
+				set_leader_portrait = Portrait_SVK_Milan_Stefanik
+			}
 		}
 	}
 	
@@ -7331,6 +7335,8 @@ country_event = { #TRAKTOP
 	picture = GFX_report_event_WHR_tractor
 
 	fire_only_once = yes
+
+        is_triggered_only = yes
 
 	option = { #pew pew but repeated
 		name = bdeczeflavor.208.a
