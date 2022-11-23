@@ -3098,7 +3098,7 @@ focus_tree = {
 	focus = {
 
 		id = SCT_jacobite_king
-		icon = GFX_goal_monarchism
+		icon = GFX_BAY_RUPRECHT
 
 		x = 70
 		y = 0
@@ -3121,491 +3121,486 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SCT_kings_guard
-		icon = GFX_goal_ideology_paternal_autocrat
-
-		prerequisite = { focus = SCT_assert_independence focus = SCT_mitteleuropa }
-		relative_position_id = SCT_jacobite_king
-
-		x = -2
-		y = 2
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_kings_guard"
-			
-			add_ideas = SCT_king_police
-		}
-	}
-	
-	focus = {
-		id = SCT_erase_parliament
-		icon = GFX_goal_INS_focus_abandon_ethical_policy
-
-		prerequisite = { focus = SCT_kings_guard }
-		relative_position_id = SCT_jacobite_king
-
-		x = -3
-		y = 3
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_erase_parliament"
-			
-			country_event = scotland.130
-		}
-	}
-	
-	focus = {
-		id = SCT_royal_council
-		icon = GFX_focus_rom_royal_dictatorship
-
-		prerequisite = { focus = SCT_erase_parliament }
-		relative_position_id = SCT_jacobite_king
-
-		x = -2
-		y = 4
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_royal_council"
-			
-			country_event = scotland.132
-		}
-	}
-	
-	focus = {
-		id = SCT_destroy_syndies
-		icon = GFX_goal_HOL_crackdown_radsoc
-
-		prerequisite = { focus = SCT_assert_independence focus = SCT_mitteleuropa }
-		relative_position_id = SCT_jacobite_king
-
-		x = 2
-		y = 2
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_destroy_syndies"
-			remove_ideas = SCT_socialist_issues
-			add_popularity = {
-				ideology = totalist popularity = -0.20
-			}
-			add_popularity = {
-				ideology = syndicalist popularity = -0.20
-			}
-			add_popularity = {
-				ideology = radical_socialist popularity = -0.20
-			}
-		}
-	}
-	
-	focus = {
-		id = SCT_secret_police
-		icon = GFX_goal_secret_police
-
-		prerequisite = { focus = SCT_destroy_syndies }
-		relative_position_id = SCT_jacobite_king
-
-		x = 3
-		y = 3
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_secret_police"
-			
-			add_ideas = SCT_evil_police
-		}
-	}
-	
-	focus = {
-		id = SCT_german_education
-		icon = GFX_goal_OTT_constitution
-
-		prerequisite = { focus = SCT_secret_police }
-		relative_position_id = SCT_jacobite_king
-
-		x = 2
-		y = 4
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_german_education"
-			
-			add_research_slot = 1
-		}
-	}
-	
-	focus = {
-		id = SCT_legitimacy_crisis
-		icon = GFX_goal_HOL_depillarization
-
-		prerequisite = { focus = SCT_assert_independence focus = SCT_mitteleuropa }
-		relative_position_id = SCT_jacobite_king
+		id = SCT_Forming_a_Loyal_Government
+		icon = GFX_goal_GER_Support_Small_Business
 
 		x = 0
+		y = 1
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_jacobite_king
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_The_White_Rose_Guards
+		icon = GFX_goal_MEX_Pink_Roses
+
+		x = 1
 		y = 2
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Forming_a_Loyal_Government
+		}
+		mutually_exclusive = { 
+		focus = SCT_The_German_Eagle_Watches
+		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_legitimacy_crisis"
-			country_event = scotland.133
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_crush_british
-		icon = GFX_focus_RAJ_clamp_down_on_corruption
-
-		prerequisite = { focus = SCT_legitimacy_crisis }
-		mutually_exclusive = { focus = SCT_work_with_british }
-		relative_position_id = SCT_jacobite_king
-
-		x = -1
-		y = 3
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 5
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_crush_british"
-			remove_ideas = SCT_unionist_issues
-			add_political_power = -50
-		}
-	}
-	
-	focus = {
-		id = SCT_work_with_british
-		icon = GFX_HON_peace_in_our_time
-
-		prerequisite = { focus = SCT_legitimacy_crisis }
-		mutually_exclusive = { focus = SCT_crush_british }
-		relative_position_id = SCT_jacobite_king
+		id = SCT_A_Concordat_with_His_Holiness
+		icon = GFX_goal_AUS_Envoy_Pope
 
 		x = 1
 		y = 3
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_The_White_Rose_Guards
+		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_work_with_british"
-			remove_ideas = SCT_unionist_issues
-			add_stability = 0.05
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_purge_republicans
-		icon = GFX_focus_renounce_the_treaty_of_trianon
+		id = SCT_Renewal_of_the_Scottish_Language
+		icon = GFX_IRE_gaelic
 
-		prerequisite = { focus = SCT_crush_british focus = SCT_work_with_british }
-		relative_position_id = SCT_jacobite_king
+		x = 2
+		y = 4
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_A_Concordat_with_His_Holiness
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_The_Bonnie_Prince_Avenged
+		icon = GFX_focus_flag_scotland
+
+		x = 1
+		y = 5
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Renewal_of_the_Scottish_Language
+		}
+		prerequisite = { 
+	    focus = SCT_Torn_Between_the_two_Crowns
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_Torn_Between_the_two_Crowns
+		icon = GFX_goal_BRG_Crown
 
 		x = 0
 		y = 4
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_A_Concordat_with_His_Holiness
+		focus = SCT_Strengthen_Ties_with_Berlin_and_Munich
+		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_purge_republicans"
-			remove_ideas = SCT_democrat_issues
-			remove_ideas = SCT_religious_issues
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_assert_independence
-		icon = GFX_goal_generic_demand_territory
+		id = SCT_The_German_Eagle_Watches
+		icon = GFX_goal_AOG_Prussian_Eagle_Conquers_Heavens
 
-		prerequisite = { focus = SCT_jacobite_king }
-		mutually_exclusive = { focus = SCT_mitteleuropa }
-		relative_position_id = SCT_jacobite_king
-
-		available = { is_subject = no }
-		
-		x = -3
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_assert_independence"
-			
-		}
-	}
-	
-	focus = {
-		id = SCT_scottish_farms
-		icon = GFX_goal_agricultural_policies
-
-		prerequisite = { focus = SCT_assert_independence }
-		relative_position_id = SCT_jacobite_king
-
-		x = -4
+		x = -1
 		y = 2
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Forming_a_Loyal_Government
+		}
+		mutually_exclusive = { 
+		focus = SCT_The_White_Rose_Guards
+		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_scottish_farms"
-			add_ideas = SCT_farming
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_ban_unions
-		icon = GFX_goal_UK_ban_unions
+		id = SCT_Strengthen_Ties_with_Berlin_and_Munich
+		icon = GFX_goal_AOG_Direct_German_Rule
 
-		prerequisite = { focus = SCT_scottish_farms }
-		relative_position_id = SCT_jacobite_king
-
-		x = -5
+		x = -1
 		y = 3
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_The_German_Eagle_Watches
+		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_ban_unions"
-			add_ideas = SCT_illegal_unions
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_focus_on_mining
-		icon = GFX_goal_generic_construction2
+		id = SCT_Cultural_Exchanges
+		icon = GFX_goal_AOG_Stratocratic_Elan
 
-		prerequisite = { focus = SCT_ban_unions }
-		relative_position_id = SCT_jacobite_king
-
-		x = -4
+		x = -2
 		y = 4
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Strengthen_Ties_with_Berlin_and_Munich
+		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_focus_on_mining"
-			
-			133 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			136 = {
-				add_extra_state_shared_building_slots = 1
-			}
-			121 = {
-				add_resource = {
-					type = steel
-					amount = 10
-				}
-			}
-			136 = {
-				add_resource = {
-					type = tungsten
-					amount = 10
-				}
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_mitteleuropa
-		icon = GFX_goal_Empower_the_Reichsbank
+		id = SCT_Break_the_Claymore
+		icon = GFX_goal_AUS_Helmet_Sword_Sway_Ballot
 
-		prerequisite = { focus = SCT_jacobite_king }
-		mutually_exclusive = { focus = SCT_assert_independence }
-		relative_position_id = SCT_jacobite_king
+		x = -1
+		y = 5
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Cultural_Exchanges
+		}
+		prerequisite = { 
+		focus = SCT_Torn_Between_the_two_Crowns
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_Finalizing_our_Entry_into_Mitteleuropa 
+		icon = GFX_goal_GER_Mitteleuropa_German
+
+		x = -3
+		y = 2
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Forming_a_Loyal_Government
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_Reignite_the_Mining_Industry
+		icon = GFX_goal_generic_coal_mining
+
+		x = -3
+		y = 3
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Finalizing_our_Entry_into_Mitteleuropa
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_Attract_German_Investment
+		icon = GFX_goal_CZE_german_concession
+
+		x = -3
+		y = 5
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Reignite_the_Mining_Industry
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	focus = {
+		id = SCT_Syndicalists_Crushed_Under_the_German_Goosestep
+		icon = GFX_HOL_crackdown_syndie
 
 		x = 3
-		y = 1
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 10
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_mitteleuropa"
-			
-		}
-	}
-	
-	focus = {
-		id = SCT_german_grain
-		icon = GFX_focus_AUS_agriculture
-
-		prerequisite = { focus = SCT_mitteleuropa }
-		relative_position_id = SCT_jacobite_king
-
-		x = 4
 		y = 2
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Forming_a_Loyal_Government
+		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_german_grain"
-			add_ideas = WAL_buying_german_grain
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_invite_companies
-		icon = GFX_goal_German_Investements
+		id = SCT_Reform_the_Homeland_Watch_into_the_Kings_Guard
+		icon = GFX_focus_SCT_soldiers_march
 
-		prerequisite = { focus = SCT_german_grain }
-		relative_position_id = SCT_jacobite_king
-
-		x = 5
+		x = 3
 		y = 3
-		cost = 5
-
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Syndicalists_Crushed_Under_the_German_Goosestep
+		}
 		
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_invite_companies"
-			custom_effect_tooltip = WAL_german_companies_avalible
-			set_country_flag = german_companies_avalible
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
+		}
+	}
+	
+	
+	focus = {
+		id = SCT_Adapting_to_German_Military_Traditions
+		icon = GFX_goal_AOG_Vanquishing_Warrior
+
+		x = 3
+		y = 5
+		cost = 1
+        relative_position_id = SCT_jacobite_king
+		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Reform_the_Homeland_Watch_into_the_Kings_Guard
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
 	
 	focus = {
-		id = SCT_german_oil
-		icon = GFX_goal_oil
-
-		prerequisite = { focus = SCT_invite_companies }
-		relative_position_id = SCT_jacobite_king
-
-		x = 4
-		y = 4
-		cost = 5
-
-		available_if_capitulated = yes
-		
-		ai_will_do = {
-			factor = 3
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_german_oil"
-			121 = {
-				add_resource = {
-					type = oil
-					amount = 10
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = SCT_scottish_king
+		id = SCT_A_Truly_Legitimate_Kingdom
 		icon = GFX_focus_SCT_kingdom
 
-		prerequisite = { focus = SCT_focus_on_mining focus = SCT_german_oil }
-		prerequisite = { focus = SCT_royal_council }
-		prerequisite = { focus = SCT_purge_republicans }
-		prerequisite = { focus = SCT_german_education }
-		relative_position_id = SCT_jacobite_king
-
 		x = 0
-		y = 5
-		cost = 5
-
+		y = 6
+		cost = 1
+        relative_position_id = SCT_jacobite_king
 		available_if_capitulated = yes
+		prerequisite = { 
+		focus = SCT_Break_the_Claymore
+		focus = SCT_The_Bonnie_Prince_Avenged
+		}
+		prerequisite = { 
+		focus = SCT_Attract_German_Investment
+		}
+		prerequisite = { 
+		focus = SCT_Adapting_to_German_Military_Traditions
+		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
-
+		
+		available = {
+			has_country_flag = german_king
+		}
+		
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus SCT_scottish_king"
-			remove_ideas = SCT_political_chaos
+			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
+			country_event = scotland.129
 		}
 	}
+	
+	
 	
 	##############
 	#Syndie Stuff#

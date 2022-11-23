@@ -216,46 +216,64 @@ SCT_silver_legion_desc:0 "Everywhere in Scotland, the legions continue to grow. 
 SCT_gods_light:0 "In God's Holy Light"
 SCT_gods_light_desc:0 "A covenant remade and restored. A people turned back to the right path. All Scotsmen now read from the same Hymn sheet. Christ the King can be heard chanted in streets everywhere in Scotland. Truly, we will witness his second coming soon, and by the grace of God, truly be his chosen people. "
 
-SCT_jacobite_king:0 "A Jacobite King"
+SCT_jacobite_king:0 "Rupprecht Sits atop Stone of Destiny"
 SCT_jacobite_king_desc:0 "With it was with help from our gallant allies in Europe that we managed to liberate ourselves from Syndicalist British tyranny. Now it is time for us to show our appreciation. In order to further our ties with the emerging German power in Europe, we seek to crown Rupprecht of Bavaria as King of Scots. Long live King Robert IV of House Stuart-Wittelsbach, forever may a descendent of the Bruce occupy our throne!"
-SCT_kings_guard:0 "Establish The King's Guard"
-SCT_kings_guard_desc:0 "While some openly welcome the return of a monarchy in Scotland, others are perturbed by the fact that our King is German. A new regiment of Loyal Scotsmen will be created to not only ensure the safety of His Majesty, but also provide a shining example of how our people should rally behind the throne."
-SCT_erase_parliament:0 "Erase Parliament"
-SCT_erase_parliament_desc:0 "Many of the King's new subjects remain nostalgic for the time of when they were represented by parliament. We must erase these foul memories and ensure that the spectre of democracy haunts us no more."
-SCT_royal_council:0 "Empower The Royal Council"
-SCT_royal_council_desc:0 "Democracy in Scotland is a fickle thing. Given the instability of the rising, the King has seen fit to order the drawing up of a new Scottish constitution, one that gives him, his privy councillors, and the Church a leading, paternal hand."
-SCT_destroy_syndies:0 "Destroy Remaining Syndicalists"
-SCT_destroy_syndies_desc:0 "It was not just the factory workers or those who slave away in Scotland’s dockyards who joined with the Syndicalist cause. Those dissatisfied with the land reforms of the old United Kingdom also took up arms against the Empire. Both Highland and Lowland tenant farmers must be brought to heel."
-SCT_secret_police:0 "Establish The Special Police Commission"
-SCT_secret_police_desc:0 "Opposition to our rule has been greater than expected. To better protect His Majesty and the state, a new special police force that will operate from the shadows has been authorized."
-SCT_german_education:0 "Reform The Education System"
-SCT_german_education_desc:0 "Scotland’s Universities have long been a place of innovation and useful learning, not just for the natives, but for the world over. Scottish science is known as some of the finest in the world, we would do well to exploit our nation’s talent in this way as best we can."
-SCT_legitimacy_crisis:0 "The Legitimacy Crisis"
-SCT_legitimacy_crisis_desc:0 "To use his German name, Rupprecht, Duke of Bavaria, was a commander in the Imperial German Army in the First Weltkreig. This has rubbed many of Scotland’s veterans up the wrong way. Not to mention his son's name of Heinrich. We must seek to ensure that the King adopts Scottish mannerisms and the common religion in order to ensure his legitimacy. Rupprecht however, seems upset about himself and his son abandoning Catholicism."
-SCT_crush_british:0 "Crush The Unionists"
-SCT_crush_british_desc:0 "‘I will gladly learn Scots, but I cannot forsake the religious custom that my family has practiced for centuries.’ The King’s words are telling, and the hard-line Protestant Unionists in Scotland aren’t going to like it. Their days are numbered."
-SCT_work_with_british:0 "Reconcile With The Unionists"
-SCT_work_with_british_desc:0 "‘If becoming one of Scotland’s faithful brings their people closer to me, then so be it.’ It seems that the King, after much deliberation, has chosen the path of least resistance. He will show the Unionists that the Scottish Church will never be threatened by having a Catholic on the throne. He will meet with Church of Scotland Ministers later this week to be christened a Presbyterian."
-SCT_purge_republicans:0 "Purge Republicans"
-SCT_purge_republicans_desc:0 "A Scottish Republic is simply not in anyone’s interest. Ideas of Republicanism have spawned not only Syndicalist, but rabid Legionary states all throughout Europe. The noose is more than adequate for all who oppose the King of Scotland."
-SCT_assert_independence:0 "Assert Economic Independence"
-SCT_assert_independence_desc:0 "While we appreciate all that Germany has done for us, we cannot allow ourselves to become yet another cog in the Mitteleuropa economic project. Membership of the Reichspakt will keep Scotland safe, but economic independence will keep us free."
-SCT_scottish_farms:0 "Subsidize Scottish Farms"
-SCT_scottish_farms_desc:0 "As a result of the rising, the fields lay bare. With the importation of agricultural machinery from Germany, we shall lead a great transformation from the potato fields of Angus, to the barley pastures of the borders. Only with a strong agricultural sector can we truly thrive!"
-SCT_ban_unions:0 "Ban Unions"
-SCT_ban_unions_desc:0 "The Syndicalist menace first reared its ugly head with the support of the trade unions in Scotland. This treachery against any crown cannot be tolerated a moment longer. With rifles and truncheon, we will ensure that clandestine meetings in the workplace will never occur again. "
-SCT_focus_on_mining:0 "Focus On Mining"
-SCT_focus_on_mining_desc:0 "The Scottish Highlands are a mountainous place and provided much to the British Empire. With coal, iron, and zinc, Scotland can become the workshop of the Isles, given adequate funding."
-SCT_mitteleuropa:0 "Mitteleuropa Ties"
-SCT_mitteleuropa_desc:0 "The more liberal elements in Germany seem to be crying out for a change to the structure of Mitteleuropa. No longer will Germany have a stranglehold on other nation’s economies but shall instead promote growth and free trade throughout the continent. Three hurrahs for the fayre of Europe!"
-SCT_german_grain:0 "Buy German Grain"
-SCT_german_grain_desc:0 "Scotland is rich in its ability to produce high quality livestock and livestock related products, likewise with Oats and Barley. More time can be dedicated to the rearing and growing of such fine fayre if we import cheap German grain!"
-SCT_invite_companies:0 "Invite German Companies"
-SCT_invite_companies_desc:0 "Germany is the world hegemon and while there was a small tumult due to Black Monday there companies are already bouncing back. The German Ambassador has made a formal request that we ease restrictions and extend invitations to various German industrial giants. There presence in Scotland can only be good for the both of us!"
-SCT_german_oil:0 "German Oil Rights"
-SCT_german_oil_desc:0 "Oil keeps the machines of not only war, but civilian life, moving. A great oil field has been discovered northeast of Aberdeen. If exploited properly, Scotland and Europe as a whole could very well be on the cusp of previously untold prosperity in this new and exciting age!"
-SCT_scottish_king:0 "A Scottish King"
-SCT_scottish_king_desc:0 "A son of the Stuarts, and in turn, a son of the Bruce himself, now again sits upon the throne of Scotland. The Scottish people have put aside their distrust of the German, now considering him and his successors to be as Scottish as they are, if not by blood, but by culture and loyalty to Scotland,"
+
+SCT_Forming_a_Loyal_Government:0 "Forming a Loyal Government"
+SCT_Forming_a_Loyal_Government_desc:0 ""
+
+SCT_The_White_Rose_Guards:0 "The White Rose Guards"
+SCT_The_White_Rose_Guards_desc:0 ""
+
+SCT_A_Concordat_with_His_Holiness:0 "A Concordat with His Holiness"
+SCT_A_Concordat_with_His_Holiness_desc:0 ""
+
+SCT_Renewal_of_the_Scottish_Language:0 "Renewal of the Scottish Language"
+SCT_Renewal_of_the_Scottish_Language_desc:0 ""
+
+SCT_The_Bonnie_Prince_Avenged:0 "The Bonnie Prince Avenged"
+SCT_The_Bonnie_Prince_Avenged_desc:0 ""
+
+SCT_Torn_Between_the_two_Crowns:0 "Torn Between the two Crowns"
+SCT_Torn_Between_the_two_Crowns_desc:0 ""
+
+SCT_The_German_Eagle_Watches:0 "The German Eagle Watches"
+SCT_The_German_Eagle_Watches_desc:0 ""
+
+SCT_Strengthen_Ties_with_Berlin_and_Munich:0 "Strengthen Ties With Munich and Berlin"
+SCT_Strengthen_Ties_with_Berlin_and_Munich_desc:0 ""
+
+SCT_Cultural_Exchanges:0 "Scottish-German Cultural Exchanges"
+SCT_Cultural_Exchanges_desc:0 ""
+
+SCT_Break_the_Claymore:0 "Break the Neo-Jacobites' Claymore"
+SCT_Break_the_Claymore_desc:0 ""
+
+SCT_Finalizing_our_Entry_into_Mitteleuropa:0 "Finalizing our Entry into Mitteleuropa"
+SCT_Finalizing_our_Entry_into_Mitteleuropa_desc:0 ""
+
+SCT_Reignite_the_Mining_Industry:0 "Reignite the Mining Industry"
+SCT_Reignite_the_Mining_Industry_desc:0 ""
+
+SCT_Attract_German_Investment:0 "Attract German Investment"
+SCT_Attract_German_Investment_desc:0 ""
+
+SCT_Syndicalists_Crushed_Under_the_German_Goosestep:0 "Syndicalists Crushed under the German Goosestep"
+SCT_Syndicalists_Crushed_Under_the_German_Goosestep_desc:0 ""
+
+SCT_Reform_the_Homeland_Watch_into_the_Kings_Guard:0 "Fashion the King's Guard"
+SCT_Reform_the_Homeland_Watch_into_the_Kings_Guard_desc:0 ""
+
+SCT_Adapting_to_German_Military_Traditions:0 "Adapting German Military Traditions to our Own"
+SCT_Adapting_to_German_Military_Traditions_desc:0 ""
+
+SCT_A_Truly_Legitimate_Kingdom:0 "A Truly Legitimate Kingdom"
+SCT_A_Truly_Legitimate_Kingdom_desc:0 ""
+
+
+
+
+
 
 SCT_socialist_legacy:0 "Maclean's Legacy Lives On"
 SCT_socialist_legacy_desc:0 "John MacLean was seen as Scotland’s saviour. In a time mired by civil strife, economic depression, and the molestation of the Scottish Proletariat by an Anglo-Scots Bourgeoise, it was John MacLean who walked through Clydeside with the red banner in his hand, rallying the people to socialism and better lives. Against all demagogues, Liberals, and dictators, Scotland will truly be an uncorrupted worker’s state again."
