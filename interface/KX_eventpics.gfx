@@ -868,7 +868,11 @@ spriteTypes = {
 		name = "profits"
 		texturefile = "gfx/event_pictures/Asia/Legation_Cities/profits.png"
 	}
-		spriteType = {
+	spriteType = {
+		name = "GFX_report_event_SCT_Covenant"
+		texturefile = "gfx/event_pictures/Europe/Scotland/GFX_report_event_SCT_Covenant.png"
+	}
+	spriteType = {
 		name = "SCT_john_maccormick_speech"
 		texturefile = "gfx/event_pictures/Europe/Scotland/SCT_john_maccormick_speech.png"
 	}

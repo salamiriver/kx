@@ -54,6 +54,10 @@ country_event = { # Trade Congress begins
 				id = uob.2
 				days = 13
 			}
+			country_event = {
+				id = uob.3000
+				days = 18
+			}
 		}
 	}
 }
@@ -750,6 +754,27 @@ country_event = { # No majority achieved
 			}
 		}
 	}
+}
+### Scottish Convent Event ###
+country_event = { #Scottish Convent 
+	id = uob.3000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.2001" }
+	title = uob.3000.t
+	desc = uob.3000.d
+	picture = GFX_report_event_SCT_Covenant
+
+	is_triggered_only = yes
+
+	option = { # fuck off
+		name = uob.3000.a
+		add_political_power = -50
+		add_stability = -0.03
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+	}
+
 }
 ### Show of Force ###
 country_event = { # Where to send the Fleet?
