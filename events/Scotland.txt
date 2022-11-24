@@ -5582,7 +5582,7 @@ country_event = { #Syndies want power!
 		add_stability = 0.05
 	    hidden_effect = {
 		country_event = {
-				id = sctrevolt.22
+				id = sctrevolt.21
 				days = 10
 		}
 	  }
@@ -5737,6 +5737,29 @@ country_event = { #Syndie prov government
 }
 
 country_event = { #Scottish unity gov
+	id = sctrevolt.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.22"}
+	title = sctrevolt.22.t
+	desc = sctrevolt.22.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctrevolt.21.a
+		add_popularity = {
+			ideology = authoritarian_democrat popularity = 0.10
+		}
+		add_political_power = 50
+		add_war_support = 0.05
+		add_stability = 0.05
+	    set_country_flag = SCT_scottish_unity_gov_flag
+		set_country_flag = SCT_elections_allowed_flag
+    }
+}
+
+country_event = { #Treaty of Glasgow, End of the Rebellion
 	id = sctrevolt.22
 	immediate = {log = "[GetDateText]: [Root.GetName]: event sctrevolt.22"}
 	title = sctrevolt.22.t
@@ -5747,14 +5770,9 @@ country_event = { #Scottish unity gov
 	is_triggered_only = yes
 
 	option = {
-		name = sctrevolt.19.a
-		add_popularity = {
-			ideology = authoritarian_democrat popularity = 0.10
-		}
-		add_political_power = 50
-		add_war_support = 0.05
-		add_stability = 0.05
-	    set_country_flag = SCT_scottish_unity_gov_flag
-		set_country_flag = SCT_elections_allowed_flag
+		name = sctrevolt.22.a
+		remove_ideas = SCT_revolt
+		add_political_power = 100
+		add_war_support = -0.10
     }
 }
