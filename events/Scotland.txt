@@ -4964,7 +4964,7 @@ country_event = { # Maxton does stuff
 			popularity = 0.05
 		}
 		add_political_power = -50
-		add_stability -0.2
+		add_stability -0.03
 		
     }
 }
