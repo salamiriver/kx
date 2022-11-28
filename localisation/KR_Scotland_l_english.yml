@@ -1386,4 +1386,9 @@ SCT_restore_the_act_of_union_jacocbite:0 "Restore Jacobite rule over England"
 SCT_take_wales_jacobite:0 "March on Wales"
 SCT_absorb_wales_jacobite:0 "Absorb Wales"
 
+### comedy ###
+SCT_fun:0 "Caoiva"
+SCT_fun_ADJ:0 "Caoivish"
+SCT_fun_DEF:0 "Achonate of Caoiva"
+
 

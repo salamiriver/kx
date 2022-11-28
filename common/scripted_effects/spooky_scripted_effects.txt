@@ -1,5 +1,11 @@
 spooky_portraits = {
 	if = {	
+		limit = { has_country_leader = { name = "John MacCormick" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_John_MacCormick_fun.png"
+		}
+	}
+	if = {	
 		limit = { has_country_leader = { name = "J. Edgar Hoover" ruling_only = yes } }
 		set_country_leader_portrait = {
 			portrait = "gfx/leaders/FUN/Portrait_PAN_J_Edgar_Hoover_fun.png"
@@ -1244,6 +1250,17 @@ spooky_portraits = {
 		} } 
 		TRM = {
 			set_cosmetic_tag = TRM_transgender
+		}
+	}
+	if = {	
+		limit = { 
+		SCT = {
+			NOT = {
+				has_cosmetic_tag = SCT_fun
+			}
+		} } 
+		SCT = {
+			set_cosmetic_tag = SCT_fun
 		}
 	}
 	if = {	
