@@ -4964,7 +4964,6 @@ country_event = { # Maxton does stuff
 			popularity = 0.05
 		}
 		add_political_power = -50
-		add_stability -0.03
 		
     }
 }
@@ -5138,7 +5137,6 @@ country_event = { # MacCormick becomes leader
 				id = sctflavor.1
 				days = 23
 			}	
-		}
         country_event = {
 				id = sctflavor.3
 				days = 7
