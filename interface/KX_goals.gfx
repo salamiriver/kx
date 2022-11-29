@@ -18914,6 +18914,14 @@ SpriteTypes = {
 		name = "GFX_goal_generic_rat_espionage"
 		texturefile = "gfx/interface/goals/generic_rat_espionage.png"
 	}
+	spriteType = {
+		name = "GFX_goal_generic_mad_bear"
+		texturefile = "gfx/interface/goals/generic_mad_bear.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_cult_personality"
+		texturefile = "gfx/interface/goals/generic_cult_personality.png"
+	}
 	
 	spriteType = {
 		name = "GFX_goal_generic_the_man"
@@ -19055,6 +19063,11 @@ SpriteTypes = {
 	spriteType = {
 		name = "GFX_goal_ALA_hebrew_development"
 		texturefile = "gfx/interface/goals/goal_ALA_hebrew_development.png"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_generic_anti_japan"
+		texturefile = "gfx/interface/goals/goal_generic_anti_japan.png"
 	}
 	
 }
