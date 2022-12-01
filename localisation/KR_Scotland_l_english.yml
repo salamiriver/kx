@@ -1160,6 +1160,7 @@ SCT_you_will_have_to_last_120_days_tt:0 "§YWe will have to last§! §R120 Days�
 SCT_freedom_tt:0 "§GFor the First time in over 500 years, Scotland has a chance at freedom. We will not waste it.§!"
 SCT_we_will_look_for_aid_tt:0 "§GWe will begin looking for aid from other countries.§!"
 SCT_homeland_watch_will_defend_us_tt:0 "§GThe Homeland Watch will defend us.§!"
+SCT_german_king:0 "§2Rupprecht of Bavaria§! has been crowned King of Scotland"
 uprising_over:0 "The Uprising Is Over"
 army_reform:0 "Army Reform Has Began"
 focus_on_agriculture:0 "Agrarian Economics"
@@ -1172,7 +1173,6 @@ democracy_survives:0 "Democracy Survives!"
 watch_coup:0 "The Homeland Watch Have Taken Power"
 gods_land:0 "The Covenanters Have Taken Over"
 syndie_scotland:0 "The Syndicalists Have Taken Power"
-german_king:0 "Rupprecht Is To Be Crowned"
 edward_on_throne:0 "The King is to be Crowned"
 join_crowns:0 "The Union Of Crowns Has Been Established"
 join_parliaments:0 "The Union Of Parliaments Has Been Ratified Once More"
@@ -1196,7 +1196,6 @@ head_office_burned:0 "The Bureau Head Office Has Been Destroyed"
 purged_unfaithful:0 "The Purge Has Taken Place"
 SCT_scottish_subs:0"We will gain a fleet of Submarines"
 
-SCT_german_king:0 "§MRupprecht of Bavaria will be crowned King of Scotland and his son Heinrich his regent.§!"
 SCT_english_king:0 "§MKing [CAN.GetLeader] will be crowned King.§!"
 SCT_joined_crowns:0 "§M[CAN.GetLeader] will be crowned King of an independent Kingdom of Scotland!§!"
 SCT_joined_parliaments:0 "§M[CAN.GetLeader] will be crowned King of the United Kingdom and a provisional British government will be established.§!"
@@ -1374,9 +1373,6 @@ SCT_naval_bankruptcy_desc:0 "With the navy going into bankruptcy we have been fo
 SCT_naval_bailout:0 "Naval Bailout"
 SCT_naval_bailout_desc:0 "With the navy nearly going into bankruptcy we have been forced to bailout the program until it is sustainable againn."
 SCT_navy_spies:0 "Office Of Naval Intelligence"
-
-### Tooltips ###
-SCT_you_will_have_to_last_120_days_tt:0 "§YWe will have to last§! §R120 Days§! §Yagainst the English if we are to achieve independence!§!"
 
 ###Decisions###
 SCT_legitimacy_actions:0"Dealing with Legitimacy"

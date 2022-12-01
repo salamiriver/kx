@@ -3111,12 +3111,16 @@ focus_tree = {
 		}
 		
 		available = {
-			has_country_flag = german_king
+			has_country_flag = SCT_german_king
 		}
+		
+		bypass = {
+		  	has_country_flag = SCT_german_king
+		  }
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SCT_jacobite_king"
-			country_event = scotland.129
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 	
