@@ -979,7 +979,7 @@ country_event = { #Syndies want power!
 	option = { #offer a middle ground
 		name = sctrevolt.17.b
 		ai_chance = {
-			factor = 75
+			factor = 50
 		}
 		add_political_power = -50
 		add_stability = 0.05
@@ -1175,7 +1175,7 @@ country_event = { #Treaty of Glasgow, End of the Rebellion
 		name = sctrevolt.22.a
 		remove_ideas = SCT_revolt
 		add_political_power = 100
-		add_war_support = -0.10
+		add_war_support = -0.15
 		hidden_effect = {
 		  if = {
 		   limit = {
@@ -1201,6 +1201,10 @@ country_event = { #Treaty of Glasgow, End of the Rebellion
 		   limit = {
 		      has_country_flag = SCT_german_aid_flag
 			  }
+			  country_event = {
+				id = scotland.5
+				days = 5
+		     }
 		    }
 		  if = {
 		   limit = {
@@ -1208,5 +1212,271 @@ country_event = { #Treaty of Glasgow, End of the Rebellion
 			  }
 		    }
 	    }
+    }
+}
+### German aid events ###
+country_event = { #Growing concerns about German influence 
+	id = scotland.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.5"}
+	title = scotland.5.t
+	desc = scotland.5.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = scotland.5.a
+		add_stability = -0.03
+		add_political_power = -10
+		hidden_effect {
+		GER = {
+		 country_event = {
+		    id = scotland.6
+			days = 3
+		 }
+		}
+     }
+  }
+}
+
+country_event = { #The matter of Scotland (for Germany)
+	id = scotland.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.6"}
+	title = scotland.6.t
+	desc = scotland.6.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Demand they crown Rupprecht
+		name = scotland.6.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -100
+		SCT = {
+		 country_event = {
+		    id = scotland.7
+			days = 3
+		 }
+     }
+	option = { #Ask they join the Reichspakt
+		name = scotland.6.b
+		trigger = {
+			SCT = {
+				is_ai = Yes
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -25
+		SCT = {
+		 country_event = {
+		    id = scotland.8
+			days = 3
+		 }
+      }
+    }
+	option = { #Leave them be
+		name = scotland.6.c
+		trigger = {
+			SCT = {
+				is_ai = Yes
+			}
+		}
+		add_political_power = 25
+		ai_chance = {
+			factor = 10
+		}
+    }
+  }
+}
+
+country_event = { #Germany demands we restore the Monarchy!
+	id = scotland.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.7"}
+	title = scotland.7.t
+	desc = scotland.7.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Fuck off you kraut bastards
+		name = scotland.7.a
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.03
+		add_political_power = 100
+		hidden_effect {
+		GER = {
+		 country_event = {
+		    id = scotland.8
+			days = 3
+		 }
+		} 
+      }
+    }
+	option = { #We have no choice
+		name = scotland.7.b
+		add_stability = -0.05
+		add_political_power = -25
+		hidden_effect {
+		 country_event = {
+		    id = scotland.11294
+			days = 10
+		 }
+      }
+    }
+}
+
+country_event = { #Scotland says no!
+	id = scotland.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.8"}
+	title = scotland.8.t
+	desc = scotland.8.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Give the order to attack the Government
+		name = scotland.8.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -30
+		hidden_effect {
+		SCT = {
+		 country_event = {
+		    id = scotland.9
+			days = 5
+		 }
+		} 
+      }
+    }
+	option = { #Accept it
+		name = scotland.8.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 25
+    }
+}
+
+country_event = { #the Schottisches Expeditionsregiment attempts to take over
+	id = scotland.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.9"}
+	title = scotland.9.t
+	desc = scotland.9.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Stop them!
+		name = scotland.9.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.05
+		add_political_power = -50
+		add_manpower = -500
+		hidden_effect {
+		 country_event = {
+		    id = scotland.10
+			days = 5
+		 }
+      }
+    }
+	option = { #give in
+		name = scotland.9.b
+		ai_chance = {
+			factor = 50
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat popularity = -0.15
+		}
+		add_stability = -0.03
+		add_political_power = -25
+		add_manpower = -1000
+		 country_event = {
+		    id = scotland.11
+			days = 5
+		 }
+    }
+}
+
+country_event = { #What do we do now
+	id = scotland.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.10"}
+	title = scotland.10.t
+	desc = scotland.10.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Declare a state of emergency!
+		name = scotland.10.a
+		ai_chance = {
+			factor = 45
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat popularity = 0.10
+		}
+		add_political_power = 100
+		add_war_support = 0.10
+		add_stability = -0.10
+	    set_country_flag = SCT_MacCormick_dictator
+		set_party_name = {
+         ideology = authoritarian_democrat
+         long_name = SCT_authoritarian_democrat_NSP_party_long
+         name = SCT_authoritarian_democrat_NSP_party
+        }
+		
+    }
+	option = { # Keep the prov government
+		name = scotland.10.b
+		ai_chance = {
+			factor = 65
+		}
+		add_stability = 0.10
+		add_political_power = -50
+		set_country_flag = SCT_elections_allowed_flag
+	}
+}
+
+country_event = { #the coup and Coronation
+	id = scotland.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.11"}
+	title = scotland.11.t
+	desc = scotland.11.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Long live the King!
+		name = scotland.11.a
+		complete_national_focus = SCT_jacobite_king
+		set_cosmetic_tag = SCT_Kingdom_Bavarian
+		create_country_leader = {
+	     name = "Robert IV"
+	     desc = "SCT_RUPPRECHT_DESC"
+	     picture = "gfx/leaders/SCT/Portrait_Wales_Rupprecht_I.png"
+	     expire = "1965.1.1"
+	     ideology = prussian_constitutionalism_subtype
+	     traits = {}
+        }
+		add_political_power = -100
+		add_stability = -0.15
+	    set_country_flag = SCT_No_Government
+		set_country_flag = SCT_german_king
+		
     }
 }

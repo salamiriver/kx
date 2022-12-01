@@ -3142,7 +3142,7 @@ focus_tree = {
 		}
 		
 		available = {
-			has_country_flag = german_king
+			has_country_flag = SCT_No_Government_flag
 		}
 		
 		completion_reward = {
