@@ -1502,13 +1502,16 @@ country_event = { #the coup and Coronation
 	     desc = "SCT_RUPPRECHT_DESC"
 	     picture = "gfx/leaders/SCT/Portrait_Wales_Rupprecht_I.png"
 	     expire = "1965.1.1"
-	     ideology = prussian_constitutionalism_subtype
+	     ideology = authoritarian_democrat_subtype
 	     traits = {}
         }
 		add_political_power = -100
 		add_stability = -0.15
 	    set_country_flag = SCT_No_Government
 		set_country_flag = SCT_german_king
+		GER = {
+		 add_to_faction = SCT
+		}
 		
     }
 }
@@ -1532,12 +1535,15 @@ country_event = { #The Coronation of Rupprecht peacefully
 	     desc = "SCT_RUPPRECHT_DESC"
 	     picture = "gfx/leaders/SCT/Portrait_Wales_Rupprecht_I.png"
 	     expire = "1965.1.1"
-	     ideology = prussian_constitutionalism_subtype
+	     ideology = authoritarian_democrat_subtype
 	     traits = {}
         }
 		add_political_power = -10
-		add_stability = -0.10
+		add_stability = -0.05
 		set_country_flag = SCT_german_king
+		GER = {
+		 add_to_faction = SCT
+		}
 		
     }
 }
