@@ -1275,7 +1275,7 @@ country_event = { #The matter of Scotland (for Germany)
 		add_political_power = -25
 		SCT = {
 		 country_event = {
-		    id = scotland.8
+		    id = scotland.12
 			days = 3
 		 }
       }
@@ -1293,6 +1293,38 @@ country_event = { #The matter of Scotland (for Germany)
 		}
     }
   }
+}
+
+country_event = { #Germany asks that we join the Reichspakt
+	id = scotland.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.12"}
+	title = scotland.12.t
+	desc = scotland.12.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = scotland.12.a
+		ai_chance = {
+			factor = 75
+		}
+		set_country_flag = SCT_elections_allowed_flag
+		add_stability = 0.05
+		GER = {
+		 add_to_faction = SCT
+		}
+		
+    }
+	option = { #Nah
+		name = scotland.12.b
+		ai_chance = {
+			factor = 35
+		}
+		add_political_power = 50
+		set_country_flag = SCT_elections_allowed_flag
+	}
 }
 
 country_event = { #Germany demands we restore the Monarchy!
@@ -1477,6 +1509,54 @@ country_event = { #the coup and Coronation
 		add_stability = -0.15
 	    set_country_flag = SCT_No_Government
 		set_country_flag = SCT_german_king
+		
+    }
+}
+
+country_event = { #The Coronation of Rupprecht peacefully
+	id = scotland.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.13"}
+	title = scotland.13.t
+	desc = scotland.13.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Long live the King!
+		name = scotland.13.a
+		complete_national_focus = SCT_jacobite_king
+		set_cosmetic_tag = SCT_Kingdom_Bavarian
+		create_country_leader = {
+	     name = "Robert IV"
+	     desc = "SCT_RUPPRECHT_DESC"
+	     picture = "gfx/leaders/SCT/Portrait_Wales_Rupprecht_I.png"
+	     expire = "1965.1.1"
+	     ideology = prussian_constitutionalism_subtype
+	     traits = {}
+        }
+		add_political_power = -10
+		add_stability = -0.10
+		set_country_flag = SCT_german_king
+		
+    }
+}
+
+country_event = { #Government resigns
+	id = scotland.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event scotland.14"}
+	title = scotland.14.t
+	desc = scotland.14.d
+	picture = SCT_syndies_march
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Fuck
+		name = scotland.14.a
+		set_country_flag = SCT_No_Government
+		add_political_power = -100
+		add_stability = -0.10
 		
     }
 }
