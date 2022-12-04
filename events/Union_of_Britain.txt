@@ -496,6 +496,10 @@ country_event = { # Maximist Victory
 			ruling_party = totalist
 		}
 		hidden_effect = {
+			country_event = {
+				id = uob.3001
+				days = 40
+			}
 			add_ideas = ENG_Eric_Blair_hog_tot
 			add_ideas = ENG_Cynthia_Mosley_for_tot
 			add_ideas = ENG_Leslie_Solley_eco_tot
@@ -758,7 +762,7 @@ country_event = { # No majority achieved
 ### Scottish Convent Event ###
 country_event = { #Scottish Convent 
 	id = uob.3000
-	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.2001" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.3000" }
 	title = uob.3000.t
 	desc = uob.3000.d
 	picture = GFX_report_event_SCT_Covenant
@@ -776,6 +780,24 @@ country_event = { #Scottish Convent
 	}
 
 }
+
+country_event = { #Radicalization of Scottish nationalism 
+	id = uob.3001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event uob.3001" }
+	title = uob.3001.t
+	desc = uob.3001.d
+	picture = GFX_report_event_SCT_Covenant
+
+	is_triggered_only = yes
+
+	option = { # fuck off
+		name = uob.3001.a
+		add_political_power = -50
+		add_stability = -0.05
+	}
+
+}
+
 ### Show of Force ###
 country_event = { # Where to send the Fleet?
 	id = uob.15
@@ -7958,7 +7980,7 @@ country_event = { # WHRA Burnings
 	}
 }
 
-country_event = { # Homeland Watch Attacks
+country_event = { # The Tartan Terrorists
 	id = uob.501
 	immediate = {log = "[GetDateText]: [Root.GetName]: event uob.501"}
 	title = uob.501.t
