@@ -77,31 +77,31 @@ SCT_Kingdom_Bavarian3_DEF:0 "the Kingdom of Scotland"
 
 ### Focuses ###
 SCT_scotland_unshackled:0 "The Great Risisng Begins"
-SCT_scotland_unshackled_desc:0 ""
+SCT_scotland_unshackled_desc:0 "With the formation of the Provisional Government of Scotland following the storming of Edinburgh, fighting has offically begun on the front with England."
 
 SCT_look_for_foreign_aid:0 "Petition for Foreign Aid"
-SCT_look_for_foreign_aid_desc:0 ""
+SCT_look_for_foreign_aid_desc:0 "We need aid from Foreign countries if we are to put an end to this war with the English dogs quickly"
 
 SCT_use_the_weapon_reserves:0 "Gather the Weapon Reserves"
-SCT_use_the_weapon_reserves_desc:0 ""
+SCT_use_the_weapon_reserves_desc:0 "The Syndicalists left many weapon cashes within Scotland when they fled, we must use them against the foe"
 
 SCT_sprit_of_the_bruce:0 "Call Back to the Struggle of Robert the Bruce"
-SCT_sprit_of_the_bruce_desc:0 ""
+SCT_sprit_of_the_bruce_desc:0 "Robert the Bruce led Scotland during the first war of Scottish Independence, calling back to his struggle will give much need morale to the SVF"
 
 SCT_create_the_homeland_watch:0 "Form the Homeland Watch"
-SCT_create_the_homeland_watch_desc:0 ""
+SCT_create_the_homeland_watch_desc:0 "The Scottish Volunteer Force once acted as a militia defending Scottish people, however during the Risisng they have effectively become the Army of the Provisional Government. A new force will be created to fill the role the SVF once filled, the Homeland Watch"
 
 SCT_arm_the_returned_exiles:0 "Arm the Returned Exiles"
-SCT_arm_the_returned_exiles_desc:0 ""
+SCT_arm_the_returned_exiles_desc:0 "From Canada, many exiles have arrived hoping that our Government will return to the serivce of the King, while we have no intentions to do so we can arm this veterans of the Great War and Militant Royalists to aid us in our fight"
 
-SCT_as_long_as_theres_100:0 "As Long As There's One Hundred"
-SCT_as_long_as_theres_100_desc:0 ""
+SCT_as_long_as_theres_100:0 "Honor the Declaration of Arbroath"
+SCT_as_long_as_theres_100_desc:0 "The Declaration of Arbroath sent to Pope John XXII by Scottish Nobles, it declared that as long as but a hundred of us remain alive, never will we on any conditions be brought under English rule. We must honor the Declaration and make our forefathers proud of us! For it is in truth not for glory, nor riches, nor honours that we are fighting, but for freedom - for that alone, which no honest man gives up but with life itself."
 
-SCT_use_our_mountains:0 "Use Our Mountain Peaks"
-SCT_use_our_mountains_desc:0 ""
+SCT_use_our_mountains:0 "Use Our Highland Peaks"
+SCT_use_our_mountains_desc:0 "The men of the SVF know our highland hills far better than the English invaders, we must use this to our advantage"
 
-SCT_defend_scotland_at_all_costs:0 "Dìon an Loidhne!"
-SCT_defend_scotland_at_all_costs_desc:0 ""
+SCT_defend_scotland_at_all_costs:0 "Alba gu Bràth!"
+SCT_defend_scotland_at_all_costs_desc:0 "Too long we've played the Tartan fool, too long we've bowed to English rule, and too long we have cringed before John Bull, no more! We must give everything for Scotland's independence from the English oppressors, our brothers in Ireland were able to do it, and so shall we! And let our cry forever be, Scotland Forever!"
 
 
 SCT_first_elections:0 "The First Elections"
