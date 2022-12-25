@@ -159,7 +159,7 @@ create_country_leader = {
 	desc = "SCT_GALLACHER_DESC"
 	picture = "gfx/leaders/SCT/Portrait_Willie_Gallacher.png"
 	expire = "1965.1.1"
-	ideology = syndicalist_subtype
+	ideology = centralized_syndicalism_subtype
 	traits = {}
 }
 create_country_leader = {
