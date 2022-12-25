@@ -349,6 +349,26 @@ country_event = { # Maxton does stuff
 		
     }
 }
+country_event = { # Infighting within the STUC
+	id = sctflavor.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event sctflavor.2"}
+	title = sctflavor.4.t
+	desc = sctflavor.4.d
+	picture = GFX_els_meeting
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = sctflavor.3.a
+		
+		add_popularity = {
+			ideology = syndicalist 
+			popularity = -0.05
+		}
+		add_political_power = 25
+		
+    }
+}
 ###############
 #Revolt Events#
 ###############
@@ -602,7 +622,12 @@ country_event = { # Exiles from Canada flock to the Scottish Party and Unionists
 		add_popularity = {
 			ideology = market_liberal popularity = 0.07
 		}
-
+        hidden_effect = {
+		country_event = {
+				id = sctflavor.4
+				days = 6
+			}
+		}
     }
 }
 
