@@ -357,7 +357,6 @@ country_event = { # First Elections
 
 	trigger = {
 		tag = YUC
-		has_completed_focus = YUC_yucatec_democracy
 		not = {
 			has_country_flag = YUC_first_elections
 		}
@@ -508,7 +507,6 @@ country_event = { # First Elections (Authdem)
 
 	trigger = {
 		tag = YUC
-		has_completed_focus = YUC_yucatec_democracy
 		has_government = authoritarian_democrat
 	}
 
@@ -538,7 +536,6 @@ country_event = { # Other elections Elections
 
 	trigger = {
 		tag = YUC
-		has_completed_focus = YUC_yucatec_democracy
 		has_country_flag = YUC_first_elections
 		NOT = {
 			has_government = authoritarian_democrat
@@ -1087,7 +1084,7 @@ country_event = { # flavor in shit
 	option = { # Yay
 		name = yuc_flavor.19.a
 		create_country_leader = {# Felipe Carrillo Puerto
-			name = "Elvia Carrillo Puertoo"
+			name = "Elvia Carrillo Puerto"
 			desc = "POLITICS_ELVIA_PUERTO_DESC"
 			picture = "gfx/leaders/YUC/Portrait_Yucatan_Elvia_Carrillo_Puerto.png"
 			expire = "1965.1.1"
