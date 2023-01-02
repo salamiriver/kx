@@ -13,6 +13,1060 @@ focus_tree = {
 	}
 	default = no
 
+      #Democratic Tree
+
+	focus = {
+		id = WCC_a_free_rockies
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 38
+		y = 8
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_new_elections
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = WCC_a_free_rockies
+		}
+
+            relative_position_id = WCC_a_free_rockies
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
+	focus = {
+		id = WCC_revitalization_of_the_goldites
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 9
+		y = 1
+
+		prerequisite = {
+			focus = WCC_new_elections
+		}
+
+            relative_position_id = WCC_new_elections
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_villards_classical_liberalism
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = WCC_revitalization_of_the_goldites
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_leave_laissez_faire_in_past
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_villards_classical_liberalism
+		}
+
+            relative_position_id = WCC_villards_classical_liberalism
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_necessary_disarmament
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_villards_classical_liberalism
+		}
+
+            relative_position_id = WCC_villards_classical_liberalism
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_free_journalism_from_big_business
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = WCC_necessary_disarmament
+		}
+		prerequisite = {
+			focus = WCC_leave_laissez_faire_in_past
+		}
+
+            relative_position_id = WCC_villards_classical_liberalism
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	
+
+	focus = {
+		id = WCC_honoring_gold_democrat_hero
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_revitalization_of_the_goldites
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_donations_to_NAACP
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_revitalization_of_the_goldites
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_help_poor_and_suffering
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = WCC_honoring_gold_democrat_hero
+		}
+		prerequisite = {
+			focus = WCC_donations_to_NAACP
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_propel_civil_rights_for_all
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 3
+
+		prerequisite = {
+			focus = WCC_help_poor_and_suffering
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_fund_anti_imperialist_cause
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -2
+		y = 4
+
+		prerequisite = {
+			focus = WCC_propel_civil_rights_for_all
+		}
+		prerequisite = {
+			focus = WCC_encourage_racial_self_determination
+			focus = WCC_free_journalism_from_big_business
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_rebuild_the_gold_standard
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 4
+
+		prerequisite = {
+			focus = WCC_propel_civil_rights_for_all
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_legacy_of_founding_members
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 2
+		y = 4
+
+		prerequisite = {
+			focus = WCC_propel_civil_rights_for_all
+		}
+		prerequisite = {
+			focus = WCC_encourage_racial_self_determination
+			focus = WCC_free_journalism_from_big_business
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_end_unjust_taxation
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 5
+
+		prerequisite = {
+			focus = WCC_legacy_of_founding_members
+		}
+		prerequisite = {
+			focus = WCC_rebuild_the_gold_standard
+		}
+		prerequisite = {
+			focus = WCC_fund_anti_imperialist_cause
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_uphold_principles_of_american_people
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 5
+
+		prerequisite = {
+			focus = WCC_legacy_of_founding_members
+		}
+		prerequisite = {
+			focus = WCC_rebuild_the_gold_standard
+		}
+		prerequisite = {
+			focus = WCC_fund_anti_imperialist_cause
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_golden_torch_of_liberty_held_high
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 6
+
+		prerequisite = {
+			focus = WCC_uphold_principles_of_american_people
+		}
+		prerequisite = {
+			focus = WCC_end_unjust_taxation
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
+	focus = {
+		id = WCC_storeys_progressivism
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 3
+		y = 1
+
+		prerequisite = {
+			focus = WCC_revitalization_of_the_goldites
+		}
+
+            relative_position_id = WCC_revitalization_of_the_goldites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_unshackle_immigration_restrictions
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_storeys_progressivism
+		}
+
+            relative_position_id = WCC_storeys_progressivism
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_devotion_to_justice
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_storeys_progressivism
+		}
+
+            relative_position_id = WCC_storeys_progressivism
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_encourage_racial_self_determination
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = WCC_devotion_to_justice
+		}
+		prerequisite = {
+			focus = WCC_unshackle_immigration_restrictions
+		}
+
+            relative_position_id = WCC_storeys_progressivism
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
+
+	focus = {
+		id = WCC_radical_democrat_revival
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = WCC_new_elections
+		}
+
+            relative_position_id = WCC_new_elections
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_liberal_wing_victorious
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_radical_democrat_revival
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_internationalist_trade
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = WCC_liberal_wing_victorious
+		}
+
+            relative_position_id = WCC_liberal_wing_victorious
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_new_deal_on_rockies
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 2
+
+		prerequisite = {
+			focus = WCC_internationalist_trade
+		}
+
+            relative_position_id = WCC_liberal_wing_victorious
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_businessman_with_a_heart
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 4
+
+		prerequisite = {
+			focus = WCC_new_deal_on_rockies
+		}
+
+            relative_position_id = WCC_liberal_wing_victorious
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_isolate_the_union
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 3
+
+		prerequisite = {
+			focus = WCC_progressive_wing_win
+			focus = WCC_liberal_wing_victorious
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_civil_service_reform
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 4
+
+		prerequisite = {
+			focus = WCC_isolate_the_union
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_free_the_press
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 4
+
+		prerequisite = {
+			focus = WCC_isolate_the_union
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_promote_equal_rights_for_all
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 5
+
+		prerequisite = {
+			focus = WCC_free_the_press
+		}
+		prerequisite = {
+			focus = WCC_civil_service_reform
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
+	focus = {
+		id = WCC_progressive_wing_win
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_radical_democrat_revival
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_attract_the_bull_moose
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = WCC_progressive_wing_win
+		}
+
+            relative_position_id = WCC_progressive_wing_win
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_appeal_to_the_farmer
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 2
+
+		prerequisite = {
+			focus = WCC_attract_the_bull_moose
+		}
+
+            relative_position_id = WCC_progressive_wing_win
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_stand_tall_against_big_businesses
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 4
+
+		prerequisite = {
+			focus = WCC_appeal_to_the_farmer
+		}
+
+            relative_position_id = WCC_progressive_wing_win
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_the_champions_of_freedom
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 6
+
+		prerequisite = {
+			focus = WCC_promote_equal_rights_for_all
+		}
+		prerequisite = {
+			focus = WCC_businessman_with_a_heart
+                  focus = WCC_stand_tall_against_big_businesses
+		}
+
+            relative_position_id = WCC_radical_democrat_revival
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
+	focus = {
+		id = WCC_resurgence_of_the_silverites
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -9
+		y = 1
+
+		prerequisite = {
+			focus = WCC_new_elections
+		}
+
+            relative_position_id = WCC_new_elections
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_surpass_the_gold_standard
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 3
+
+		prerequisite = {
+			focus = WCC_oppose_the_lds_church
+			focus = WCC_reform_prison_system
+		}
+
+            relative_position_id = WCC_resurgence_of_the_silverites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_legacy_of_WJB
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 4
+
+		prerequisite = {
+			focus = WCC_surpass_the_gold_standard
+		}
+
+            relative_position_id = WCC_resurgence_of_the_silverites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_silver_republicans
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -2
+		y = 1
+
+		prerequisite = {
+			focus = WCC_resurgence_of_the_silverites
+		}
+
+            relative_position_id = WCC_resurgence_of_the_silverites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_oppose_the_lds_church
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_silver_republicans
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_adopt_initiative_referendum_system
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 2
+
+		prerequisite = {
+			focus = WCC_silver_republicans
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_land_conservation_projects
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 0
+		y = 3
+
+		prerequisite = {
+			focus = WCC_adopt_initiative_referendum_system
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_raise_mormon_question
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_silver_republicans
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_direct_primary_system_for_offices
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -2
+		y = 2
+
+		prerequisite = {
+			focus = WCC_raise_mormon_question
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_expand_silver_mines
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -2
+		y = 3
+
+		prerequisite = {
+			focus = WCC_direct_primary_system_for_offices
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_sovereignty_for_the_people
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 4
+
+		prerequisite = {
+			focus = WCC_expand_silver_mines
+		}
+
+            relative_position_id = WCC_silver_republicans
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
+	focus = {
+		id = WCC_silver_democrats
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = 2
+		y = 1
+
+		prerequisite = {
+			focus = WCC_resurgence_of_the_silverites
+		}
+
+            relative_position_id = WCC_resurgence_of_the_silverites
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+	focus = {
+		id = WCC_reform_prison_system
+		icon = GFX_goal_WCC_rocky_defense
+		cost = 5.00
+		x = -1
+		y = 1
+
+		prerequisite = {
+			focus = WCC_silver_democrats
+		}
+
+            relative_position_id = WCC_silver_democrats
+
+		ai_will_do = {
+			factor = 100
+		}	
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
+			
+		}
+	}
+
 	### Army Tree ###
 	focus = {# Grand Reorganization
 		id = WCC_grand_reorganization
@@ -22,7 +1076,7 @@ focus_tree = {
 		y = 0
 		ai_will_do = {
 			factor = 100
-		}
+		}	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus WCC_grand_reorganization"
 			add_ideas = WCC_bradley_plan
