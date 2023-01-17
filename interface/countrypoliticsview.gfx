@@ -9,6 +9,10 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 		
 	}
+	spriteType = {
+		name = "GFX_bop_glow_effect"
+		textureFile = "gfx/interface/bop/bop_button.png"
+	}
 	
 	#Autonomy Stuff
 
@@ -1057,6 +1061,10 @@ spriteTypes = {
 		name = "GFX_ideology_socdem_mercenary_democracy_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/socdem_mercenary_democracy_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_socdem_mladorossi_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/socdem_mladorossi_group.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_centrist_subtype"
@@ -1161,6 +1169,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_jeffersonianism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/jeffersonianism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_christian_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_christian_democracy_group.png"
 	}
 	
 	spriteType = {
@@ -1866,6 +1878,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_wandervogel_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/wandervogel_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_natpop_pan_asianism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/natpop_pan_asianism_group.png"
 	}
 	
 	### YOU GO IN THE CORNER OF SHAME ###

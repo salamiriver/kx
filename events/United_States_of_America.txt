@@ -5177,7 +5177,7 @@ country_event = { # Intention to negotiate announced
 		name = ustates.65.a
 		hidden_effect = {
 			country_event = { id = ustates.66 days = 3 }
-			country_event = { id = Texas.25 days = 2 }
+			country_event = { id = texas_prewar.25 days = 2 }
 		}
 	}
 }
@@ -20431,7 +20431,7 @@ country_event = { # Cincinnatus Republican Convention
 			create_country_leader = {
 					name = "Theodore Roosevelt Jr."
 					desc = "POLITICS_THEODORE_ROOSEVELT_DESC"
-					picture = "gfx/leaders/WCC/Portrait_WCC_Teddy_Roosevelt_Jr.png"
+					picture = "gfx/leaders/WCC/Portrait_WCC_Teddy_Roosevelt_Jr_Suit.png"
 					expire = "1965.1.1"
 					ideology = liberal_conservative_subtype
 					traits = { great_war_hero }
@@ -29462,7 +29462,7 @@ country_event = { # Intention to negotiate announced
 		add_stability = 0.05
 		hidden_effect = {
 			country_event = { id = ustates.4028 days = 5 }
-			country_event = { id = Texas.25 days = 2 }
+			country_event = { id = texas_prewar.25 days = 2 }
 		}
 	}
 }

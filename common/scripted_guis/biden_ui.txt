@@ -2295,11 +2295,52 @@ scripted_gui = {
 			
 			RUS_hog_guy_visible = { #born as a result of laziness
 				AND = {
+					russia_is_democratic = yes
 					has_country_flag = HOG_veiw
-					tag = RUS
-					RUS = {
-						russia_is_democratic = yes
-						has_idea_with_trait = head_of_government
+					OR = {
+						has_idea = RUS_Pavel_N_Milyukov_hog_mli
+						has_idea = RUS_Sergey_M_Kirov_hog_syn
+						has_idea = RUS_Maria_A_Spiridonova_hog_rso
+						has_idea = RUS_Isaak_Z_Shteinberg_hog_syn
+						has_idea = RUS_Nikolay_I_Bukharin_hog_syn
+						has_idea = RUS_Aleksey_I_Rykov_hog_rso
+						has_idea = RUS_Vladimir_K_Volsky_hog_rso
+						has_idea = RUS_Irakliy_G_Tsereteli_hog_sde
+						has_idea = RUS_Rafail_Abramovich_hog_sde
+						has_idea = RUS_Fyodor_Dan_hog_sde
+						has_idea = RUS_Aleksandr_N_Potresov_hog_sde
+						has_idea = RUS_Vladimir_M_Zenzinov_hog_sde
+						has_idea = RUS_Aleksand_F_Kerensky_hog_sli
+						has_idea = RUS_Nikolay_V_Nekrasov_hog_sli
+						has_idea = RUS_Vladimir_D_Nabokov_hog_mli
+						has_idea = RUS_Aleksandr_I_Konovalov_hog_mli
+						has_idea = RUS_Vasiliy_V_Shulgin_hog_sco
+						has_idea = RUS_Georgiy_P_Ignatiev_hog_sco
+						has_idea = RUS_Felix_F_Yusupov_hog_ade
+						has_idea = RUS_Nikolay_S_Trubetskoy_hog_sco
+						has_idea = RUS_Vladimir_M_Purishkevich_hog_pau
+						has_idea = RUS_Patriarch_Sergius_hog_pau
+						has_idea = RUS_Nikolay_E_Markov_hog_npo
+						has_idea = RUS_Boris_V_Savinkov_hog_npo
+						has_idea = RUS_Viktor_M_Baydalakov_hog_npo
+						AND = {
+							has_idea = RUS_Patriarch_Sergius_hog_pau
+							NOT = {
+								has_country_leader = {
+									name = "Sergius"
+									ruling_only = yes
+								}
+							}
+						}
+						AND = {
+							has_idea = RUS_Vladimir_M_Purishkevich_hog_pau
+							NOT = {
+								has_country_leader = {
+									name = "Vladimir Purishkevich"
+									ruling_only = yes
+								}
+							}
+						}
 					}
 				}
 			}
@@ -2619,6 +2660,178 @@ scripted_gui = {
 				AND = {
 					has_country_flag = HOG_veiw
 					has_idea = ETH_Imru_Haile_Selassie_hog_sde
+				}
+			}
+			
+			### White Ruthenia ###
+			
+			Radaslau_Astrouski_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = WHR_Radaslau_Astrouski_hog_ade
+				}
+			}
+			
+			Adam_Stankievic_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = WHR_Adam_Stankievic_hog_sco
+				}
+			}
+			
+			Sigismund_von_Hohenzollern_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = WHR_Sigismund_von_Hohenzollern_hog_pau
+				}
+			}
+			
+			Mikola_Abramcyk_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = WHR_Mikola_Abramcyk_hog_sli
+				}
+			}
+			
+			Vasil_Zacharka_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = WHR_Vasil_Zacharka_hog_ade
+				}
+			}
+			
+			Jazep_Ljosik_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = WHR_Jazep_Ljosik_hog_sde
+				}
+			}
+			
+			### Switzerland ###
+			
+			Ernst_Nobs_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Ernst_Nobs_hog_sde
+				}
+			}
+			
+			Robert_Grimm_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Robert_Grimm_hog_sde
+				}
+			}
+			
+			Hans_Oprecht_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Hans_Oprecht_hog_sde
+				}
+			}
+			
+			Ernst_Wetter_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Ernst_Wetter_hog_sli
+				}
+			}
+			
+			Hermann_Obrecht_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Hermann_Obrecht_hog_sli
+				}
+			}
+			
+			Max_Petitpierre_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Max_Petitpierre_hog_sli
+				}
+			}
+			
+			Walther_Stampfli_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Walther_Stampfli_hog_mli
+				}
+			}
+			
+			Marcel_Pilet_Golaz_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Marcel_Pilet_Golaz_hog_mli
+				}
+			}
+			
+			Enrico_Celio_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Enrico_Celio_hog_sco
+				}
+			}
+			
+			Oskar_Leimgruber_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Oskar_Leimgruber_hog_sco
+				}
+			}
+			
+			Giuseppe_Motta_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Giuseppe_Motta_hog_sco
+				}
+			}
+			
+			Eduard_von_Steiger_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Eduard_von_Steiger_hog_ade
+				}
+			}
+			
+			Friedrich_Traugott_Wahlen_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Friedrich_Traugott_Wahlen_hog_ade
+				}
+			}
+			
+			Rudolf_Minger_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Rudolf_Minger_hog_ade
+				}
+			}
+			
+			Jules_Humbert_Droz_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Jules_Humbert_Droz_hog_rso
+				}
+			}
+			
+			Jakob_Herzog_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Jakob_Herzog_hog_syn
+				}
+			}
+			
+			Fritz_Platten_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Fritz_Platten_hog_tot
+				}
+			}
+			
+			Albert_Meyer_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SWI_Albert_Meyer_hog_mli
 				}
 			}
 			

@@ -9,7 +9,7 @@ do_russian_renames_in_europe = {
 		set_province_name = {
 			id = 3544
 			name = "Varshava"
-		}
+		} 
 		set_province_name = {
 			id = 9508
 			name = "Lodz"
@@ -205,20 +205,32 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		clr_state_flag = renamed_state_lithuanian
+		clr_state_flag = renamed_state_belarusian
 		set_state_name = endo_state_95
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 560
 			name = endo_vp_560
 		}
+	}
+	else_if = {
+		limit = {
+			state = 1295
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_lithuanian
+		clr_state_flag = renamed_state_belarusian
+		set_state_name = "Novogrudok"
+		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 3309
-			name = endo_vp_3309
+			name = "Slonim"
 		}
 		set_province_name = {
 			id = 9359
 			name = "Novogrudok"
 		}
+	
 	}
 	else_if = {
 		limit = {
@@ -560,6 +572,7 @@ do_russian_renames_in_europe = {
 		set_state_name = endo_state_150_russian
 		set_state_flag = renamed_state_russian
 	}
+	
 	else_if = {
 		limit = {
 			state = 189
@@ -587,14 +600,8 @@ do_russian_renames_in_europe = {
 		clr_state_flag = renamed_state_lithuanian
 		set_state_name = "Kurlyandiya"
 		set_state_flag = renamed_state_russian
-		set_province_name = {
-			id = 6342
-			name = "Mitava"
-		}
-		set_province_name = {
-			id = 9262
-			name = "Libava"
-		}
+		set_province_name = { id = 6342 name = "Mitava"}
+		set_province_name = { id = 9262 name = "Libava"}
 	}
 	else_if = {
 		limit = {
@@ -604,10 +611,7 @@ do_russian_renames_in_europe = {
 		clr_state_flag = renamed_state_estonian
 		set_state_name = "Yuriev"
 		set_state_flag = renamed_state_russian
-		set_province_name = {
-			id = 3174
-			name = "Pernov"
-		}
+		set_province_name = { id = 3174 name = "Pernov"}
 		set_province_name = {
 			id = 9221
 			name = "Yuriev"
@@ -703,6 +707,24 @@ do_russian_renames_in_europe = {
 	}
 	else_if = {
 		limit = {
+			state = 1286
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		set_state_name = "Pavlograd"
+		clr_state_flag = renamed_state_ukrainian
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 453
+			name = "Pavlograd"
+		}
+		set_province_name = {
+			id = 429
+			name = "Gulyai-Pole"
+		}
+	}
+	else_if = {
+		limit = {
 			state = 201
 			NOT = { has_state_flag = renamed_state_russian }
 		}
@@ -760,9 +782,74 @@ do_russian_renames_in_europe = {
 			id = 11370
 			name = "Minsk"
 		}
-		set_province_name = {
+	}
+	else_if = {
+		limit = {
+			state = 1294
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_belarusian
+		set_state_name = "Borisov"
+		set_state_flag = renamed_state_russian
+			set_province_name = {
 			id = 294
 			name = "Borisov"
+		}
+	
+	}
+	else_if = {
+		limit = {
+			state = 1288
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_estonian
+		clr_state_flag = renamed_state_german
+		set_state_name = endo_state_1288
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 14715
+			name = endo_vp_14715
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1290
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_german
+		clr_state_flag = renamed_state_latvian
+		set_state_name = endo_state_1290
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 3310
+			name = endo_vp_3310
+		}
+	}
+	else_if = { 
+		limit = {
+			state = 1291
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_german
+		clr_state_flag = renamed_state_estonian
+		set_state_name = endo_state_1291
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 126
+			name = endo_vp_126
+		}
+	}else_if = {
+		limit = {
+			state = 209
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_german
+		clr_state_flag = renamed_state_latvian
+		set_state_name = endo_state_209
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 11202
+			name = endo_vp_11202
 		}
 	}
 	else_if = {
@@ -843,6 +930,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Kharkov"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 418
@@ -855,6 +943,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Yekaterinoslav"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 11437
@@ -871,14 +960,11 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Yuzovka"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 6474
 			name = "Yuzovka"
-		}
-		set_province_name = {
-			id = 9461
-			name = "Lugansk"
 		}
 		set_province_name = {
 			id = 14702
@@ -888,6 +974,14 @@ do_russian_renames_in_europe = {
 			id = 14705
 			name = "Debaltsevo"
 		}
+	}
+	else_if = {
+		limit = {
+			state = 1283
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_ukrainian
+		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 3466
 			name = "Nyu-York"
@@ -899,18 +993,50 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Slavyansk"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 502
 			name = "Slavyansk"
 		}
-		set_province_name = {
-			id = 9531
-			name = "Izyum"
+	}
+	else_if = {
+		limit = {
+			state = 1282
+			NOT = { has_state_flag = renamed_state_russian }
 		}
+		set_state_name = "Starobelsk"
+		clr_state_flag = renamed_state_ukrainian
+		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 11487
 			name = "Starobelsk"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1284
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		set_state_name = "Lugansk"
+		clr_state_flag = renamed_state_ukrainian
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 9461
+			name = "Lugansk"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1285
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		set_state_name = "Izyum"
+		clr_state_flag = renamed_state_ukrainian
+		set_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 9531
+			name = "Izyum"
 		}
 	}
 	else_if = {
@@ -937,6 +1063,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Pereyaslav"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 9437
@@ -949,6 +1076,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Kremenchug"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 6495
@@ -961,6 +1089,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Yelisavetgrad"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 3452
@@ -987,6 +1116,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Belaya Tserkov"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 504
@@ -999,6 +1129,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Pobuzhye"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 	}
 	else_if = {
@@ -1007,6 +1138,7 @@ do_russian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = "Gadyach"
+		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 9413
@@ -1095,14 +1227,10 @@ do_russian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 755
-			has_state_flag = renamed_state_finnish
+			NOT = { has_state_flag = renamed_state_russian }
 		}
 		set_state_name = endo_state_755
-		set_state_flag = renamed_state_belarusian
-		set_province_name = {
-			id = 6326
-			name = endo_vp_6326
-		}
+		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 11241
 			name = endo_vp_11241
@@ -2225,13 +2353,38 @@ do_bielarusian_renames_in_europe = {
 		set_state_name = endo_state_206
 		clr_state_flag = renamed_state_russian
 		set_province_name = {
-			id = 294
-			name = endo_vp_294
-		}
-		set_province_name = {
 			id = 11370
 			name = endo_vp_11370
 		}
+	}
+	else_if = {
+		limit = {
+			state = 1294
+			has_state_flag = renamed_state_russian
+		}
+		set_state_name = endo_state_1294
+		clr_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 294
+			name = endo_vp_294
+		}		
+	}
+	else_if = {
+		limit = {
+			state = 1295
+			NOT = { has_state_flag = renamed_state_belarusian }
+		}
+		set_state_name = endo_state_1295
+		clr_state_flag = renamed_state_russian
+		clr_state_flag = renamed_state_lithuanian
+		set_province_name = {
+			id = 3309
+			name = endo_vp_3309
+		}	
+		set_province_name = {
+			id = 9359
+			name = endo_vp_9359
+		}		
 	}
 	else_if = {
 		limit = {
@@ -2278,11 +2431,35 @@ do_bielarusian_renames_in_europe = {
 			state = 243
 			NOT = { has_state_flag = renamed_state_belarusian }
 		}
-		set_state_name = "Roslawl"
+		set_state_name = "Amscislau"
 		set_state_flag = renamed_state_belarusian
 		set_province_name = {
-			id = 3278
-			name = "Roslawl"
+			id = 289
+			name = "Amscislau"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1292
+			NOT = { has_state_flag = renamed_state_belarusian }
+		}
+		set_state_name = "Worša"
+		set_state_flag = renamed_state_belarusian
+		set_province_name = {
+			id = 11220
+			name = "Worša"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1293
+			NOT = { has_state_flag = renamed_state_belarusian }
+		}
+		set_state_name = "Roslau"
+		set_state_flag = renamed_state_belarusian
+		set_province_name = {
+			id = 11336
+			name = "Roslau"
 		}
 	}
 	else_if = {
@@ -2293,13 +2470,21 @@ do_bielarusian_renames_in_europe = {
 		set_state_name = "Viciebsk"
 		set_state_flag = renamed_state_belarusian
 		set_province_name = {
-			id = 6326
-			name = "Polatsk"
-		}
-		set_province_name = {
 			id = 11241
 			name = "Viciebsk"
 		}
+	}
+	else_if = {
+		limit = {
+			state = 1287
+			NOT = { has_state_flag = renamed_state_belarusian }
+		}
+		set_state_name = "Polatsk"
+		set_state_flag = renamed_state_belarusian
+		set_province_name = {
+			id = 6326
+			name = "Polatsk"
+		}		
 	}
 	else_if = {
 		limit = {
@@ -2525,9 +2710,10 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 137
-			has_state_flag = renamed_state_russian
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		clr_state_flag = renamed_state_russian
+		clr_state_flag = renamed_state_kipchak
 		set_state_flag = renamed_state_ukrainian
 		set_state_name = endo_state_137
 		set_province_name = {
@@ -2538,11 +2724,43 @@ do_ukrainian_renames_in_europe = {
 			id = 6724
 			name = endo_vp_6724
 		}
+		set_province_name = {
+			id = 9680
+			name = endo_vp_9680
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1220
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		clr_state_flag = renamed_state_russian
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_ukrainian
+		set_state_name = endo_state_1220
+		set_province_name = {
+			id = 14762
+			name = endo_vp_14762
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1221
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		clr_state_flag = renamed_state_russian
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_ukrainian
+		set_state_name = endo_state_1221
+		set_province_name = {
+			id = 3686
+			name = endo_vp_3686
+		}
 	}
 	else_if = {
 		limit = {
 			state = 192
-			has_state_flag = renamed_state_russian
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_192
 		clr_state_flag = renamed_state_russian
@@ -2555,7 +2773,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 193
-			has_state_flag = renamed_state_russian
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_193
 		clr_state_flag = renamed_state_russian
@@ -2580,9 +2798,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 198
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_198
 		clr_state_flag = renamed_state_russian
@@ -2595,9 +2811,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 199
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_199
 		clr_state_flag = renamed_state_russian
@@ -2614,7 +2828,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 200
-			has_state_flag = renamed_state_russian
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_200
 		clr_state_flag = renamed_state_russian
@@ -2623,6 +2837,15 @@ do_ukrainian_renames_in_europe = {
 			id = 11405
 			name = endo_vp_11405
 		}
+	}
+	else_if = {
+		limit = {
+			state = 1286
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		set_state_name = endo_state_1286
+		clr_state_flag = renamed_state_russian
+		set_state_flag = renamed_state_ukrainian
 		set_province_name = {
 			id = 453
 			name = endo_vp_453
@@ -2635,9 +2858,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 201
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_201
 		clr_state_flag = renamed_state_russian
@@ -2650,9 +2871,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 202
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_202
 		clr_state_flag = renamed_state_russian
@@ -2665,9 +2884,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 203
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_203
 		clr_state_flag = renamed_state_russian
@@ -2680,9 +2897,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 221
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_221
 		clr_state_flag = renamed_state_russian
@@ -2695,7 +2910,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 226
-			has_state_flag = renamed_state_russian
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_226
 		clr_state_flag = renamed_state_russian
@@ -2712,17 +2927,11 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 227
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_227
 		clr_state_flag = renamed_state_russian
 		set_state_flag = renamed_state_ukrainian
-		set_province_name = {
-			id = 3466
-			name = endo_vp_3466
-		}
 		set_province_name = {
 			id = 6474
 			name = endo_vp_6474
@@ -2730,10 +2939,6 @@ do_ukrainian_renames_in_europe = {
 		set_province_name = {
 			id = 6505
 			name = endo_vp_6505
-		}
-		set_province_name = {
-			id = 9461
-			name = endo_vp_9461
 		}
 		set_province_name = {
 			id = 14702
@@ -2750,10 +2955,34 @@ do_ukrainian_renames_in_europe = {
 	}
 	else_if = {
 		limit = {
+			state = 1284
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		set_state_name = endo_state_1284
+		clr_state_flag = renamed_state_russian
+		set_state_flag = renamed_state_ukrainian
+		set_province_name = {
+			id = 9461
+			name = endo_vp_9461
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1282
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		set_state_name = endo_state_1239
+		clr_state_flag = renamed_state_russian
+		set_state_flag = renamed_state_ukrainian
+		set_province_name = {
+			id = 3466
+			name = endo_vp_3466
+		}
+	}
+	else_if = {
+		limit = {
 			state = 1239
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1239
 		clr_state_flag = renamed_state_russian
@@ -2773,10 +3002,34 @@ do_ukrainian_renames_in_europe = {
 	}
 	else_if = {
 		limit = {
+			state = 1282
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		set_state_name = endo_state_1282
+		clr_state_flag = renamed_state_russian
+		set_state_flag = renamed_state_ukrainian
+		set_province_name = {
+			id = 11487
+			name = endo_vp_11487
+		}		
+	}
+	else_if = {
+		limit = {
+			state = 1285
+			NOT = { has_state_flag = renamed_state_ukrainian }
+		}
+		set_state_name = endo_state_1285
+		clr_state_flag = renamed_state_russian
+		set_state_flag = renamed_state_ukrainian
+		set_province_name = {
+			id = 9531
+			name = endo_vp_9531		}
+				
+	}
+	else_if = {
+		limit = {
 			state = 1234
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1234
 		clr_state_flag = renamed_state_russian
@@ -2793,9 +3046,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1237
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1237
 		clr_state_flag = renamed_state_russian
@@ -2808,9 +3059,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1238
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1238
 		clr_state_flag = renamed_state_russian
@@ -2823,9 +3072,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1233
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1233
 		clr_state_flag = renamed_state_russian
@@ -2838,9 +3085,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1232
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1232
 		clr_state_flag = renamed_state_russian
@@ -2853,9 +3098,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1240
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1243
 		clr_state_flag = renamed_state_russian
@@ -2877,9 +3120,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1243
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1243
 		clr_state_flag = renamed_state_russian
@@ -2970,9 +3211,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 791
-			OR = {
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_791
 		clr_state_flag = renamed_state_russian
@@ -2988,10 +3227,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 1228
-			OR = {
-				has_state_flag = renamed_state_russian
-				has_state_flag = renamed_state_polish
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_1228
 		clr_state_flag = renamed_state_polish
@@ -3004,10 +3240,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 792
-			OR = {
-				has_state_flag = renamed_state_russian
-				has_state_flag = renamed_state_polish
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		set_state_name = endo_state_792
 		clr_state_flag = renamed_state_polish
@@ -3020,12 +3253,7 @@ do_ukrainian_renames_in_europe = {
 	else_if = {
 		limit = {
 			state = 997
-			OR = {
-				has_state_flag = renamed_state_polish
-				has_state_flag = renamed_state_lithuanian
-				has_state_flag = renamed_state_ukrainian
-				has_state_flag = renamed_state_russian
-			}
+			NOT = { has_state_flag = renamed_state_ukrainian }
 		}
 		clr_state_flag = renamed_state_polish
 		clr_state_flag = renamed_state_lithuanian
@@ -3071,11 +3299,242 @@ do_ukrainian_renames_in_europe = {
 			NOT = { has_state_flag = renamed_state_russian }
 		}
 		clr_state_flag = renamed_state_kipchak
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_karluk
 		set_state_name = "Bukeevskaya Orda"
 		set_state_flag = renamed_state_russian
 		set_province_name = {
 			id = 6525
 			name = "Khanskaya Stavka"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1209
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Samarkand"
+		set_province_name = {
+			id = 10671
+			name = "Samarkand"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1278
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Petroaleksandrovsk"
+		set_province_name = {
+			id = 1614
+			name = "Nukus"
+		}
+		set_province_name = {
+			id = 1576
+			name = "Petroaleksandrovsk"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1211
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Vostochniy Pamir"
+	}
+	else_if = {
+		limit = {
+			state = 1279
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Skobelev"
+		set_province_name = {
+			id = 14731
+			name = "Skobelev"
+		}
+		set_province_name = {
+			id = 14728
+			name = "Namangan"
+		}
+		set_province_name = {
+			id = 14732
+			name = "Kokand"
+		}
+		set_province_name = {
+			id = 14733
+			name = "Dzhalalabat"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 407
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Tashkent"
+		set_province_name = {
+			id = 1459
+			name = "Tashkent"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 585
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Kyzylkum"
+	}
+	else_if = {
+		limit = {
+			state = 712
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Syrdarya"
+	}
+	else_if = {
+		limit = {
+			state = 1281
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Dashoguz"
+	}
+	else_if = {
+		limit = {
+			state = 584
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Zakaspiy"
+		set_province_name = {
+			id = 12333
+			name = "Ashkhabat"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 861
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Khiva"
+		set_province_name = {
+			id = 1614
+			name = "Khiva"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1210
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Gisar"
+		set_province_name = {
+			id = 1614
+			name = "Gisar"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1276
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Chardzhuy"
+		set_province_name = {
+			id = 14737
+			name = "Chardzhuy"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 1277
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Karshi"
+		set_province_name = {
+			id = 7639
+			name = "Karshi"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 405
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Bukhara"
+		set_province_name = {
+			id = 9605
+			name = "Bukhara"
+		}
+		set_province_name = {
+			id = 14721
+			name = "Novaya Bukhara"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 732
+			NOT = { has_state_flag = renamed_state_russian }
+		}
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		set_state_flag = renamed_state_russian
+		set_state_name = "Pamir"
+		set_province_name = {
+			id = 12218
+			name = "Kurgan-Tyube"
 		}
 	}
 }
@@ -3097,6 +3556,10 @@ do_kipchak_turkic_renames_in_europe = {
 			id = 6724
 			name = endo_vp_6724_crimean
 		}
+		set_province_name = {
+			id = 9680
+			name = "Keriç"
+		}
 	}
 	else_if = {
 		limit = {
@@ -3107,6 +3570,10 @@ do_kipchak_turkic_renames_in_europe = {
 		clr_state_flag = renamed_state_russian
 		clr_state_flag = renamed_state_ukrainian
 		set_state_flag = renamed_state_kipchak
+		set_province_name = {
+			id = 14762
+			name = "Canköy"
+		}
 	}
 	else_if = {
 		limit = {
@@ -3566,6 +4033,21 @@ do_kipchak_turkic_renames_in_asia = {
 	}
 	else_if = {
 		limit = {
+			state = 810
+			NOT = { has_state_flag = renamed_state_kipchak }
+		}
+		set_state_name = "Semey"
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_russian
+		set_state_flag = renamed_state_kipchak
+		set_province_name = {
+			id = 10218
+			name = "Semey"
+		}
+	}
+	else_if = {
+		limit = {
 			state = 1191
 			NOT = { has_state_flag = renamed_state_kipchak }
 		}
@@ -3708,7 +4190,7 @@ do_kipchak_turkic_renames_in_asia = {
 		}
 		set_province_name = {
 			id = 14733
-			name = "Zhalalabat"
+			name = "Jalalabat"
 		}
 	}
 	else_if = {
@@ -3813,10 +4295,10 @@ do_kipchak_turkic_renames_in_asia = {
 		clr_state_flag = renamed_state_oghuz
 		clr_state_flag = renamed_state_russian
 		set_state_flag = renamed_state_kipchak
-		set_state_name = "Şarzhūy"
+		set_state_name = "Şarjūy"
 		set_province_name = {
 			id = 14737
-			name = "Şarzhūy"
+			name = "Şarjūy"
 		}
 	}
 	else_if = {
@@ -3850,7 +4332,7 @@ do_kipchak_turkic_renames_in_asia = {
 		}
 		set_province_name = {
 			id = 14721
-			name = "Zhana Būhara"
+			name = "Jana Būhara"
 		}
 	}
 	else_if = {
@@ -4038,6 +4520,21 @@ do_karluk_turkic_renames_in_asia = {
 		set_province_name = {
 			id = 4250
 			name = "Qaragandi"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 810
+			NOT = { has_state_flag = renamed_state_karluk }
+		}
+		set_state_name = "Semey"
+		set_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_kipchak
+		clr_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 10218
+			name = "Semey"
 		}
 	}
 	else_if = {
@@ -4442,6 +4939,21 @@ do_oghuz_turkic_renames_in_asia = {
 		set_province_name = {
 			id = 4250
 			name = "Garaganda"
+		}
+	}
+	else_if = {
+		limit = {
+			state = 810
+			NOT = { has_state_flag = renamed_state_oghuz }
+		}
+		set_state_name = "Semey"
+		set_state_flag = renamed_state_oghuz
+		clr_state_flag = renamed_state_kipchak
+		clr_state_flag = renamed_state_karluk
+		clr_state_flag = renamed_state_russian
+		set_province_name = {
+			id = 10218
+			name = "Semey"
 		}
 	}
 	else_if = {
