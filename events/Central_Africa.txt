@@ -1930,6 +1930,15 @@ country_event = { # Kill Kamerun if they are still colonial
 	desc = cea_flavour.28.d
 	picture = GFX_report_event_CEA_bokassa_worried
 	
+	trigger = {
+		CMR = {	
+			OR = {
+				has_colonial_government = yes
+				has_government = social_conservative
+			}
+		}
+	}
+	
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1948,6 +1957,17 @@ country_event = { # Pact with Kamerun
 	title = cea_flavour.29.t
 	desc = cea_flavour.29.d
 	picture = GFX_report_event_CEA_bokassa_worried
+	
+	trigger = {
+		CMR = {	
+			NOT = {
+				OR = {
+					has_colonial_government = yes
+					has_government = social_conservative
+				}
+			}
+		}
+	}
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -2146,7 +2166,7 @@ country_event = { # Leadership Conference
 	}
 	
 	option = { # Antonie
-		name = cea_flavour.36.a
+		name = cea_flavour.36.b
 		remove_ideas_with_trait = head_of_government
 		add_ideas = CEA_Jurgen_Darlan_hog_sde
 		hidden_effect = {
@@ -3451,8 +3471,6 @@ country_event = { #Way of Cooking
 	title = cea_feast.100.t
 	desc = cea_feast.100.d
 	picture = GFX_report_event_CEA_cooking
-
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 
@@ -3483,8 +3501,6 @@ country_event = { #Grand Feast Held
 	title = cea_feast.101.t
 	desc = cea_feast.101.d
 	picture = GFX_report_event_CEA_dinner
-
-	fire_only_once = yes
 	
 	is_triggered_only = yes
 

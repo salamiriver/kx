@@ -1495,7 +1495,7 @@ country_event = { # The Provisional Government
 }
 
 ### 1940 Elections and Primaries ###
-country_event = { # 1944 Quaker Party Primary
+country_event = { # 1940 Quaker Party Primary
 	id = newengland.2121
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.34"}
 	title = newengland.2121.t
@@ -1566,7 +1566,7 @@ country_event = { # 1944 Quaker Party Primary
 	}
 }
 
-country_event = { # 1944 Prohibition Party Primary
+country_event = { # 1940 Prohibition Party Primary
 	id = newengland.2122
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.2122"}
 	title = newengland.2122.t
@@ -16871,7 +16871,7 @@ country_event = { #an end to new englandism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newenglandmilflavor.9"}
 	title = newenglandmilflavor.28.t
 	desc = newenglandmilflavor.28.d
-	picture = GFX_NEE_new_egnland
+	picture = GFX_NEE_new_england
 	
 	fire_only_once = yes
 	
@@ -18173,6 +18173,18 @@ country_event = {# pershing elections
 			elections_allowed = no
 		}
 		
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_conservative
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		
 			country_event = {
 				id = newenglandmilflavor.42
 				days = 1460
@@ -18363,6 +18375,18 @@ country_event = {# pershing elections
 			ruling_party = market_liberal
 			election_frequency = 48
 			elections_allowed = no
+		}
+		
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = market_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
 		}
 		
 			country_event = {
@@ -18564,6 +18588,18 @@ country_event = {# pershing elections
 			elections_allowed = no
 		}
 		
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		
 			country_event = {
 				id = newenglandmilflavor.42
 				days = 1460
@@ -18704,13 +18740,15 @@ country_event = {# groves retire?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
 	title = newenglandmilflavor.48.t
 	desc = newenglandmilflavor.48.d
-	picture = GFX_groves_2
+	picture = GFX_NEE_groves_2
 
 	is_triggered_only = yes
 	
 	option = {#So be it
 		name = newenglandmilflavor.48.a
 		add_political_power = 50
+		remove_ideas = NEE_Leslie_Richard_Groves_Jr_hog_ade
+		add_ideas = WCC_Dwight_D_Eisenhower_hog_ade
 		hidden_effect = {
 			country_event = {
 				id = newenglandmilflavor.49
@@ -18722,7 +18760,7 @@ country_event = {# groves retire?
 
 	option = {#So be it
 		name = newenglandmilflavor.48.b
-		add_political_power = -25
+		add_political_power = 25
 	}	
 }
 
@@ -19236,7 +19274,7 @@ country_event = {# treason
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
 	title = newenglandmilflavor.66.t
 	desc = newenglandmilflavor.66.d
-	picture = GFX_groves_2
+	picture = GFX_NEE_groves_2
 
 	is_triggered_only = yes
 	
@@ -21309,7 +21347,7 @@ country_event = { #ending the 17th
 	is_triggered_only = yes
 	
 	option = { #Nice
-		name = newenglandmilflavor.111		
+		name = newenglandmilflavor.111.a	
 		add_political_power = -25
 		add_stability = 0.15
 		
@@ -25652,7 +25690,7 @@ country_event = { # Capital for the new America but sons of liberty
 
 	option = { # Trenton
 	
-		name = "Let me see the other capitals"
+		name = "Let me see the other Capitals."
 		ai_chance = {
 			base = 30
 		}
@@ -25721,7 +25759,7 @@ country_event = { # Capital for the new America but sons of liberty
 
 	option = { # Trenton
 	
-		name = "Let me see the other capitals"
+		name = "Let me see the other Capitals."
 		ai_chance = {
 			base = 30
 		}
