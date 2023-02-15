@@ -404,6 +404,12 @@ defined_text = {
 		}
 		localization_key =  volkisch_communitarianism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = internationalism_subtype
+		}
+		localization_key =  internationalism_subtype
+	}
 	
 	text = {
 		trigger = {
@@ -1249,6 +1255,12 @@ defined_text = {
 		}
 		localization_key = soclib_christian_democracy_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = soclib_progressive_democracy_subtype
+		}
+		localization_key = soclib_progressive_democracy_subtype
+	}
  
 	text = {
 		trigger = {
@@ -1810,11 +1822,17 @@ defined_text = {
 		}
 		localization_key = authdem_diemism_subtype
 	}
-        text = {
+    text = {
 		trigger = {
 			has_country_leader_ideology = authdem_coconut_subtype
 		}
 		localization_key = authdem_coconut_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = authdem_mercenary_democracy_subtype
+		}
+		localization_key = authdem_mercenary_democracy_subtype
 	}
 
 	text = {
@@ -2401,6 +2419,12 @@ defined_text = {
 			has_country_leader_ideology = hoahaoism_subtype
 		}
 		localization_key = hoahaoism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = hispanism_subtype
+		}
+		localization_key = hispanism_subtype
 	}
 	
 	### YOU GO IN THE CORNER OF SHAME ###
