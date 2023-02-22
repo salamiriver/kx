@@ -160,6 +160,9 @@ MEX_Aloof_Pontificate:0 "Aloof Pontificate \n§gBishop Martínez is committed to
 MEX_archbishop:0 "Archbishop of Mexico City"
 MEX_Tecuichpoch:0 "Legacy of Tecuichpoch"
 
+###Crete 
+CRE_kidnapped:0 "Kidnapped" #Muller
+
 ### Black Belt 
 preacher_daddy:0 "Daddy King"
 the_rabbi:0 "The Rabbi"
