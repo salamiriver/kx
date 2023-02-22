@@ -595,6 +595,13 @@ country_event = { # A Heinous Crime
 				}
 				retire = yes
 			}
+			create_country_leader = {
+				name = "League Council"
+				desc = ""
+				picture = "gfx/leaders/LEP/Portrait_LEP_Council.png"
+				expire = "1965.1.1"
+				ideology = pataut_warlordism_subtype
+			}
 			QIE = { #event about it happening, will trigger further qi going to wu for help
 				country_event = {
 					id = qielepcollapse.5
@@ -828,15 +835,11 @@ news_event = {# The Illusion Shatters
 		log = "[GetDateText]: [Root.GetName]: event lepcollapse.17"
 		hidden_effect = {
 			if = {
-				limit = {
-					tag = QIE
-				}
+				limit = { tag = QIE }
 				dismantle_faction = yes
 			}
 			if = {
-				limit = {
-					tag = LEP
-				}
+				limit = { tag = LEP }
 				set_global_flag = LEP_collapse
 				set_country_flag = LEP_collapsed
 				country_event = {
@@ -845,18 +848,14 @@ news_event = {# The Illusion Shatters
 				}
 			}
 			if = {
-				limit = {
-					tag = SZC
-				}
+				limit = { tag = SZC }
 				country_event = {
 					id = sichuan.7
 					days = 10
 				}
 			}
 			if = {
-				limit = {
-					tag = SHX
-				}
+				limit = { tag = SHX }
 				country_event = {
 					id = shx.7
 					days = 5

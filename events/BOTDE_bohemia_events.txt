@@ -4150,11 +4150,11 @@ country_event = { #Secession of German-Bohemia
 			add_state_core = 786
 			add_state_core = 71
 			set_cosmetic_tag = PGU_german_bohemia
-			change_tag_from = ROOT
-			declare_war_on = {
+                        declare_war_on = {
 				target = CZE
 				type = annex_everything
 			}
+			change_tag_from = ROOT
 		}
 		hidden_effect = {
 			#load oob
@@ -4396,6 +4396,10 @@ country_event = { #Standardizing Uniforms
 			every_unit_leader = {
 				limit = { has_id = 82814 }
 				set_leader_portrait = SVK_Rudolf_Viest_Blue
+			}
+			every_unit_leader = {
+				limit = { has_id = 82815 }
+				set_leader_portrait = Portrait_SVK_Milan_Stefanik
 			}
 		}
 	}
@@ -7332,6 +7336,8 @@ country_event = { #TRAKTOP
 
 	fire_only_once = yes
 
+        is_triggered_only = yes
+
 	option = { #pew pew but repeated
 		name = bdeczeflavor.208.a
 		add_equipment_to_stockpile = {
@@ -7886,11 +7892,11 @@ country_event = { #Slovak Legislature Introduces Secession Bill
 			}
 		}
 		SVK = {
-			change_tag_from = ROOT
-			declare_war_on = {
+                       declare_war_on = {
 				target = CZE
 				type = annex_everything
 			}
+			change_tag_from = ROOT
 			#Load oob...
 		}
 		#Peaceout event...

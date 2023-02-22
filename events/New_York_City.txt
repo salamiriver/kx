@@ -11,7 +11,7 @@
 ### 46-64 MOB SPECIFIC FLAVOUR ########
 ### 640-653 FDR SPECIFIC FLAVOUR ######
 ### 260- 292 CF SPECIFIC FLAVOUR ######
-### 3333-3357 SYND SPECIFIC FLAVOUR ###
+### 3333-3359 SYND SPECIFIC FLAVOUR ###
 ### 2222-2239 HARLEM SPECIFIC FLAVOUR #
 #######################################
 
@@ -121,7 +121,11 @@ country_event = { #Battle
 
 country_event = { #Battle
 	id = newyork_prewar.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: newyork_prewar.3"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: newyork_prewar.3" 
+	hidden_effect = {
+		set_global_flag = NYC_exists_flag
+	}
+	}
 	title = newyork_prewar.3.t
 	desc = newyork_prewar.3.d
 	picture = GFX_report_event_NYC_laguardia_1
@@ -176,9 +180,12 @@ news_event = { #Battle
 	desc = newyork_prewar.4.d
 	picture = GFX_news_event_NYC_free
 
+	major = yes
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
 
 	option = { # 
 		name = newyork_prewar.4.a
@@ -186,7 +193,7 @@ news_event = { #Battle
 	}
 }
 
-news_event = { #Battle
+country_event = { #Battle
 	id = newyork_prewar.5
 	immediate = {log = "[GetDateText]: [Root.GetName]: newyork_prewar.5"}
 	title = newyork_prewar.5.t
@@ -1714,7 +1721,20 @@ country_event = { #Tammany Puppet Mayor
 	id = NYC.15
 	immediate = {log = "[GetDateText]: [Root.GetName]: NYC.15"}
 	title = NYC.15.t
-	desc = NYC.15.d
+	desc = {
+		text = NYC.15.d
+		trigger = {
+			NOT = {
+				has_global_flag = IRE_VALERA_GONE
+			}
+		}
+	}
+	desc = {
+		text = NYC.15.d_2
+		trigger = {
+			has_global_flag = IRE_VALERA_GONE
+		}
+	}
 	picture = GFX_report_event_NYC_new_mayor
 
 	is_triggered_only = yes
@@ -1757,6 +1777,59 @@ country_event = { #Tammany Puppet Mayor
 				id = NYC.45
 				days = 50
 			}
+		}
+	}
+	
+	option = { # 
+		name = NYC.15.c
+		trigger = {
+			has_global_flag = IRE_VALERA_GONE
+		}
+		clr_global_flag = IRE_VALERA_GONE
+		remove_ideas = NYC_George_Washington_Olvany_hog_sco
+		add_ideas = IRE_Eamon_de_Valera_hog_sco
+		create_country_leader = {
+			name = "Edward de Valera"
+			desc = "POLITICS_EDWARD_DE_VALERA_DESC"
+			picture = "gfx/leaders/IRE/Portrait_Ireland_Eamon_de_Valera_kr.png"
+			expire = "1965.1.1"
+			ideology = clientelism_subtype
+			traits = {}
+		}
+		set_party_name = {
+			name = NYC_tammany_social_conservative_party2
+			long_name = NYC_tammany_social_conservative_party2_long
+			ideology = social_conservative
+		}
+		hidden_effect = {
+			country_event = {
+				id = NYC.450
+				days = 50
+			}
+		}
+	}
+
+	option = { # 
+		name = NYC.15.e
+		create_country_leader = {
+			name = "Adam Clayton Powell Jr."
+			desc = "POLITICS_POWELL_DESC"
+			picture = "gfx/leaders/NYC/Portrait_NYC_Adam_Clayton_Powell_Jr.png"
+			expire = "1965.1.1"
+			ideology = clientelism_subtype
+			traits = {}
+		}
+	}
+
+	option = { # 
+		name = NYC.15.f
+		create_country_leader = {
+			name = "Enoch L. Johnson"
+			desc = "POLITICS_NUCKY_DESC"
+			picture = "gfx/leaders/NYC/Portrait_NYC_Nucky_Johnson.png"
+			expire = "1965.1.1"
+			ideology = clientelism_subtype
+			traits = {}
 		}
 	}
 }
@@ -2401,9 +2474,12 @@ news_event = { # War of the Worlds
 	desc = NYC.230.d
 	picture = GFX_news_event_NYC_welles_war_of_the_worlds
 
+	major = yes
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
 
 	option = { # Flavour
 		name = NYC.230.a
@@ -2966,6 +3042,23 @@ country_event = { # George Washington Olvany Flavour
 	}
 }
 
+country_event = { # Eamon de Valera Flavour
+	id = NYC.450
+	immediate = {log = "[GetDateText]: [Root.GetName]: NYC.450"}
+	title = NYC.450.t
+	desc = NYC.450.d
+	picture = GFX_report_event_IRE_valera
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Flavour
+		name = NYC.450.a
+
+	}
+}
+
 country_event = { # Dealing with Snitches
 	id = NYC.46
 	immediate = {log = "[GetDateText]: [Root.GetName]: NYC.46"}
@@ -3409,7 +3502,7 @@ country_event = { # America Demands we Rejoin
 		ai_chance = {
 			factor = 75
 		}
-		event_target:USA_NYC_ASKER = {
+		FROM = {
 			annex_country = {
 				target = NYC
 				transfer_troops = yes
@@ -3422,7 +3515,7 @@ country_event = { # America Demands we Rejoin
 		ai_chance = {
 			factor = 25
 		}
-		event_target:USA_NYC_ASKER = {
+		FROM = {
 			country_event = { 
 				id = NYC.67 
 				days = 14 
@@ -5018,6 +5111,23 @@ country_event = { # Crosswaith or Harrison (For Hubert/Crosswaith)
 			traits = { negro_debs }
 		}
 	}
+
+	option = { # D Hamilton Jackson
+		name = NYC_flavor.3336.c
+		set_party_name = {
+			name = NYC_hamilton_syndicalist_party
+			long_name = NYC_hamilton_syndicalist_party_long
+			ideology = syndicalist
+		}
+		create_country_leader = {
+			name = "David Hamilton Jackson"
+			desc = ""
+			picture = "gfx/leaders/NYC/Portrait_NYC_David_Hamilton_Jackson.png"
+			expire = "1965.1.1"
+			ideology = african_syndicalism_subtype
+			traits = { black_moses }
+		}
+	}
 }
 country_event = { # Forming Caribbean (Crosswaith/Harrison Specific)
 	id = NYC_flavor.3337
@@ -5025,6 +5135,21 @@ country_event = { # Forming Caribbean (Crosswaith/Harrison Specific)
 	title = NYC_flavor.3337.t
 	desc = NYC_flavor.3337.d
 	picture = GFX_report_event_NYC_casper_holstein
+
+        trigger = {
+		686 = { is_owned_by_ROOT_or_ally = yes }
+		818 = { is_owned_by_ROOT_or_ally = yes }
+		315 = { is_owned_by_ROOT_or_ally = yes }
+		820 = { is_owned_by_ROOT_or_ally = yes }
+		319 = { is_owned_by_ROOT_or_ally = yes }
+		318 = { is_owned_by_ROOT_or_ally = yes }
+		308 = { is_owned_by_ROOT_or_ally = yes }
+		694 = { is_owned_by_ROOT_or_ally = yes }
+		692 = { is_owned_by_ROOT_or_ally = yes }
+		691 = { is_owned_by_ROOT_or_ally = yes }
+		690 = { is_owned_by_ROOT_or_ally = yes }
+		689 = { is_owned_by_ROOT_or_ally = yes }
+        }
 
 	is_triggered_only = yes
 	
@@ -5164,6 +5289,10 @@ country_event = { # Journey Back Home
 	desc = NYC_flavor.3342.d
 	picture = GFX_report_event_NYC_virgins
 
+	trigger = {
+		has_government = syndicalist
+	}
+
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -5181,6 +5310,10 @@ country_event = { # Legacy of Slave Revolt
 	desc = NYC_flavor.3343.d
 	picture = GFX_report_event_NYC_slave_revolt
 
+	trigger = {
+		has_government = syndicalist
+	}
+
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -5197,6 +5330,10 @@ country_event = { # Question of the Harlem Mobsters
 	title = NYC_flavor.3344.t
 	desc = NYC_flavor.3344.d
 	picture = report_event_NYC_harlem_mafia
+
+	trigger = {
+		has_government = syndicalist
+	}
 
 	is_triggered_only = yes
 	
@@ -5324,7 +5461,7 @@ country_event = { # Garvey Visits
 	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.3350"}
 	title = NYC_flavor.3350.t
 	desc = NYC_flavor.3350.d
-	picture = GFX_report_event_Marcus_Garvey
+	picture = GFX_BBR_Garvey
 
 	is_triggered_only = yes
 	
@@ -5370,6 +5507,8 @@ country_event = { # BBR Exiles
 			exists = no
 		}
 	}
+	
+	is_triggered_only = yes
 	
 	fire_only_once = yes
 
@@ -5458,6 +5597,8 @@ country_event = { # CSA Exiles
 			exists = no
 		}
 	}
+
+	is_triggered_only = yes
 	
 	fire_only_once = yes
 
@@ -5535,7 +5676,7 @@ country_event = { # Black Socialists and Stuff Visit
 	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.3354"}
 	title = NYC_flavor.3354.t
 	desc = NYC_flavor.3354.d
-	picture = GFX_report_event_BBR_daddy_WEB
+	picture = GFX_event_BBR_daddy_WEB
 
 	is_triggered_only = yes
 	
@@ -5553,6 +5694,10 @@ country_event = { # Second Negro Sanherdrin
 	desc = NYC_flavor.3355.d
 	picture = GFX_report_event_generic_happy_crowd
 
+	trigger = {
+		has_government = syndicalist
+	}
+
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -5568,6 +5713,10 @@ country_event = { # Otto Huiswoud and Lovette Fort Whitemen
 	title = NYC_flavor.3356.t
 	desc = NYC_flavor.3356.d
 	picture = GFX_report_event_generic_scandal
+
+	trigger = {
+		has_government = syndicalist
+	}
 
 	is_triggered_only = yes
 	
@@ -5585,6 +5734,10 @@ country_event = { # Richard B Moore
 	desc = NYC_flavor.3357.d
 	picture = GFX_report_event_generic_scandal
 
+	trigger = {
+		has_government = syndicalist
+	}
+
 	is_triggered_only = yes
 	
 	fire_only_once = yes
@@ -5594,6 +5747,81 @@ country_event = { # Richard B Moore
 		add_stability = 0.05
 	}
 }
+
+country_event = { #Hamilton's Many Titles
+	id = NYC_flavor.3358
+	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.3357"}
+	title = NYC_flavor.3358.t
+	desc = NYC_flavor.3358.d
+	picture = GFX_report_event_NYC_hamilton_title
+
+	trigger = {
+		has_government = syndicalist
+		has_country_leader = {
+			name = "David Hamilton Jackson"
+			ruling_only = yes
+		}
+	}
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Flavour
+		name = NYC_flavor.3358.a
+		add_stability = 0.05
+	}
+}
+country_event = { #Bull and Bread Day
+	id = NYC_flavor.3359
+	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.3357"}
+	title = NYC_flavor.3359.t
+	desc = NYC_flavor.3359.d
+	picture = GFX_report_event_NYC_bull_bread
+
+	trigger = {
+		has_government = syndicalist
+		has_country_leader = {
+			name = "David Hamilton Jackson"
+			ruling_only = yes
+		}
+	}
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Flavour
+		name = NYC_flavor.3359.a
+		add_stability = 0.05
+	}
+}
+country_event = { #Hamilton's Fight for Emancipation
+	id = NYC_flavor.3360
+	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.3357"}
+	title = NYC_flavor.3360.t
+	desc = NYC_flavor.3360.d
+	picture = GFX_report_event_NYC_emancipation
+
+	trigger = {
+		has_government = syndicalist
+		has_country_leader = {
+			name = "David Hamilton Jackson"
+			ruling_only = yes
+		}
+	}
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = { # Flavour
+		name = NYC_flavor.3360.a
+		add_stability = 0.05
+	}
+}
+
+#
 country_event = { # Sports and Stuff
 	id = NYC_flavor.20
 	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.20"}
@@ -7617,9 +7845,12 @@ news_event = { # Empire State Building News
 	desc = NYC_flavor.61.d
 	picture = GFX_news_event_NYC_empire_state
 
+	major = yes
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
 
 	option = { # Flavour
 		name = NYC_flavor.61.a
@@ -8146,6 +8377,18 @@ country_event = { # New Democrats
 
 	option = { # Flavour
 		name = NYC_flavor.65.a
+                create_country_leader = {
+	              name = "Adam Clayton Powell Jr."
+	              picture = "gfx/leaders/NYC/Portrait_NYC_Adam_Clayton_Powell_Jr.png"
+	              expire = "1965.1.1"
+	              ideology = conservative_populism_subtype
+	              traits = {}
+                }
+                set_party_name = {
+			name = NYC_tammany_social_conservative_party
+			long_name = NYC_tammany_social_conservative_party_long
+			ideology = social_conservative
+		}
 	}	
 }
 
@@ -8610,6 +8853,46 @@ country_event = { #Mobsters return
 			logistics_skill = 1
 		}
 	}
+}
+
+country_event = { #Empire State Building
+	id = NYC_flavor.82
+	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.82"}
+	title = NYC_flavor.82.t
+	desc = NYC_flavor.82.d
+	picture = GFX_report_event_NYC_empire_state_crash
+
+	trigger = {
+	date > 1945.07.28
+	tag = NYC
+	}
+	
+	fire_only_once = yes
+	
+		option = { # 
+		name = NYC_flavor.82.a
+		add_manpower = -14
+		}
+}
+
+country_event = { #40 Wall Street
+	id = NYC_flavor.83
+	immediate = {log = "[GetDateText]: [Root.GetName]: NYC_flavor.83"}
+	title = NYC_flavor.83.t
+	desc = NYC_flavor.83.d
+	picture = GFX_report_event_NYC_40_wall_street
+
+	trigger = {
+	date > 1946.05.20
+	tag = NYC
+	}
+	
+	fire_only_once = yes
+	
+		option = { # 
+		name = NYC_flavor.83.a
+		add_manpower = -5
+		}
 }
 
 country_event = { # dutch prevention

@@ -339,6 +339,18 @@ spriteTypes = {
 		name = "GFX_idea_SHX_christian_statism"
 		texturefile = "gfx/interface/ideas/ideas/SHX_christian_statism.png"
 	}
+	spriteType = {
+		name = "GFX_idea_SHX_Guominjun_army"
+		texturefile = "gfx/interface/ideas/ideas/SHX_Guominjun_army.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SHX_Guominjun_unrest"
+		texturefile = "gfx/interface/ideas/ideas/SHX_Guominjun_unrest.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SHX_beijing_influence"
+		texturefile = "gfx/interface/ideas/ideas/SHX_beijing_influence.png"
+	}
 
 	### SQI ###
 	spriteType = {
@@ -356,6 +368,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_SQI_jiangsu_exploitation"
 		texturefile = "gfx/interface/ideas/ideas/SQI_jiangsu_exploitation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SQI_QIE_relationship"
+		texturefile = "gfx/interface/ideas/ideas/SQI_QIE_relationship.png"
 	}
 
 	### SIA ###
@@ -541,6 +557,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CHI_economic_affairs_commission"
 		texturefile = "gfx/interface/ideas/ideas/economic_affairs_commission.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CHI_defence_idea"
+		texturefile = "gfx/interface/ideas/ideas/CHI_defence_idea.png"
 	}
 
 	#GEA

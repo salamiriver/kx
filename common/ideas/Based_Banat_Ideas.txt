@@ -603,7 +603,7 @@ ideas = {
 		}
 		
 		BAN_army_collapse = {
-			picture = idea_generic_destruction
+			picture = generic_destruction
 			allowed = {
 				always = yes
 			}
@@ -642,7 +642,7 @@ ideas = {
 		}
 		
 		BAN_healthcare_acts = {
-			picture = idea_hun_treaty_of_trianon
+			picture = National_Healthcare_System
 			allowed = {
 				always = yes
 			}

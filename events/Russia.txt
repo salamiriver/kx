@@ -15,6 +15,7 @@ add_namespace = rusdeminfo
 
 country_event = { #History
 	id = russia.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1" }
 	immediate = {
 		set_country_flag = psr_coalition
 		set_country_flag = market_liberal_coalition
@@ -48,6 +49,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1017
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1017" }
 	title = russia.1017.t 
 	desc = russia.1017.d 
 	is_triggered_only = yes
@@ -63,6 +65,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1018
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1018" }
 	title = russia.1018.t 
 	desc = russia.1018.d 
 	is_triggered_only = yes
@@ -78,6 +81,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1019
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1019" }
 	title = russia.1019.t 
 	desc = russia.1019.d 
 	is_triggered_only = yes
@@ -93,6 +97,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1020
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1020" }
 	title = russia.1020.t 
 	desc = russia.1020.d 
 	is_triggered_only = yes
@@ -108,6 +113,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1021
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1021" }
 	title = russia.1021.t 
 	desc = russia.1021.d 
 	is_triggered_only = yes
@@ -123,6 +129,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1022
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1022" }
 	title = russia.1022.t 
 	desc = russia.1022.d 
 	is_triggered_only = yes
@@ -138,6 +145,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1023
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1023" }
 	title = russia.1023.t 
 	desc = russia.1023.d 
 	is_triggered_only = yes
@@ -153,6 +161,7 @@ country_event = { #History
 }
 country_event = { #History
 	id = russia.1024
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.1024" }
 	title = russia.1024.t 
 	desc = russia.1024.d 
 	is_triggered_only = yes
@@ -171,6 +180,7 @@ country_event = { #History
 }
 country_event = { #Constitution 1918
 	id = russia.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.2" }
 	title = russia.2.t
 	desc = russia.2.d
 
@@ -188,6 +198,7 @@ country_event = { #Constitution 1918
 
 country_event = { #Russian economy
 	id = russia.2017
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.2017" }
 	title = russia.2017.t
 	desc = russia.2017.d
 
@@ -384,10 +395,6 @@ country_event = { #Aftermath of assassination
 				days = 4
 			}
 			country_event = {
-				id = russia.30
-				days = 8
-			}
-			country_event = {
 				id = russia.9
 				days = 12
 			}
@@ -400,8 +407,8 @@ country_event = { #Aftermath of assassination
 				days = 6
 			}
 			country_event = {
-				id = russia.16
-				days = 30
+				id = russia.30
+				days = 25
 			}
 			country_event = {
 				id = rusdem.3
@@ -412,24 +419,16 @@ country_event = { #Aftermath of assassination
 				days = 80
 			}
 			country_event = {
-				id = rusdem.7
-				days = 80
-			}
-			country_event = {
 				id = rusdem.8
 				days = 85
 			}
 			country_event = {
-				id = rusdem.9
-				days = 85
-			}
-			country_event = {
 				id = rusdem.5
-				days = 90
+				days = 89
 			}
 			country_event = {
 				id = rusdem.10
-				days = 90
+				days = 92
 			}
 			country_event = {
 				id = rusdem.4
@@ -557,7 +556,7 @@ country_event = { #Gorgulov Trial
 		set_country_flag = RUS_GOR_ALIVE
 		add_popularity = {
 			ideology = national_populist
-			popularity = 0.02
+			popularity = -0.07
 		}
 		add_stability = -0.04
 		if = {
@@ -572,7 +571,6 @@ country_event = { #Gorgulov Trial
 				remove_idea = rus_political_instability
 				add_idea = rus_political_instability1
 			}
-			subtract_from_variable = { psr_mp = 10 }
 		}
 	}
 	option = {
@@ -601,10 +599,7 @@ country_event = { #Gorgulov Trial
 				}
 			}
 		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.05
-		}
+		RUS_increase_nrpr_pop = yes
 		add_stability = 0.04
 		if = {
 			limit = {
@@ -959,6 +954,10 @@ country_event = { #Snap Elections
 				id = russia.49
 				days = 25
 			}
+			country_event = {
+				id = russia.50
+				days = 27
+			}
 			set_politics = {	
 				ruling_party = social_democrat
 				election_frequency = 47
@@ -969,52 +968,6 @@ country_event = { #Snap Elections
 		}
 	}
 
-country_event = { #Forming government
-	id = russia.47
-	immediate = {log = "[GetDateText]: [Root.GetName]: event russia.47"}
-	title = russia.47.t 
-	desc = russia.47.d 
-	is_triggered_only = yes
-	option = {
-		name = russia.47.a
-		ai_chance = {
-			factor = 50
-		}
-		add_stability = 0.1
-		custom_effect_tooltip = iraklij_pm
-		set_country_flag = RUS_PSR_MENSH
-		set_country_flag = RUS_IRA
-		remove_ideas_with_trait = head_of_government
-		add_ideas = RUS_Irakliy_G_Tsereteli_hog_sde
-		remove_ideas_with_trait = foreign_minister
-		add_ideas = RUS_Nikolay_Sukhanov_for_rso
-		remove_ideas_with_trait = economy_minister
-		add_ideas = RUS_Vladimir_M_Zenzinov_eco_sde
-		remove_ideas_with_trait = security_minister
-		add_ideas = RUS_Aleksey_I_Rykov_sec_rso
-		set_country_flag = RUS_democracy
-		load_base_russian_tree = yes
-	}
-	option = {
-		name = russia.47.b
-		ai_chance = {
-			factor = 50
-		}
-		add_stability = 0.05
-		set_country_flag = RUS_PSR_MENSH
-		set_country_flag = RUS_ZEN
-		remove_ideas_with_trait = head_of_government
-		add_ideas = RUS_Vladimir_M_Zenzinov_hog_sde
-		remove_ideas_with_trait = foreign_minister
-		add_ideas = RUS_Nikolay_Sukhanov_for_rso
-		remove_ideas_with_trait = economy_minister
-		add_ideas = RUS_Mikhail_I_Tereshchenko_eco_sli
-		remove_ideas_with_trait = security_minister
-		add_ideas = RUS_Aleksey_I_Rykov_sec_rso
-		set_country_flag = RUS_democracy
-		load_base_russian_tree = yes
-	}
-}		
 
 country_event = { #Chernov speaks
 	id = russia.42
@@ -1338,24 +1291,18 @@ country_event = { #Bukharin speaks
 	title = russia.49.t 
 	desc = russia.49.d 
 	is_triggered_only = yes
+	picture = GFX_event_russia_bukharin
 	trigger = {
 		has_country_flag = bolsheviks_allowed
+		NOT = { has_country_flag = nsp_banned }
 	}
 	option = {
 		name = russia.49.a
 		add_stability = 0.03
-		country_event = {
-			id = russia.50
-			days = 2
-		}
 	}
 	option = {
 		name = russia.49.b
 		add_stability = 0.03
-		country_event = {
-			id = russia.50
-			days = 2
-		}
 		country_event = rusdeminfo.24
 	}
 }
@@ -1366,6 +1313,11 @@ country_event = { #RKP-PLSR coalition
 	title = russia.50.t 
 	desc = russia.50.d 
 	is_triggered_only = yes
+	trigger = {
+		has_country_flag = bolsheviks_allowed
+		NOT = { has_country_flag = plsr_banned }
+		NOT = { has_country_flag = nsp_banned }
+	}
 	option = {
 		name = russia.50.a
 		add_stability = 0.05
@@ -1376,7 +1328,27 @@ country_event = { #RKP-PLSR coalition
 		country_event = rusdeminfo.26	
 	}	
 }
-	
+country_event = { #Spiridonova speaks
+	id = russia.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event russia.51"}
+	title = russia.51.t 
+	desc = russia.51.d 
+	picture = GFX_report_event_RUS_Spiridonova
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = bolsheviks_allowed
+		has_country_flag = nsp_banned
+	}
+	option = {
+		name = russia.51.a
+		add_stability = 0.05
+	}
+	option = {
+		name = russia.51.b
+		add_stability = 0.05
+		country_event = rusdeminfo.26	
+	}
+}	
 country_event = { #Forming government
 	id = russia.48
 	immediate = {log = "[GetDateText]: [Root.GetName]: event russia.48"}
@@ -1479,22 +1451,15 @@ country_event = { #Questions of bolsheviks
 	title = russia.16.t
 	desc = russia.16.d 
 	is_triggered_only = yes
+	
 	option = {
 		name = russia.16.a
 		custom_effect_tooltip = bolsheviks_allowed
 		ai_chance = {
-			factor = 10
+			factor = 40
 			modifier = {
 				factor = 5
 				has_country_flag = appease_socialists
-			}
-			modifier = {
-				factor = 1.5
-				has_country_flag = fight_nationalists
-			}
-			modifier = {
-				factor = 0.5
-				has_country_flag = appease_nationalists
 			}
 			modifier = {
 				factor = 0.5
@@ -1503,46 +1468,14 @@ country_event = { #Questions of bolsheviks
 			modifier = {
 			factor = 10000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_CENTER_REPUBLIC
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR_NRPR
-					}
-				}
-			}
-			modifier = {
-			factor = 10000
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION	}
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC	}
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_CENTER_REPUBLIC	}
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR	}
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP	}
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI	}
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR	}
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR	}
 				AND = {
 					has_stability < -0.29
 					OR = {
@@ -1582,6 +1515,7 @@ country_event = { #Questions of bolsheviks
 				}
 			}
 		}
+		}
 		add_popularity = {
 			ideology = radical_socialist
 			popularity = 0.025
@@ -1605,7 +1539,7 @@ country_event = { #Questions of bolsheviks
 				desc = "POLITICS_SENATE_DESC"
 				picture = "gfx/leaders/RUS/Portrait_RUS_The_Senate.png"
 				expire = "1965.1.1"
-				ideology = market_socialist_subtype
+				ideology = bukharinist_subtype
 			}
 		}	
 	}	
@@ -1613,19 +1547,7 @@ country_event = { #Questions of bolsheviks
 		name = russia.16.b
 		custom_effect_tooltip = red_terror
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				has_country_flag = appease_socialists
-			}
-			modifier = {
-				factor = 0.5
-				has_country_flag = fight_nationalistss
-			}
-			modifier = {
-				factor = 3
-				has_country_flag = appease_nationalists
-			}
+			factor = 60
 			modifier = {
 				factor = 1.5
 				has_country_flag = fight_socialists
@@ -1735,8 +1657,6 @@ country_event = { #Questions of bolsheviks
 			}
 		}
 		add_stability = -0.05
-		
-		
 	}
 }
 ###Black Monday
@@ -2051,33 +1971,6 @@ country_event = { #First recovery
 	option = {
 		name = russia.25.a
 		add_stability = 0.04
-		if = {
-			limit = {
-				has_completed_focus = RUS_Senate_Plan
-			}
-			if = {
-				limit = { russia_is_democratic = yes }
-				RUS_increase_lkdp_pop = yes
-				RUS_increase_rkdp_pop = yes
-				RUS_increase_vns_pop = yes
-				RUS_increase_ep_pop = yes
-			}
-		}
-		else = {
-			if = {
-				limit = { russia_is_democratic = yes }
-				if = {
-					limit = {
-						has_country_flag = bolsheviks_allowed
-					}
-					RUS_increase_plsr_pop = yes
-					RUS_increase_nsp_pop = yes
-				}
-				RUS_increase_psr_pop = yes
-				RUS_increase_rsdrp_pop = yes
-				RUS_increase_nrpr_pop = yes
-			}
-		}
 	}
 }
 country_event = { #Recovery
@@ -2094,55 +1987,19 @@ country_event = { #Recovery
 			limit = {
 				has_completed_focus = RUS_Senate_Plan
 			}
-			if = {
-				limit = { russia_is_democratic = yes }
-				RUS_increase_lkdp_pop = yes
-				RUS_increase_rkdp_pop = yes
-				RUS_increase_vns_pop = yes
-				RUS_increase_ep_pop = yes
-			}
-			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = rus_black_monday_senate_5
 					add_idea = rus_black_monday_senate_6
-				}
-			}
-			hidden_effect = {
-				remove_ideas = rus_black_monday_senate_5
-				add_timed_idea = {
-					idea = rus_black_monday_senate_6
 					days = 365
 				}
 			}
-		}
 		else = {
-			if = {
-				limit = { russia_is_democratic = yes }
-				if = {
-					limit = {
-						has_country_flag = bolsheviks_allowed
-					}
-					RUS_increase_plsr_pop = yes
-					RUS_increase_nsp_pop = yes
-				}
-				RUS_increase_psr_pop = yes
-				RUS_increase_rsdrp_pop = yes
-				RUS_increase_nrpr_pop = yes
-			}
-			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = rus_black_monday_duma_5
 					add_idea = rus_black_monday_duma_6
-				}
-			}
-			hidden_effect = {
-				remove_ideas = rus_black_monday_duma_5
-				add_timed_idea = {
-					idea = rus_black_monday_duma_6
 					days = 365
 				}
 			}
-		}
 		hidden_effect = {
 			country_event = {
 				id = russia.27
@@ -2184,187 +2041,74 @@ country_event = { #Socialist demonstration
 	option = {
 		name = russia.30.a
 		ai_chance = {
-			factor = 35
+			factor = 25
 			modifier = {
 			factor = 10000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_REVOLUTION
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REVOLUTION
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REFORM
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_KORNILOV_SAVINKOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_KORNILOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_WRANGEL_TSAR_WRANGEL
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_DROZDOVSKY_ALONE
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_DROZDOVSKY_MONARCHIST
-					}
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_REVOLUTION }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_KORNILOV_SAVINKOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_KORNILOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_WRANGEL_TSAR_WRANGEL }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_DROZDOVSKY_ALONE }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_DROZDOVSKY_MONARCHIST }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR_NRPR }
 				}
 			}
 		}
 		set_country_flag = fight_socialists
-		add_stability = -0.05
-		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.05
-		}
-		add_popularity = {
-			ideology = syndicalist
-			popularity = -0.05
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = -0.05
-		}
-		
-		country_event = {
-			id = russia.31
-			days = 1
-		}
+		add_stability = -0.1
+		RUS_increase_plsr_pop = yes
+		RUS_increase_nsp_pop = yes
+		RUS_increase_rsdrp_pop = yes
 	}
 	option = {
 		name = russia.30.b
 		ai_chance = {
-			factor = 65
+			factor = 75
 			modifier = {
 			factor = 10000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_CENTER_REPUBLIC
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR_NRPR
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI
-					}
-				}
-			}
-			modifier = {
-			factor = 10000
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_CENTER_REPUBLIC }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR_NRPR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REFORM }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REVOLUTION }
 				AND = {
 					has_stability < -0.2
 					OR = {
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_MONARCHY
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_OLIGARCHS
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_REPUBLIC
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_EURASIAN_UNION
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REVOLUTION
-						}
-						has_game_rule = {
-							rule = RUS_post_assassination
-							option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REFORM
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_MONARCHY }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_OLIGARCHS }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_REPUBLIC }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_EURASIAN_UNION }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REVOLUTION }
+							has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REFORM }
 						}
 					}
 				}
 			}
 		}
 		set_country_flag = appease_socialists
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = syndicalist
-			popularity = 0.012
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.012
+		RUS_increase_psr_pop = yes
+		country_event = {
+			id = russia.16
+			days = 5
 		}
 		country_event = {
 			id = russia.31
-			days = 1
+			days = 2
 		}
 	}
 }
@@ -2378,126 +2122,42 @@ country_event = { #Nationalist demonstration
 	option = {
 		name = russia.31.a
 		ai_chance = {
-			factor = 50
-			modifier = {
-				factor = 1.5
-				has_country_flag = appease_socialists
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR
-				}
-			}
+			factor = 60
 			modifier = {
 				factor = 10000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_KORNILOV_SAVINKOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV
-					}
-				}
-			}
-			modifier = {
-				factor = 10000
-				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_KORNILOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_DROZDOVSKY_ALONE
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_DROZDOVSKY_MONARCHIST
-					}
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RUS_POST_ASSASSINATION_WRANGEL_TSAR_WRANGEL
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_CENTER_REPUBLIC }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR_NRPR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_KORNILOV_SAVINKOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_KORNILOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_DROZDOVSKY_ALONE }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_DROZDOVSKY_MONARCHIST }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_WRANGEL_TSAR_WRANGEL }
 				}
 			}
 		}
 		set_country_flag = fight_nationalists
 		add_stability = -0.05
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.05
-		}
+		RUS_increase_nrpr_pop = yes
+		RUS_increase_psr_pop = yes
 		country_event = {
 			id = russia.32
-			days = 1
+			hours = 6
 		}
 	}
 	option = {
@@ -2511,25 +2171,20 @@ country_event = { #Nationalist demonstration
 			modifier = {
 			factor = 10000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REVOLUTION
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REFORM
-					}
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR_NRPR }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REVOLUTION }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_NRPR_REFORM }
 				}
 			}
 		}
 		set_country_flag = appease_nationalists
 		add_popularity = {
-			ideology = national_populist
-			popularity = 0.05
-		}
+			ideology = social_democrat
+			popularity = -0.035
+		}		
 		country_event = {
 			id = russia.32
-			days = 1
+			hours = 6
 		}
 	}
 }			
@@ -2537,86 +2192,54 @@ country_event = { #Clashes in Petrograd
 	id = russia.32
 	immediate = {log = "[GetDateText]: [Root.GetName]: event.russia.32"}
 	title = russia.32.t 
-	desc = russia.32.d
+	desc = {
+		text = russia.32.d.reject_sav
+		trigger = { has_country_flag = fight_nationalists }
+	}
+	desc = {
+		text = russia.32.d.accept_sav
+		trigger = { has_country_flag = appease_nationalists }
+	}
 	is_triggered_only = yes
+	picture = GFX_report_event_RUS_clashes
 	option = {
 		name = russia.32.a
 		ai_chance = {
-			factor = 10
+			factor = 70
 			modifier = {
 			factor = 6
+				OR = {
+					AND = {
 				has_country_flag = appease_socialists
+						OR = {
 				has_country_flag = fight_nationalists
+							has_country_flag = appease_nationalists
 			}
-			modifier = {
-			factor = 6
+					}
+					AND = {
 				has_country_flag = appease_nationalists
+						OR = {
 				has_country_flag = fight_socialists
-			}
-			modifier = {
-			factor = 6
-				has_country_flag = appease_nationalists
 				has_country_flag = appease_socialists
 			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION
 				}
+			}
 			}
 			modifier = {
 				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_RSDRP
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR
+				OR = {
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PEACEFUL_REVOLUTION }
+					has_game_rule = { rule = RUS_post_assassination option = RUS_POST_ASSASSINATION_LEFT_REPUBLIC }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PLSR }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_RSRPI }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PSR }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP }
+					has_game_rule = { rule = RUS_post_assassination option = RULE_OPTION_RUS_POST_ASSASSINATION_MPSR }
 				}
 			}
 		}
 		add_political_power = 100
-		
 		set_country_flag = clashes_peace
 		country_event = {
 			id = russia.33
@@ -2626,62 +2249,34 @@ country_event = { #Clashes in Petrograd
 	option = {
 		name = russia.32.b
 		ai_chance = {
-			factor = 5
-			modifier = {
-			factor = 10000
-			has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_REVOLUTION
-					}
-			}
+			factor = 30
 			modifier = {
 			factor = 10000
 				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RUS_POST_ASSASSINATION_KORNILOV_SAVINKOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV
-					}
-				}
-			}
-			modifier = {
-				factor = 10000
-				OR = {
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_KORNILOV
-					}
-					has_game_rule = {
-						rule = RUS_post_assassination
-						option = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN
-					}
-				}
-			}
-			modifier = {
-				factor = 10000
-				has_game_rule = {
-					rule = RUS_post_assassination
-					option = RUS_POST_ASSASSINATION_WRANGEL_TSAR_WRANGEL
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_PROGRESSIVES }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_RKDP }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_MONARCHY }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_OLIGARCHS }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_VNS_REPUBLIC }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_EURASIAN_UNION }
+					has_game_rule = { rule = RUS_post_assassination option = RUS_POST_ASSASSINATION_REVOLUTION }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_KORNILOV_SAVINKOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_KORNILOV }
+					has_game_rule = { rule = RUS_post_assassination	option = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_DROZDOVSKY_ALONE }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_DROZDOVSKY_MONARCHIST }
+					has_game_rule = { rule = RUS_post_assassination	option = RUS_POST_ASSASSINATION_WRANGEL_TSAR_WRANGEL }
 				}
 			}
 			modifier = {
 				factor = 2
+				OR = {
 				has_country_flag = fight_socialists
+					has_country_flag = fight_nationalists
 			}
-			modifier = {
-				factor = 2
-				has_country_flag = fight_nationalists
 			}
 		}
 		add_stability = -0.05
@@ -2700,62 +2295,69 @@ country_event = { #Day after
 		set_country_flag = RUS_demonstrations 
 	}
 	title = russia.33.t 
-	desc = { text = russia.33.d-peace trigger = { has_country_flag = clashes_peace }}
-	desc = { text = russia.33.d-army trigger = { has_country_flag = clashes_army }}
+	desc = { 
+		text = russia.33.d-peace 
+		trigger = { has_country_flag = clashes_peace }
+	}
+	desc = { 
+		text = russia.33.d-army 
+		trigger = { has_country_flag = clashes_army }
+	}
 	is_triggered_only = yes
 	option = {
 		name = russia.33.a
 		trigger = { 
 			has_country_flag = clashes_peace
-			has_country_flag = appease_socialists
 			has_country_flag = fight_nationalists
 		}
 		set_country_flag = socialist_negot
 		add_stability = 0.05
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = syndicalist
-			popularity = 0.025
-		}
-		
+		RUS_increase_plsr_pop = yes
+		RUS_increase_nsp_pop = yes
+		RUS_increase_psr_pop = yes
+		RUS_increase_rsdrp_pop = yes
 		add_popularity = {
 			ideology = national_populist
-			popularity = -0.05
-		}
+			popularity = -0.07
+		}		
 	}
 	option = {
 		name = russia.33.b
 		trigger = { 
 			has_country_flag = clashes_peace
 			has_country_flag = appease_nationalists
-			has_country_flag = fight_socialists
 		}
 		set_country_flag = nationalist_negot
 		add_stability = 0.05
 		add_popularity = {
-			ideology = national_populist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.025
-		}
-		add_popularity = {
 			ideology = syndicalist
-			popularity = -0.05
+			popularity = -0.07
 		}
 		add_popularity = {
 			ideology = radical_socialist
-			popularity = -0.05
+			popularity = -0.07
 		}
-	
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.07
+		}
+		RUS_increase_nrpr_pop = yes
+		clr_country_flag = bolsheviks_allowed
+		set_country_flag = bolsheviks_banned
+		set_country_flag = plsr_banned
+		set_country_flag = nsp_banned
+		swap_ideas = {
+			remove_idea = rus_political_instability
+			add_idea = rus_political_instability1
+		}
+		set_country_flag = RUS_TERROR
+		hidden_effect = {
+			country_event = {
+				id = rusd.999
+				days = 2
+			}
+		}
+		add_stability = -0.05
 	}
 	option = {
 		name = russia.33.c
@@ -2765,14 +2367,21 @@ country_event = { #Day after
 		add_stability = -0.1
 		add_political_power = -100
 		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.05
+			ideology = syndicalist
+			popularity = -0.07
 		}
 		add_popularity = {
-			ideology = paternal_autocrat
-			popularity = 0.1
+			ideology = radical_socialist
+			popularity = -0.07
 		}
-	
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.07
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = -0.07
+		}
 	}
 	option = {
 		name = russia.33.d
@@ -2781,32 +2390,9 @@ country_event = { #Day after
 			has_country_flag = appease_nationalists
 			has_country_flag = appease_socialists 
 		}
-		set_country_flag = negot_fail
-		add_stability = -0.1
-		add_political_power = -100
-		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.05
-		}
-		
+		add_stability = 0.1
+		RUS_increase_psr_pop = yes
 	}
-	option = {
-		name = russia.33.e
-		trigger = { 
-			has_country_flag = clashes_peace
-			has_country_flag = fight_nationalists
-			has_country_flag = fight_socialists
-			}
-		set_country_flag = negot_fail
-		add_stability = -0.1
-		add_political_power = -100
-		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.05
-		}
-		
-	}
-	
 }
 country_event = { #Unlock Military
 	id = russia.53
@@ -4111,7 +3697,7 @@ country_event = {#Bukharin arrested
 				name = "Sergey Kirov"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Sergey_Kirov.png"
 				expire = "1965.1.1"
-				ideology = market_socialist_subtype
+				ideology = bukharinist_subtype
 				traits = {}
 			}
 		}
@@ -4129,7 +3715,7 @@ country_event = {#Bukharin arrested
 				name = "Sergey Kirov"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Sergey_Kirov.png"
 				expire = "1965.1.1"
-				ideology = market_socialist_subtype
+				ideology = bukharinist_subtype
 				traits = {}
 			}
 		}
@@ -4847,14 +4433,6 @@ country_event = {#Kerensky arrested
 		set_country_flag = RUS_kornilov_coup
 		add_ideas = RUS_Lavr_G_Kornilov_hog_pau
 		
-		create_country_leader = {
-			name = "Lavr Kornilov"
-			desc = "POLITICS_LAVR_KORNILOV_DESC"
-			picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
-			expire = "1965.1.1"
-			ideology = junta_subtype
-			traits = {}
-		}
 		add_stability = 0.1
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -5025,14 +4603,6 @@ country_event = {#Kornilov coups Kerensky
 		set_country_flag = RUS_kornilov_coup
 		add_ideas = RUS_Lavr_G_Kornilov_hog_pau
 		
-			create_country_leader = {
-				name = "Lavr Kornilov"
-				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-				traits = {}
-			}
 		add_stability = 0.1
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -5261,16 +4831,16 @@ country_event = {#Elections
 				days = 25
 			}
 			country_event = {
-				id = russia.30
-				days = 8
+				id = russia.50
+				days = 27
 			}
 			country_event = {
 				id = russia.14
 				days = 10
 			}
 			country_event = {
-				id = russia.16
-				days = 30
+				id = russia.30
+				days = 20
 			}
 			country_event = {
 				id = rusdem.100
@@ -6178,6 +5748,7 @@ country_event = { #General strike
 ###Democratic Russia
 country_event = { #Acting
 	id = rusdem.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rusdem.1" }
 	title = rusdem.1.t
 	desc = rusdem.1.d
 	fire_only_once = yes
@@ -6192,9 +5763,7 @@ country_event = { #Acting
 } 
 country_event = { #resign!
 	id = rusdem.201
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event rusdem.201"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rusdem.201" }
 	title = rusdem.201.t 
 	desc = rusdem.201.d 
 	fire_only_once = no
@@ -6215,9 +5784,7 @@ country_event = { #resign!
 }
 country_event = { #resign!
 	id = rusdem.202
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event rusdem.202"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rusdem.202" }
 	title = rusdem.202.t 
 	desc = rusdem.202.d 
 	fire_only_once = no
@@ -6252,9 +5819,7 @@ country_event = { #resign!
 }
 country_event = { #resign!
 	id = rusdem.203
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event rusdem.202"
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rusdem.203" }
 	title = rusdem.203.t 
 	desc = rusdem.203.d 
 	fire_only_once = yes
@@ -6315,16 +5880,9 @@ country_event = { #resign!
 			limit = {
 				OR = {
 					has_country_flag = RUS_black_hundredists_are_ready_to_join
-					AND = {
-						has_government = social_conservative
-						RUS_russian_monarch = yes
-					}
-					AND = {
-						has_government = market_liberal
 						RUS_russian_monarch = yes
 					}
 				}
-			}
 			set_party_name = {
 				ideology = national_populist
 				name = RUS_chernosot_party
@@ -6354,7 +5912,6 @@ country_event = { #resign!
 					ideology = legionarism_subtype 
 				}
 			}	
-			
 		}
 		else = {
 			clr_country_flag = nsnp_banned
@@ -6764,25 +6321,36 @@ country_event = { #Eurasianists bye bye
 		russia_is_democratic = yes
 		OR = {
 			NOT = { has_government = social_conservative }
+			AND = {
+				has_government = social_conservative
 			has_country_flag = RUS_conservative_block_exists
 		}
-		NOT = { has_government = market_liberal }
+		}
 		has_a_ep_president = no
 	}
 	option = {
 		name = rusdem.211.a
 		set_country_flag = ep_banned
+		if = {
+			limit = {
+				NOT = { has_country_flag = RUS_conservative_block_exists }
+			}
+			set_party_name = {
+				ideology = authoritarian_democrat
+				name = RUS_social_conservative_party
+				long_name = RUS_social_conservative_party_long
+			}
+		}
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = -0.25
 		}
-		add_popularity = {
-			ideology = social_conservative
-			popularity = 0.07
-		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = 0.07
+		RUS_increase_vns_pop = yes
+		hidden_effect = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = -0.07
+			}
 		}		
 	}
 }
@@ -9537,12 +9105,6 @@ country_event = { #PM
 			mp_support_calc = yes
 			senators_support_calc = yes
 			
-			load_base_russian_tree = yes
-			set_country_flag = make_russia_liberal_conservative_democratic_tree_visible
-			mark_focus_tree_layout_dirty = yes
-			mp_support_calc = yes
-			senators_support_calc = yes
-			
 			random_other_country = {
 				news_event = {
 					id = russianews.13
@@ -9631,8 +9193,8 @@ country_event = { #PM
 				has_country_flag = RUS_ELECTION_vns_victory
 				has_country_flag = RUS_ELECTION_ep_victory
 				has_country_flag = RUS_ELECTION_vns_ep_victory
+				has_country_flag = RUS_ELECTION_kdp_vns_victory
 			}
-			NOT = { has_country_flag = RUS_kdp_vns_coalition }
 		}
 		ai_chance = {
 			factor = 30
@@ -9672,6 +9234,7 @@ country_event = { #PM
 		mp_support_calc = yes
 		senators_support_calc = yes
 		hidden_effect = {
+			activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_VNS }
 			load_base_russian_tree = yes
 			set_country_flag = make_russia_liberal_conservative_democratic_tree_visible
 			mark_focus_tree_layout_dirty = yes
@@ -13948,6 +13511,11 @@ country_event = { #PLSR/NSP
 }
 country_event = { #PLSR/NSP
 	id = rusdem.303
+	immediate = {
+		hidden_effect = {
+			activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_RSDRP }	
+		}
+	}
 	title = rusdem.303.t
 	desc = rusdem.303.d
 	fire_only_once = yes
@@ -15194,7 +14762,7 @@ country_event = { #NSP
 			name = "Aleksey Rykov"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksey_Rykov.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 		}
 		country_event = {
 			id = rusdem.345
@@ -15224,7 +14792,7 @@ country_event = { #NSP
 				name = "Sergey Kirov"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Sergey_Kirov.png"
 				expire = "1965.1.1"
-				ideology = market_socialist_subtype 
+				ideology = bukharinist_subtype 
 			}
 			country_event = {
 				id = rusdem.345
@@ -17467,9 +17035,8 @@ country_event = { #PSR
 			check_variable = { RUS_lkdp_votes > RUS_rkdp_votes }
 		}
 		custom_effect_tooltip = RUS_Get_Along_With_Liberals_coalition_secured
-		set_country_flag = market_liberal_coalition
-		set_country_flag = social_liberal_coalition
-		RUS_add_to_coalition = yes
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_LKDP }
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_RKDP }
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.05
@@ -17633,6 +17200,8 @@ country_event = { #PSR
 		}
 		mp_support_calc = yes
 		senators_support_calc = yes
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_NSP }
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_RSDRP }
 		effect_tooltip = { unlock_national_focus = RUS_soc_land_blocked }
 	}
 }
@@ -17802,6 +17371,7 @@ country_event = { #PSR
 			ideology = social_democrat
 			popularity = 0.02
 		}
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_PLSR }
 		if = {
 			limit = {
 				has_country_flag = bolsheviks_allowed
@@ -18500,6 +18070,8 @@ country_event = { #RSDRP
 	option = {
 		name = rusdem.461.a
 		add_ideas = RUS_revolutionary_democracy
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_PLSR }
+		activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_NSP }
 		country_event = {
 			id = rusdem.329
 			days = 3
@@ -19329,6 +18901,9 @@ country_event = { #KDP
 		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.05
+		}
+		hidden_effect = {
+			activate_targeted_decision = { target = ROOT decision = RUS_coalition_with_NSNP }
 		}
 	} 
 }
@@ -22939,16 +22514,6 @@ country_event = { #Kornilov coup
 			RUS_Ivan_P_Romanovskiy_eco_pau
 			RUS_Aleksandr_P_Balk_sec_pau
 		}
-			create_country_leader = {
-				name = "Lavr Kornilov"
-				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-				traits = {}
-			}
-		
-		
 		add_stability = 0.1
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -22975,8 +22540,6 @@ country_event = { #Kornilov coup
 			remove_ideas = rus_political_instability
 		}
 		hidden_effect = {
-			set_cosmetic_tag = RUS
-			reset_russian_leaders = yes
 			add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.1
@@ -23024,16 +22587,6 @@ country_event = { #Kornilov coup
 		add_ideas = RUS_Ivan_P_Romanovskiy_eco_pau
 		remove_ideas_with_trait = security_minister
 		add_ideas = RUS_Aleksandr_P_Balk_sec_pau 
-			create_country_leader = {
-				name = "Lavr Kornilov"
-				desc = "POLITICS_LAVR_KORNILOV_DESC"
-				picture = "gfx/leaders/RUS/Portrait_RUS_Lavr_Kornilov.png"
-				expire = "1965.1.1"
-				ideology = junta_subtype
-				traits = {}
-			}
-		
-		
 		add_stability = 0.1
 		add_popularity = {
 			ideology = paternal_autocrat
@@ -23059,8 +22612,6 @@ country_event = { #Kornilov coup
 			remove_ideas = rus_political_instability
 		}
 		hidden_effect = {
-			set_cosmetic_tag = RUS
-			reset_russian_leaders = yes
 			add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.1
@@ -23166,7 +22717,6 @@ country_event = { #Revolution
 		}
 		hidden_effect = {
 			setup_soviet_russia = yes
-			RUS_setup_soviets = yes
 			random_other_country = {
 				news_event = {
 					id = russianews.5
@@ -23193,7 +22743,6 @@ country_event = { #Revolution
 		}
 		hidden_effect = {
 			setup_soviet_russia = yes
-			RUS_setup_soviets = yes
 			random_other_country = {
 				news_event = {
 					id = russianews.5
@@ -23220,7 +22769,6 @@ country_event = { #Revolution
 		}
 		hidden_effect = {
 			setup_soviet_russia = yes
-			RUS_setup_soviets = yes
 			random_other_country = {
 				news_event = {
 					id = russianews.5
@@ -23242,80 +22790,6 @@ country_event = { #Revolution
 		set_country_flag = popular_front_coalition
 	}
 }
-country_event = { #Revolution
-	id = rusd.30
-	title = rusd.21.t 
-	desc = rusd.21.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = rusd.21.a
-		trigger = {
-			has_country_flag = bolsheviks_allowed
-		}
-		hidden_effect = {
-			setup_soviet_russia = yes
-			RUS_setup_soviets = yes
-		}
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
-		}
-		hidden_effect = {
-			set_popularities = {
-				totalist = 18
-				radical_socialist = 54
-				syndicalist = 18
-				social_democrat = 10
-				social_liberal = 0
-				market_liberal = 0
-				social_conservative = 0
-				authoritarian_democrat = 0
-				paternal_autocrat = 0
-				national_populist = 0
-				}
-			}
-		remove_all_ministers = yes
-		add_ideas = {
-			RUS_Aleksey_I_Rykov_hog_rso
-			RUS_Ivan_N_Smirnov_for_rso
-			RUS_Sergey_M_Kirov_eco_tot
-			SOV_Andrey_Zhdanov_sec_rso
-		}
-	}
-	option = {
-		name = rusd.21.a
-		trigger = {
-			NOT = { has_country_flag = bolsheviks_allowed }
-		}
-		hidden_effect = {
-			setup_soviet_russia = yes
-			RUS_setup_soviets = yes
-		}
-		hidden_effect = {
-			set_popularities = {
-				totalist = 10
-				radical_socialist = 18
-				syndicalist = 14
-				social_democrat = 58
-				social_liberal = 0
-				market_liberal = 0
-				social_conservative = 0
-				authoritarian_democrat = 0
-				paternal_autocrat = 0
-				national_populist = 0
-				}
-		}
-		remove_all_ministers = yes
-		add_ideas = {
-			RUS_Irakliy_G_Tsereteli_hog_sde
-			RUS_Aleksey_M_Nikitin_for_mli
-			RUS_Matvey_Skobelev_eco_rso
-			RUS_Fyodor_I_Dan_sec_sde
-		}
-	}
-}	
-
 
 country_event = { #Finland seizes Karelia
 	id = rusd.31
@@ -26845,11 +26319,12 @@ country_event = { #Kirill Romanov dies
 	trigger = {
 		NOT = { has_country_flag = soviet_russia_restored }
 	}
-	
+	picture = GFX_report_event_RUS_kirill_dead
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event rusd.95"
 		set_country_flag = Kirill_Romanov_dead
 		hidden_effect = {
+			TRM = { country_event = tram.5 }
 			if = {
 				limit = {
 					ENG = {
@@ -27636,13 +27111,14 @@ country_event = { #1st Women's Division of Death
 			name = "Maria Bochkareva"
 			portrait_path = "gfx/leaders/RUS/Portrait_RUS_Maria_Bochkareva.png"
 			traits = {
-				
+				trait_reckless harsh_leader
 			}
 			skill = 2
 			attack_skill = 1
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 1
+			female = yes
 		}
 		if = {
 			limit = {
@@ -29335,6 +28811,26 @@ country_event = { #Anniversary
 		}
 	}
 }
+country_event = { #Rakhaminov
+	id = rusd.181
+	immediate = { log = "[GetDateText]: [Root.GetName]: event russia.3" }
+	title = rusd.181.t
+	desc = rusd.181.d
+	
+	picture = GFX_report_event_RUS_rakhmaninov
+	fire_only_once = yes
+	trigger = {
+		tag = RUS
+		soviets_exist = no
+		american_civil_war = yes
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = rusd.181.a
+		add_political_power = 15
+	}
+}
 ###Socialist events
 country_event = { #Unlock political decisions
 	id = russoc.1
@@ -30533,7 +30029,7 @@ country_event = {#Results
 			name = "Nikolay Bukharin"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype 
+			ideology = bukharinist_subtype 
 			traits = { RUS_ex_bolshevik  }
 		}
 		hidden_effect = {
@@ -30672,7 +30168,7 @@ country_event = { #Russia wants to join the Internationale
 
 	option = {
 		name = russoc.100.a
-		add_to_faction = FROM
+		Faction_mergable_invite = yes
 	}
 
 	option = {
@@ -31686,7 +31182,7 @@ country_event = {#Results
 					desc = POLITICS_NIKOLAI_BUKHARIN_DESC
 					picture = "gfx/leaders/RUS/Portrait_RUS_Nikolay_Bukharin.png"
 					expire = "1965.1.1"
-					ideology = market_socialist_subtype
+					ideology = bukharinist_subtype
 					traits = { RUS_ex_bolshevik  }
 				}
 				meta_effect = {
@@ -31773,7 +31269,7 @@ country_event = {#Results
 					name = "Sergey Kirov"
 					picture = "gfx/leaders/RUS/Portrait_RUS_Sergey_Kirov.png"
 					expire = "1965.1.1"
-					ideology = market_socialist_subtype
+					ideology = bukharinist_subtype
 				}
 				meta_effect = {
 					text = {
@@ -31832,7 +31328,7 @@ country_event = {#Results
 				name = "Aleksey Kosygin"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Aleksey_Kosygin.png"
 				expire = "1965.1.1"
-				ideology = market_socialist_subtype
+				ideology = bukharinist_subtype
 			}
 			meta_effect = {
 				text = {
@@ -31880,7 +31376,7 @@ country_event = {#Results
 				name = "Martemyan Ryutin"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Martemyan_Ryutin.png"
 				expire = "1965.1.1"
-				ideology = market_socialist_subtype
+				ideology = bukharinist_subtype
 				traits = { SOV_peasant_propagandist }
 			}
 			meta_effect = {
@@ -32463,7 +31959,7 @@ country_event = { #Dissolution
 			}
 			remove_core_of = ROOT
 			add_claim_by = ROOT
-			add_to_array = { RUS_integration_state_array = PREV }
+			add_to_array = { global.RUS_integration_state_array = PREV }
 			add_core_of = UKR
 			transfer_state_to = UKR
 		}
@@ -33799,7 +33295,7 @@ country_event = { #voroshilov plot
 				name = "Mikhail Tukhachevsky"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Tukhachevskiy.png"
 				expire = "1965.1.1"
-				ideology = red_junta_subtype
+				ideology = internationalism_subtype
 				traits = { red_napoleon }
 			}
 		}
@@ -34339,7 +33835,7 @@ country_event = { #Troika dissolves
 			name = "Mikhail Tukhachevsky"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Tukhachevskiy.png"
 			expire = "1965.1.1"
-			ideology = red_junta_subtype
+			ideology = internationalism_subtype
 			traits = { red_napoleon }
 		}
 		remove_all_ministers = yes
@@ -35113,7 +34609,7 @@ country_event = { #Elections of Chairman
 			name = "Aleksey Kosygin"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Aleksey_Kosygin.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype
+			ideology = bukharinist_subtype
 		}
 	}
 	option = {
@@ -35126,7 +34622,7 @@ country_event = { #Elections of Chairman
 			name = "Martemyan Ryutin"
 			picture = "gfx/leaders/RUS/Portrait_RUS_Martemyan_Ryutin.png"
 			expire = "1965.1.1"
-			ideology = market_socialist_subtype
+			ideology = bukharinist_subtype
 			traits = { SOV_peasant_propagandist }
 		}
 	}
@@ -36019,7 +35515,11 @@ country_event = { #Battle for Astrakhan
 				RUS = {
 					transfer_state = 1191
 					add_state_claim = 1191
-					add_to_array = { RUS_integration_state_array = 1191 }
+					add_to_array = { global.RUS_integration_state_array = 1191 }
+				}
+				1191 = {
+					add_core_of = KLY
+					start_resistance = KLY				
 				}
 			}
 		}
@@ -37816,7 +37316,10 @@ country_event = { #Germany's Reaction on Russian plans in Caucasus
 			OR = {
 				DKB = { has_socialist_government = no }
 				country_exists = KUB
+				has_guaranteed = GEO
 				is_in_faction_with = GEO
+				has_guaranteed = AZE
+				has_guaranteed = ABK
 			}
 			OR = {
 				is_neighbor_of = DKB
@@ -37859,12 +37362,13 @@ country_event = { #Germany's Reaction on Russian plans in Caucasus
 			}
 		}
 		add_political_power = -30
-		every_country = { #GEO & AZR
+		every_country = { #GEO & AZE
 			limit = {
 				OR = {
 					tag = DKB
 					tag = KUB
 					tag = GEO
+					tag = AZE
 				}
 				has_socialist_government = no
 				has_war = no
@@ -37879,11 +37383,15 @@ country_event = { #Germany's Reaction on Russian plans in Caucasus
 		}
 		if = {
 			limit = {
-				is_in_faction_with = GEO
+				OR = {
+					has_guaranteed = GEO
+					is_in_faction_with = GEO
+				}
 			}
 			every_country = { #GEO & AZR
 				limit = {
 					OR = {
+						tag = GEO
 						tag = MTR
 						tag = AZE
 					}
@@ -37967,20 +37475,6 @@ country_event = { #Germany's Reaction on Russian plans in Caucasus
 			if = {
 				limit = { is_in_faction_with = GER }
 				leave_faction = yes
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_global_flag = AXIS_VICTORY }
-					TUR = { is_subject = no }
-				}
-				TUR = { 
-					country_event = {
-						id = ottfor.51 
-						days = 1
-					}
-				}
 			}
 		}
 	}
@@ -43284,7 +42778,20 @@ country_event = { #FROM accepts
 
 	option = {
 		name = rusfor.1002.a
-		add_to_faction = FROM
+		if = {
+			limit = { has_guaranteed = FROM }
+			diplomatic_relation = {
+				country = FROM
+				relation = guarantee
+				active = no
+			}
+		}
+		if = {
+			limit = {
+				NOT = { is_in_faction_with = FROM }
+			}
+			add_to_faction = FROM
+		}
 	}
 }
 
@@ -43369,6 +42876,12 @@ country_event = { #Russia ignored demands
 					active = no
 				}
 			}
+			if = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				ROOT = { remove_from_faction = PREV }
+			}			
 		}
 		FROM = {
 			country_event = {
@@ -43413,19 +42926,11 @@ country_event = { #Russia ignored demands
 					active = no
 				}
 			}
-		}
-		hidden_effect = {
 			if = {
 				limit = {
-					NOT = { has_global_flag = AXIS_VICTORY }
-					TUR = { is_subject = no }
+					is_in_faction_with = ROOT
 				}
-				TUR = { 
-					country_event = {
-						id = ottfor.51 
-						days = 1
-					}
-				}
+				ROOT = { remove_from_faction = PREV }
 			}
 		}
 	}
@@ -43445,20 +42950,6 @@ country_event = { #Mitteleuropa ceases all contacts with us RUS
 		add_stability = -0.1
 		add_ideas = rus_ceased_contacts_germany
 		RUS_remove_riga_accords = yes
-		hidden_effect = {
-			if = {
-				limit = {
-					NOT = { has_global_flag = AXIS_VICTORY }
-					TUR = { is_subject = no }
-				}
-				TUR = { 
-					country_event = {
-						id = ottfor.51 
-						days = 1
-					}
-				}
-			}
-		}
 	}
 }
 news_event = { #The Caucasus Crisis
@@ -46556,7 +46047,7 @@ country_event = { #We get into CPS
 			days = 600
 		}
 		hidden_effect = {
-			add_ideas = RUS_co_prosperity_penalties
+			remove_ideas = RUS_co_prosperity_penalties
 			add_to_array = { global.asian_economic_sphere = ROOT }
 			JAP_recalculate_economic_integration = yes
 			add_dynamic_modifier = { modifier = JAP_asian_economic_sphere_member }
@@ -46597,6 +46088,9 @@ country_event = { #Russia demands northern Mongolia
 
 	option = {
 		name = rusfor.1113.a #Bow down
+		ai_chance = {
+			factor = 30
+		}
 		FROM = {
 			effect_tooltip = { transfer_state = 329 }
 			country_event = {
@@ -46610,7 +46104,7 @@ country_event = { #Russia demands northern Mongolia
 	option = {
 		name = rusfor.1113.b #refuse politely
 		ai_chance = {
-			factor = 0
+			factor = 70
 		}
 		FROM = {
 			country_event = {
@@ -46920,7 +46414,7 @@ country_event = { #Ukraine
 				is_russian_majority_in_ukraine = yes
 			}
 			add_claim_by = ROOT
-			ROOT = { add_to_array = { RUS_integration_state_array = PREV } }
+			ROOT = { add_to_array = { global.RUS_integration_state_array = PREV } }
 		}		
 	}
 }
@@ -47008,7 +46502,7 @@ country_event = { #Ukraine
 				is_russian_majority_in_ukraine = yes
 			}
 			add_claim_by = ROOT
-			ROOT = { add_to_array = { RUS_integration_state_array = PREV } }
+			ROOT = { add_to_array = { global.RUS_integration_state_array = PREV } }
 		}	
 	}
 }		
@@ -47650,7 +47144,7 @@ country_event = { #Transfer of the territory
 					}
 				}
 				transfer_state_to = ROOT
-				ROOT = { add_to_array = { RUS_integration_state_array = PREV } }
+				ROOT = { add_to_array = { global.RUS_integration_state_array = PREV } }
 			}
 		}
 		if = {
@@ -47878,7 +47372,7 @@ country_event = { #Treaty of Petrograd FIN
 				}
 			}
 			transfer_state_to = FROM
-			FROM = { add_to_array = { RUS_integration_state_array = PREV } }
+			FROM = { add_to_array = { global.RUS_integration_state_array = PREV } }
 		}
 		FROM = {
 			white_peace_with_ROOT = yes
@@ -48181,7 +47675,7 @@ country_event = { #Treaty of Chisinau
 				}
 			}
 			FROM = { transfer_state = PREV }
-			FROM = { add_to_array = { RUS_integration_state_array = PREV } }
+			FROM = { add_to_array = { global.RUS_integration_state_array = PREV } }
 		}
 		FROM = {
 			white_peace_with_ROOT = yes
@@ -48310,7 +47804,7 @@ country_event = { #WHR question
 				OR = {
 					has_game_rule = {
 						rule = WHR_situation
-						option = WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_DEMOCRAT_BSDP
+						option = WHR_SITUATION_BSDP
 					}
 					has_game_rule = {
 						rule = WHR_situation
@@ -48318,33 +47812,8 @@ country_event = { #WHR question
 					}
 					has_game_rule = {
 						rule = WHR_situation
-						option = WHR_SITUATION_BPSF_GERMAN_INTERVENTION
+						option = WHR_SITUATION_BPSF
 					}
-					has_game_rule = {
-						rule = WHR_situation
-						option = WHR_SITUATION_BPSF_GERMAN_ACQUIESCENCE
-					}					
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = WHR_situation
-						option = WHR_SITUATION_ULADZIMIR_DEMOCRACY_SOCIAL_DEMOCRAT_BSDP
-					}
-					has_game_rule = {
-						rule = WHR_situation
-						option = WHR_SITUATION_SIGISMUND_COUP
-					}
-					has_game_rule = {
-						rule = WHR_situation
-						option = WHR_SITUATION_BPSF_GERMAN_INTERVENTION
-					}
-					has_game_rule = {
-						rule = WHR_situation
-						option = WHR_SITUATION_BPSF_GERMAN_ACQUIESCENCE
-					}					
 				}
 			}
 		}
@@ -50640,11 +50109,11 @@ country_event = { #Kvzhd
 			transfer_state = 883
 			transfer_state = 714
 			transfer_state = 717
-			add_to_array = { RUS_integration_state_array = 885 }
-			add_to_array = { RUS_integration_state_array = 884 }
-			add_to_array = { RUS_integration_state_array = 883 }
-			add_to_array = { RUS_integration_state_array = 714 }
-			add_to_array = { RUS_integration_state_array = 717 }
+			add_to_array = { global.RUS_integration_state_array = 885 }
+			add_to_array = { global.RUS_integration_state_array = 884 }
+			add_to_array = { global.RUS_integration_state_array = 883 }
+			add_to_array = { global.RUS_integration_state_array = 714 }
+			add_to_array = { global.RUS_integration_state_array = 717 }
 			country_event = {
 				id = rusfor.1403
 				days = 2
@@ -50761,11 +50230,11 @@ country_event = { #Kvzhd
 			transfer_state = 883
 			transfer_state = 714
 			transfer_state = 717
-			add_to_array = { RUS_integration_state_array = 885 }
-			add_to_array = { RUS_integration_state_array = 884 }
-			add_to_array = { RUS_integration_state_array = 883 }
-			add_to_array = { RUS_integration_state_array = 714 }
-			add_to_array = { RUS_integration_state_array = 717 }
+			add_to_array = { global.RUS_integration_state_array = 885 }
+			add_to_array = { global.RUS_integration_state_array = 884 }
+			add_to_array = { global.RUS_integration_state_array = 883 }
+			add_to_array = { global.RUS_integration_state_array = 714 }
+			add_to_array = { global.RUS_integration_state_array = 717 }
 			country_event = {
 				id = rusfor.1403
 				days = 2
@@ -50906,7 +50375,7 @@ country_event = { #approach japan
 			}
 		}
 		555 = {	add_claim_by = ROOT	}
-		add_to_array = { RUS_integration_state_array = 555 }
+		add_to_array = { global.RUS_integration_state_array = 555 }
 		JAP = {
 			country_event = {
 				id = rusfor.1419
@@ -51009,7 +50478,7 @@ country_event = { #approach japan
 			}
 			FROM = {
 				transfer_state = PREV
-				add_to_array = { RUS_integration_state_array = 537 }
+				add_to_array = { global.RUS_integration_state_array = 537 }
 			}
 		}
 		FROM = {
@@ -51075,7 +50544,7 @@ country_event = { #approach japan
 			}
 			FROM = {
 				transfer_state = PREV
-				add_to_array = { RUS_integration_state_array = PREV }
+				add_to_array = { global.RUS_integration_state_array = PREV }
 			}
 		}
 		FROM = {
@@ -53368,7 +52837,7 @@ country_event = { # Turkestan agreed
 			annex_country = { target = FROM }
 		}
 		584 = { add_claim_by = ROOT }
-		add_to_array = { RUS_integration_state_array = 584 }
+		add_to_array = { global.RUS_integration_state_array = 584 }
 		UZB = {
 			transfer_state = 861
 			add_state_core = 861
@@ -57807,34 +57276,7 @@ country_event = {
 
 	}
 }
-country_event = {
-	id = russia.2009
-	title = russia.2009.t
-	desc = russia.2009.d
-	
-	fire_only_once = yes
 
-	is_triggered_only = yes
-
-	option = { #a great idea!
-		name = russia.2009.a
-
-		set_province_name = { id = 6342 name = "Mitava"}
-		set_province_name = { id = 9262 name = "Libava"}
-		set_province_name = { id = 9221 name = "Yuriev"}
-		set_province_name = { id = 9501 name = "Volmar"}
-		set_province_name = { id = 3174 name = "Pernov"}
-		set_province_name = { id = 185 name = "Arensburg"}
-		set_province_name = { id = 3152 name = "Revel"}
-		set_province_name = { id = 6296 name = "Kovno"}
-
-	}
-	option = { #
-		name = russia.2009.b
-
-
-	}
-}
 country_event = {
 	id = russia.2010
 	title = russia.2010.t
