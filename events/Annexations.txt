@@ -638,7 +638,10 @@ country_event = { #Fate of Brest
 			base = 100
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		997 = {
@@ -712,7 +715,7 @@ country_event = { #Fate of Brest
 				}
 			}
 			hidden_effect = {
-		if = {
+			if = {
 					limit = { has_resistance = yes }
 					set_temp_variable = { original_compliance = THIS.compliance }
 					set_temp_variable = { original_resistance = THIS.resistance }
@@ -4477,7 +4480,10 @@ country_event = { #Fate of Poland
 			factor = 25
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		every_owned_state = {
@@ -4504,7 +4510,10 @@ country_event = { #Fate of Poland
 			factor = 25
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		trigger = {
@@ -5204,8 +5213,12 @@ country_event = { #Fate of Finland
 		ai_chance = {
 			factor = 100
 			modifier = {
-				factor = 0.5
+				add = -50
 				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				add = 50
+				RUS_russian_monarch = yes
 			}
 		}
 		set_temp_variable = { tag_to_release = FIN }
@@ -5311,6 +5324,10 @@ country_event = { #Fate of Finland
 			modifier = {
 				add = 50
 				has_completed_focus = RUS_Expansionism
+			}
+			modifier = {
+				add = -50
+				RUS_russian_monarch = yes
 			}
 		}
 		every_owned_state = {
@@ -8007,7 +8024,7 @@ country_event = { #Fate of Bucovina
 			713 = { is_valid_annexation_state = yes } #Suceava
 			ROM = { ROOT_can_grant_land = yes }
 			OR = {
-				has_completed_focus = RUS_Expansionism
+				is_russian_tag_that_can_integrate = yes
 				AND = {
 					tag = UKR
 					owns_state = 89 #Stanislawow
@@ -8049,7 +8066,7 @@ country_event = { #Fate of Bucovina
 			713 = { is_valid_annexation_state = yes } #Suceava
 			TRS = { ROOT_can_grant_land = yes }
 			OR = {
-				has_completed_focus = RUS_Expansionism
+				is_russian_tag_that_can_integrate = yes
 				AND = {
 					tag = UKR
 					owns_state = 89 #Stanislawow
@@ -8085,6 +8102,7 @@ country_event = { #Fate of Bucovina
 			713 = { is_valid_annexation_state = yes } #Suceava
 			OR = {
 				has_completed_focus = RUS_Expansionism
+				RUS_russian_monarch = yes
 				AND = {
 					tag = UKR
 					owns_state = 89 #Stanislawow
@@ -8123,6 +8141,7 @@ country_event = { #Fate of Bucovina
 			713 = { is_valid_annexation_state = no } #Suceava
 			OR = {
 				has_completed_focus = RUS_Expansionism
+				RUS_russian_monarch = yes
 				AND = {
 					tag = UKR
 					owns_state = 89 #Stanislawow
@@ -8199,6 +8218,7 @@ country_event = { #Fate of Bucovina
 						tag = UKR
 						tag = POL
 						has_completed_focus = RUS_Expansionism
+						RUS_russian_monarch = yes
 					}
 				}
 			}
@@ -10053,10 +10073,7 @@ country_event = { #Fate of Burma
 
 	option = { #balkanize
 		name = annex.53.b
-		ai_chance = {
-			factor = 99
-		}
-
+		ai_chance = { factor = 99 }
 		trigger = {
 			OR = {
 				owns_state = 701
@@ -10064,45 +10081,30 @@ country_event = { #Fate of Burma
 				owns_state = 756
 			}
 		}
-
 		every_owned_state = {
 			limit = {
 				is_not_claim_or_core_of_ROOT = yes
 				is_core_of = KAC
 			}
-			KAC = {
-				transfer_state = PREV
-			}
+			KAC = { transfer_state = PREV }
 		}
 		if = {
-			limit = {
-				KAC = {
-					exists = yes
-				}
-			}
+			limit = { KAC = { exists = yes } }
 			set_temp_variable = { tag_to_release = KAC }
 			puppet_released_tag = yes
 		}
-
 		every_owned_state = {
 			limit = {
 				is_not_claim_or_core_of_ROOT = yes
 				is_core_of = SHA
 			}
-			SHA = {
-				transfer_state = PREV
-			}
+			SHA = { transfer_state = PREV }
 		}
 		if = {
-			limit = {
-				SHA = {
-					exists = yes
-				}
-			}
+			limit = { SHA = { exists = yes } }
 			set_temp_variable = { tag_to_release = SHA }
 			puppet_released_tag = yes
 		}
-
 		every_owned_state = {
 			limit = {
 				is_not_claim_or_core_of_ROOT = yes
@@ -10113,12 +10115,17 @@ country_event = { #Fate of Burma
 					state = 756
 				}
 			}
-			BRM = {
-				transfer_state = PREV
-			}
+			BRM = { transfer_state = PREV }
 		}
 		set_temp_variable = { tag_to_release = BRM }
 		puppet_released_tag = yes
+		if = {
+			limit = {
+				is_chinese_tag = yes
+				has_subject = SHA
+			}
+			SHA = { set_cosmetic_tag = SHA_wa }
+		}
 	}
 
 	option = { #occupy
@@ -10187,7 +10194,10 @@ country_event = { #Fate of Latvia
 			base = 80
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0
@@ -10478,7 +10488,10 @@ country_event = { #Fate of Estonia
 			factor = 70
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0
@@ -11969,6 +11982,7 @@ country_event = { #The fate of Georgia
 			GEO = {
 				add_state_core = 231 #Sakartvelo
 				add_state_core = 1213 #Batumi
+				add_state_core = 1188 #
 				remove_ideas = {
 					GEO_treaty_of_poti_idea
 					GEO_treaty_of_poti_idea2
@@ -12080,7 +12094,10 @@ country_event = { #The fate of Georgia
 			factor = 50
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		if = {
@@ -13263,6 +13280,10 @@ country_event = { #The fate of Turkestan
 				is_russian_tag_that_can_integrate = yes
 			}
 			modifier = {
+				add = -20
+				RUS_russian_monarch = yes
+			}
+			modifier = {
 				add = 20
 				has_completed_focus = RUS_Realpolitik
 			}
@@ -13423,6 +13444,10 @@ country_event = { #The fate of Bukhara
 			modifier = {
 				add = -20
 				is_russian_tag_that_can_integrate = yes
+			}
+			modifier = {
+				add = -20
+				RUS_russian_monarch = yes			
 			}
 			modifier = {
 				add = 20
@@ -13887,8 +13912,11 @@ country_event = { #The fate of Uzbekistan
 				is_russian_tag_that_can_integrate = yes
 			}
 			modifier = {
+				add = -20
+				RUS_russian_monarch = yes			
+			}
+			modifier = {
 				add = 20
-				is_russian_tag_that_can_integrate = yes
 				has_completed_focus = RUS_Realpolitik
 			}
 		}
@@ -15448,7 +15476,10 @@ country_event = { #The Annexation of Armenia
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		set_temp_variable = { tag_to_release = ARM }
@@ -15612,7 +15643,10 @@ country_event = { #The Annexation of Azerbaijan
 			factor = 50
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		set_temp_variable = { tag_to_release = AZE }
@@ -16775,6 +16809,10 @@ country_event = { #Fate of Ukraine
 				has_left_democratic_government = no
 			}
 			modifier = {
+				factor = 0
+				RUS_russian_monarch = yes
+			}
+			modifier = {
 				factor = 0.4
 				has_completed_focus = RUS_Realpolitik
 			}
@@ -16928,6 +16966,7 @@ country_event = { #Fate of Ukraine
 				OR = {
 					has_completed_focus = RUS_Expansionism
 					has_socialist_government = yes
+					RUS_russian_monarch = yes
 				}
 			}
 		}
@@ -17091,6 +17130,7 @@ country_event = { #Fate of Ukraine
 				OR = {
 					has_completed_focus = RUS_Expansionism
 					has_socialist_government = yes
+					RUS_russian_monarch = yes
 				}
 			}
 		}
@@ -17180,6 +17220,7 @@ country_event = { #Fate of Ukraine
 			modifier = {
 				factor = 0
 				has_completed_focus = RUS_Realpolitik
+				RUS_russian_monarch = no
 			}
 		}
 		every_state = {
@@ -20076,7 +20117,10 @@ country_event = { #Fate of Belarus
 			factor = 100
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -24383,7 +24427,10 @@ country_event = { #Fate of Lithuania
 			factor = 70
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0
@@ -42945,8 +42992,10 @@ country_event = { #Fate of Batumi
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
-				owns_state = 231 #Georgia
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					owns_state = 231 #Georgia
+				}
 			}
 		}
 		set_temp_variable = { tag_to_release = ARM }
@@ -46544,7 +46593,10 @@ country_event = { #Fate of the Crimea
 			factor = 100
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 		}
 		trigger = {
@@ -46688,7 +46740,10 @@ country_event = { #Fate of the East Galicia
 			factor = 25
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0
@@ -46720,7 +46775,10 @@ country_event = { #Fate of the East Galicia
 			factor = 100
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0.1
@@ -46753,7 +46811,10 @@ country_event = { #Fate of the East Galicia
 			factor = 100
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0.1
@@ -46795,7 +46856,10 @@ country_event = { #Fate of the East Galicia
 			factor = 100
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Expansionism
+				OR = {
+					has_completed_focus = RUS_Expansionism
+					RUS_russian_monarch = yes
+				}
 			}
 			modifier = {
 				factor = 0.1
