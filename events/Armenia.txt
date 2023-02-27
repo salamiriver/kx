@@ -496,11 +496,11 @@ country_event = { # THE CALM BEFORE THE STORM
 						paternal_autocrat > 0.5
 						AND = {
 							is_ai = yes
-							has_game_rule = { rule = ARM_path option = ARM_PATH_NATPOP }
-						}
-						AND = {
-							is_ai = yes
-							has_game_rule = { rule = ARM_path option = ARM_PATH_PATAUT_NZHDEH }
+							OR = {
+								has_game_rule = { rule = ARM_path option = ARM_PATH_NATPOP }
+								has_game_rule = { rule = ARM_path option = ARM_PATH_AUTHDEM }
+								has_game_rule = { rule = ARM_path option = ARM_PATH_PATAUT_NZHDEH }
+							}
 						}
 					}
 				}
@@ -1239,6 +1239,12 @@ country_event = { #Boghos Bey Succeeds
 			ARM_Hamazasp_Ohanjanyan_for_sde
 			ARM_Grigor_Jaghetyan_eco_mli
 			ARM_Boghos_Bey_Dadian_sec_ade
+		}
+		create_country_leader = {
+			name = "Hayk Asatryan"
+			picture = "gfx/leaders/ARM/Portrait_Armenia_Hayk_Asatryan.png"
+			expire = "1965.1.1"
+			ideology = tseghakronism_subtype
 		}
 	}
 }
