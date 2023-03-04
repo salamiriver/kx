@@ -556,10 +556,6 @@ UTR_autonomy = {
 	color = rgb { 60 179 113 }
 	color_ui = rgb { 60 179 113 }
 }
-BAT_PRI = {
-	color = rgb { 60 161 179 }
-	color_ui = rgb { 60 161 179 }
-}
 ALO_ORE = {
 	color = rgb { 60 179 113 }
 	color_ui = rgb { 60 179 113 }
@@ -1480,6 +1476,18 @@ NEE_pershing_forster_columbia = {
 	color = rgb { 60 59 140 }
 	color_ui = rgb { 60 59 140 }
 }
+
+NEE_pershing_easton_america = {
+	color = rgb { 60 59 140 }
+	color_ui = rgb { 60 59 140 }
+}
+
+
+NEE_pershing_easton_columbia = {
+	color = rgb { 60 59 140 }
+	color_ui = rgb { 60 59 140 }
+}
+
 
 NEE_pershing_betsy_columbia = {
 	color = rgb { 60 59 140 }
@@ -2718,6 +2726,10 @@ NYC_UNIFIED_BBR = {
 	color = rgb { 102 0 0 }
 	color_ui = rgb { 102 0 0 }
 }
+NYC_harlem = {
+	color = rgb { 181	92 92 }
+	color_ui = rgb { 181 92 92 }
+}
 TIAN_EMPIRE = {
 	color = rgb { 82  2  15 }
 	color_ui = rgb { 82  2  15 }
@@ -3274,7 +3286,15 @@ CAR_CAPTAINCY_PHILIPPINES = {
 	color = rgb { 255 141 35 }
 	color_ui = rgb { 255 141 35 }
 }
+CAR_CAPTAINCY_YUCATAN = {
+	color = rgb { 255 141 35 }
+	color_ui = rgb { 255 141 35 }
+}
 CAR_KINGDOM_GUATEMALA = {
+	color = rgb { 255 141 35 }
+	color_ui = rgb { 255 141 35 }
+}
+CAR_AUDENCIA_PANAMA = {
 	color = rgb { 255 141 35 }
 	color_ui = rgb { 255 141 35 }
 }
@@ -3322,7 +3342,47 @@ FIN_grand_duchy = {
     color = rgb { 71 147 80 }
     color_ui = rgb { 71 147 80 }
 }
+POL_CONGRESS = {
+    color = rgb { 71 147 80 }
+    color_ui = rgb { 71 147 80 }
+}
+GEO_TCU_RUS = {
+    color = rgb { 71 147 80 }
+    color_ui = rgb { 71 147 80 }
+}
+BAT_PRI = {
+    color = rgb { 71 147 80 }
+    color_ui = rgb { 71 147 80 }
+}
 ALA_RUS = {
     color = rgb { 71 147 80 }
     color_ui = rgb { 71 147 80 }
+}
+UKR_RUS_monarchy = {
+    color = rgb { 38 141 49 }
+    color_ui = rgb { 38 141 49 }
+}
+WHR_RUS_monarchy = {
+    color = rgb { 38 141 49 }
+    color_ui = rgb { 38 141 49 }
+}
+
+VIN_XUYEN_DUONG = {
+	color = rgb { 32 32 45 }
+	color_ui = rgb { 32 32 45 }
+}
+
+VIN_CON_RIT_DUONG = {
+	color = rgb { 32 32 45 }
+	color_ui = rgb { 32 32 45 }
+}
+
+VIN_XUYEN_VIEN = {
+	color = rgb { 32 32 45 }
+	color_ui = rgb { 32 32 45 }
+}
+
+VIN_CON_RIT_VIEN = {
+	color = rgb { 32 32 45 }
+	color_ui = rgb { 32 32 45 }
 }

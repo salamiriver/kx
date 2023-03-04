@@ -83,10 +83,21 @@ country_event = { #Restoration of the Dalai Lama
 		name = tib.2.a
 		if = {
 			limit = {
-				NOT = { has_country_flag = TIB_totalist_path }
+				has_completed_focus = TIB_Roerich_Victory
+			}
+			add_political_power = 75
+			hidden_effect = {
+			country_event = { #
+					id = tib.155
+					days = 6200
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_completed_focus = TIB_Roerich_Victory }
 			}
 			retire_country_leader = yes
-		}
 		create_country_leader = {
 			name = "The 14th Dalai Lama"
 			desc = "POLITICS_DALAI_LAMA_DESC"
@@ -158,6 +169,12 @@ country_event = { #Restoration of the Dalai Lama
 			}
 		}
 		hidden_effect = {
+		country_event = { #
+			id = tib.155
+			days = 6200
+			}
+		}
+		hidden_effect = {
 		SKM = {
 		if = {
 		limit = {
@@ -168,6 +185,7 @@ country_event = { #Restoration of the Dalai Lama
 				}
 			}
 			country_event = sikkim.23
+				}
 			}
 		}
 	}
@@ -540,6 +558,14 @@ country_event = { #expedition returns to lhasa
 		}
 		add_opinion_modifier = {
 			target = SIA
+			modifier = KR_trade_agreement
+		}
+		add_opinion_modifier = {
+			target = SKM
+			modifier = KR_trade_agreement
+		}
+		add_opinion_modifier = {
+			target = KLY
 			modifier = KR_trade_agreement
 		}
 	}
@@ -3094,6 +3120,18 @@ country_event = { #
 		mahatma
 			}
 		}
+	create_field_marshal = {
+			name = "Avatar of the Red Mahatma"
+			portrait_path = "gfx/leaders/TIB/Portrait_TIB_Ghost_Lenin.png"
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 	option = { # 
 		name = tib.133.b
@@ -3137,6 +3175,18 @@ country_event = { #
 		mahatma
 			}
 		}
+	create_field_marshal = {
+			name = "Dmitriy Ulyanov"
+			portrait_path = "gfx/leaders/UKR/Portrait_CRM_Dmitry_Ulyanov.png"
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 	option = { # 
 		name = tib.133.c
@@ -3175,6 +3225,19 @@ country_event = { #
 	traits = {
 		mahatma
 			}
+		}
+	create_field_marshal = {
+			name = "Nadezhda Krupskaya"
+			portrait_path = "gfx/leaders/MON/Portrait_MON_Nadezhda_Krupskaya.png"
+			female = yes
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 }
@@ -3261,6 +3324,9 @@ country_event = { #
 		}
 		set_cosmetic_tag = TIB_SHANGRI_LA
 		}
+	}
+	option = { # 
+		name = tib.135.f
 	}
 	option = { # 
 		name = tib.135.e
@@ -3892,7 +3958,77 @@ country_event = { #
 				}
 				add_core_of = TIB
 		}
+		hidden_effect = {
 		add_state_core = 537
+                add_state_core = 1218
+		}
+		every_country = {
+				limit = {
+					is_in_asia = yes
+				}
+				TIB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+				}
+			}
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = BAT
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = EST
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = LAT
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = LIT
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = WHR
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = UKR
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = DKB
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = KLY
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = KUB
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = MTR
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = GEO
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = ARM
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = AZE
+		}
+		create_wargoal = {
+				type = annex_everything
+				target = ABK
+		}
 	}
 }
 
@@ -4516,5 +4652,121 @@ country_event = { #
 			factor = 0
 		}
 	add_political_power = 30
+	}
+}
+
+country_event = { #
+	id = tib.155
+	immediate = { log = "[GetDateText]: [Root.GetName]: event tib.155" }
+	title = tib.155.t
+	desc = tib.155.d
+	picture = GFX_report_event_TIB_dalai_lama_young
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+	name = tib.155.a
+	trigger = {
+	has_country_leader = { name = "The 14th Dalai Lama" ruling_only = yes }
+	}
+	increase_ruling_party_popularity_by_5 = yes
+	add_political_power = 75
+	if = {	
+			limit = { has_country_leader = { name = "The 14th Dalai Lama" ruling_only = yes } }
+			set_country_leader_portrait = {
+				portrait = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			}
+		}
+	}
+	option = { # 
+	name = tib.155.b
+	trigger = {
+	NOT = {
+	has_country_leader = { name = "The 14th Dalai Lama" ruling_only = yes }
+		}
+	}
+	increase_ruling_party_popularity_by_5 = yes
+	add_political_power = 75
+	}
+	option = { # 
+	name = tib.155.c
+	trigger = {
+	NOT = {
+	has_country_leader = { name = "The 14th Dalai Lama" ruling_only = yes }
+		}
+	}
+	increase_ruling_party_popularity_by_5 = yes
+	add_political_power = 75
+	create_country_leader = {
+			name = "The 14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = theocracy_subtype
+			traits = {
+				great_survivor
+			}
+		}
+		create_country_leader = {
+			name = "The 14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = authoritarian_democrat_subtype
+			traits = {
+				great_survivor
+			}
+		}
+		create_country_leader = {
+			name = "The 14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = social_conservative_subtype
+			traits = {
+				great_survivor
+			}
+		}
+		create_country_leader = {
+			name = "The 14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = market_liberal_subtype
+			traits = {
+				great_survivor
+			}
+		}
+		create_country_leader = {
+			name = "The 14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = soclib_tridemism_subtype
+			traits = {
+				great_survivor
+			}
+		}
+		create_country_leader = {
+			name = "14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = socdem_tridemism_subtype
+			traits = {
+				great_survivor
+			}
+		}
+		create_country_leader = {
+			name = "The 14th Dalai Lama"
+			desc = "POLITICS_DALAI_LAMA_DESC"
+			picture = "gfx/leaders/TIB/Portrait_TIB_Dalai_Lama_Old.png"
+			expire = "2019.1.1"
+			ideology = radsoc_tridemism_subtype
+			traits = {
+				great_survivor
+			}
+		}
 	}
 }

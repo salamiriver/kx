@@ -1117,6 +1117,10 @@ spriteTypes = {
 		name = "GFX_ideology_socdem_esoteric_leninism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/socdem_esoteric_leninism_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_sardism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/sardism_group.png"
+	}
 	
 	spriteType = {
 		name = "GFX_ideology_centrist_subtype"
@@ -1229,6 +1233,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_soclib_progressive_democracy_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/soclib_progressive_democracy_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_soclib_sardism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soclib_sardism_group.png"
 	}
 	
 	spriteType = {
@@ -1440,6 +1448,11 @@ spriteTypes = {
 		name = "GFX_ideology_soccon_coconut_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/soccon_coconut_group.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_soccon_generic_national_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/soccon_generic_national_democracy_group.png"
+	}
+	
 	
 	spriteType = {
 		name = "GFX_ideology_autdem_christian_democracy_subtype"
@@ -1608,6 +1621,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_authdem_roerichism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/authdem_roerichism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_generic_national_democracy_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/generic_national_democracy_group.png"
 	}
 	
 	spriteType = {
@@ -1789,6 +1806,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ideology_roerichism_subtype"
 		texturefile = "gfx/interface/ideologies/subideologies/roerichism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_hispanism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_hispanism_group.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_pataut_popular_patriotism_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/pataut_popular_patriotism_group.png"
 	}
 	
 	spriteType = {
