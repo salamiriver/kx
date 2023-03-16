@@ -5371,7 +5371,11 @@ shared_focus = {
 			add_war_support = 0.05
 			activate_targeted_decision = { target = DKB decision = RUS_Attack_Cossacks }
 			activate_targeted_decision = { target = KUB decision = RUS_Attack_Cossacks }
-			activate_targeted_decision = { target = KLY decision = RUS_Attack_Cossacks }			
+			activate_targeted_decision = { target = KLY decision = RUS_Attack_Cossacks }
+			if = {
+				limit = { country_exists = CRM }
+				activate_targeted_decision = { target = CRM decision = RUS_Attack_Caucasus }			
+			}
 		}
 	}	
 	
@@ -16223,20 +16227,6 @@ focus_tree = {
 				tooltip = RUS_SAVI_HOG
 				has_idea = RUS_Boris_V_Savinkov_hog_npo
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_leader = {
-							name = "Dmitriy Odinets"
-							ruling_only = yes
-						}
-					}
-				}
-				power_balance_value = {
-					id = RUS_senate_duma_conflict
-					value < -0.6
-				}
-			}			
 			custom_trigger_tooltip = {
 				tooltip = rus_president_elections_1936_over
 				OR = {
@@ -16384,20 +16374,6 @@ focus_tree = {
 				OR = {
 					has_idea = RUS_senate_duma_conflict
 					has_country_flag = rus_president_elections_1936_over
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_country_leader = {
-							name = "Dmitriy Odinets"
-							ruling_only = yes
-						}
-					}
-				}
-				power_balance_value = {
-					id = RUS_senate_duma_conflict
-					value < -0.6
 				}
 			}
 			OR = {
@@ -16565,20 +16541,6 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						has_country_leader = {
-							name = "Dmitriy Odinets"
-							ruling_only = yes
-						}
-					}
-				}
-				power_balance_value = {
-					id = RUS_senate_duma_conflict
-					value < -0.75
-				}
-			}
-			if = {
-				limit = {
 					has_completed_focus = RUS_Ensure_Duma_Support
 					NOT = { has_idea = RUS_senate_duma_conflict }
 				}
@@ -16659,20 +16621,6 @@ focus_tree = {
 				has_idea = RUS_Boris_V_Savinkov_hog_npo
 			}
 			has_country_flag = RUS_third_revolution
-			if = {
-				limit = {
-					NOT = {
-						has_country_leader = {
-							name = "Dmitriy Odinets"
-							ruling_only = yes
-						}
-					}
-				}
-				power_balance_value = {
-					id = RUS_senate_duma_conflict
-					value < -0.9
-				}
-			}
 		}
 		prerequisite = {
 			focus = RUS_Motherland_Belongs_To_People
@@ -19693,7 +19641,7 @@ focus_tree = {
 				}
 				remove_ideas = rus_political_instability1
 			}
-			remove_ideas = rus_memories_of_rev
+			remove_ideas = RUS_scars_of_russian_revolution
 			custom_effect_tooltip = "You will get access to all locked trees"
 			custom_effect_tooltip = "The Committee will be dissolved"
 			set_country_flag = unlock_military
@@ -19748,7 +19696,7 @@ focus_tree = {
 				}
 				remove_ideas = rus_political_instability1
 			}
-			remove_ideas = rus_memories_of_rev
+			remove_ideas = RUS_scars_of_russian_revolution
 			custom_effect_tooltip = "You will get access to all locked trees"
 			custom_effect_tooltip = "The Committee will be dissolved"
 			set_country_flag = unlock_military
@@ -19891,6 +19839,10 @@ focus_tree = {
 				if = {
 					limit = { country_exists = ABK }
 					activate_targeted_decision = { target = ABK decision = RUS_Attack_Caucasus }			
+				}
+				if = {
+					limit = { country_exists = CRM }
+					activate_targeted_decision = { target = CRM decision = RUS_Attack_Caucasus }			
 				}
 				if = {
 					limit = { has_completed_focus = RUS_Expansionism }

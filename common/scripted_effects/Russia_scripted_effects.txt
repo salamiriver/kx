@@ -5921,7 +5921,7 @@ setup_soviets_civil_war = {
 			clr_country_flag = RUS_demonstrations
 			clr_country_flag = RUS_Okhrannoye_Otdeleniye_locked
 			set_country_flag = RUS_JUNTA
-			remove_ideas = rus_memories_of_rev
+			remove_ideas = RUS_scars_of_russian_revolution
 			if = {
 				limit = { has_idea = rus_political_instability1}
 				remove_ideas = rus_political_instability1
@@ -7108,7 +7108,6 @@ setup_rus_cw_victory = {
 				days = 2
 			}
 			load_base_russian_tree = yes
-			set_country_flag = make_russia_democratic_tree_visible
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -7490,7 +7489,7 @@ setup_soviet_psr = {
 			rus_experienced_military
 			rus_divided_marine
 			rus_brest_litovsk
-			rus_memories_of_rev
+			RUS_scars_of_russian_revolution
 			rus_black_monday_duma_1
 			rus_black_monday_duma_2
 			rus_black_monday_duma_3
@@ -8316,7 +8315,7 @@ setup_soviet_russia = {
 			rus_divided_marine
 			rus_brest_litovsk
 			rus_brest_litovsk_1
-			rus_memories_of_rev
+			RUS_scars_of_russian_revolution
 			rus_black_monday_duma_1
 			rus_black_monday_duma_2
 			rus_black_monday_duma_3
@@ -9966,6 +9965,25 @@ RUS_puppet_setup = {
 				create_country_leader = {
 					name = "Pavel Bermondt-Avalov"
 					picture = "gfx/leaders/RUS/Portrait_RUS_Pavel_Bermondt_Avalov.png"
+					expire = "1965.1.1"
+					ideology = junta_subtype
+				}
+				set_politics = {
+					ruling_party = paternal_autocrat
+					elections_allowed = no
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = MON
+						has_completed_focus = MON_bow_to_none
+					}
+				}
+				create_country_leader = {
+					name = "Vladimir Kappel"
+					desc = "POLITICS_VLADIMIR_KAPPEL_DESC"
+					picture = "gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
 					expire = "1965.1.1"
 					ideology = junta_subtype
 				}

@@ -1777,6 +1777,7 @@
 	BRA_Gois_Monteiro_hog_pau:0 "Góis Monteiro"
 	BRA_Arlindo_Veiga_dos_Santos_hog_npo:0 "Arlindo Veiga dos Santos"
 	BRA_Gustavo_Dodt_Barroso_hog_npo:0 "Gustavo Dodt Barroso"
+	BRA_Plinio_Salgado_hog_npo:0 "Plinio Salgado"
 	BRA_Joao_Candido_Felisberto_hog_npo:0 "João Cândido Felisberto"
 
 	### Person of Influence ###
@@ -7984,9 +7985,12 @@
 
 	### Head of Government ###
 	IRE_Jim_Gralton_hog_tot:0 "Jim Gralton"
+	IRE_Frank_Ryan_hog_tot:0 "Frank Ryan"
+	IRE_Jim_Larkin_Jr_hog_tot:0 "Jim Larkin Jr."
 	IRE_Betty_Sinclair_hog_tot:0 "Betty Sinclair"
 	IRE_Irish_Congress_of_Trade_Unions_hog_syn:0 "Irish Congress of Trade Unions"
 	IRE_Peadar_O'Donnell_hog_rso:0 "Peadar O'Donnell"
+	IRE_Maurice_Twomey_hog_rso:0 "Maurice Twomey"
 	IRE_William_X_O'Brien_hog_sde:0 "William X. O'Brien"
 	IRE_Thomas_Johnson_hog_sde:0 "Thomas Johnson"
 	IRE_Margaret_Buckley_hog_sde:0 "Margaret Buckley"
@@ -8000,8 +8004,9 @@
 	IRE_Eamon_de_Valera_hog_sco:0 "Eamon de Valera"
 	IRE_Michael_Collins_hog_ade:0 "Michael Collins"
 	IRE_Eoin_O'Duffy_hog_pau:0 "Eoin O'Duffy"
+	IRE_Ned_Cronin_hog_pau:0 "Ned Cronin"
 	IRE_Joseph_Brennan_hog_npo:0 "Joseph Brennan"
-	IRE_Maurice_Twomey_hog_rso:0 "Maurice Twomey"
+	IRE_Raymond_Moulton_O_Brien_hog_npo:0 "Raymond Moulton O'Brien"
 
 	### Person of Influence ###
 	## Foreign Minister
@@ -8013,13 +8018,14 @@
 	IRE_James_Everett_for_sde:0 "James Everett"
 	IRE_John_O'Hanlon_for_sli:0 "John O'Hanlon"
 	IRE_Richard_Mulcahy_for_mli:0 "Richard Mulcahy"
+	IRE_William_T_Cosgrave_for_mli:0 "William T. Cosgrave"
 	IRE_John_A_Costello_for_sco:0 "John A. Costello"
 	IRE_Frank_Aiken_for_sco:0 "Frank Aiken"
 	IRE_Kevin_O'Higgins_for_ade:0 "Kevin O'Higgins"
 	IRE_Alfie_Byrne_for_pau:0 "Alfie Byrne"
 	IRE_Thomas_F_O_Higgins_eco_pau:0 "Thomas F. O'Higgins"
 	IRE_Oliver_J_Flanagan_for_npo:0 "Oliver J. Flanagan"
-	IRE_Ned_Cronin_for_pau:0 "Ned Cronin"
+	IRE_Kathleen_Browne_for_pau:0 "Kathleen Browne"
 	IRE_James_J_Walsh_for_npo:0 "James J. Walsh"
 	IRE_Osmond_Esmonde_for_npo:0 "Osmond Esmonde"
 	## Economy Minister
@@ -8229,6 +8235,7 @@
 	ITA_Alfredo_Cardinal_Ottaviani_hog_pau:0 "Alfredo Cardinal Ottaviani"
 	ITA_Giuseppe_Cardinal_Siri_hog_pau:0 "Giuseppe Cardinal Siri"
 	ITA_Josef_von_Oesterreich_Toskana_hog_pau:0 "Josef von Österreich Toskana"
+    ITA_Galeazzo_Ciano_hog_npo:0 "Galeazzo Ciano"
 	ITA_Italo_Balbo_hog_npo:0 "Italo Balbo"
 	ITA_Julius_IV_hog_npo:0 "Julius IV"
 
@@ -12187,7 +12194,7 @@
 	PRF_Jayachamarajendra_Wadiyar_hog_ade:0 "Jayachamarajendra Wadiyar"
 	PRF_Krishna_Raja_Wadiyar_IV_hog_ade:0 "Krishna Raja Wadiyar IV"
 	PRF_Krushna_Chandra_Gajapati_hog_ade:0 "Krushna Chandra Gajapati"
-	PRF_Rajaram_II_of_Kolhapur_hog_ade:0 "Rajaram II of Kolhapur"
+	PRF_Rajaram_II_of_Kolhapur_hog_ade:0 "Rajaram III of Kolhapur"
 	PRF_Azam_Jah_of_Berar_hog_pau:0 "Azam Jah of Berar"
 	PRF_Osman_Ali_Khan_hog_pau:0 "Osman Ali Khan"
 
@@ -14345,11 +14352,16 @@
 	SRD_Mario_Berlinguer_hog_sde:0 "Mario Berlinguer"
 	SRD_Anselmo_Contu_hog_sli:0 "Anselmo Contu"
 	SRD_Camillo_Bellieni_hog_sli:0 "Camillo Bellieni"
+	SRD_Ferruccio_Parri_hog_sli:0 "Ferruccio Parri"
 	SRD_Francesco_Cocco_Ortu_hog_mli:0 "Francesco Cocco Ortu"
 	SRD_Luigi_Crespellani_hog_mli:0 "Luigi Crespellani"
+	SRD_Bruno_Villabruna_hog_mli:0 "Bruno Villabruna"
 	SRD_Alfredo_Corrias_hog_sco:0 "Alfredo Corrias"
+	SRD_Adone_Zoli_hog_sco:0 "Adone Zoli"
 	SRD_Luigi_Efisio_Marras_hog_sco:0 "Luigi Efisio Marras"
 	SRD_Giorgio_Bardanzellu_hog_ade:0 "Giorgio Bardanzellu"
+	SRD_Roberto_Lucifero_d_Aprigliano_hog_ade:0 "Roberto Lucifero d'Aprigliano"
+	SRD_Pietro_Badoglio_hog_pau:0 "Pietro Badoglio"
 	SRD_Amadeo_di_Savoia_Aosta_hog_pau:0 "Amadeo di Savoia-Aosta"
 
 	### Person of Influence ###
@@ -14457,7 +14469,7 @@
 	SRI_Olindo_Vernocchi_eco_rso:0 "Olindo Vernocchi"
 	## Security Minister
 	SRI_Luigi_Razza_sec_tot:0 "Luigi Razza"
-	SRI_Vittorio_Vidali_sec_tot:0 "Vittorio Vidali"
+	SRI_Roberto_Farinacci_sec_tot:0 "Roberto Farinacci"
 	SRI_Ilio_Barontini_sec_syn:0 "Ilio Barontini"
 	SRI_Maria_Rygier_sec_syn:0 "Maria Rygier"
 	SRI_Ruggiero_Grieco_sec_syn:0 "Ruggiero Grieco"

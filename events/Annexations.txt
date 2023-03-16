@@ -675,7 +675,6 @@ country_event = { #Fate of Brest
 		}
 		recheck_annexations = yes
 	}
-
 	option = { #Integrate
 		name = annex.integration
 		trigger = {
@@ -768,13 +767,11 @@ country_event = { #Fate of Polesia
 	option = { #give to Poland
 		name = annex.4.a
 		trigger = {
-			OR = {
-				93 = { is_valid_annexation_state = no } #Polesia
-				POL = { 
-					OR = {
-						owns_state = 95 
-						owns_state = 1295
-					}
+			POL = { 
+				OR = {
+					owns_state = 93 
+					owns_state = 95 
+					owns_state = 1295
 				}
 			}
 			NOT = {
@@ -898,6 +895,7 @@ country_event = { #Fate of Polesia
 		name = annex.integration
 		trigger = {
 			OR = {
+				tag = POL
 				tag = WHR
 				tag = UKR
 				AND = {
@@ -7442,7 +7440,7 @@ country_event = { #Fate of Bucovina
 	is_triggered_only = yes
 	
 	option = {
-		name = annex.43.n # Release BUK
+		name = annex.43.q # Release BUK
 		trigger = {
 			NOT = {
 				tag = AUS
@@ -9068,6 +9066,9 @@ country_event = { #The Fate of Russia
 					state = 654 #Ulala
 					state = 811 #Minusinsk
 					state = 329 #Tuva
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_to = var:tag_to_release
@@ -9129,6 +9130,9 @@ country_event = { #The Fate of Russia
 					state = 243 #Krichev
 					state = 722 #Petsamo
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 					state = 880 #Dvinsk
 					state = 564 #Verkhneudinsk
 					state = 563 #Chita
@@ -10255,7 +10259,7 @@ country_event = { #Fate of Latvia
 					}
 					create_country_leader = {
 						name = "Gustavs Celmiņš"
-						picture = "gfx/leaders/LAT/Portrait_LAT_Gustavs_Celmins.png"
+						picture = "gfx/leaders/LAT/Portrait_LAT_Gustavs_Celmins_kr.png"
 						expire = "1965.1.1"
 						ideology = national_populist_subtype
 					}
@@ -11854,7 +11858,7 @@ country_event = { # Abkhazia
 	}
 	
 	option = { #occupy
-		name = annex.68.b
+		name = annex.occupation
 		ai_chance = {
 			factor = 0
 		}
@@ -11867,6 +11871,23 @@ country_event = { # Abkhazia
 country_event = { #The Irish Question
 	id = annex.68
 	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.68" }
+	immediate = {
+		hidden_effect = {
+			add_to_temp_array = { core_removal_array = IRE }
+			remove_all_cores_and_claims_of_tags = yes
+			IRE = {
+				add_state_core = 119 
+				add_state_core = 134 
+				add_state_core = 113 
+				add_state_core = 135
+				drop_cosmetic_tag = yes
+				every_unit_leader = {
+					limit = { has_unit_leader_flag = GEO_leader }
+					set_nationality = GEO
+				}
+			}
+		}
+	}
 	title = annexation_IRE_CONQ
 	desc = annexation_IRE_CONQ_desc
 	is_triggered_only = yes
@@ -15596,13 +15617,15 @@ country_event = { #The Annexation of Armenia
 	id = annex.113
 	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.113" }
 	immediate = { 
-		hidden_effect = {			
+		hidden_effect = {
+                        ARM = {			
 			create_country_leader = {
 				name = "Hayk Asatryan"
 				picture = "gfx/leaders/ARM/Portrait_Armenia_Hayk_Asatryan.png"
 				expire = "1965.1.1"
 				ideology = tseghakronism_subtype
 			}
+                        }
 		}
 	}
 	title = annexation_ARM_CONQ
@@ -17155,7 +17178,7 @@ country_event = { #Fate of Ukraine
 					limit = { has_variable = original_resistance }
 					set_resistance = original_resistance
 				}
-				add_to_array = { RUS_integration_state_array = THIS }
+				add_to_array = { global.RUS_integration_state_array = THIS }
 			}
 		}
 		set_temp_variable = { tag_to_release = UKR }
@@ -17369,9 +17392,19 @@ country_event = { #Fate of Ukraine
 		UKR = { drop_cosmetic_tag = yes }
 		if = {
 			limit = {
-				ROOT = { RUS_russian_monarch = yes }
+				ROOT = { 
+					RUS_russian_monarch = yes 
+					RUS_is_constitutional_monarchy = yes 
+					is_ai = no
+				}
 			}
-			UKR = { 
+			set_autonomy = {
+				target = UKR
+				autonomous_state = kr_integrated_puppet
+				freedom_level = 0.75
+			}
+			UKR = {
+				set_cosmetic_tag = UKR_RUS_monarchy
 				RUS_install_puppet_monarchy = yes
 			}
 		}
@@ -20266,6 +20299,7 @@ country_event = { #Fate of Belarus
 				limit = {
 					WHR = { has_country_flag = WHR_anarchists }
 				}
+                                WHR = {
 				create_country_leader = {
 					name = "Usievalad Ihnatoŭski"
 					desc = "POLITICS_USIEVALAD_IHNATOUSKI_DESC"
@@ -20280,6 +20314,7 @@ country_event = { #Fate of Belarus
 					expire = "1965.1.1"
 					ideology = agrarian_socialism_subtype
 				}
+                                }
 			}
 		}
 	}
@@ -27804,7 +27839,7 @@ country_event = { #Fate of Altai
 			add_state_core = 654
 			add_state_core = 811
 			add_state_claim = 329
-			add_to_array = { RUS_integration_state_array = 329 }
+			add_to_array = { global.RUS_integration_state_array = 329 }
 		}
 		recheck_annexations = yes
 	}
@@ -34193,6 +34228,11 @@ country_event = { #The Annexation of Shan
 
 		set_temp_variable = { tag_to_release = SHA }
 		release_targeted_tag = yes
+		hidden_effect = {
+			SHA = {
+				country_event = shan.18
+			}
+		}
 	}
 
 	option = {
@@ -43469,6 +43509,9 @@ country_event = { #Fate of Eastern Belarus
 					state = 1292 #Smolensk
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_claim = yes
@@ -43512,6 +43555,9 @@ country_event = { #Fate of Eastern Belarus
 					state = 1292 #Smolensk
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_core = yes
@@ -43549,6 +43595,9 @@ country_event = { #Fate of Eastern Belarus
 					state = 1292 #Smolensk
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_claim = yes
@@ -43650,6 +43699,9 @@ country_event = { #Fate of Eastern Belarus
 				OR = {
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_claim = yes
@@ -43713,7 +43765,10 @@ country_event = { #Fate of Southern Belarus
 					207 = { is_claim_or_core_of_ROOT = yes }
 				}
 			}
-			WHR = { ROOT_can_grant_land = yes }
+			WHR = { 
+				ROOT_can_grant_land = yes 
+				owns_state = 204
+			}
 		}
 		ai_chance = {
 			base = 40
@@ -46778,6 +46833,7 @@ country_event = { #Fate of the Crimea
 		}
 		trigger = {
 			UKR = { 
+				owns_state = 196
 				is_ally_of_ROOT = yes 
 				ROOT_can_grant_land = yes					
 			}
@@ -46803,19 +46859,37 @@ country_event = { #Fate of the Crimea
 		name = annex.403.d #Give to Russia
 		trigger = {
 			is_russian_tag_that_can_integrate = no
-			var:234.owner = {
-				OR = {
-					AND = {
-						OR = {
-							tag = DKB
-							tag = KUB
+			OR = {
+				var:234.owner = {
+					OR = {
+						AND = {
+							OR = {
+								tag = DKB
+								tag = KUB
+							}
+							is_ally_of_ROOT = yes
+							ROOT_can_grant_land = yes
 						}
-						is_ally_of_ROOT = yes
-						ROOT_can_grant_land = yes
+						AND = {
+							is_russian_tag_that_can_integrate = yes
+							is_ally_of_ROOT = yes
+						}
 					}
-					AND = {
-						is_russian_tag_that_can_integrate = yes
-						is_ally_of_ROOT = yes
+				}
+				var:196.owner = {
+					OR = {
+						AND = {
+							OR = {
+								tag = DKB
+								tag = KUB
+							}
+							is_ally_of_ROOT = yes
+							ROOT_can_grant_land = yes
+						}
+						AND = {
+							is_russian_tag_that_can_integrate = yes
+							is_ally_of_ROOT = yes
+						}
 					}
 				}
 			}
@@ -46898,7 +46972,7 @@ country_event = { #Fate of the East Galicia
 						state = 91
 						state = 1140
 						state = 89
-						state = 1125
+						state = 80
 						state = 1126
 						state = 1127
 					}

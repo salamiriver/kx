@@ -6871,7 +6871,6 @@ country_event = { #LIBERATION GAMER MOMENT
 		set_country_flag = NFA_france_free
 		set_global_flag = NFA_actuallysomehowdidit
 		add_state_core = 16
-		add_state_core = 19
 		add_state_core = 20
 		add_state_core = 21
 		add_state_core = 779
@@ -13803,7 +13802,7 @@ country_event = { #Nationalist France supports us! CAR
 		name = nfa.63.a
 		add_manpower = 3000
 		custom_effect_tooltip = received_equipment_1500
-		add_ideas = SPA_advisors_natfrance
+		add_ideas = CAR_french_advisers_idea
 		set_global_flag = CAR_help_from_natfrance
 		FROM_send_volunteers_to_ROOT = yes
 	}
@@ -18173,7 +18172,7 @@ country_event = { #pope shot
 			}
 			create_country_leader = {
 			name = "Leo XIV"
-			picture = "gfx/leaders/SRI/papalpio.png"
+			picture = "gfx/leaders/SRI/Portrait_Padre_Pio_Pope.png"
 			expire = "1965.1.1"
 			ideology = legionarism_subtype
 			traits = { NFA_the_mfing_pope} 
@@ -18191,7 +18190,7 @@ country_event = { #pope shot
 			}
 			create_country_leader = {
 			name = "Julius IV"
-			picture = "gfx/leaders/ITA/Portrait_Italy_Julius.png"
+			picture = "gfx/leaders/PAP/Portrait_Papal_State_Julius.png"
 			expire = "1965.1.1"
 			ideology = legionarism_subtype
 			traits = { NFA_the_mfing_pope} 
@@ -18209,7 +18208,7 @@ country_event = { #pope shot
 			}
 			create_country_leader = {
 			name = "John XXIII"
-			picture = "gfx/leaders/ITA/Portrait_Papal_State_John.png"
+			picture = "gfx/leaders/PAP/Portrait_Papal_State_John.png"
 			expire = "1965.1.1"
 			ideology = legionarism_subtype
 			traits = { NFA_the_mfing_pope} 
@@ -18227,7 +18226,7 @@ country_event = { #pope shot
 			}
 			create_country_leader = {
 			name = "Stephen X"
-			picture = "gfx/leaders/ITA/Portrait_Papal_State_Stephen.png"
+			picture = "gfx/leaders/PAP/Portrait_Papal_State_Stephen.png"
 			expire = "1965.1.1"
 			ideology = legionarism_subtype
 			traits = { NFA_the_mfing_pope} 
@@ -18245,7 +18244,7 @@ country_event = { #pope shot
 			}
 			create_country_leader = {
 			name = "Pius XIII"
-			picture = "gfx/leaders/ITA/Portrait_Papal_State_PiusXII.png"
+			picture = "gfx/leaders/PAP/Portrait_Papal_State_Pius_XII.png"
 			expire = "1965.1.1"
 			ideology = legionarism_subtype
 			traits = { NFA_the_mfing_pope} 
@@ -18261,7 +18260,7 @@ country_event = { #pope shot
 		}
 		create_country_leader = {
 		name = "College of Cardinals"
-		picture = "gfx/leaders/ITA/Portrait_Italy_College_of_Cardinals.png"
+		picture = "gfx/leaders/PAP/Portrait_Papal_State_College_of_Cardinals.png"
 		desc = "POLITICS_COLLEGE_CARDINALS_DESC"
 		expire = "1965.1.1"
 		ideology = legionarism_subtype

@@ -1068,6 +1068,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_Portrait_Ireland_Ned_Cronin"
+		texturefile = "gfx/leaders/IRE/Portrait_Ireland_Ned_Cronin.png"
+	}
+	
+	spriteType = {
 		name = "GFX_Portrait_Ireland_Betty_Sinclair"
 		texturefile = "gfx/leaders/IRE/Portrait_Ireland_Betty_Sinclair.png"
 	}
@@ -1390,6 +1395,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_BRA_Arlindo_Veiga_dos_Santos_KX"
 		texturefile = "gfx/leaders/BRA/Portrait_BRA_Arlindo_Veiga_dos_Santos_KX.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_BRA_Plinio_Salgado"
+		texturefile = "gfx/leaders/BRA/Portrait_BRA_Plinio_Salgado.png"
 	}
 	
 	### Romanians ###
@@ -2003,6 +2013,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portrait_Vietnam_Duong_Van_Duong"
 		texturefile = "gfx/leaders/VIN/Portrait_Vietnam_Duong_Van_Duong.png"
+	}
+
+    spriteType = {
+		name = "GFX_Portrait_Vietnam_Buu_Loc"
+		texturefile = "gfx/leaders/VIN/Portrait_Vietnam_Buu_Loc.png"
 	}	
 	
 	### Bulgarian PMs ###
@@ -2064,6 +2079,142 @@ spriteTypes = {
 		texturefile = "gfx/leaders/TIB/Portrait_TIB_Nicholas_Roerich.png"
 	}
 	
+	### Sardinian PMs ###
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Giorgio_Bardanzellu"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Giorgio_Bardanzellu.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Pietro_Badoglio"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Pietro_Badoglio.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Luigi_Efisio_Marras"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Luigi_Efisio_Marras.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Roberto_Lucifero_di_Aprigliano"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Roberto_Lucifero_di_Aprigliano.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Luigi_Crespellani"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Luigi_Crespellani.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Alfredo_Corrias"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Alfredo_Corrias.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Camillo_Bellieni"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Camillo_Bellieni.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Emilio_Lussu"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Emilio_Lussu.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Mario_Berlinguer"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Mario_Berlinguer.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Italy_Ferruccio_Parri"
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Ferruccio_Parri.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Italy_Bruno_Villabruna"
+		texturefile = "gfx/leaders/ITA/Portrait_Italy_Bruno_Villabruna.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRD_Adone_Zoli"
+		texturefile = "gfx/leaders/SRD/Portrait_SRD_Adone_Zoli.png"
+	}
+	
+	### Varios Italian People ###
+	
+	spriteType = {
+		name = "GFX_Portrait_ITA_Galeazzo_Ciano"
+		texturefile = "gfx/leaders/ITA/Portrait_ITA_Galeazzo_Ciano.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRI_Riccardo_Lombardi"
+		texturefile = "gfx/leaders/SRI/Portrait_SRI_Riccardo_Lombardi.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_SRI_Arturo_Labriola"
+		texturefile = "gfx/leaders/SRI/Portrait_SRI_Arturo_Labriola.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_ITA_Luigi_Sturzo"
+		texturefile = "gfx/leaders/ITA/Portrait_ITA_Luigi_Sturzo.png"
+	}
+	
+	### Princely Fed People ###
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Council_of_Princes"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Council_of_Princes.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Raja_Wadiyar_IV"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Raja_Wadiyar_IV.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Jayachamarajendra_Wadiyar"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Jayachamarajendra_Wadiyar.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Balarama_Varma_of_Travancore"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Balarama_Varma_of_Travancore.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Rajaram_III_of_Kolhapur"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Rajaram_III_of_Kolhapur.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Princely_Madapati_Hanumantha_Rao"
+		texturefile = "gfx/leaders/PRF/Portrait_Princely_Madapati_Hanumantha_Rao.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Princely_Akbar_Hydari"
+		texturefile = "gfx/leaders/PRF/Portrait_Princely_Akbar_Hydari.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Princely_Mirza_Muhammad_Ismail"
+		texturefile = "gfx/leaders/PRF/Portrait_Princely_Mirza_Muhammad_Ismail.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Bahadur_Yar_Jung"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Bahadur_Yar_Jung.png"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_PRF_Krushna_Chandra_Gajapati"
+		texturefile = "gfx/leaders/PRF/Portrait_PRF_Krushna_Chandra_Gajapati.png"
+	}
+	
 	###Other###
 	spriteType = {
 		name = "GFX_Portrait_Belgium_Adalbert_I"
@@ -2083,7 +2234,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_Julius_Evola_Baron"
-		texturefile = "gfx/leaders/SRI/Julius_Evola_Baron.png"
+		texturefile = "gfx/leaders/SIC/Julius_Evola_Baron.png"
 	}
 	spriteType = {
 		name = "GFX_Portrait_TEX_philip_the_first"

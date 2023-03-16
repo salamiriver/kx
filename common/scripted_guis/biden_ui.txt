@@ -1725,6 +1725,13 @@ scripted_gui = {
 				}
 			}
 			
+			Ned_Cronin_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = IRE_Ned_Cronin_hog_pau
+				}
+			}
+			
 			Betty_Sinclair_visible = {
 				AND = {
 					has_country_flag = HOG_veiw
@@ -2186,6 +2193,13 @@ scripted_gui = {
 				}
 			}
 			
+			Plinio_Salgado_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = BRA_Plinio_Salgado_hog_npo
+				}
+			}
+			
 			### Romanians ###
 			
 			Corneliu_Codreanu_visible = {
@@ -2386,9 +2400,17 @@ scripted_gui = {
 				has_country_flag = HOG_veiw
 				has_idea = RUS_Aleksey_I_Rykov_hog_rso
 			}
+			Vladimir_Volsky_visible = {
+				has_country_flag = HOG_veiw
+				has_idea = RUS_Vladimir_K_Volsky_hog_rso
+			}
 			Rafail_Abramovich_visible = {
 				has_country_flag = HOG_veiw
 				has_idea = RUS_Rafail_Abramovich_hog_sde
+			}
+			Irakliy_Tsereteli_visible = {
+				has_country_flag = HOG_veiw
+				has_idea = RUS_Irakliy_G_Tsereteli_hog_sde
 			}
 			Aleksandr_Potresov_visible = {
 				has_country_flag = HOG_veiw
@@ -3201,6 +3223,194 @@ scripted_gui = {
 				AND = {
 					has_country_flag = HOG_veiw
 					has_idea = SKM_Sonam_Tshering_hog_npo
+				}
+			}
+			
+			### Sardinian PMs ###
+			
+			Giorgio_Bardanzellu_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Giorgio_Bardanzellu_hog_ade
+				}
+			}
+			
+			Pietro_Badoglio_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Pietro_Badoglio_hog_pau
+				}
+			}
+			
+			Luigi_Efisio_Marras_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Luigi_Efisio_Marras_hog_sco
+				}
+			}
+			
+			Roberto_Lucifero_d_Aprigliano_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Roberto_Lucifero_d_Aprigliano_hog_ade
+				}
+			}
+			
+			Luigi_Crespellani_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Luigi_Crespellani_hog_mli
+				}
+			}
+			
+			Alfredo_Corrias_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Alfredo_Corrias_hog_sco
+				}
+			}
+			
+			Camillo_Bellieni_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Camillo_Bellieni_hog_sli
+				}
+			}
+			
+			Emilio_Lussu_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Emilio_Lussu_hog_sde
+				}
+			}
+			
+			Mario_Berlinguer_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Mario_Berlinguer_hog_sde
+				}
+			}
+			
+			Ferruccio_Parri_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Ferruccio_Parri_hog_sli
+				}
+			}
+			
+			Bruno_Villabruna_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Bruno_Villabruna_hog_mli
+				}
+			}
+			
+			Adone_Zoli_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRD_Adone_Zoli_hog_sco
+				}
+			}
+			
+			### Varios Italian People ###
+			
+			Galeazzo_Ciano_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = ITA_Galeazzo_Ciano_hog_npo
+				}
+			}
+			
+			Riccardo_Lombardi_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRI_Riccardo_Lombardi_hog_rso
+				}
+			}
+			
+			Arturo_Labriola_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SRI_Arturo_Labriola_hog_rso
+				}
+			}
+			
+			Luigi_Sturzo_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = SIC_Luigi_Sturzo_hog_sco
+				}
+			}
+			
+			### Princely Fed People ###
+			
+			Council_of_Princes_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Council_of_Princes_hog_ade
+				}
+			}
+			
+			Krishna_Raja_Wadiyar_IV_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Krishna_Raja_Wadiyar_IV_hog_ade
+				}
+			}
+			
+			Jayachamarajendra_Wadiyar_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Jayachamarajendra_Wadiyar_hog_ade
+				}
+			}
+			
+			Chithira_Thirunal_Balarama_Varma_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Chithira_Thirunal_Balarama_Varma_hog_sco
+				}
+			}
+			
+			Rajaram_II_of_Kolhapur_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Rajaram_II_of_Kolhapur_hog_ade
+				}
+			}
+			
+			Madapati_Hanumantha_Rao_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Madapati_Hanumantha_Rao_hog_mli
+				}
+			}
+			
+			Akbar_Hydari_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Akbar_Hydari_hog_sco
+				}
+			}
+			
+			Mirza_Muhammad_Ismail_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Mirza_Muhammad_Ismail_hog_sco
+				}
+			}
+			
+			Nawab_Fazal_Nawaz_Jung_Bahadur_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Nawab_Fazal_Nawaz_Jung_Bahadur_hog_sco
+				}
+			}
+			
+			Krushna_Chandra_Gajapati_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = PRF_Krushna_Chandra_Gajapati_hog_ade
 				}
 			}
 			
