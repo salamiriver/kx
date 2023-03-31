@@ -2545,20 +2545,38 @@ RUS_Alliance_decisions = {
 				FROM = { tag = COR }
 				OR = {
 					has_game_rule = {
-						rule = COR_FOREIGN_POLICY
+						rule = COR_foreign_policy
 						option = COR_FOREIGN_POLICY_ENTENTE
 					}
 					has_game_rule = {
-						rule = COR_FOREIGN_POLICY
+						rule = COR_foreign_policy
 						option = COR_FOREIGN_POLICY_REICHSPAKT
 					}
 					has_game_rule = {
-						rule = COR_FOREIGN_POLICY
+						rule = COR_foreign_policy
 						option = COR_FOREIGN_POLICY_EXPANSIONISM
 					}
 					has_game_rule = {
-						rule = COR_FOREIGN_POLICY
+						rule = COR_foreign_policy
 						option = COR_FOREIGN_POLICY_ISOLATIONISM
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = CSA }
+				OR = {
+					has_game_rule = {
+						rule = CSA_foreign_policy
+						option = CSA_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = CSA_foreign_policy
+						option = CSA_FOREIGN_POLICY_WORLD_REVOLUTION
+					}
+					has_game_rule = {
+						rule = CSA_foreign_policy
+						option = CSA_FOREIGN_POLICY_MONROEISM
 					}
 				}
 			}
@@ -3042,30 +3060,30 @@ RUS_China_Policy_decisions = {
 		icon = hol_exchange_intelligence_data
 
 		available = {
-			AND = {
-				OR = {
-					tag = DKB
-					AND = {
+			OR = {
+				AND = {
+					OR = {
 						tag = RUS
-						OR = {
-							has_government = totalist
-							has_country_flag = soviet_russia_restored
-						}
+						tag = DKB
+					}
+					OR = {
+						has_government = totalist
+						has_country_flag = soviet_russia_restored
 					}
 				}
-				OR = {
+				AND = {
 					tag = DKB
-					AND = {
-						CHI = {
-							has_completed_focus = CHI_thegeneralissimohasrisenfromthedead
-						}
+					CHI = {
+						has_completed_focus = CHI_thegeneralissimohasrisenfromthedead
 					}
 				}
-				OR = {
+				AND = {
 					country_exists = CHI
-					AND = {
-						country_exists = GXC
-						GXC = { GXC_has_LKMT_government = yes }
+					OR = {	
+						AND = {
+							country_exists = GXC
+							GXC = { GXC_has_LKMT_government = yes }
+						}
 						CHI = { exists = no }
 					}
 				}

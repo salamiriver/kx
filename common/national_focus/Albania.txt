@@ -20,7 +20,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_aftermath_of_black_monday
-		icon = GFX_goal_bankruptcy
+		icon = GFX_goal_HOL_black_monday
 		x = 5
 		y = 0
 		available = { always = no }
@@ -81,13 +81,14 @@ focus_tree = {
 
 	focus = {
 		id = ALB_balance_the_budget
-		icon = GFX_goal_generic_stable_government
+		icon = GFX_goal_generic_financial_markets
 		prerequisite = { focus = ALB_bashkimi_economic_policy focus = ALB_progressive_economic_policy }
 		relative_position_id = ALB_aftermath_of_black_monday
 		x = -1
 		y = 2
 		available = {
 			is_subject = no
+			has_socialist_government = no
 		}
 		cost = 5
 		ai_will_do = {
@@ -140,6 +141,7 @@ focus_tree = {
 		y = 2
 		available = {
 			is_subject = no
+			has_socialist_government = no
 		}
 		cost = 5
 		ai_will_do = {
@@ -256,6 +258,13 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 100
+				has_game_rule = {
+					rule = ALB_election
+					option = ALB_ELECTION_KING_WIED
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_land_redistribution"
@@ -884,7 +893,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_centralisation_of_power
-		icon = GFX_RUS_strengthen_chairman
+		icon = GFX_goal_deseret_Strong_Hand
 		prerequisite = { focus = ALB_progressive_victory }
 		relative_position_id = ALB_albanian_elections_of_1936
 		x = 2
@@ -908,7 +917,7 @@ focus_tree = {
 
 	focus = {
 		id = ALB_resist_land_reform_efforts
-		icon = GFX_goal_skull_treaty
+		icon = GFX_goal_generic_peasant_strike
 		prerequisite = { focus = ALB_progressive_victory }
 		relative_position_id = ALB_albanian_elections_of_1936
 		x = 4
@@ -923,9 +932,11 @@ focus_tree = {
 			factor = 100
 			modifier = {
 				factor = 100
-				has_game_rule = {
-					rule = ALB_election
-					option = ALB_ELECTION_KING_ZOGU
+				NOT = {
+					has_game_rule = {
+						rule = ALB_election
+						option = DEFAULT
+					}
 				}
 			}
 		}
@@ -1129,7 +1140,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_albanian_national_army"
-			army_experience = 10
+			army_experience = 50
+			add_manpower = 5000
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -1152,6 +1164,11 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1250
+				producer = ALB
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1176,13 +1193,18 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 275
+				producer = ALB
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
 		id = ALB_arm_of_gendarmerie
-		icon = GFX_goal_national_arsenal
+		icon = GFX_goal_AUS_Helmet_Sword_Sway_Ballot
 		prerequisite = { focus = ALB_invest_in_artillery focus = ALB_modernisation_of_equipment }
 		relative_position_id = ALB_albanian_national_army
 		x = 0
@@ -1192,11 +1214,24 @@ focus_tree = {
 			factor = 150
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ALB_election
-					option = ALB_ELECTION_KING_ZOGU
+				NOT = {
+					has_game_rule = {
+						rule = ALB_election
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_SOCDEM
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_SOCCON
+					}
 				}
-				NOT = { has_cosmetic_tag = ALB_kingdom }
+				NOT = {
+					has_completed_focus = ALB_restoration_of_the_king
+					has_completed_focus = ALB_King_Zog
+				}
 			}
 			modifier = {
 				factor = 1000
@@ -1204,7 +1239,7 @@ focus_tree = {
 					rule = ALB_election
 					option = ALB_ELECTION_KING_ZOGU
 				}
-				has_cosmetic_tag = ALB_kingdom
+				has_completed_focus = ALB_King_Zog
 			}
 		}
 		completion_reward = {
@@ -1212,13 +1247,21 @@ focus_tree = {
 			custom_effect_tooltip = ALB_gendarmerie_tt
 			add_ideas = ALB_arm_of_gendarmerie_idea
 			set_country_flag = ALB_gendarmerie_protection
+			44 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESISTANCE }
 	}
 
 	focus = {
 		id = ALB_armour_research
-		icon = GFX_goal_light_tanks
+		icon = GFX_goal_POL_light_tanks
 		prerequisite = { focus = ALB_modernisation_of_equipment }
 		prerequisite = { focus = ALB_arm_of_gendarmerie }
 		relative_position_id = ALB_albanian_national_army
@@ -1236,13 +1279,33 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "No Step Back" }
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 125
+					producer = ALB
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis
+					amount = 125
+					producer = ALB
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
 		id = ALB_motorised_infantry
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_USA_integral_mechanization
 		prerequisite = { focus = ALB_invest_in_artillery }
 		prerequisite = { focus = ALB_arm_of_gendarmerie }
 		relative_position_id = ALB_albanian_national_army
@@ -1258,6 +1321,11 @@ focus_tree = {
 				name = ALB_motorised_infantry
 				bonus = 1
 				technology = motorised_infantry
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 275
+				producer = ALB
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1284,6 +1352,9 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			every_unit_leader = {
+				add_skill_level = 1
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_RESEARCH }
 	}
@@ -1299,7 +1370,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_albanian_naval_force"
-			navy_experience = 10
+			navy_experience = 50
+			44 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -1316,7 +1395,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_albanian_air_force"
-			air_experience = 10
+			air_experience = 50
 		}
 		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 	}
@@ -1409,6 +1488,11 @@ focus_tree = {
 				uses = 1
 				category = cas_bomber
 			}
+			add_equipment_to_stockpile = {
+				type = medium_plane_airframe
+				amount = 25
+				producer = ALB
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1434,7 +1518,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = air_base
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1560,7 +1644,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1571,6 +1654,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_setting_up_the_albanian_kingdom"
 			add_political_power = 80
+			increase_ruling_party_popularity_by_3 = yes
+			add_opinion_modifier = {
+				target = AUS
+				modifier = KR_approves_of_govt
+			}
+			reverse_add_opinion_modifier = {
+				target = AUS
+				modifier = KR_approves_of_govt
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1591,7 +1683,6 @@ focus_tree = {
 			}
 		}
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1636,7 +1727,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1661,7 +1751,6 @@ focus_tree = {
 		x = 2
 		y = 2
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1671,6 +1760,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_prioritise_the_needs_of_catholics"
+			add_command_power = 25
 			country_event = { id = albania.46 days = 1 }
 		}
 	}
@@ -1684,7 +1774,6 @@ focus_tree = {
 		x = -1
 		y = 3
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1707,7 +1796,6 @@ focus_tree = {
 		x = 1
 		y = 3
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1764,7 +1852,6 @@ focus_tree = {
 		x = -2
 		y = 4
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1774,6 +1861,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_crushing_partisans"
+			add_popularity = {
+				ideology = totalist
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = -0.06
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = -0.04
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.07
+			}
 			country_event = { id = albania.56 days = 1 }
 		}
 	}
@@ -1787,7 +1890,6 @@ focus_tree = {
 		x = 0
 		y = 4
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1798,17 +1900,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_providing_austria_with_oil"
 			add_political_power = -80
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = ALB_oil_drilling
-					}
-				}
-				add_resource = {
-					type = oil
-					amount = 8
-					state = 44
-				}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 44
 			}
 			hidden_effect = {
 				AUS = {
@@ -1829,7 +1924,6 @@ focus_tree = {
 		x = 2
 		y = 4
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1840,6 +1934,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_granting_autonomy_to_catholic_clans"
 			add_political_power = 50
+			add_command_power = 100
+			add_war_support = 0.06
+			add_stability = 0.04
+			increase_ruling_party_popularity_by_5 = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1854,7 +1952,6 @@ focus_tree = {
 		x = 0
 		y = 5
 		available = {
-			is_subject = yes
 			has_country_flag = ALB_restoration_of_wied
 			has_government = authoritarian_democrat
 		}
@@ -1874,7 +1971,45 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_finalisation_of_the_kingdom"
 			custom_effect_tooltip = ALB_kingdom_tt
 			hidden_effect = {
-				set_cosmetic_tag = ALB_kingdom
+				set_cosmetic_tag = ALB_kingdom_wied
+			}
+			if = {
+			limit = {
+			has_country_leader = {
+				name = "Wilhelm zu Wied"
+				ruling_only = yes
+			}
+			is_ai = no
+			}
+			add_state_core = 765
+			add_state_core = 1097
+			add_state_core = 105
+			add_state_core = 1270
+			add_state_core = 185
+			add_state_core = 758
+			add_state_core = 1271
+			create_wargoal = {
+					type = annex_everything
+					target = SER
+				}
+			create_wargoal = {
+					type = annex_everything
+					target = GRE
+				}
+			create_wargoal = {
+					type = annex_everything
+					target = CRO
+				}
+			create_wargoal = {
+					type = annex_everything
+					target = BUL
+				}
+			hidden_effect = {
+			create_wargoal = {
+					type = annex_everything
+					target = MNT
+					}
+				}
 			}
 		}
 	}
@@ -2231,10 +2366,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Claim_Greater_Albania"
 			add_state_core = 765
-			add_state_claim = 1097
-			add_state_claim = 105
-			add_state_claim = 185
-			add_state_claim = 758
+			add_state_core = 1097
+			add_state_core = 1270
+			add_state_core = 105
+			add_state_core = 185
+			add_state_core = 758
+			add_state_core = 1271
 			if = {
 				limit = {
 					has_country_leader = {
@@ -2292,6 +2429,10 @@ focus_tree = {
 		x = 33
 		y = 6
         available = { 
+			has_government = syndicalist
+			has_country_flag = ALB_Socialist_Takeover
+		}
+		bypass = {
 			has_government = syndicalist
 			has_country_flag = ALB_Socialist_Takeover
 		}
@@ -2354,6 +2495,17 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = absolute_monarchy_subtype
 			}
+			set_party_name = {
+				ideology = paternal_autocrat
+				long_name = "The Ruins of House Zogu"
+				name = "Ruins of Zogu"
+			}
+			hidden_effect = {
+			random_unit_leader = {
+				limit = { has_id = 548084 }
+				set_nationality = NSW
+		    }
+		    }
 		}
 	}
     focus = {
@@ -2451,7 +2603,28 @@ focus_tree = {
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = ALB_election
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_XOXE
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_MALESHOVA
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_FUNDO
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Succession_Concession"
@@ -2466,7 +2639,7 @@ focus_tree = {
 		        }
                 set_party_name = {
                     ideology = totalist
-                    long_name = "Militantët Pararojë"
+                    long_name = "Militantët Pararojë (Vanguardist Militants)"
                     name = "MP"
                 }
             }
@@ -2572,7 +2745,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Communes_Son
-		icon = GFX_goal_FRA_future_of_commune
+		icon = GFX_goal_ALB_Communes_Truest_Son
 		x = 0
 		y = 1
         relative_position_id = ALB_Succession_Concession
@@ -2613,7 +2786,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Syndicate_Development
-		icon = GFX_goal_FRA_communal_enterprises
+		icon = GFX_goal_ALB_Local_Syndicate_Development
 		x = -1
 		y = 1
         relative_position_id = ALB_Communes_Son
@@ -2911,13 +3084,33 @@ focus_tree = {
 				category = industry
 			}
 			effect_tooltip = {
-				remove_idea = ALB_black_monday_idea
+				remove_ideas = ALB_black_monday_idea
 			}
 			hidden_effect = {
-				remove_idea = ALB_black_monday_idea
-				remove_idea = ALB_black_monday_idea2
-				remove_idea = ALB_black_monday_idea3
-				remove_idea = ALB_black_monday_idea4
+				if = {
+				limit = {
+					has_idea = ALB_black_monday_idea
+				}
+				remove_ideas = ALB_black_monday_idea
+			}
+			if = {
+				limit = {
+					has_idea = ALB_black_monday_idea2
+				}
+				remove_ideas = ALB_black_monday_idea2
+			}
+			if = {
+				limit = {
+					has_idea = ALB_black_monday_idea3
+				}
+				remove_ideas = ALB_black_monday_idea3
+			}
+			if = {
+				limit = {
+					has_idea = ALB_black_monday_idea4
+				}
+				remove_ideas = ALB_black_monday_idea4
+				}
 			}
 		}
 	}
@@ -3026,18 +3219,6 @@ focus_tree = {
 				remove_ideas = ALB_illiteracy
 				remove_ideas = ALB_illiteracy2
 			}
-			if = {
-				limit = {
-					has_country_leader = {
-						name = "Enver Hoxha"
-						ruling_only = yes
-					}
-				}
-				country_event = {
-					id = albsoc.5
-					days = 5
-				}
-			}
 		}
 	}
     focus = {
@@ -3145,30 +3326,6 @@ focus_tree = {
 				remove_idea = ALB_Flowers_Socialism 
 				add_idea = ALB_Rejuvenation_Classes
 			}
-			if = {
-				limit = {
-					has_idea = ALB_black_monday_idea
-				}
-				remove_ideas = ALB_black_monday_idea
-			}
-			if = {
-				limit = {
-					has_idea = ALB_black_monday_idea2
-				}
-				remove_ideas = ALB_black_monday_idea2
-			}
-			if = {
-				limit = {
-					has_idea = ALB_black_monday_idea3
-				}
-				remove_ideas = ALB_black_monday_idea3
-			}
-			if = {
-				limit = {
-					has_idea = ALB_black_monday_idea4
-				}
-				remove_ideas = ALB_black_monday_idea4
-			}
 		}
 	}
     focus = {
@@ -3189,7 +3346,24 @@ focus_tree = {
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_XOXE
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_MALESHOVA
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_FUNDO
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_No_Vision_Mine"
@@ -3200,7 +3374,7 @@ focus_tree = {
 		    }
             set_party_name = {
                 ideology = totalist
-                long_name = "Partia e Punës e Shqipërisë"
+                long_name = "Partia e Punës e Shqipërisë (Party of Labour of Albania)"
                 name = "PPSh"
             }
             custom_effect_tooltip = ALB_Hoxha_Destiny_tt
@@ -3216,6 +3390,12 @@ focus_tree = {
 					ALB_Nako_Spiru_eco_tot
 					ALB_Koci_Xoxe_sec_tot
 				}
+				if = {	
+					limit = { has_country_leader = { name = "Enver Hoxha" ruling_only = yes } }
+					set_country_leader_portrait = {
+						portrait = "gfx/leaders/ALB/Portrait_Albania_Enver_Hoxha.png"
+					}
+				}
 				create_country_leader = {
 					name = "Workers' Congress of Albania"
 					picture = "gfx/leaders/ALB/Portrait_ALB_Workers_Congress.png"
@@ -3227,7 +3407,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Chasing_Plan
-		icon = GFX_goal_CSA_great_sprint
+		icon = GFX_goal_ALB_Five_Years_Plan
 		x = -3
 		y = 1
         relative_position_id = ALB_No_Vision_Mine
@@ -3434,8 +3614,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Purify_Party"
             set_party_name = {
                 ideology = totalist
-                long_name = "Vërtëta Partia e Punës e Shqipërisë"
-                name = "VPPSh"
+                long_name = "Partia e Vërtetë e Punës e Shqipërisë (True Party of Labour of Albania)"
+                name = "PVPSh"
             }
 			add_manpower = -2000
 			add_popularity = {
@@ -3469,8 +3649,12 @@ focus_tree = {
 			add_ideas = ALB_Cultural_Ideological_Revolution
 			hidden_effect = {
 			country_event = {
+					id = albsoc.5
+					days = 4
+			}	
+			country_event = {
 				id = albsoc.36
-				days = 15
+				days = 26
 				}
 			}
 		}
@@ -3623,7 +3807,7 @@ focus_tree = {
 		    }
             set_party_name = {
                 ideology = totalist
-                long_name = "Lidhja e Komunisteve të Shqipërisë"
+                long_name = "Lidhja e Komunisteve të Shqipërisë (League of Communists of Albania)"
                 name = "LKSh"
             }
             set_politics = {
@@ -3649,7 +3833,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Yugophilism
-		icon = GFX_goal_SER_Immortal_Yugoslavism
+		icon = GFX_goal_ALB_Yugophilism
 		x = -1
 		y = 1
         relative_position_id = ALB_Chairman_Xoxe
@@ -3666,11 +3850,21 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Yugophilism"
 			add_ideas = ALB_Yugophilism
+			hidden_effect = {
+				country_event = {
+					id = albsoc.29
+					days = 19
+					}
+				country_event = {
+						id = albsoc.30
+						days = 34
+					}
+			}
 		}
 	}
     focus = {
 		id = ALB_New_Hardline_Methods
-		icon = GFX_goal_CSA_all_for_revolution
+		icon = GFX_goal_ALB_New_Hardline_Methods
 		x = 1
 		y = 1
         relative_position_id = ALB_Chairman_Xoxe
@@ -3692,6 +3886,12 @@ focus_tree = {
 			}
 			add_command_power = 50
 			add_war_support = 0.05
+			hidden_effect = {
+				country_event = {
+					id = albsoc.35
+					days = 15
+					}
+			}
 		}
 	}
     focus = {
@@ -3715,13 +3915,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Pact_Conviction"
-			increase_ruling_party_popularity_by_5 = yes
-			add_political_power = 75
-			hidden_effect = {
-			country_event = {
-				id = albsoc.35
-				days = 15
-				}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.075
 			}
 			unlock_decision_tooltip = ALB_join_soviet_faction
 			unlock_decision_tooltip = ALB_union_with_illyria
@@ -3817,7 +4013,7 @@ focus_tree = {
 		    }
             set_party_name = {
                 ideology = syndicalist
-                long_name = "Partia Sindikaliste e Shqipërisë"
+                long_name = "Partia Sindikaliste e Shqipërisë (Syndicalist Party of Albania)"
                 name = "PSSh"
             }
             custom_effect_tooltip = ALB_Maleshova_Cabinet_tt
@@ -3838,7 +4034,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Reinforce_Syndicalist_System
-		icon = GFX_goal_CSA_centralist_reorganization
+		icon = GFX_goal_ALB_Reinforce_Syndicalist_System
 		x = -1
 		y = 1
         relative_position_id = ALB_Chairman_Maleshova
@@ -3870,7 +4066,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Cooperate_Chief_Capital
-		icon = GFX_goal_CSA_class_fusion
+		icon = GFX_goal_ALB_Cooperate_Chiefs_Capital
 		x = 1
 		y = 1
         relative_position_id = ALB_Chairman_Maleshova
@@ -3916,19 +4112,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Western_Diplomatic_Approach"
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.075
+			}
+			unlock_decision_tooltip = ALB_join_entente
+			unlock_decision_tooltip = ALB_stay_with_3rd_int
 			hidden_effect = {
 			country_event = {
 				id = albsoc.33
 				days = 15
 				}
 			}
-			unlock_decision_tooltip = ALB_join_entente
-			unlock_decision_tooltip = ALB_stay_with_3rd_int
 		}
 	}
     focus = {
-		id = ALB_Appeal_Northern_Epirus
-		icon = GFX_goal_ALB_Northern_Epirus
+		id = ALB_Appeal_Southern_Epirus
+		icon = GFX_goal_ALB_Southern_Epirus
 		x = 0
 		y = 1
         relative_position_id = ALB_Western_Diplomatic_Approach
@@ -3943,12 +4143,21 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ALB_Appeal_Northern_Epirus"
+			log = "[GetDateText]: [Root.GetName]: Focus ALB_Appeal_Southern_Epirus"
 			add_state_core = 185
+			if = {
+			limit = {
+			ALB = {
+			NOT = {
+			owns_state = 185
+					}
+				}
+			}
 			GRE = {
 				country_event = {
 					id = albsoc.12
 					days = 5
+					}
 				}
 			}
 			hidden_effect = {
@@ -3988,6 +4197,10 @@ focus_tree = {
 		    }
             custom_effect_tooltip = ALB_Fundo_Cabinet_tt
             hidden_effect = {
+				country_event = {
+					id = albsoc.34
+					days = 15
+				}
                 add_popularity = {
 					ideology = radical_socialist
 					popularity = 0.3
@@ -4040,7 +4253,7 @@ focus_tree = {
 	}
     focus = {
 		id = ALB_Transform_Rigid_Structure
-		icon = GFX_goal_CSA_equality
+		icon = GFX_goal_ALB_Transform_Rigid_Structure
 		x = 1
 		y = 1
         relative_position_id = ALB_Chairman_Fundo
@@ -4080,14 +4293,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Moderate_Men_Treaty"
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.075
+			}
 			unlock_decision_tooltip = ALB_join_russia
 			unlock_decision_tooltip = ALB_join_austria
-			hidden_effect = {
-			country_event = {
-				id = albsoc.34
-				days = 15
-				}
-			}
 		}
 	}
     focus = {
@@ -4109,11 +4320,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Vouch_Dardania"
 			add_state_core = 765
+			if = {
+			limit = {
+			ALB = {
+			NOT = {
+			owns_state = 765
+					}
+				}
+			}
 			765 = {
 				owner = {
 					country_event = {
 						id = albsoc.16
 						days = 5
+						}
 					}
 				}
 			}
@@ -4148,21 +4368,40 @@ focus_tree = {
 		select_effect = {
 			if = {
 				limit = {
-					has_idea = ALB_Nexhmije_Hoxha_hog_tot
+					AND = {
+						has_idea = ALB_Nexhmije_Hoxha_hog_tot
+						has_idea = ALB_Koci_Xoxe_sec_tot
+					}
 				}
 				country_event = {
 					id = albsoc.6
-					days = 130
+					days = 7
 				}
 			}
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ALB_election
+					option = ALB_ELECTION_HOXHA_UTOPIA
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_We_Follow"
 			add_ideas = ALB_We_Follow
+			hidden_effect = {
+				if = {
+					limit = { has_idea = ALB_Nexhmije_Hoxha_hog_tot }
+					country_event = {
+						id = albsoc.6
+						days = 12
+					}
+				}
+			}
 		}
 	}
     focus = {
@@ -4217,7 +4456,20 @@ focus_tree = {
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_ODRYSIA
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_PELASGIA
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Illyrian_Thesis"
@@ -4288,6 +4540,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Remove_Squatting_Menace"
+			every_state = {
+			limit = {
+				OR = {
+					is_core_of = CRO
+					is_core_of = SER
+					is_claimed_by = CRO
+					is_claimed_by = SER
+				}
+			}
+			add_claim_by = ALB
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = SER
@@ -4367,7 +4630,20 @@ focus_tree = {
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_ARDLYRIA
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_PELASGIA
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Illyrian_Thesis"
@@ -4401,6 +4677,8 @@ focus_tree = {
 				OR = {
 					is_core_of = BUL
 					is_claimed_by = BUL
+					is_core_of = ROM
+					is_claimed_by = ROM
 				}
 			}
 			add_claim_by = ALB
@@ -4485,6 +4763,8 @@ focus_tree = {
 				OR = {
 					is_core_of = BUL
 					is_claimed_by = BUL
+					is_core_of = ROM
+					is_claimed_by = ROM
 				}
 			}
 			add_core_of = ALB
@@ -4515,7 +4795,20 @@ focus_tree = {
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_ARDLYRIA
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_ODRYSIA
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Theory_Pelasagians"
@@ -4577,6 +4870,26 @@ focus_tree = {
 				}
 			}
 			add_claim_by = ALB
+		    }
+			hidden_effect = {
+			add_state_claim = 1089
+			add_state_claim = 341
+			add_state_claim = 1225
+			add_state_claim = 773
+			add_state_claim = 340
+			add_state_claim = 339
+			add_state_claim = 342
+			add_state_claim = 356
+			add_state_claim = 49
+			add_state_claim = 343
+			add_state_claim = 346
+			add_state_claim = 345
+			add_state_claim = 355
+			add_state_claim = 344
+			add_state_claim = 354
+			add_state_claim = 1001
+			add_state_claim = 1213
+			add_state_claim = 1000
 			}
 			create_wargoal = {
 				type = annex_everything
@@ -4596,6 +4909,7 @@ focus_tree = {
 				name = "Enver Hoxha"
 				ruling_only = yes
 			}
+			owns_state = 47
 		}
         prerequisite = {
 			focus = ALB_Learn_Good_Pyrrhus
@@ -4618,7 +4932,27 @@ focus_tree = {
 			}
 			add_core_of = ALB
 			}
-			set_cosmetic_tag = ALB_Pelasagia
+			hidden_effect = {
+			add_state_core = 1089
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+				}
+			set_cosmetic_tag = ALB_Pelasgia
 		}
 	}
     focus = {
@@ -4642,7 +4976,20 @@ focus_tree = {
 		}
 		cost = 5.0
 		ai_will_do = {
-			factor = 50
+			factor = 500
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = ALB_election
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = ALB_election
+						option = ALB_ELECTION_HOXHA_UTOPIA
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Utopia_Perfected"
@@ -4699,11 +5046,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Explore_Wealth"
-			add_resource = { type = steel amount = 5 state = 44 }
-			add_resource = { type = aluminium amount = 5 state = 44 }
-			add_resource = { type = chromium amount = 5 state = 44 }
-			add_resource = { type = rubber amount = 5 state = 44 }
-			add_resource = { type = oil amount = 5 state = 44 }
+			add_resource = { type = steel amount = 12 state = 44 }
+			add_resource = { type = aluminium amount = 12 state = 44 }
+			add_resource = { type = chromium amount = 12 state = 44 }
+			add_resource = { type = rubber amount = 12 state = 44 }
+			add_resource = { type = oil amount = 12 state = 44 }
 		}
 	}
     focus = {
@@ -4744,7 +5091,7 @@ focus_tree = {
 						}
 					}
 					create_wargoal = {
-						type = puppet
+						type = annex_everything
 						target = SER
 					}
 				}
@@ -4755,7 +5102,7 @@ focus_tree = {
 						}
 					}
 					create_wargoal = {
-						type = puppet
+						type = annex_everything
 						target = BUL
 					}
 				}
@@ -4766,7 +5113,7 @@ focus_tree = {
 						}
 					}
 					create_wargoal = {
-						type = puppet
+						type = annex_everything
 						target = ROM
 					}
 				}
@@ -4777,7 +5124,7 @@ focus_tree = {
 						}
 					}
 					create_wargoal = {
-						type = puppet
+						type = annex_everything
 						target = GRE
 					}
 				}
@@ -4788,7 +5135,7 @@ focus_tree = {
 						}
 					}
 					create_wargoal = {
-						type = puppet
+						type = annex_everything
 						target = HUN
 					}
 				}
@@ -4818,7 +5165,7 @@ focus_tree = {
 				ruling_only = yes
 			}
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4839,7 +5186,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_My_Sweet_Enver
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4861,7 +5208,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_My_Sweet_Enver
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4885,7 +5232,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Piercing_Fury
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4906,7 +5253,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Strangle_Traitors
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4930,7 +5277,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4954,7 +5301,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -4983,7 +5330,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Worthy_Enver
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5013,7 +5360,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5037,7 +5384,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5071,7 +5418,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Collectives_Militarization
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5092,7 +5439,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5116,7 +5463,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5143,7 +5490,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Who_Purges_Purgers
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5167,7 +5514,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5223,6 +5570,36 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = national_populist_subtype
 		    }
+			set_party_name = {
+                ideology = social_liberal
+                long_name = "Purged"
+                name = "Purged"
+            }
+			set_party_name = {
+                ideology = market_liberal
+                long_name = "Purged"
+                name = "Purged"
+            }
+			set_party_name = {
+                ideology = social_conservative
+                long_name = "Purged"
+                name = "Purged"
+            }
+			set_party_name = {
+                ideology = authoritarian_democrat
+                long_name = "Purged"
+                name = "Purged"
+            }
+			set_party_name = {
+                ideology = paternal_autocrat
+                long_name = "Purged"
+                name = "Purged"
+            }
+			set_party_name = {
+                ideology = national_populist
+                long_name = "Purged"
+                name = "Purged"
+            }
 		}
 	}
     focus = {
@@ -5237,7 +5614,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Renewed_Vision_Albania
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5245,7 +5622,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ALB_Dissolve_Party"
 			set_party_name = {
 				ideology = totalist
-				long_name = "Drejtoria e Sigurisë Publike"
+				long_name = "Drejtoria e Sigurisë Publike (Committee of Public Safety)"
 				name = "Drejtoria e Nexhmijes"
 			}
 			create_country_leader = {
@@ -5266,6 +5643,21 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = social_democrat_subtype
 		    }
+			set_party_name = {
+                ideology = syndicalist
+                long_name = "Dissolved"
+                name = "Dissolved"
+            }
+			set_party_name = {
+                ideology = radical_socialist
+                long_name = "Dissolved"
+                name = "Dissolved"
+            }
+			set_party_name = {
+                ideology = social_democrat
+                long_name = "Dissolved"
+                name = "Dissolved"
+            }
 		}
 	}
     focus = {
@@ -5283,7 +5675,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Dissolve_Party
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5313,7 +5705,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_My_Will_Alone
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5343,7 +5735,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Legacy_Eternal
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5366,7 +5758,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Legacy_Eternal
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5393,7 +5785,7 @@ focus_tree = {
         prerequisite = {
 			focus = ALB_Behold_Red_Horse
 		}
-		cost = 5.0
+		cost = 4.0
 		ai_will_do = {
 			factor = 50
 		}
@@ -5402,6 +5794,38 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = FRA
+			}
+			if = {
+			limit = {
+			is_ai = no
+			has_government = totalist
+			has_country_leader = {
+				name = "Nexhmije Hoxha"
+				ruling_only = yes
+			}
+			NOT = {
+			has_cosmetic_tag = ALB_Enver
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_europe = yes
+				}
+				ALB = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			every_state = {
+					limit = {
+						is_on_continent = europe
+					}
+					ALB = { 
+						add_state_core = PREV 
+					}	
+				}
 			}
 		}
 	}                               

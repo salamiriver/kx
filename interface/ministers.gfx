@@ -14069,6 +14069,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/EGY/EGY_Mohammed_Naguib.png"
 	}
 	spriteType = {
+		name = "GFX_idea_EGY_Taha_Hussein_hog_sli"
+		texturefile = "gfx/interface/ministers/EGY/EGY_Taha_Hussein.png"
+	}
+	spriteType = {
 		name = "GFX_idea_EGY_Fouad_Serageddin_hog_mli"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Fouad_Serageddin.png"
 	}
@@ -25965,6 +25969,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/IRE/IRE_Thomas_Johnson.png"
 	}
 	spriteType = {
+		name = "GFX_idea_IRE_Liam_Mellows_hog_sde"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Liam_Mellows.png"
+	}
+	spriteType = {
 		name = "GFX_idea_IRE_Margaret_Buckley_hog_sde"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Margaret_Buckley.png"
 	}
@@ -26186,6 +26194,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_IRE_Liam_Mellows_sec_sde"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Liam_Mellows.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_Thomas_Johnson_sec_sde"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Thomas_Johnson.png"
 	}
 	spriteType = {
 		name = "GFX_idea_IRE_Thomas_J_O_Connell_sec_sde"
