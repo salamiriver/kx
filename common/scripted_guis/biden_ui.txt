@@ -3529,6 +3529,20 @@ scripted_gui = {
 					has_country_flag = BIDEN_COUNCIL
 				}
 			}
+			
+			Michael_D_Higgins_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = BDN_Michael_D_Higgins_hog_sde
+				}
+			}
+			
+			Barry_O_Bama_visible = {
+				AND = {
+					has_country_flag = HOG_veiw
+					has_idea = BDN_Barry_O_Bama_hog_sde
+				}
+			}
 
 			Leon_Blum_visible = {
 				AND = {
